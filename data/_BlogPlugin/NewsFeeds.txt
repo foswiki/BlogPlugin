@@ -4,7 +4,7 @@
 %FORMFIELD{"TopicDescription"}%
 
 <style type="text/css">
-.feeds .foswikiFirstCol {
+.feeds .twikiFirstCol {
   width:15em;
 }
 </style>
