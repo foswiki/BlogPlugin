@@ -4,15 +4,15 @@
 %FORMFIELD{"TopicDescription"}%
 
 BlogPages are pages that exist outside the normal chronological stream of BlogEntries
-but behave similar in several respects. Basically they are a kind of TWikiTopics but
+but behave similar in several respects. Basically they are a kind of WikiTopics but
 have a SubjectCategory property and an (optional) discussion thread attached to them. 
-Some topics in the <nop>%WEB% web are no BlogPages but just plain TWikiTopics as they
+Some topics in the <nop>%WEB% web are no BlogPages but just plain WikiTopics as they
 are not part of a specific SubjectCategory as such. Separating BlogPages from
-the notion of TWikiTopics prevents some situations that were rather artificial. The
-distinction will allow us to keep some topics of type TWikiTopic out of the way when
+the notion of WikiTopics prevents some situations that were rather artificial. The
+distinction will allow us to keep some topics of type WikiTopic out of the way when
 we want to deal with BlogPages for this weblog application.
 
-<div class="twikiPageForm blogAdminButtons">
+<div class="foswikiPageForm blogAdminButtons">
 <form action="%SCRIPTURLPATH{"edit"}%/%WEB%/" method="post">
 <input type="hidden" name="onlywikiname" value="on" />
 <input type="hidden" name="templatetopic" value="BlogPageTemplate" />
@@ -39,4 +39,4 @@ See also: %TOPIC%Template, %TOPIC%Form, RenderNewBlogPageButton
 
 %META:FORM{name="TopicForm"}%
 %META:FIELD{name="TopicType" attributes="M" title="TopicType" value="TopicType"}%
-%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="TopicType of a tagged TWikiTopic"}%
+%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="TopicType of a tagged WikiTopic"}%

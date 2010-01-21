@@ -15,4 +15,4 @@
 %META:FIELD{name="State" attributes="" title="State" value="unpublished"}%
 %META:FIELD{name="Related" attributes="" title="Related" value=""}%
 %META:FIELD{name="Date" attributes="M" title="Date" value="13 Aug 2005 - 01:42"}%
-%META:FIELD{name="BlogTag" attributes="" title="BlogTag" value="archive:2 blogdev:2 navigation plugin release twiki webdev wordpress"}%
+%META:FIELD{name="BlogTag" attributes="" title="BlogTag" value="archive:2 blogdev:2 navigation plugin release foswiki webdev wordpress"}%

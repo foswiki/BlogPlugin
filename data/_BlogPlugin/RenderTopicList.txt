@@ -20,7 +20,7 @@
 ~~~ }%
 </div>
 ~~~ <style type="text/css">
-~~~   .tableModDiv .twikiTable td { vertical-align:top; }
+~~~   .tableModDiv .foswikiTable td { vertical-align:top; }
 ~~~ </style>
 %STOPINCLUDE%
 </verbatim>

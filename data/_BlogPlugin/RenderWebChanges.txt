@@ -51,4 +51,4 @@
 
 %META:FORM{name="TopicForm"}%
 %META:FIELD{name="TopicType" attributes="M" title="TopicType" value="TopicFunction"}%
-%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="Replacement for TWiki's default WebChanges"}%
+%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="Replacement for Foswiki's default WebChanges"}%

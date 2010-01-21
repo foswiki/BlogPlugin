@@ -4,7 +4,7 @@
 %FORMFIELD{"TopicDescription"}%
 
 <style type="text/css">
-.feeds .twikiFirstCol {
+.feeds .foswikiFirstCol {
   width:15em;
 }
 </style>
@@ -29,5 +29,5 @@
 
 
 %META:FORM{name="TopicForm"}%
-%META:FIELD{name="TopicType" attributes="M" title="TopicType" value="BlogPage, TWikiTopic"}%
+%META:FIELD{name="TopicType" attributes="M" title="TopicType" value="BlogPage, WikiTopic"}%
 %META:FIELD{name="TopicDescription" attributes="" title="TopicDescription" value="News Aggregation"}%

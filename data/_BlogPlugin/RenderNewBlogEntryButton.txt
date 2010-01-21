@@ -7,7 +7,7 @@ Note, that this button has view access for the %MAINWEB%.BlogAuthorGroup only.
 So this button will only be displayed for users in this group.
 
 See also: RenderNewBlogLinkButton, RenderNewCategoryButton,
-RenderNewBlogPageButton, RenderNewTWikiTopicButton
+RenderNewBlogPageButton, RenderNewWikiTopicButton
 
 ---++ Parameters
    * TEXT: text to be displayed on the button

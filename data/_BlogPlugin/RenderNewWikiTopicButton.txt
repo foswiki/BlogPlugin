@@ -15,7 +15,7 @@ See also: RenderNewBlogLinkButton, RenderNewCategoryButton, RenderNewBlogEntryBu
 <verbatim>
 %STARTINCLUDE%
 *~~
-<form action="%SCRIPTURLPATH{"view"}%/%WEB%/TWikiTopic" method="get">
+<form action="%SCRIPTURLPATH{"view"}%/%WEB%/WikiTopic" method="get">
 <input type="submit" class="blogSubmitButton blogTopicButton" value="%TEXT%" />
 </form>
 *~~
@@ -40,5 +40,5 @@ See also: RenderNewBlogLinkButton, RenderNewCategoryButton, RenderNewBlogEntryBu
 
 %META:FORM{name="TopicForm"}%
 %META:FIELD{name="TopicType" attributes="M" title="TopicType" value="TopicFunction"}%
-%META:FIELD{name="TopicDescription" attributes="" title="TopicDescription" value="Renders a button to create a new TWikiTopic"}%
-%META:TOPICMOVED{by="MichaelDaum" date="1138890491" from="Blog.RenderNewBlogPageButton" to="Blog.RenderNewTWikiTopicButton"}%
+%META:FIELD{name="TopicDescription" attributes="" title="TopicDescription" value="Renders a button to create a new WikiTopic"}%
+%META:TOPICMOVED{by="MichaelDaum" date="1138890491" from="Blog.RenderNewBlogPageButton" to="Blog.RenderNewWikiTopicButton"}%

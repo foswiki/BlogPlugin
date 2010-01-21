@@ -30,5 +30,5 @@ Please contact one of your [[%MAINWEB%.BlogAdminGroup][BlogAdmins]] in case that
 -->
 
 %META:FORM{name="TopicForm"}%
-%META:FIELD{name="TopicType" attributes="M" title="TopicType" value="AdminTool, TWikiTopic"}%
+%META:FIELD{name="TopicType" attributes="M" title="TopicType" value="AdminTool, WikiTopic"}%
 %META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="Syndication feeds for the %25WEB%25 web"}%

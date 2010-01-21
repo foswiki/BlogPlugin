@@ -39,7 +39,7 @@ if the linked site has a nice rss feed.
 *~~      }$percnt
 ~~~      $percntELSEDEFINED$percnt
 ~~~      $n<!-- -->
-~~~      $n<table class=\"twikiTable\">
+~~~      $n<table class=\"foswikiTable\">
 ~~~      <tr><th>Name:</th><td> $formfield(Name) </td></tr>
 ~~~      <tr><th>Headline:</th><td> $formfield(Headline) </td></tr>
 ~~~      <tr><th>Url:</th><td> $formfield(Url) </td></tr>

@@ -22,7 +22,7 @@ See also: BlogAbout
 %STARTSECTION{"Page"}%
 You are in the page section consisting of all the [[BlogPages]] that 
 exist outside the chronological sortion of BlogEntries but are special
-TWikiTopics with respect to this application
+WikiTopics with respect to this application
 %ENDSECTION{"Page"}%
 
 ---+++ Admin section

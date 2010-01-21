@@ -33,7 +33,7 @@ Copyright text to be added to the syndication feeds of this blog:
 See also the TopicFunction RenderLicense to display a content license icon in the sidebar.
 
 ---+++ Search
-Flag to include/exclude this web from TWiki's SEARCH
+Flag to include/exclude this web from Foswiki's SEARCH
    * Set NOSEARCHALL =
 
 <nop>NatSearch customization for <nop>BlogUp (expert settings):
@@ -130,7 +130,7 @@ Chose the skin to be used for this web:
 ---+++ Misc
 <nop>DBCachePlugin settings registering the <nop>BlogPlugin's <nop>WebDB
 implementation for this web (don't change):
-   * Set WEBDB = TWiki::Plugins::BlogPlugin::WebDB
+   * Set WEBDB = Foswiki::Plugins::BlogPlugin::WebDB
 
 Initialization of WebButtons variables (don't change):
    * Set WEBBUTTONSCLASS_HOME =
@@ -145,7 +145,7 @@ TopicFunctions to generate html page header information:
 <verbatim>
    * Set HTTP_EQUIV_ON_VIEW = %DBCALL{"RenderHttpEquivs"}%
    * Set PAGETITLE = $percntDBCALL{\"RenderPageTitle\"}$percnt
-   * Set DEFAULT_METAKEYWORDS = TWiki, Blogging, BlogPlugin, BlogUp, BlogUpRing
+   * Set DEFAULT_METAKEYWORDS = Foswiki, Blogging, BlogPlugin, BlogUp, BlogUpRing
    * Set METAKEYWORDS = %DEFAULT_METAKEYWORDS%
    * #Set METAAUTHOR =
    * #Set METADESCRIPTION =

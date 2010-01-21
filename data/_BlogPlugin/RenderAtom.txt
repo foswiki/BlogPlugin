@@ -33,7 +33,7 @@ See also: RenderRss, WebSyndication
 ~~~ href="%SCRIPTURL{"view"}%/%INCLUDINGWEB%/%INCLUDINGTOPIC%" />
 %IFDEFINED{"%WEBLOGOIMG%" then="<logo>%WEBLOGOIMG%</logo>"}%
 <generator uri="%SCRIPTURL{"view"}%/%SYSTEMWEB%/BlogPlugin">
-  TWiki %WIKIVERSION%, <nop>BlogPlugin %PLUGINVERSION{"BlogPlugin"}%
+  Foswiki %WIKIVERSION%, <nop>BlogPlugin %PLUGINVERSION{"BlogPlugin"}%
 </generator>
 <id>
 *~~ tag:%HTTP_HOST%,%SERVERTIME{"$year-$mo-$day"}%:%INCLUDINGWEB%.%INCLUDINGTOPIC%
@@ -71,7 +71,7 @@ See also: RenderRss, WebSyndication
 *~~           $percntIFDEFINEDTHEN{\"$expand(TopicType)\" as=\"BlogComment\" glue=\"off\"}$percnt
 ~~~           $expand('<b>' and Headline and '</b>')
 ~~~           $percntFIDEFINED$percnt
-~~~           $percntIFDEFINEDTHEN{\"$expand(TopicType)\" as=\"TWikiTopic\" glue=\"off\"}$percnt
+~~~           $percntIFDEFINEDTHEN{\"$expand(TopicType)\" as=\"WikiTopic\" glue=\"off\"}$percnt
 ~~~             $expand(TopicDescription) 
 ~~~           $percntFIDEFINED$percnt
 ~~~           $expand(Teaser) 

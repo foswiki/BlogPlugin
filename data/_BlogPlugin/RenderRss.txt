@@ -37,7 +37,7 @@ See also: RenderAtom, WebSyndication
   </items>
 </channel>
 <image rdf:about="%WEBLOGOIMG%">
-  <title>TWiki/NatSkin</title>
+  <title>Foswiki/NatSkin</title>
   <link>%SCRIPTURL{"view"}%/%INCLUDINGWEB%</link>
   <url>%IFDEFINED{"%WEBLOGOIMG%" then="%WEBLOGOIMG%" else="%WIKILOGOIMG%"}%</url>
 </image>
@@ -66,7 +66,7 @@ See also: RenderAtom, WebSyndication
 ~~~          $expand('&lt;b&gt;' and Headline and '&lt;/b&gt;')
 ~~~        $percntFIDEFINED$percnt
 ~~~        $encode(
-~~~          $percntIFDEFINEDTHEN{\"$expand(TopicType)\" as=\"TWikiTopic\" glue=\"off\"}$percnt
+~~~          $percntIFDEFINEDTHEN{\"$expand(TopicType)\" as=\"WikiTopic\" glue=\"off\"}$percnt
 ~~~            $expand(TopicDescription)
 ~~~          $percntFIDEFINED$percnt
 ~~~          $expand(Teaser)

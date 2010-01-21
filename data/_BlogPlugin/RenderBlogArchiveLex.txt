@@ -91,7 +91,7 @@
 ~~~   plural="off"
 ~~~   exclude="http.*|citeblog.*|xxxxxxxxxx|www.*|WebPreferences|WebHome|
 *~~     com|ve|([A-Z]+)"
-~~~   map="twiki=TWiki"
+~~~   map="foswiki=Foswiki"
 ~~~ }%
 %IFDEFINEDTHEN{"%QUERY%"}%
 %~~   $nopDBCALL{"RenderBlogArchiveHitList"

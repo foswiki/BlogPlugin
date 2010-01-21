@@ -13,7 +13,7 @@ Only BlogAuthors will get to see them. See the access rights below.
 ---++ Upload
 <form name="main" enctype="multipart/form-data" action="%SCRIPTURLPATH{"upload"}%/%INCLUDINGWEB%/%INCLUDINGTOPIC%" method="post">
 <input type="hidden" name="hidefile" value="1" />
-<div class="twikiPageForm">
+<div class="foswikiPageForm">
 <table width="100%">
  <tr>
   <td align="right">
@@ -48,7 +48,7 @@ Only BlogAuthors will get to see them. See the access rights below.
 ---++ Manage 
 %$nopMETA{"attachments" all="on"}% 
 <style type="text/css">
-.twikiAttachments table {
+.foswikiAttachments table {
   font-size:80%;
 }
 </style>

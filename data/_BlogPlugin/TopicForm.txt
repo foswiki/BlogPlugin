@@ -16,4 +16,4 @@
 
 %META:FORM{name="TopicForm"}%
 %META:FIELD{name="TopicType" attributes="M" title="TopicType" value="DataForm"}%
-%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="DataForm attached to general TWikiTopics"}%
+%META:FIELD{name="TopicDescription" attributes="M" title="TopicDescription" value="DataForm attached to general WikiTopics"}%

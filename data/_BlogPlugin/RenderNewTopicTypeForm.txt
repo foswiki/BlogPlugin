@@ -12,7 +12,7 @@
 <verbatim>
 %STARTINCLUDE%
 ~~~
-<div class="twikiPageForm blogAdminButtons">
+<div class="foswikiPageForm blogAdminButtons">
 <form action="%SCRIPTURLPATH{"edit"}%/%WEB%" method="post">
 <input type="hidden" name="onlywikiname" value="on" />
 %IFDEFINEDTHEN{"%TEMPLATE%"}%

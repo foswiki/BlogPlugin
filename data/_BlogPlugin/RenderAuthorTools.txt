@@ -10,12 +10,12 @@
 <verbatim>
 %STARTINCLUDE%
 ~~~ 
-<div class="twikiPageForm blogAuthorButtons">
+<div class="foswikiPageForm blogAuthorButtons">
 %DBCALL{"RenderNewBlogEntryButton" TEXT="New Posting" warn="off"}%
 %DBCALL{"RenderNewCategoryButton" TEXT="New Category" warn="off"}%
 %DBCALL{"RenderNewBlogLinkButton" TEXT="New Link" warn="off"}%
 %DBCALL{"RenderNewBlogPageButton" TEXT="New Page" warn="off"}%
-%DBCALL{"RenderNewTWikiTopicButton" TEXT="New Topic" warn="off"}%
+%DBCALL{"RenderNewWikiTopicButton" TEXT="New Topic" warn="off"}%
 %DBCALL{"RenderUploadImageButton" TEXT="Upload Image" warn="off"}%
 </div>
 %IFDEFINEDTHEN{"%AUTHOR%"}%

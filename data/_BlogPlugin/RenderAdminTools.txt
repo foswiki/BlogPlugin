@@ -36,7 +36,7 @@ NONE
 ~~~   }%
       </ol>%ENDTWISTY%
     </li>
-    <li>%TWISTY{id="twikiforms" remember="on" link="DataForms"}%
+    <li>%TWISTY{id="foswikiforms" remember="on" link="DataForms"}%
       <ol>
 %~~   DBQUERY{"TopicType=~'\bDataForm\b'"
 ~~~      format="<li><a href=\"%SCRIPTURLPATH{"view"}%/$web/$topic\"

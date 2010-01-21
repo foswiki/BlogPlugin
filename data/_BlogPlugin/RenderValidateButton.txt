@@ -6,7 +6,7 @@
 ---++ Implementation
 %STARTINCLUDE%
 ~~~
-<div class="twikiPageForm blogAdminButtons">
+<div class="foswikiPageForm blogAdminButtons">
 <form action="http://validator.w3.org/check/referer" target="_blank">
 <input type="hidden" name="ss" value="1" />
 <input type="submit" class="blogSubmitButton" value="%TEXT%" />
