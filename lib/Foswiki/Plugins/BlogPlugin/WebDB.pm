@@ -15,12 +15,12 @@
 #
 ###############################################################################
 
-package TWiki::Plugins::BlogPlugin::WebDB;
+package Foswiki::Plugins::BlogPlugin::WebDB;
 
 use strict;
-use TWiki::Plugins::DBCachePlugin::WebDB;
+use Foswiki::Plugins::DBCachePlugin::WebDB;
 use Time::Local;
-@TWiki::Plugins::BlogPlugin::WebDB::ISA = ("TWiki::Plugins::DBCachePlugin::WebDB");
+@Foswiki::Plugins::BlogPlugin::WebDB::ISA = ("Foswiki::Plugins::DBCachePlugin::WebDB");
 
 use vars qw( %MON2NUM );
 
@@ -79,7 +79,7 @@ sub onReload {
 sub parseTime {
   my $date = shift;
   
-  # try "31 Dec 2001 - 23:59"  (TWiki date)
+  # try "31 Dec 2001 - 23:59"  (Foswiki date)
   if ($date =~ /([0-9]+)\s+([A-Za-z]+)\s+([0-9]+)[\s\-]+([0-9]+)\:([0-9]+)/) {
     my $year = $3;
     $year -= 1900 if( $year > 1900 );

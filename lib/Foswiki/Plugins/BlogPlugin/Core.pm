@@ -14,13 +14,13 @@
 # http://www.gnu.org/copyleft/gpl.html
 #
 ###############################################################################
-package TWiki::Plugins::BlogPlugin::Core;
+package Foswiki::Plugins::BlogPlugin::Core;
 
 use strict;
 use vars qw( $debug );
 
-use TWiki::Plugins::DBCachePlugin;
-use TWiki::Plugins::BlogPlugin::WebDB;
+use Foswiki::Plugins::DBCachePlugin;
+use Foswiki::Plugins::BlogPlugin::WebDB;
 
 $debug = 0; # toggle me
 
@@ -42,13 +42,13 @@ sub handleCiteBlog {
   my ($this, $session, $params, $theTopic, $theWeb) = @_;
 
   $theTopic = $params->{_DEFAULT} || $params->{topic};
-  ($theWeb, $theTopic) = &TWiki::Func::normalizeWebTopicName($theWeb, $theTopic);
+  ($theWeb, $theTopic) = &Foswiki::Func::normalizeWebTopicName($theWeb, $theTopic);
 
   return &inlineError("ERROR: CITEBLOG has no topic argument") 
     unless $theTopic;
 
-  my $theDB = TWiki::Plugins::DBCachePlugin::getDB($theWeb);
-  my $viewUrl = TWiki::Func::getViewUrl($theWeb, $theTopic);
+  my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($theWeb);
+  my $viewUrl = Foswiki::Func::getViewUrl($theWeb, $theTopic);
   my $text = "<a href=\"$viewUrl\" title=\"permalink to <nop>$theTopic\">$theTopic</a>";
 
   my $topicObj = $theDB->fastget($theTopic);
@@ -63,7 +63,7 @@ sub handleCiteBlog {
     $form->fastget('TopicDescription') ||
     $form->fastget('Name') ||
     $theTopic;
-  my $createDate = TWiki::Func::formatTime($topicObj->fastget('createdate'), '$day $mon $year');
+  my $createDate = Foswiki::Func::formatTime($topicObj->fastget('createdate'), '$day $mon $year');
   return "<a href=\"$viewUrl\" title=\"permalink to <nop>$theTopic\">$displayText ($createDate)</a>";
 }
 
@@ -82,12 +82,12 @@ sub handlePrevDoc {
 
   return &inlineError("ERROR: PREVDOC has no \"where\" argument") unless $theWhere;
 
-  my ($thisWeb, $thisTopic) = &TWiki::Func::normalizeWebTopicName($theWeb, $theTopic);
+  my ($thisWeb, $thisTopic) = &Foswiki::Func::normalizeWebTopicName($theWeb, $theTopic);
 
   #writeDebug('theFormat='.$theFormat);
   #writeDebug('theWhere='. $theWhere) if $theWhere;
   
-  my $theDB = TWiki::Plugins::DBCachePlugin::getDB($thisWeb);
+  my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($thisWeb);
   my ($prevTopic, $nextTopic) = $this->getPrevNextTopic(
     $theDB, $thisWeb, $thisTopic, $theWhere, $theOrder, $theReverse);
   if ($prevTopic ne '_notfound') {
@@ -111,12 +111,12 @@ sub handleNextDoc {
 
   return &inlineError("ERROR: NEXTDOC has no \"where\" argument") unless $theWhere;
 
-  my ($thisWeb, $thisTopic) = &TWiki::Func::normalizeWebTopicName($theWeb, $theTopic);
+  my ($thisWeb, $thisTopic) = &Foswiki::Func::normalizeWebTopicName($theWeb, $theTopic);
 
   #writeDebug('theFormat='.$theFormat);
   #writeDebug('theWhere='. $theWhere) if $theWhere;
 
-  my $theDB = TWiki::Plugins::DBCachePlugin::getDB($thisWeb);
+  my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($thisWeb);
   my ($prevTopic, $nextTopic) = $this->getPrevNextTopic(
     $theDB, $thisWeb, $thisTopic, $theWhere, $theOrder, $theReverse);
   if ($nextTopic ne '_notfound') {
@@ -188,7 +188,7 @@ sub handleRecentComments {
   return &inlineError("ERROR: RECENTCOMMENTS has no \"format\" argument") 
     unless $theFormat;
   
-  my $theDB = TWiki::Plugins::DBCachePlugin::getDB($theWeb);
+  my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($theWeb);
 
   my %blogComments;
   my %baseRefs;
@@ -284,7 +284,7 @@ sub handleRecentComments {
     # get commenter
     my @commenter;
     my %seenAuthor;
-    my $viewUrl = TWiki::Func::getViewUrl($theWeb, $baseRefName);
+    my $viewUrl = Foswiki::Func::getViewUrl($theWeb, $baseRefName);
     foreach my $blogCommentName (@{$baseRefs{$baseRefName}{comments}}) {
       my $author = $blogComments{$blogCommentName}{author};
       next if $seenAuthor{$author};
@@ -334,7 +334,7 @@ sub handleCountComments {
   return &inlineError("ERROR: COUNTCOMMENTS has no topic argument") 
     unless $theBlogRef;
 
-  ($theWeb, $theBlogRef) = &TWiki::Func::normalizeWebTopicName($theWeb, $theBlogRef);
+  ($theWeb, $theBlogRef) = &Foswiki::Func::normalizeWebTopicName($theWeb, $theBlogRef);
   #writeDebug("theBlogRef=$theBlogRef");
   #writeDebug("theWeb=$theWeb");
 
@@ -346,7 +346,7 @@ sub handleCountComments {
   if (defined $nrTopics) {
     #writeDebug("found $nrTopics comments in cache for $theBlogRef");
   } else {
-    my $theDB = TWiki::Plugins::DBCachePlugin::getDB($theWeb);
+    my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($theWeb);
     $nrTopics = &countBlogRefs($theDB, $theBlogRef);
     $this->{countCommentsCache}{$key} = $nrTopics;
     #writeDebug("found $nrTopics comments for $theBlogRef");
@@ -385,12 +385,12 @@ sub handleRelatedTopics {
 
   my $theFilterObj;
   if ($theFilter) {
-    $theFilterObj = new TWiki::Contrib::DBCacheContrib::Search($theFilter);
+    $theFilterObj = new Foswiki::Contrib::DBCacheContrib::Search($theFilter);
     return &inlineError("ERROR: can't parse query $theFilter")
       unless $theFilterObj;
   }
   
-  my $theDB = TWiki::Plugins::DBCachePlugin::getDB($theWeb);
+  my $theDB = Foswiki::Plugins::DBCachePlugin::getDB($theWeb);
 
   # get direct related
   my %relatedTopics;
@@ -442,13 +442,13 @@ sub handleRelatedTopics {
 ###############################################################################
 # static
 sub inlineError {
-  return '<span class="twikiAlert">' . $_[0] . '</span>' ;
+  return '<span class="foswikiAlert">' . $_[0] . '</span>' ;
 }
 
 ###############################################################################
 # static
 sub writeDebug {
-  #&TWiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
+  #&Foswiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
   print STDERR "DEBUG - BlogPlugin - $_[0]\n" if $debug;
 }
 

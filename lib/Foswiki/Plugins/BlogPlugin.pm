@@ -14,7 +14,7 @@
 # http://www.gnu.org/copyleft/gpl.html
 #
 ###############################################################################
-package TWiki::Plugins::BlogPlugin;
+package Foswiki::Plugins::BlogPlugin;
 
 use strict;
 use vars qw(
@@ -22,12 +22,12 @@ use vars qw(
   $doneHeader $blogCore $blogFactory
 );
 
-use TWiki::Plugins::BlogPlugin::WebDB; # must be compiled in advance
+use Foswiki::Plugins::BlogPlugin::WebDB; # must be compiled in advance
 
 $VERSION = '$Rev$';
 $RELEASE = '0.99';
 $NO_PREFS_IN_TOPIC = 1;
-$SHORTDESCRIPTION = 'Basic blogging features used to implement the BlogUp <nop>TWikiApplication';
+$SHORTDESCRIPTION = 'Basic blogging features used to implement the BlogUp <nop>WikiApplication';
 
 ###############################################################################
 sub initPlugin {
@@ -36,13 +36,13 @@ sub initPlugin {
   $blogCore = undef;
   $blogFactory = undef;
 
-  TWiki::Func::registerTagHandler('CITEBLOG', \&handleCiteBlog);
-  TWiki::Func::registerTagHandler('COUNTCOMMENTS', \&handleCountComments);
-  TWiki::Func::registerTagHandler('NEXTDOC', \&handleNextDoc);
-  TWiki::Func::registerTagHandler('PREVDOC', \&handlePrevDoc);
-  TWiki::Func::registerTagHandler('RECENTCOMMENTS', \&handleRecentComments);
-  TWiki::Func::registerTagHandler('RELATEDTOPICS', \&handleRelatedTopics);
-  TWiki::Func::registerRESTHandler('createblog', \&handleCreateBlog);
+  Foswiki::Func::registerTagHandler('CITEBLOG', \&handleCiteBlog);
+  Foswiki::Func::registerTagHandler('COUNTCOMMENTS', \&handleCountComments);
+  Foswiki::Func::registerTagHandler('NEXTDOC', \&handleNextDoc);
+  Foswiki::Func::registerTagHandler('PREVDOC', \&handlePrevDoc);
+  Foswiki::Func::registerTagHandler('RECENTCOMMENTS', \&handleRecentComments);
+  Foswiki::Func::registerTagHandler('RELATEDTOPICS', \&handleRelatedTopics);
+  Foswiki::Func::registerRESTHandler('createblog', \&handleCreateBlog);
 
   return 1;
 }
@@ -74,10 +74,10 @@ sub handleCreateBlog {
 sub newFactory {
   return $blogFactory if $blogFactory;
 
-  eval 'use TWiki::Plugins::BlogPlugin::Factory;';
+  eval 'use Foswiki::Plugins::BlogPlugin::Factory;';
   die $@ if $@;
 
-  $blogFactory = new TWiki::Plugins::BlogPlugin::Factory;
+  $blogFactory = new Foswiki::Plugins::BlogPlugin::Factory;
 
   return $blogFactory;
 }
@@ -87,10 +87,10 @@ sub newFactory {
 sub newCore {
   return $blogCore if $blogCore;
 
-  eval 'use TWiki::Plugins::BlogPlugin::Core;';
+  eval 'use Foswiki::Plugins::BlogPlugin::Core;';
   die $@ if $@;
 
-  $blogCore = new TWiki::Plugins::BlogPlugin::Core;
+  $blogCore = new Foswiki::Plugins::BlogPlugin::Core;
 
   return $blogCore;
 }

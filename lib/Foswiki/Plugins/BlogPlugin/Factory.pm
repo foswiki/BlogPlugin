@@ -14,7 +14,7 @@
 # http://www.gnu.org/copyleft/gpl.html
 #
 ###############################################################################
-package TWiki::Plugins::BlogPlugin::Factory;
+package Foswiki::Plugins::BlogPlugin::Factory;
 
 use strict;
 use vars qw($debug);
@@ -31,7 +31,7 @@ sub new {
 ###############################################################################
 # static
 sub writeDebug {
-  #&TWiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
+  #&Foswiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
   #print STDERR "DEBUG - BlogPlugin - $_[0]\n" if $debug;
 }
 
@@ -40,12 +40,12 @@ sub handleCreateBlog {
   my ($this, $session) = @_;
 
   writeDebug("called handleCreateBlog");
-  $TWiki::Plugins::SESSION = $session;
+  $Foswiki::Plugins::SESSION = $session;
 
-  my $query = TWiki::Func::getCgiQuery();
+  my $query = Foswiki::Func::getCgiQuery();
   my $baseWeb = $query->param('baseweb') || '_BlogPlugin';
   my $webBGColor = $query->param('webbgcolor') || '#D0D0D0';
-  my $tagline = $query->param('tagline') || 'A twiki blog';
+  my $tagline = $query->param('tagline') || 'A Foswiki blog';
   my $noSearchAll = $query->param('nosearchall') || '';
   my $newWeb = $query->param('newweb') || '';
   my $blogName = $query->param('blogname') || $newWeb;
@@ -55,7 +55,7 @@ sub handleCreateBlog {
   my $technoratiCode = $query->param('technoraticode') || '';
   my $googleAdsenseCode = $query->param('googleadsensecode') || '';
 
-  my $webName = $query->param('webname') || $TWiki::cfg{'SystemWebName'};
+  my $webName = $query->param('webname') || $Foswiki::cfg{'SystemWebName'};
   my $topicName = $query->param('topicname') || 'BlogFactory';
 
   writeDebug("baseWeb=$baseWeb");
@@ -76,7 +76,7 @@ sub handleCreateBlog {
 
   # check permission, user authorized to create webs?
   unless($session->{user}->isAdmin()) { 
-    throw TWiki::OopsException(
+    throw Foswiki::OopsException(
       'accessdenied',
       def => 'topic_access',
       web => $webName,
@@ -90,21 +90,21 @@ sub handleCreateBlog {
 
   # check params
   unless($newWeb) {
-    throw TWiki::OopsException('attention', 
+    throw Foswiki::OopsException('attention', 
       def => 'web_missing'
     );
   }
-  unless (TWiki::isValidWebName($newWeb, 1)) {
-    throw TWiki::OopsException('attention', 
+  unless (Foswiki::isValidWebName($newWeb, 1)) {
+    throw Foswiki::OopsException('attention', 
       def =>'invalid_web_name', 
       params => $newWeb
     );
   }
-  $newWeb = TWiki::Sandbox::untaintUnchecked($newWeb);
-  $baseWeb = TWiki::Sandbox::untaintUnchecked($baseWeb);
+  $newWeb = Foswiki::Sandbox::untaintUnchecked($newWeb);
+  $baseWeb = Foswiki::Sandbox::untaintUnchecked($baseWeb);
 
   if( $session->{store}->webExists($newWeb)) {
-    throw TWiki::OopsException('attention', 
+    throw Foswiki::OopsException('attention', 
       def => 'web_exists', 
       params => $newWeb 
     );
@@ -128,19 +128,19 @@ sub handleCreateBlog {
 
   my $err = $session->{store}->createWeb($user, $newWeb, $baseWeb, $opts);
   if ($err) {
-    throw TWiki::OopsException('attention', 
+    throw Foswiki::OopsException('attention', 
       def => 'web_creation_error',
       params => [ $newWeb, $err ] 
     );
   }
 
   # finally
-  my $url = TWiki::Func::getViewUrl($webName, $topicName);
+  my $url = Foswiki::Func::getViewUrl($webName, $topicName);
   $url .= 
     "?blogfactorymsg=Successfuly created the $newWeb!!!" .
     "&newweb=$newWeb&blogname=$blogName";
   
-  TWiki::Func::redirectCgiQuery($query, $url);
+  Foswiki::Func::redirectCgiQuery($query, $url);
   return '';
 }
 
