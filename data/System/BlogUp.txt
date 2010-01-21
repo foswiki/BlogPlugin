@@ -1,6 +1,6 @@
 %META:TOPICINFO{author="ProjectContributor" date="1148545407" format="1.1" version="1.1"}%
 %META:TOPICPARENT{}%
----+!! BlogUp: a twiki based weblog setup
+---+!! BlogUp: a Foswiki-based weblog setup
 
 *Note*: The BlogUp application is part of the BlogPlugin.
 
@@ -10,10 +10,10 @@
 
 
 <!--
-%ALIAS{name="TWikiApplication" value="%SYSTEMWEB%.AnApplicationWithWikiForm"}%
+%ALIAS{name="WikiApplication" value="%SYSTEMWEB%.AnApplicationWithWikiForm"}%
 %ALIAS{name="TopicFunction" value="#TopicFunctions"}%
 %ALIAS{name="TopicFunctions" value="#TopicFunctions"}%
-%ALIAS{name="TWikiWorkbench" value="#Implementation"}%
+%ALIAS{name="WikiWorkbench" value="#Implementation"}%
 %ALIAS{name="TopicTypes" value="#TopicTypes"}%
 %ALIAS{name="TopicType" value="#TopicTypes"}%
 %ALIAS{name="TopicTemplates" value="#TopicTemplates"}%
@@ -27,7 +27,7 @@
 -->
 
 ---++ Introduction
-BlogUp is a TWikiApplication addon package that turns TWiki into a weblog
+BlogUp is a WikiApplication addon package that turns Foswiki into a weblog
 tool. In combination with the NatSkin it offers the look &amp; feel of
 well known blogging tools like <nop>MovableType or <nop>WordPress but embedded
 into a full-fledged wiki.
@@ -42,7 +42,7 @@ The main features are:
    * full content syndication
    * flexible archiving and retrieval
    * tag statistics
-   * completely form-based TWikiApplication using the TWikiWorkbench approach
+   * completely form-based WikiApplication using the WikiWorkbench approach
 
 ---++ Screenshots
 <noautolink>
@@ -57,7 +57,7 @@ template web.
 
 ---++ User Manual
 %TODO%
-The BlogUp TWikiApplication is made up of tree levels that are of use depending on the role
+The BlogUp WikiApplication is made up of tree levels that are of use depending on the role
 of the visitor. 
    1 application level: that's the view a normal visitor gets on the site
    2 blog author level: grant access to tools needed to post a blog entry or add
@@ -86,7 +86,7 @@ blog.
 
 
 ---++ Implementation
-The BlogUp is implemented using the TWikiWorkbench approach consisting (at least) of a set of 
+The BlogUp is implemented using the WikiWorkbench approach consisting (at least) of a set of 
 TopicTypes, TopicFunctions, DataForms and TopicTemplates that are used to implement the application.
 
 ---+++ TopicTypes
@@ -148,12 +148,12 @@ See also: BlogPlugin, [[_BlogPlugin.WebHome][BlogUp template web]]
 -->
 
 <style type="text/css">
-  .tableModDiv .twikiTable td { vertical-align:top; }
+  .tableModDiv .foswikiTable td { vertical-align:top; }
 </style>
 
 ---++ Application Info
 
-|  Author: | TWiki:Main/MichaelDaum |
+|  Author: | Foswiki:Main/MichaelDaum |
 |  Copyright &copy;: | 2006, Michael Daum |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
 |  Version: | v0.47 |
@@ -162,10 +162,9 @@ See also: BlogPlugin, [[_BlogPlugin.WebHome][BlogUp template web]]
 |  24 Jan 2006: | Initial version |
 |  Demo: | http://jojowiki.dyndns.org |
 |  Home: | Foswiki:Extensions/%TOPIC% |
-|  Feedback: | Foswiki:Extensions/BlogPlugin |
-|  Appraisal: | Foswiki:Extensions/BlogPluginAppraisal |
+|  Support: | Foswiki:Support/BlogPlugin |
 
--- TWiki:Main/MichaelDaum - 08 Feb 2006
+-- Foswiki:Main/MichaelDaum - 08 Feb 2006
 
 
 %META:FILEATTACHMENT{name="BlogPluginSnap1.jpg" attachment="BlogPluginSnap1.jpg" attr="h" comment="FrontPage (Wordpress style)" date="1138825802" path="BlogPluginSnap1.jpg" size="123999" stream="BlogPluginSnap1.jpg" user="ProjectContributor" version="1.1"}%

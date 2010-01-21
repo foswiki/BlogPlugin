@@ -11,9 +11,9 @@
 ---+!! <nop>%TOPIC%
 %TOC%
 
-This is the supplemental plugin for the BlogUp <nop>TWikiApplication.
+This is the supplemental plugin for the BlogUp <nop>WikiApplication.
 It bundles some of the features found in common blogging applications 
-that are very hard or even impossible to implement using <nop>TWikiML. 
+that are very hard or even impossible to implement using <nop>TML (Topic Markup Language). 
 Note, that most of the tags are tightly related to the
 data model of BlogUp, i.e. it relies on its <nop>TopicType and <nop>DataForm 
 definitions. 
@@ -186,17 +186,17 @@ Read
    * [[http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=3391][Foundations of Statistical Natural Language Processing]]
    * [[http://www.perl.com/pub/a/2003/02/19/engine.html][Building a Vector Space Search Engine in Perl]]
    * [[http://search.cpan.org/~mceglows/Search-VectorSpace-0.02/][Search-VectorSpace]]
-And send me a patch if you've coded that into TWiki ;).
+And send me a patch if you've coded that into Foswiki ;).
 
 ---++ Plugin Installation Instructions
 
-   * [[http://twiki.org/p/pub/Plugins/%TOPIC%/%TOPIC%.zip][Download]] and install 
+   * [[http://foswiki.org/pub/Extensions/%TOPIC%/%TOPIC%.zip][Download]] and install 
      all additionally required plugins listed in the
      [[#Plugin_Info][dependencies information]] below
    * Download the BlogPlugin ZIP file from the Plugin web (see below)
-   * Unzip ==%TOPIC%.zip== in your twiki installation directory. Content:
+   * Unzip ==%TOPIC%.zip== in your Foswiki installation directory. Content:
      | *File:* | *Description:* |
-     | ==data/TWiki/%TOPIC%.txt== | plugin topic |
+     | ==data/System/%TOPIC%.txt== | plugin topic |
      | ==data/_BlogPlugin/*.txt== | blog template web |
      | ==data/Main/BlogAdminGroup.txt== | blog admin group |
      | ==data/Main/BlogAuthorGroup.txt== | blog author group |
@@ -204,13 +204,13 @@ And send me a patch if you've coded that into TWiki ;).
      | ==lib/Foswiki/Plugins/%TOPIC%/Core.pm== | plugin core module |
      | ==lib/Foswiki/Plugins/%TOPIC%/Factory.pm== | rest interface for the <nop>BlogFactory |
      | ==lib/Foswiki/Plugins/%TOPIC%/WebDB.pm== | <nop>WebDB implementation for the <nop>DBCachePlugin |
-   * Open the TWiki [[%SCRIPTURL{"configure"}%][configuration]] dialog,
+   * Open the Foswiki [[%SCRIPTURL{"configure"}%][configuration]] dialog,
      enable the plugin and change the <nop>PluginsOrder to 
      _<nop>GluePlugin, <nop>SpreadSheetPlugin, <nop>IfDefinedPlugin, <nop>AliasPlugin_
    * Create a new Blog web using the _BlogPlugin template web
    * Edit the Main.BlogAdminGroup and the Main.BlogAuthorGroup to match your needs.
    * Optionally, run ==%TOPIC%_installer.pl== to automatically check and
-     install other TWiki modules that this module depends on. You can also do
+     install other Foswiki modules that this module depends on. You can also do
      this step manually.
    * Alternatively, manually make sure the dependencies listed in the table
      below are resolved.
@@ -218,9 +218,9 @@ And send me a patch if you've coded that into TWiki ;).
 
 ---++ Plugin Info
 <!-- provided for compatibility only
-   * Set SHORTDESCRIPTION = Basic blogging features used to implement the BlogUp <nop>TWikiApplication
+   * Set SHORTDESCRIPTION = Basic blogging features used to implement the BlogUp <nop>WikiApplication
 -->
-|  Plugin Author: | TWiki:Main.MichaelDaum |
+|  Plugin Author: | Foswiki:Main.MichaelDaum |
 |  Copyright &copy;: | 2006, MichaelDaum@WikiRing.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
 |  Version: | v0.99 |
@@ -386,9 +386,9 @@ And send me a patch if you've coded that into TWiki ;).
 		  lots of w3c fixes, mostly superfluous &lt;p>s in the wrong place; \
 		  css improvements |
 |  24 Jan 2006: | Initial version |
-|  TWiki Dependency: | $TWiki::Plugins::VERSION 1.1 |
+|  Foswiki Dependency: | $Foswiki::Plugins::VERSION 2.0 |
 |  Perl Version: | 5.8 |
 |  Plugin Home: | Foswiki:Extensions/%TOPIC% |
-|  Feedback: | Foswiki:Extensions/%TOPIC%Dev |
+|  Support: | Foswiki:Support/%TOPIC% |
 
--- TWiki:Main.MichaelDaum - 31 Aug 2006
+-- Foswiki:Main.MichaelDaum - 31 Aug 2006
