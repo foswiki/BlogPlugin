@@ -1,18 +1,5 @@
 /* blogging */
 
-/* debug 
-.blogEntryButton, .blogCategoryButton, .blogPageButton, .blogTopicButton,
-.blogAbout, .blogSideBar, .blogSideBarCommenter, .blogSideBarSection,
-.blogEntry, .blogHeadline, .blogInfo, .blogDate, .blogText, .blogMore,
-.blogComments, .blogComment, .blogCommentOdd, .blogCommentEven,
-.blogAddComment, .blogCommentCount, .blogCommentNr, .blogCommentDate,
-.blogSubComments, .blogSubComment, .blogRef, .blogNavigation, .blogRelated1,
-.blogRelated2, .blogRelated3, .blogNext, .blogPrev, .blogCommentText,
-.blogSubmitButton, .blogFeedCategory, .blogSideBarHeader {
-{
-   border:1px solid red;
-}
-*/
 .blogAbout {
   /*text-align:justify; */
   font-size:95%; 
@@ -29,13 +16,23 @@
   margin-bottom:0px;
 }
 
-.blogInfo {
-  padding-bottom:5px;
-}
-
 .blogText {
   text-align:justify;
   width:100%;
+}
+.blogText .alt,
+.blogText h1,
+.blogText h2,
+.blogText h3,
+.blogText h4,
+.blogText h5,
+.blogText h6,
+.blogText li {
+  text-align:left;
+}
+.blogText p {
+  margin:0px;
+  margin-top:0.7em;
 }
 .blogText cite {
   text-align:left;
@@ -50,7 +47,7 @@
 }
 
 .blogNavigation {
-  font-size:0.8em;
+  font-size:95%;
   margin-bottom:10px;
   padding:0px;
 }
@@ -94,9 +91,6 @@
 .blogCommentEven {
   margin-top:20px;
 }
-.blogCommentCount {
-  margin-left:10px;
-}
 .blogHeadline .blogCommentCount {
   font-size:2em;
   text-align:right;
@@ -104,11 +98,12 @@
 .blogEntryCount {
   text-align:right;
 }
+.natSideBar .blogSideBarHeader h1 {
+  margin-bottom:0px;
+  padding-bottom:0px;
+}
 .blogSideBarHeader {
   margin-bottom:2px;
-}
-.blogSideBar .blogEntryCount,
-.blogSideBar .blogCommentCount {
 }
 .blogComment {
   padding:5px;
@@ -147,7 +142,7 @@
 }
 
 .blogSideBarCommenter {
-  font-size:0.9em;
+  font-size:95%;
 }
 
 .blogSideBar form {
@@ -185,10 +180,6 @@
   font-weight:bold;
 }
 
-.blogSideBarAdmin li {
-  white-space:nowrap;
-}
-
 .blogAdminButtons,
 .blogAuthorButtons {
   margin-bottom:10px !important;
@@ -221,6 +212,20 @@
   text-align:center;
   margin:1em 0;
 }
+
+
+.blogEditFormTagCloud a.current,
+.blogArchiveModes a.current,
+.blogArchiveYear a.current,
+.blogArchiveMonth a.current,
+.blogArchiveLexMins a.current,
+.blogArchiveTagCloud a.current {
+  background:#f4f4f4;
+}
+.blogArchiveTagCloud a.hilite {
+  background:#f4f4f4;
+}
+
 .blogArchiveYear,
 .blogArchiveMonth {
   margin:10px;
@@ -242,14 +247,27 @@
   padding:20px 20px 15px 20px;
   line-height:200%;
 }
+.blogEditFormTagCloud {
+  text-align:center; 
+  line-height:200%;
+  padding:5px;
+  margin:0px 15px 10px 0px;
+}
 .blogArchiveLexMin a {
   margin:10px 0;
   font-size:1em;
   padding:0 5px;
 }
-.blogSideBarLastFM h1 a:after {
-  display:none;
+.blogLastFMInfo {
+  margin-bottom:0.5em;
+}
+.blogLastFMRadio {
+  text-align:center;
 }
 .blogGoogleAds {
   margin:5px auto;
+}
+.blogTechTag { /* don't display but make technorati happy */
+  font-size:2px;
+  color:white !important;
 }
