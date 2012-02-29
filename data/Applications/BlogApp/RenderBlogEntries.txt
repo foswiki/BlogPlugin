@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1319610036" format="1.1" reprev="15" version="15"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1329333461" format="1.1" reprev="15" version="17"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -88,7 +88,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
     <div class='blogText hyphenate'>
 $expand(text)
 ~~~
-      <span class='blogMore'>&#8230;&nbsp;[[$web.$topic][%MAKETEXT{"reply"}%]]</span>
+      <span class='blogMore'>&#8230;&nbsp;[[$web.$topic][%MAKETEXT{"more"}%]]</span>
       %CLEAR%
     </div>
     </div>"
