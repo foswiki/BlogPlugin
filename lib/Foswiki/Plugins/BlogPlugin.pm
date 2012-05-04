@@ -10,7 +10,7 @@
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details, published at 
+# GNU General Public License for more details, published at
 # http://www.gnu.org/copyleft/gpl.html
 #
 ###############################################################################
@@ -21,41 +21,43 @@ use warnings;
 use Error qw(:try);
 
 our $core;
-our $VERSION = '$Rev$';
-our $RELEASE = '2.00';
+our $VERSION           = '$Rev$';
+our $RELEASE           = '2.00';
 our $NO_PREFS_IN_TOPIC = 1;
-our $SHORTDESCRIPTION = 'Basic blogging features used to implement the BlogApp <nop>WikiApplication';
+our $SHORTDESCRIPTION =
+  'Basic blogging features used to implement the BlogApp <nop>WikiApplication';
 our $baseTopic;
 our $baseWeb;
 
 ###############################################################################
 sub initPlugin {
-  ($baseTopic, $baseWeb) = @_;
+    ( $baseTopic, $baseWeb ) = @_;
 
-  $core = undef;
+    $core = undef;
 
-  Foswiki::Func::registerRESTHandler('blogconvert', \&handleBlogConvert);
+    Foswiki::Func::registerRESTHandler( 'blogconvert', \&handleBlogConvert );
 
-  return 1;
+    return 1;
 }
 
 ###############################################################################
-sub handleBlogConvert { 
+sub handleBlogConvert {
 
-  require Foswiki::Plugins::BlogPlugin::Converter;
-  my $converter = new Foswiki::Plugins::BlogPlugin::Converter;
+    require Foswiki::Plugins::BlogPlugin::Converter;
+    my $converter = new Foswiki::Plugins::BlogPlugin::Converter;
 
-  my @params = @_;
+    my @params = @_;
 
-  try {
-    $converter->convert(@params);
-  } catch Error::Simple with {
-    my $error = shift;
+    try {
+        $converter->convert(@params);
+    }
+    catch Error::Simple with {
+        my $error = shift;
 
-    print STDERR "ERROR: ".$error->{-text}."\n";
-  };
+        print STDERR "ERROR: " . $error->{-text} . "\n";
+    };
 
-  return "";
+    return "";
 }
 
 1;
