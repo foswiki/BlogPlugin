@@ -49,10 +49,8 @@
 }
 .blogCategoryTitle {
   border:0px;
-  float:left;
-}
-.blogCategoryTitle h1 {
   margin-top:0px;
+  color:gray;
 }
 
 #patternScreen .blogEntry {

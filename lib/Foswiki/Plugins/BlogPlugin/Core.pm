@@ -26,27 +26,27 @@ our $debug = 0;    # toggle me
 ###############################################################################
 # static
 sub inlineError {
-    return "<span class='foswikiAlert'>" . $_[0] . "</span>";
+  return "<span class='foswikiAlert'>" . $_[0] . "</span>";
 }
 
 ###############################################################################
 # static
 sub writeDebug {
 
-    #Foswiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
-    print STDERR "- BlogPlugin - $_[0]\n" if $debug;
+  #Foswiki::Func::writeDebug('- BlogPlugin - ' . $_[0]) if $debug;
+  print STDERR "- BlogPlugin - $_[0]\n" if $debug;
 }
 
 ###############################################################################
 sub new {
-    my ( $class, $baseWeb, $baseTopic ) = @_;
+  my ($class, $baseWeb, $baseTopic) = @_;
 
-    my $this = bless( {}, $class );
+  my $this = bless({}, $class);
 
-    $this->{baseWeb}   = $baseWeb;
-    $this->{baseTopic} = $baseTopic;
+  $this->{baseWeb} = $baseWeb;
+  $this->{baseTopic} = $baseTopic;
 
-    return $this;
+  return $this;
 }
 
 1;

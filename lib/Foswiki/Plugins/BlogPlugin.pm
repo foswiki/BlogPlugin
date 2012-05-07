@@ -21,43 +21,42 @@ use warnings;
 use Error qw(:try);
 
 our $core;
-our $VERSION           = '$Rev$';
-our $RELEASE           = '2.00';
+our $VERSION = '$Rev$';
+our $RELEASE = '2.00';
 our $NO_PREFS_IN_TOPIC = 1;
-our $SHORTDESCRIPTION =
-  'Basic blogging features used to implement the BlogApp <nop>WikiApplication';
+our $SHORTDESCRIPTION = 'Basic blogging features used to implement the BlogApp <nop>WikiApplication';
 our $baseTopic;
 our $baseWeb;
 
 ###############################################################################
 sub initPlugin {
-    ( $baseTopic, $baseWeb ) = @_;
+  ($baseTopic, $baseWeb) = @_;
 
-    $core = undef;
+  $core = undef;
 
-    Foswiki::Func::registerRESTHandler( 'blogconvert', \&handleBlogConvert );
+  Foswiki::Func::registerRESTHandler('blogconvert', \&handleBlogConvert);
 
-    return 1;
+  return 1;
 }
 
 ###############################################################################
 sub handleBlogConvert {
 
-    require Foswiki::Plugins::BlogPlugin::Converter;
-    my $converter = new Foswiki::Plugins::BlogPlugin::Converter;
+  require Foswiki::Plugins::BlogPlugin::Converter;
+  my $converter = new Foswiki::Plugins::BlogPlugin::Converter;
 
-    my @params = @_;
+  my @params = @_;
 
-    try {
-        $converter->convert(@params);
-    }
-    catch Error::Simple with {
-        my $error = shift;
+  try {
+    $converter->convert(@params);
+  }
+  catch Error::Simple with {
+    my $error = shift;
 
-        print STDERR "ERROR: " . $error->{-text} . "\n";
-    };
+    print STDERR "ERROR: " . $error->{-text} . "\n";
+  };
 
-    return "";
+  return "";
 }
 
 1;
