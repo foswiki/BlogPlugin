@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1304953256" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1344609004" format="1.1" version="4"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -22,7 +22,7 @@
   }%
   %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
-    format="&#124; [[%USERSWEB%.$expand(createauthor)][$expand(createauthor)]]"
+    format="&#124; [[%USERSWEB%.$expand(createauthor)]]"
   }%
   %CATINFO{
     "%BASEWEB%.%BASETOPIC%" 
@@ -42,7 +42,7 @@
 %DBCALL{"Applications.RenderFunctionCallers"}%
 
 ---++ Copyright
-&copy; 2005-2011 http://michaeldaumconsulting.com
+&copy; 2005-2012 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 

@@ -1,5 +1,4 @@
 data/Applications/BlogApp/ApplicationTopic.txt 0644
-data/Applications/BlogApp/BlogApp.txt 0644
 data/Applications/BlogApp/BlogEntry0.txt 0644
 data/Applications/BlogApp/BlogEntryEditTemplate.txt 0644
 data/Applications/BlogApp/BlogEntryRenderSolrSearchItem.txt 0644
@@ -11,6 +10,7 @@ data/Applications/BlogApp/CategoryBrowser.txt 0644
 data/Applications/BlogApp/Category.txt 0644
 data/Applications/BlogApp/CategoryViewTemplate.txt 0644
 data/Applications/BlogApp/ClassifiedTopic.txt 0644
+data/Applications/BlogApp/CompleteDocumentation.txt 0644
 data/Applications/BlogApp/DataFormAttribute.txt 0644
 data/Applications/BlogApp/DataForm.txt 0644
 data/Applications/BlogApp/DocuTopic.txt 0644

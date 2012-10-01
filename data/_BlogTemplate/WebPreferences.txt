@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1275569295" format="1.1" reprev="2" version="3"}%
+%META:TOPICINFO{author="ProjectContributor" date="1348845308" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---+!! <nop>%WEB% Web Preferences
 
@@ -59,11 +59,11 @@
 *Web*:
    * #Set DENYWEBVIEW = 
    * Set ALLOWWEBVIEW = %USERSWEB%.AdminGroup
-   * #Set DENYWEBCHANGE = 
+   * Set DENYWEBCHANGE = %USERSWEB%.WikiGuest
    * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
    * #Set DENYWEBRENAME = 
    * Set ALLOWWEBRENAME = %USERSWEB%.AdminGroup
-   * Set ALLOWWEBCOMMENT = 
+   * Set DENYWEBCOMMENT = %USERSWEB%.WikiGuest
    * Set ALLOWWEBMODERATE = %USERSWEB%.BlogAuthorGroup
 
 *Moderation*:
@@ -72,4 +72,3 @@
 *Topic*:
    * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
    * Set ALLOWTOPICRENAME = %USERSWEB%.AdminGroup
-

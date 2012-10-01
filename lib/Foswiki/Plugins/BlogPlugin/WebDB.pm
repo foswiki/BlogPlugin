@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2005-2006 MichaelDaum@WikiRing.com
+# Copyright (C) 2005-2012 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,8 +20,9 @@ package Foswiki::Plugins::BlogPlugin::WebDB;
 use strict;
 use warnings;
 
-use Foswiki::Plugins::DBCachePlugin::WebDB ();
+use Foswiki::Plugins::DBCachePlugin::WebDB();
 use Time::Local;
+
 @Foswiki::Plugins::BlogPlugin::WebDB::ISA = ("Foswiki::Plugins::DBCachePlugin::WebDB");
 
 use vars qw( %MON2NUM );

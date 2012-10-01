@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1328026513" format="1.1" reprev="6" version="6"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1342208371" format="1.1" reprev="6" version="8"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -26,7 +26,7 @@
   hidenull="on" 
   web="%BASEWEB%" 
   header="<div class='blogSideBarSection blogSideBarRecent'> 
-    <h2 >%IF{"defined CAT"
+    <h2 >%IF{"defined CAT and '%CAT%'!=''"
         then="%MAKETEXT{"Other postings in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
         else="%MAKETEXT{"Latest"}%"
       }%</h2>

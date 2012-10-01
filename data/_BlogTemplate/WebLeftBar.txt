@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1178746198" format="1.1" version="$Rev$"}%
+%META:TOPICINFO{author="ProjectContributor" date="1178746198" format="1.1" version="1"}%
 %INCLUDE{"WebSideBar"}%
 
 %META:PREFERENCE{name="SIDEBAR" title="SIDEBAR" type="Set" value="Admin"}%

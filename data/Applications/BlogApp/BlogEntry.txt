@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1332751827" format="1.1" reprev="15" version="18"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1332751827" format="1.1" reprev="15" version="18"}%
 %META:TOPICPARENT{name="TopicType"}%
 %DBCALL{"Applications.RenderTopicInstaller" TEXT="Install '%TOPIC%' TopicType" TYPE="TopicType"}%
 

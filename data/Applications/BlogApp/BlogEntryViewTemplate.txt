@@ -5,11 +5,29 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
+%TMPL:DEF{"metatitle"}%%IF{"'%WEB%.%TOPIC%'/MetaTitle" 
+  then="<meta name='title' content='$percntENCODE{\"$percntFORMFIELD{MetaTitle}$percnt\" type=\"html\"}$percnt' />"
+  else="<meta name='title' content='$percntENCODE{\"$percntGETTOPICTITLE$percnt\" type=\"html\"}$percnt' />"
+}%%TMPL:END%
+
+%TMPL:DEF{"metakeywords"}%%IF{"'%WEB%.%TOPIC%'/MetaKeywords" 
+  then="<meta name='keywords' content='$percntENCODE{\"$percntFORMFIELD{MetaKeywords}$percnt\" type=\"html\"}$percnt' />"
+  else="$percntFORMFIELD{\"Tag\" format=\"<meta name='keywords' content='$dollarpercntENCODE{\\"$value\\" type=\\"html\\"}$dollarpercnt' />\"}$percnt"
+}%%TMPL:END%
+
+%TMPL:DEF{"metadescription"}%%IF{"'%WEB%.%TOPIC%'/MetaDescription" 
+  then="<meta name='description' content='$percntENCODE{\"$percntFORMFIELD{MetaDescription}$percnt\" type=\"html\"}$percnt' />"
+  else="$percntFORMFIELD{\"Summary\" format=\"<meta name='description' content='$dollarpercntENCODE{\\"$value\\" type=\\"html\\"}$dollarpercnt' />\"}$percnt"
+}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
 %TMPL:DEF{"beforetext"}%<!-- -->
 <div class="blogEntry hyphenate">
 %DBCALL{"Applications.BlogApp.RenderBlogEntryPagination" CLASS="blogTopPagination"}%
 <div class="foswikiTopicInfo">
 %DBCALL{"Applications.BlogApp.RenderBlogEntryTitle" TITLE_EXTRA="%TMPL:P{"titleextra"}%"}%<!-- -->
+%JQREQUIRE{"button"}%<!-- -->
 %ADDTOZONE{"head"
   id="BLOGPLUGIN::CSS"
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />"

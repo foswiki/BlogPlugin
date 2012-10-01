@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1328085067" format="1.1" reprev="11" version="11"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1342208547" format="1.1" reprev="13" version="13"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -21,14 +21,14 @@ latter is used automatically when !SolrPlugin is installed.
 %METACOMMENTS{
   web="%BASEWEB%" 
   topic="%HOMETOPIC%"
-  search="State!='unpublished' %IF{"defined CAT" then="AND topic ISA '%CAT%'"}%"
+  search="State!='unpublished' %IF{"defined CAT and '%CAT%'!=''" then="AND topic ISA '%CAT%'"}%"
   sort="date"
   reverse="on"
   approved="on"
   mindate="%CALC{"$TIMEADD($TIME(), -1, month)"}%"
   limit="%IF{"defined LIMIT" then="%LIMIT%" else="10"}%"
   header="<div class='blogSideBarSection'>
-    <h2 >%IF{"defined CAT"
+    <h2 >%IF{"defined CAT and '%CAT%'!=''"
         then="%MAKETEXT{"Comments in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
         else="%MAKETEXT{"Comments"}%"
       }%</h2>
