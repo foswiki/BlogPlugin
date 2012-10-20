@@ -1,4 +1,5 @@
-%META:TOPICINFO{author="ProjectContributor" date="1178746198" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1350478286" format="1.1" version="2"}%
 %INCLUDE{"WebSideBar"}%
 
 %META:PREFERENCE{name="SIDEBAR" title="SIDEBAR" type="Set" value="Admin"}%
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%

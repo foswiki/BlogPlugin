@@ -61,11 +61,9 @@ data/Applications/BlogApp/WebTopicViewTemplate.txt 0644
 data/Applications/BlogApp/WikiApplication.txt 0644
 data/Applications/BlogApp/WikiTopic.txt 0644
 data/_BlogTemplate/BlogEntry.txt 0644
-data/_BlogTemplate/CategorizedTopic.txt 0644
 data/_BlogTemplate/Category.txt 0644
 data/_BlogTemplate/ClassifiedTopic.txt 0644
 data/_BlogTemplate/TopCategory.txt 0644
-data/_BlogTemplate/TopicStub.txt 0644
 data/_BlogTemplate/TopicType.txt 0644
 data/_BlogTemplate/WebAtom.txt 0644
 data/_BlogTemplate/WebChanges.txt 0644

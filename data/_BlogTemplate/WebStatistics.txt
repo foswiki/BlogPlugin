@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1239871759" format="1.1" version="1.2"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1350478356" format="1.1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---+ Statistics for <nop>%WEB% Web
 
@@ -7,3 +7,5 @@
 
 __Notes:__
    * Do not edit this topic, it is updated automatically. (You can also <a href="%SCRIPTURLPATH{statistics}%/%WEB%/%TOPIC%">force</a> an update)
+
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%

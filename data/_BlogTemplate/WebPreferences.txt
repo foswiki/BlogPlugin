@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1348845308" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1350478013" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---+!! <nop>%WEB% Web Preferences
 
@@ -6,7 +6,7 @@
 
 ---++ General settings
    * Set SITEMAPLIST = on
-   * Set WEBSUMMARY = 
+   * Set WEBSUMMARY = ([[WebPreferences][describe this blog]])
    * Set NOSEARCHALL = 
    * Set WEBBGCOLOR = 
    * Set NOAUTOLINK = on
@@ -31,7 +31,7 @@
    * Set NATSKIN_LAYOUT = fixed
       * possible values: fixed, bordered, fluid
    * #Set NATSKIN_VARIATION = 
-   * Set NATSKIN_SIDEBAR = right
+   * #Set NATSKIN_SIDEBAR = right
       * possible values: left, right, both, off
    * #Set NATSKIN_SIDEBARWIDTH = 19.23em
 
@@ -39,9 +39,10 @@
    * Set COMMNENTFORMAT = threaded
       * can be threaded, linear, reverse, insidetab
    * Set COMMENTMODERATION = on
+   * Set DISPLAYCOMMENTS = on
 
 ---++ !DataForm settings
-   * Set WEBFORMS = Applications.BlogApp.BlogEntry, Applications.ClassificationApp.ClassifiedTopic, Applications.ClassificationApp.CategorizedTopic, Applications.ClassificationApp.TaggedTopic
+   * Set WEBFORMS = Applications.BlogApp.BlogEntry, Applications.ClassificationApp.ClassifiedTopic
 
 ---++ !ClassificationPlugin settings
    * Set CLASSIFICATIONPLUGIN_AUTOREPARENT = on
@@ -58,17 +59,16 @@
 ---++ Access rights
 *Web*:
    * #Set DENYWEBVIEW = 
-   * Set ALLOWWEBVIEW = %USERSWEB%.AdminGroup
+   * #Set ALLOWWEBVIEW = 
    * Set DENYWEBCHANGE = %USERSWEB%.WikiGuest
-   * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
+   * #Set ALLOWWEBCHANGE =
    * #Set DENYWEBRENAME = 
-   * Set ALLOWWEBRENAME = %USERSWEB%.AdminGroup
+   * #Set ALLOWWEBRENAME =
    * Set DENYWEBCOMMENT = %USERSWEB%.WikiGuest
    * Set ALLOWWEBMODERATE = %USERSWEB%.BlogAuthorGroup
-
-*Moderation*:
-   * #Set ALLOWWEBMODERATE = %USERSWEB%.BlogAuthorGroup
 
 *Topic*:
    * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
    * Set ALLOWTOPICRENAME = %USERSWEB%.AdminGroup
+
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%

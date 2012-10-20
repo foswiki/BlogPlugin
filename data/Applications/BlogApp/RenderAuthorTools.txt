@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1348556615" format="1.1" reprev="6" version="8"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1350477839" format="1.1" reprev="6" version="10"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -13,7 +13,7 @@
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%%IF{"'%USERNAME%' ingroup 'BlogAuthorGroup'" 
+%STARTINCLUDE%%IF{"'%USERNAME%' ingroup 'BlogAuthorGroup' or '%USERNAME%' ingroup 'AdminGroup'" 
   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"tools\"}$percnt"
 }%%STOPINCLUDE%
 </verbatim>

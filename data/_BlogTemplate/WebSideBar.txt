@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1294232210" format="1.1" reprev="2" version="4"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1350478348" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 <verbatim class="tml">
 %STARTINCLUDE%%DBCALL{"Applications.BlogApp.RenderSideBar"}%%STOPINCLUDE%
@@ -11,3 +11,4 @@
 %META:FIELD{name="Tag" attributes="" title="Tag" value=""}%
 %META:FIELD{name="Category" attributes="" title="Category" value=""}%
 %META:PREFERENCE{name="SIDEBAR" title="SIDEBAR" type="Set" value="Admin"}%
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%
