@@ -80,7 +80,6 @@ data/_BlogTemplate/WebTopicEditTemplate.txt 0644
 data/_BlogTemplate/WebTopicList.txt 0644
 data/Main/BlogAdminGroup.txt 0644
 data/Main/BlogAuthorGroup.txt 0644
-data/System/BlogFactory.txt 0644
 data/System/BlogPlugin.txt 0644
 data/System/BlogUp.txt 0644
 lib/Foswiki/Plugins/BlogPlugin/Converter.pm 0644

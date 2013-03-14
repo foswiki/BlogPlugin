@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1342208547" format="1.1" reprev="13" version="13"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1358766567" format="1.1" reprev="16" version="16"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -32,48 +32,24 @@ latter is used automatically when !SolrPlugin is installed.
         then="%MAKETEXT{"Comments in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
         else="%MAKETEXT{"Comments"}%"
       }%</h2>
-    <$nopdirtyarea><ul>"
+    <ul>"
   format="<li>
      <a href='$permlink'>
-       <div class='foswikiRight'>
-         $percntTMPL:P{\"comment::photo\"
-           web=\"%USERSWEB%\"
-           topic=\"$author\"
-         }$percnt
-       </div>
-       <strong>$percntSPACEOUT{$author}$percnt</strong>
-       replied
-       $percntTIMESINCE{\"$modified\" 
-          format=\"<nobr>$time</nobr> ago\"
-       }$percnt 
-       on &#147;$percntGETTOPICTITLE{\"$web.$topic\"}$percnt&#148;
+       $percntTMPL:P{\"comment::photo\"
+         web=\"%USERSWEB%\"
+         topic=\"$author\"
+         align=\"right\"
+       }$percnt
+       $percntMAKETEXT{\"[_1] replied on [_2] [_3]\" 
+          args=\"<strong>$percntSPACEOUT{$author}$percnt</strong>, &#147;$percntGETTOPICTITLE{\"$web.$topic\"}$percnt&#148;,  $percntCALC{\"$FORMATTIME($timestamp, $day&&nbsp;$mon&&nbsp;$year)\"}$percnt\"
+       }$percnt
        %CLEAR%
      </a>
      </li>"
-  footer="</ul></$nopdirtyarea></div>"
+  footer="</ul></div>"
   separator="$n"
 }%<!-- -->
 </noautolink>%STOPINCLUDE%
-</verbatim>
-
----++ Photo
-<verbatim class="tml">
-%STARTSECTION{"photo"}%%IMAGE{
-  "%IF{"'%USERSWEB%.%AUTHOR%'/Photo"
-    then="$percntFORMFIELD{\"Photo\" topic=\"%USERSWEB%.%AUTHOR%\"}$percnt" 
-    else="%IF{"'%USERSWEB%.%AUTHOR%'/attachments[name=~'\.(gif|png|jpe?g)$']"
-      then="%QUERY{"'%USERSWEB%.%AUTHOR%'/attachments[name=~'\.(gif|png|jpe?g)'][0].name"}%"
-      else="%PUBURLPATH%/%SYSTEMWEB%/MetaCommentPlugin/nobody.gif"
-    }%"
-  }%"
-  topic="%USERSWEB%.%AUTHOR%"
-  type="plain"
-  align="right"
-  size="48"
-  style="margin-bottom:0px"
-  crop="northwest"
-  title="%SPACEOUT{%AUTHOR%}%"
-}%<!-- -->%ENDSECTION{"photo"}%
 </verbatim>
 
 ---++ Test
@@ -82,10 +58,9 @@ latter is used automatically when !SolrPlugin is installed.
 %DBCALL{"Applications.RenderFunctionCallers"}%
 
 ---++ Copyright
-&copy; 2005-2012 http://michaeldaumconsulting.com
+&copy; 2005-2013 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
 
 %META:FORM{name="Applications.ApplicationTopic"}%
 %META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%

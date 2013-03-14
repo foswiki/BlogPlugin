@@ -6,4 +6,3 @@ Foswiki::Plugins::NatSkin,>=4.0,perl,Recommended.
 Foswiki::Plugins::RedDotPlugin,>=3.00,perl,Required.
 Foswiki::Plugins::SolrPlugin,>=1.10,perl,Recommended.
 Foswiki::Plugins::TagCloudPlugin,>=2.21,perl,Required.
-Foswiki::Plugins::TimeSincePlugin,>=3.00,perl,Required.

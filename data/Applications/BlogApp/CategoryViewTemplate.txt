@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1334848015" format="1.1" reprev="19" version="19"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1359477662" format="1.1" reprev="22" version="22"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.CategoryView"}%
@@ -11,9 +11,10 @@
 %{<verbatim class="tml">}%
 %TMPL:DEF{"content"}%<!-- -->
 %FORMATLIST{
-  "%IF{"defined catname" 
-     then="%CATINFO{cat="%URLPARAM{"catname"}%" format="$title"}%"
-   }%%IF{"defined time"
+  "%CATINFO{
+    cat="%URLPARAM{"catname" default="%BASETOPIC%"}%" 
+    format="$title"
+  }%%IF{"defined time"
      then=", %CALC{"$FORMATTIME(%URLPARAM{"time"}%, $mon $year)"}%"
   }%"
   header="<h1 class='blogCategoryTitle'>" 
@@ -41,7 +42,7 @@
   id="BLOGPLUGIN::CSS" 
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />" 
 }%<!-- -->
-%TMPL:P{context="InfiniteScrollEnabled" then="infinitescroll"}%<!-- -->
+%TMPL:P{context="DISInfiniteScrollEnabled" then="infinitescroll"}%<!-- -->
 <!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
 <!-- -->%TMPL:END%
 %{</verbatim>}%
@@ -106,3 +107,5 @@ jQuery(function($) {
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="special category view for blogs"}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:PREFERENCE{name="NATSKIN_STYLE" title="NATSKIN_STYLE" type="Local" value="mdc"}%
+%META:PREFERENCE{name="NATSKIN_LAYOUT" title="NATSKIN_LAYOUT" type="Local" value="fixed"}%

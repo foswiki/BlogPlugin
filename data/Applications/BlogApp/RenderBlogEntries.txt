@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1334846906" format="1.1" reprev="15" version="21"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1358761665" format="1.1" reprev="24" version="24"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -73,12 +73,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         $percntREDDOT{\"$web.$topic\"}$percnt<!-- -->
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
       </h2>
-      <$nopdirtyarea>
-        $percntTIMESINCE{ 
-        \"$expand(createdate)\" 
-        format=\"<nop>$time ago\"  
-        null=\"about now\" 
-      }$percnt </$nopdirtyarea> 
+      <nop>$formatTime(createdate, '$day $mon $year')
       &#124; [[%USERSWEB%.$expand(createauthor)][$expand(createauthor)]]
       $percntCATINFO{
         topic=\"$web.$topic\"
@@ -90,7 +85,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
       }$percnt<!-- -->
     </div>
     <div class='blogText hyphenate'>
-$expand(text) <span class='blogMore'>&#8230;&nbsp;[[$web.$topic][%MAKETEXT{"more"}%]]</span>
+$percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web.$topic][%MAKETEXT{"more"}%]]</span>
       %CLEAR%
     </div>
     </div>"

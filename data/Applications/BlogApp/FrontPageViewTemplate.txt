@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1329332872" format="1.1" reprev="14" version="16"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1359048572" format="1.1" reprev="14" version="19"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"view"}%
@@ -29,7 +29,7 @@
   id="BLOGPLUGIN::CSS" 
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />" 
 }%<!-- -->
-%TMPL:P{context="InfiniteScrollEnabled" then="infinitescroll"}%<!-- -->
+%TMPL:P{context="InfiniteScrollEnabled" then="DISinfinitescroll"}%<!-- -->
 <!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
 <!-- -->%TMPL:END%
 %{</verbatim>}%

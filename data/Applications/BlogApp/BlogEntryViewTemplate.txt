@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1329317556" format="1.1" reprev="17" version="17"}%
+%META:TOPICINFO{author="micha" comment="save topic" date="1359048613" format="1.1" reprev="17" version="20"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.ClassifiedTopicView"}%
@@ -24,7 +24,6 @@
 %{<verbatim class="tml">}%
 %TMPL:DEF{"beforetext"}%<!-- -->
 <div class="blogEntry hyphenate">
-%DBCALL{"Applications.BlogApp.RenderBlogEntryPagination" CLASS="blogTopPagination"}%
 <div class="foswikiTopicInfo">
 %DBCALL{"Applications.BlogApp.RenderBlogEntryTitle" TITLE_EXTRA="%TMPL:P{"titleextra"}%"}%<!-- -->
 %JQREQUIRE{"button"}%<!-- -->
