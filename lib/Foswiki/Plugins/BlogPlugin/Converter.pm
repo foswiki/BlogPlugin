@@ -431,19 +431,23 @@ sub convertBlogEntry {
 
   $newTopic->putKeyed("PREFERENCE", { name => "DISPLAYCOMMENTS", title => "DISPLAYCOMMENTS", type => "Local", value => "on" });
 
+  my @authors = map {Foswiki:Func::getCanonicalUserID($_) || $_} split(/\s*,\s*/, $meta->get("FIELD", "BlogAuthor")->{value} || '');
+  @authors = ('UnknownUser') unless @authors;
+  #print STDERR "authors=@author\n";
+
+  push @fields, {
+    name => 'Author',
+    title => 'Author',
+    value => join(", ", @authors);
+  };
+
   $newTopic->putAll("FIELD", @fields);
-
-  my $author = $meta->get("FIELD", "BlogAuthor")->{value};
-  $author =~ s/^.*\.//g;    # strip web
-  $author = Foswiki::Func::getCanonicalUserID($author) || $author;
-
-  #print STDERR "author=$author\n";
 
   my $date = $meta->get("FIELD", "Date")->{value};
   $date = Foswiki::Time::parseTime($date);
 
   # save it once, and then ...
-  $newTopic->save(forcedate => $date, author => $author);
+  $newTopic->save(forcedate => $date, author => $authors[0]);
 
   # ... force a second revision to freeze the create time and author
   $newTopic->save(forcedate => $date, author => $author, forcenewrevision => 1);

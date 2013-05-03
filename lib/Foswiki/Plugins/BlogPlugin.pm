@@ -21,7 +21,7 @@ use warnings;
 use Error qw(:try);
 
 our $core;
-our $VERSION = '$Rev$';
+our $VERSION = '2.00';
 our $RELEASE = '2.00';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'Basic blogging features used to implement the <nop>BlogApp <nop>WikiApplication';

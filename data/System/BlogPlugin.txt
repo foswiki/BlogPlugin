@@ -6,8 +6,6 @@ This is the supplemental plugin for the !BlogApp <nop>WikiApplication.
 It bundles some of the features found in common blogging applications 
 that are very hard or even impossible to implement using <nop>TML (Topic Markup Language). 
 
-Shortcut: want to create a blog ... use the BlogFactory.
-
 ---++ Syntax Rules
 
 ---+++ PREVDOC, NEXTDOC

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="save topic" date="1358761674" format="1.1" version="7"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1367600480" format="1.1" reprev="8" version="8"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -22,7 +22,12 @@
   }%
   %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
-    format="&#124; [[%USERSWEB%.$expand(createauthor)]]"
+    format="&#124; $percntFORMATLIST{
+      \"$expand(Author or createauthor)\" 
+      split=\"\s*,\s*\" 
+      format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\" 
+      separator=\", \"
+    }$percnt"
   }%
   %CATINFO{
     "%BASEWEB%.%BASETOPIC%" 
@@ -42,7 +47,7 @@
 %DBCALL{"Applications.RenderFunctionCallers"}%
 
 ---++ Copyright
-&copy; 2005-2012 http://michaeldaumconsulting.com
+&copy; 2005-2013 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 
