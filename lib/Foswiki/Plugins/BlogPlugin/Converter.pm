@@ -431,14 +431,14 @@ sub convertBlogEntry {
 
   $newTopic->putKeyed("PREFERENCE", { name => "DISPLAYCOMMENTS", title => "DISPLAYCOMMENTS", type => "Local", value => "on" });
 
-  my @authors = map {Foswiki:Func::getCanonicalUserID($_) || $_} split(/\s*,\s*/, $meta->get("FIELD", "BlogAuthor")->{value} || '');
+  my @authors = map {Foswiki::Func::getCanonicalUserID($_) || $_} split(/\s*,\s*/, $meta->get("FIELD", "BlogAuthor")->{value} || '');
   @authors = ('UnknownUser') unless @authors;
-  #print STDERR "authors=@author\n";
+  #print STDERR "authors=@authors\n";
 
   push @fields, {
     name => 'Author',
     title => 'Author',
-    value => join(", ", @authors);
+    value => join(", ", @authors),
   };
 
   $newTopic->putAll("FIELD", @fields);
@@ -447,14 +447,24 @@ sub convertBlogEntry {
   $date = Foswiki::Time::parseTime($date);
 
   # save it once, and then ...
-  $newTopic->save(forcedate => $date, author => $authors[0]);
-
+  try {
+    $newTopic->save(forcedate => $date, author => $authors[0]);
+  } catch Error::Simple with {
+    my $error = shift;
+    print STDERR "ERROR: $error\n";
+  };
+ 
   # ... force a second revision to freeze the create time and author
-  $newTopic->save(forcedate => $date, author => $author, forcenewrevision => 1);
+  try {
+    $newTopic->save(forcedate => $date, author => $authors[0], forcenewrevision => 1);
+  } catch Error::Simple with {
+    my $error = shift;
+    print STDERR "ERROR: $error\n";
+  };
 
   foreach my $attachment ($meta->find('FILEATTACHMENT')) {
     print STDERR "### copying attachment $attachment->{name}\n";
-    $meta->copyAttachment($attachment->{name}, $newTopic, user => $author);
+    $meta->copyAttachment($attachment->{name}, $newTopic, user => $authors[0]);
   }
 }
 
