@@ -1,6 +1,8 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1299097553" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="micha" comment="save topic" date="1367628007" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
+%STARTSECTION{"teaser"}%
 
+%ENDSECTION{"teaser"}%
 
 %META:FORM{name="Applications.BlogApp.BlogEntry"}%
 %META:FIELD{name="TopicType" title="TopicType" value="BlogEntry, ClassifiedTopic, CategorizedTopic, TaggedTopic"}%
@@ -8,3 +10,9 @@
 %META:FIELD{name="Summary" attributes="" title="Summary" value=""}%
 %META:FIELD{name="Tag" attributes="" title="Tag" value=""}%
 %META:FIELD{name="Category" attributes="" title="Category" value=""}%
+%META:FIELD{name="Author" attributes="" title="Author" value=""}%
+%META:FIELD{name="State" attributes="" title="State" value="unpublished"}%
+%META:FIELD{name="Sticky" attributes="" title="Sticky" value=""}%
+%META:FIELD{name="MetaDescription" attributes="" title="Meta Description" value=""}%
+%META:FIELD{name="MetaKeywords" attributes="" title="Meta Keywords" value=""}%
+%META:DISQUS{name="21211fec12bb65e87ce0bb936929c2ef"}%

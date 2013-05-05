@@ -1,0 +1,55 @@
+%META:TOPICINFO{author="micha" comment="reprev" date="1367740466" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="TopicFunction"}%
+%TOC{depth="2"}%
+
+---++ Documentation
+%STARTSECTION{"documentation"}%
+
+---+++++ Parameters
+   * THETOPIC to display the counts for
+   * COMMENTSYSTEM 
+
+%ENDSECTION{"documentation"}%
+
+---++ Implementation
+<verbatim class="tml">
+%STARTINCLUDE%%DBCALL{
+   "Applications.BlogApp.RenderNumberOfComments"
+   section="%COMMENTSYSTEM{default="metacomment"}%" 
+   THETOPIC="%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%"
+   warn="off"
+}%%STOPINCLUDE%
+</verbatim>
+---+++ metacomment
+<verbatim class="tml">
+%STARTSECTION{"metacomment"}%%METACOMMENTS{
+   topic="$web.$topic"
+   approval="on"
+   format="$count" 
+   limit="1"
+   singular="1" 
+   plural="$count"
+}%%ENDSECTION{"metacomment"}%
+</verbatim>
+
+---+++ disqus
+<verbatim class="tml">
+%STARTSECTION{"disqus"}%%DISQUS_COUNT{"%THETOPIC%"}%%ENDSECTION{"disqus"}%
+</verbatim>
+
+---++ Test
+%DBCALL{"%TOPIC%"}%
+
+%DBCALL{"Applications.RenderFunctionCallers"}%
+
+---++ Copyright
+&copy; 2005 2013 http://michaeldaumconsulting.com
+
+%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
+
+%META:FORM{name="Applications.ApplicationTopic"}%
+%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
+%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
+%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

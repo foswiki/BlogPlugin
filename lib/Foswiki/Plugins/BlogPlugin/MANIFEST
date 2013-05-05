@@ -2,6 +2,7 @@ data/Applications/BlogApp/ApplicationTopic.txt 0644
 data/Applications/BlogApp/BlogEntry0.txt 0644
 data/Applications/BlogApp/BlogEntryEditTemplate.txt 0644
 data/Applications/BlogApp/BlogEntryRenderSolrSearchItem.txt 0644
+data/Applications/BlogApp/BlogEntryTemplate.txt 0644
 data/Applications/BlogApp/BlogEntry.txt 0644
 data/Applications/BlogApp/BlogEntryViewTemplate.txt 0644
 data/Applications/BlogApp/BlogSearchViewTemplate.txt 0644
@@ -29,8 +30,10 @@ data/Applications/BlogApp/RenderBlogEntryPagination.txt 0644
 data/Applications/BlogApp/RenderBlogEntryTitle.txt 0644
 data/Applications/BlogApp/RenderCategories.txt 0644
 data/Applications/BlogApp/RenderHelpText.txt 0644
+data/Applications/BlogApp/RenderNumberOfComments.txt 0644
 data/Applications/BlogApp/RenderRecentBlogEntries.txt 0644
 data/Applications/BlogApp/RenderRecentComments.txt 0644
+data/Applications/BlogApp/RenderRss.txt 0644
 data/Applications/BlogApp/RenderSideBar.txt 0644
 data/Applications/BlogApp/RenderSimilarBlogEntries.txt 0644
 data/Applications/BlogApp/ReviewCategory.txt 0644
@@ -56,8 +59,8 @@ data/Applications/BlogApp/WebSearchAdvanced.txt 0644
 data/Applications/BlogApp/WebSearch.txt 0644
 data/Applications/BlogApp/WebStatistics.txt 0644
 data/Applications/BlogApp/WebTool.txt 0644
+data/Applications/BlogApp/WebTopicEditTemplate.txt 0644
 data/Applications/BlogApp/WebTopicList.txt 0644
-data/Applications/BlogApp/WebTopicViewTemplate.txt 0644
 data/Applications/BlogApp/WikiApplication.txt 0644
 data/Applications/BlogApp/WikiTopic.txt 0644
 data/_BlogTemplate/BlogEntry.txt 0644

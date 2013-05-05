@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1358761665" format="1.1" reprev="24" version="24"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1367740468" format="1.1" reprev="27" version="27"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -58,14 +58,11 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
   format="<div class='blogEntry'>
     <div class='foswikiTopicInfo'>
       <h2>
-        $percntMETACOMMENTS{
-          topic=\"$web.$topic\"
-          approval=\"on\"
-          format=\"<div class='blogCommentCount foswikiRight'>$dollarcount</div>\" 
-          limit=\"1\"
-          singular=\"1\" 
-          plural=\"$dollarcount\"
-        }$percnt<!-- -->
+        <div class='blogCommentCount foswikiRight'>
+        $percntDBCALL{\"Applications.BlogApp.RenderNumberOfComments\"
+          THETOPIC=\"$web.$topic\"
+          COMMENTSYSTEM=\"%COMMENTSYSTEM{default="metacomment"}%\"
+        }$percnt</div>
         [[$web.$topic]] 
         $percntIF{\"'$expand(State)' = 'unpublished'\"
           then=\"<span class='foswikiAlert foswikiSmall'>(%MAKETEXT{"unpublished"}%)</span>\"
@@ -74,7 +71,12 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
       </h2>
       <nop>$formatTime(createdate, '$day $mon $year')
-      &#124; [[%USERSWEB%.$expand(createauthor)][$expand(createauthor)]]
+      &#124; $percntFORMATLIST{ 
+         \"$expand(Author or createauthor)\"  
+         split=\"\s*,\s*\"  
+         format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
+         separator=\", \" 
+      }$percnt
       $percntCATINFO{
         topic=\"$web.$topic\"
         header=\"&#124; \"
@@ -116,10 +118,10 @@ $percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web
 <table class='foswikiNullTable' width='100%'>
 <tr> 
 <td class='blogPrev'> 
-<a %IF{"%SKIP% = 0" then="style='display:none'"}%' href='%SCRIPTURL{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(thePrevSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>&#171;&nbsp;%MAKETEXT{"previous page"}%</a> 
+<a %IF{"%SKIP% = 0" then="style='display:none'"}%' href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(thePrevSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>&#171;&nbsp;%MAKETEXT{"previous page"}%</a> 
 </td> 
 <td class='blogNext' align='right'> 
-<a %IF{"%CALC{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}% href='%SCRIPTURL{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(theNextSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>%MAKETEXT{"next page"}%&nbsp;&#187;</a> 
+<a %IF{"%CALC{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(theNextSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>%MAKETEXT{"next page"}%&nbsp;&#187;</a> 
 </td> 
 </tr>
 </table> 

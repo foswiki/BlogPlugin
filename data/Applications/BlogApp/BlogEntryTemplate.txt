@@ -1,0 +1,11 @@
+%META:TOPICINFO{author="micha" date="1367627921" format="1.1" version="1"}%
+%META:TOPICPARENT{name="TopicTemplate"}%
+%STARTSECTION{"teaser"}%
+
+%ENDSECTION{"teaser"}%
+
+%META:FORM{name="Applications.ApplicationTopic"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicTemplate"}%
+%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value="BlogEntryTemplate"}%
+%META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
+%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
