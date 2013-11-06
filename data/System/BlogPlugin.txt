@@ -1,10 +1,43 @@
-%META:TOPICINFO{author="ProjectContributor" date="1139389084" format="1.1" version="1.1"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1383743992" format="1.1" reprev="3" version="3"}%
 ---+!! <nop>%TOPIC%
 %TOC%
 
-This is the supplemental plugin for the !BlogApp <nop>WikiApplication.
-It bundles some of the features found in common blogging applications 
-that are very hard or even impossible to implement using <nop>TML (Topic Markup Language). 
+This plugin comes as a !WikiApp to run a weblog using Foswiki. 
+Based on the [[Foswiki:Extensions/WikiWorkbenchContrib][WikiWorkbench approach]], it may be used
+to instantiate as many blogs as you like on the same Foswiki site.
+
+---++ Features
+
+   * easy to use
+   * comes with a simple two step workflow to publish blog postings
+   * extensible categorization and tagging system
+   * automatic recommendation system for further reading (based on Foswiki:Extensions/SolrPlugin)
+   * pluggable commenting system, either locally hosted using Foswiki:Extensions/MetaCommentPlugin or integrating [[http://disqus.com/][Disqus]] using the Foswiki:Extensions/DisqusPlugin
+   * full content syndication: blog postings are published via rss and atom in full length
+   * full-text search using Foswiki:Extensions/SolrPlugin
+   * easy to use pagination among blog postings
+   * optional infinite scrolling blog postings using Foswiki:Extensions/InfiniteScrollContrib
+   * optional pingback integration using Foswiki:Extensions/PingBackPlugin
+
+---++ Screenshots
+<noautolink>
+%IMAGEGALLERY%
+</noautolink>
+
+---++ Getting started
+
+To create a new blog use the [[%SYSTEMWEB%.WebCreateNewWeb]] tool and select the =_BlogTemplate= template.
+This will create a new web by copying the content of the [[_BlogTemplate.WebHome][_BlogTemplate web]] into the new target web.
+
+Now check the !WebPreferences of this newly created web and review its settings, i.e. the access rights for
+the web. 
+
+Make sure you add a nice description of your blog in the =WEBSUMMARY= preference setting.
+
+Create a new posting by clicking on *BlogEntries* on the sidebar. This will list all existing blog entries,
+as well as a form to create a new one.
+
+Note that your posting will not be publicly visible unless you switched its *State* property to *published*.  
 
 ---++ Plugin Installation Instructions
 %$INSTALL_INSTRUCTIONS%
@@ -23,3 +56,10 @@ that are very hard or even impossible to implement using <nop>TML (Topic Markup 
 |  Dependencies: | %$DEPENDENCIES% |
 |  Home page: | Foswiki:Extensions/%TOPIC% |
 |  Support: | Foswiki:Support/%TOPIC% |
+
+%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1383743750" size="16542" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1383743751" size="46694" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1383743752" size="30666" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1383743753" size="134027" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1383743755" size="374274" user="micha" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1383743756" size="345020" user="micha" version="1"}%

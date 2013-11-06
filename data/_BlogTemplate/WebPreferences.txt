@@ -11,10 +11,6 @@
    * Set WEBBGCOLOR = 
    * Set NOAUTOLINK = on
 
----++ Image settings
-   * Set BLOGIMAGES = %PUBURLPATH%/%WEB%/BlogImages
-   * Set IMAGEALBUM = %WEB%/BlogImages
-
 ---++ !WebComponents
    * [[WebTopicEditTemplate]]: template for new topics
    * [[WebMenu]]: horizontal navitation, overrides [[%USERSWEB%.SiteMenu]], or [[%SYSTEMWEB%.SiteMenu]]
@@ -36,13 +32,15 @@
    * #Set NATSKIN_SIDEBARWIDTH = 19.23em
 
 ---++ Comment settings
-   * Set COMMNENTFORMAT = threaded
+
+   * Set COMMENTSYSTEM = disqus
+   * Set COMMENTFORMAT = threaded
       * can be threaded, linear, reverse, insidetab
    * Set COMMENTMODERATION = on
    * Set DISPLAYCOMMENTS = on
 
 ---++ !DataForm settings
-   * Set WEBFORMS = Applications.BlogApp.BlogEntry, Applications.ClassificationApp.ClassifiedTopic
+   * Set WEBFORMS = Applications.BlogApp.BlogEntry, Applications.ClassificationApp.ClassifiedTopic, Applications.ClassificationApp.CategorizedTopic, Applications.ClassificationApp.TaggedTopic, Applications.ClassificationApp.SeoTopic
 
 ---++ !ClassificationPlugin settings
    * Set CLASSIFICATIONPLUGIN_AUTOREPARENT = on
@@ -54,7 +52,7 @@
      WebSearch.* => Applications.BlogApp.BlogSearchView
 
 ---++ Cache settings
-   * Set WEBDEPENDENCIES = WebHome, WebTopicList, WebIndex, WebChanges, Category, WebRss, WebAtom, WebSearch
+   * Set WEBDEPENDENCIES = WebHome, WebTopicList, WebIndex, WebChanges, Category, CategoryBrowser, WebRss, WebAtom, WebSearch
 
 ---++ Access rights
 *Web*:
