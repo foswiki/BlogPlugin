@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1366714231" format="1.1" reprev="8" version="11"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1366714231" format="1.1" reprev="8" version="11"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicEdit"}%

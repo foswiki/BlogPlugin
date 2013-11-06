@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1359477662" format="1.1" reprev="22" version="22"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1359477662" format="1.1" reprev="22" version="22"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.CategoryView"}%

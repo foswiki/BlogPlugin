@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1367684180" format="1.1" reprev="7" version="8"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1367684180" format="1.1" reprev="7" version="8"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -40,7 +40,7 @@
 %DBCALL{"Applications.RenderFunctionCallers"}%
 
 ---++ Copyright
-&copy; 2005-2011 http://michaeldaumconsulting.com
+&copy; 2005-2013 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 

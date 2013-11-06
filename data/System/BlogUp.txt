@@ -4,23 +4,7 @@
 
 *Note*: The BlogUp application is part of the BlogPlugin.
 
-%STOPALIASAREA%
 %TOC%
-%STARTALIASAREA%
-
-
-<!--
-%ALIAS{name="WikiApplication" value="%SYSTEMWEB%.AnApplicationWithWikiForm"}%
-%ALIAS{name="TopicFunction" value="#TopicFunctions"}%
-%ALIAS{name="TopicFunctions" value="#TopicFunctions"}%
-%ALIAS{name="WikiWorkbench" value="#Implementation"}%
-%ALIAS{name="TopicTypes" value="#TopicTypes"}%
-%ALIAS{name="TopicType" value="#TopicTypes"}%
-%ALIAS{name="TopicTemplates" value="#TopicTemplates"}%
-%ALIAS{name="TopicTemplate" value="#TopicTemplates"}%
-%ALIAS{name="DataForms" value="#DataForms"}%
-%ALIAS{name="DataForm" value="#DataForms"}%
--->
 
 <!--
    * Set TODO = %RED%TODO%ENDCOLOR%

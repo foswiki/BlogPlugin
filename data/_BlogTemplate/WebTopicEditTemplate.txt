@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="save topic" date="1367628007" format="1.1" reprev="1" version="2"}%
+%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1367628007" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 %STARTSECTION{"teaser"}%
 
