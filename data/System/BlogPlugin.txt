@@ -20,9 +20,35 @@ to instantiate as many blogs as you like on the same Foswiki site.
    * optional pingback integration using Foswiki:Extensions/PingBackPlugin
 
 ---++ Screenshots
-<noautolink>
-%IMAGEGALLERY%
-</noautolink>
+%IF{"context ImageGalleryPluginEnabled"
+  then="$percntIMAGEGALLERY{size=\"large\"}$percnt"
+  else="$percntINCLUDE{\"%WEB%.%TOPIC%\" section=\"screenshots\"}$percnt"
+}%
+
+<verbatim class="foswikiHidden">
+%STARTSECTION{"screenshots"}%<div class="screenshots">
+  <a href="%ATTACHURLPATH%/BlogPluginSnap1.png"><img src="%ATTACHURLPATH%/BlogPluginSnap1.png" width="150" alt="snap1" /></a>
+  <a href="%ATTACHURLPATH%/BlogPluginSnap2.png"><img src="%ATTACHURLPATH%/BlogPluginSnap2.png" width="150" alt="snap2" /></a>
+  <a href="%ATTACHURLPATH%/BlogPluginSnap3.png"><img src="%ATTACHURLPATH%/BlogPluginSnap3.png" width="150" alt="snap3" /></a>
+  %CLEAR%
+  <a href="%ATTACHURLPATH%/BlogPluginSnap4.png"><img src="%ATTACHURLPATH%/BlogPluginSnap4.png" width="150" alt="snap4" /></a>
+  <a href="%ATTACHURLPATH%/BlogPluginSnap5.png"><img src="%ATTACHURLPATH%/BlogPluginSnap5.png" width="150" alt="snap5" /></a>
+  <a href="%ATTACHURLPATH%/BlogPluginSnap6.png"><img src="%ATTACHURLPATH%/BlogPluginSnap6.png" width="150" alt="snap6" /></a>
+  %CLEAR%
+</div>
+
+<literal>
+<style>
+.screenshots a {
+  float:left;
+  margin:0 2px 2px;
+  overflow:hidden;
+  max-height:150px;
+}
+</style>
+</literal>
+%ENDSECTION{"screenshots"}%
+</verbatim>
 
 ---++ Getting started
 
