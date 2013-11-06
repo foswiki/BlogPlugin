@@ -82,7 +82,6 @@ data/_BlogTemplate/WebTopicList.txt 0644
 data/Main/BlogAdminGroup.txt 0644
 data/Main/BlogAuthorGroup.txt 0644
 data/System/BlogPlugin.txt 0644
-data/System/BlogUp.txt 0644
 lib/Foswiki/Plugins/BlogPlugin/Converter.pm 0644
 lib/Foswiki/Plugins/BlogPlugin.pm 0644
 locale/BlogPlugin/de.po 0644
@@ -92,6 +91,12 @@ pub/System/BlogPlugin/blogplugin.css.gz 0644
 pub/System/BlogPlugin/blogplugin.js 0644
 pub/System/BlogPlugin/blogplugin.js.gz 0644
 pub/System/BlogPlugin/blogplugin.pattern.uncompressed.css 0644
+pub/System/BlogPlugin/BlogPluginSnap1.png 0644
+pub/System/BlogPlugin/BlogPluginSnap2.png 0644
+pub/System/BlogPlugin/BlogPluginSnap3.png 0644
+pub/System/BlogPlugin/BlogPluginSnap4.png 0644
+pub/System/BlogPlugin/BlogPluginSnap5.png 0644
+pub/System/BlogPlugin/BlogPluginSnap6.png 0644
 pub/System/BlogPlugin/blogplugin.uncompressed.css 0644
 pub/System/BlogPlugin/blogplugin.uncompressed.js 0644
 pub/System/BlogPlugin/Makefile 0644
