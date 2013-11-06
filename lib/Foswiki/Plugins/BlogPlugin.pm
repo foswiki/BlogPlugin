@@ -21,8 +21,8 @@ use warnings;
 use Error qw(:try);
 
 our $core;
-our $VERSION = '2.01';
-our $RELEASE = '2.01';
+our $VERSION = '2.02';
+our $RELEASE = '2.02';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'A blogging system for Foswiki';
 our $baseTopic;
