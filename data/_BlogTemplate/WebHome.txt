@@ -7,4 +7,4 @@
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="Applications.BlogApp.FrontPageView"}%
 %META:PREFERENCE{name="HTMLTITLE" title="HTMLTITLE" type="Set" value="Blog %25IF%7b%22defined HTMLTITLESEP%22 then=%22%25HTMLTITLESEP%25%22 else=%22-%22%7d%25 %25WIKITOOLNAME%25"}%
 %META:PREFERENCE{name="CACHEABLE" title="CACHEABLE" type="Set" value="on"}%
-%META:PREFERENCE{name="CACHEEXPIRE" title="CACHEEXPIRE" type="Set" value="5min"}%
+%META:PREFERENCE{name="CACHEEXPIRE" title="CACHEEXPIRE" type="Set" value="+5m"}%

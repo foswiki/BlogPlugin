@@ -37,6 +37,7 @@ data/Applications/BlogApp/RenderRss.txt 0644
 data/Applications/BlogApp/RenderSideBar.txt 0644
 data/Applications/BlogApp/RenderSimilarBlogEntries.txt 0644
 data/Applications/BlogApp/ReviewCategory.txt 0644
+data/Applications/BlogApp/SeoTopic.txt 0644
 data/Applications/BlogApp/SoftwareCategory.txt 0644
 data/Applications/BlogApp/TaggedTopic.txt 0644
 data/Applications/BlogApp/TechnologyCategory.txt 0644

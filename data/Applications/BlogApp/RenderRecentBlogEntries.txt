@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1342208371" format="1.1" reprev="6" version="8"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1372157765" format="1.1" reprev="6" version="10"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -36,8 +36,7 @@
       $percntDBCALL{\"Applications.RenderTopicThumbnail\" 
         OBJECT=\"$web.$topic\" 
         TYPE=\"plain\" 
-      }$percnt<!-- --> 
-      $expand(topictitle)
+      }$percnt $expand(topictitle)
       <br /><span class='foswikiTopicInfo foswikiSmallish'>$formfield(Summary)</span>
       %CLEAR%
     </a></li>"
@@ -48,12 +47,14 @@
 </verbatim>
 
 ---++ Test
+%STARTSECTION{"test"}%
 %DBCALL{"%TOPIC%"}%
+%ENDSECTION{"test"}%
 
 %DBCALL{"Applications.RenderFunctionCallers"}%
 
 ---++ Copyright
-&copy; 2005-2012 http://michaeldaumconsulting.com
+&copy; 2005-2013 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 

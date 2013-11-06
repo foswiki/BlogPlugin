@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1367740468" format="1.1" reprev="27" version="27"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1367760968" format="1.1" reprev="27" version="28"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -61,7 +61,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         <div class='blogCommentCount foswikiRight'>
         $percntDBCALL{\"Applications.BlogApp.RenderNumberOfComments\"
           THETOPIC=\"$web.$topic\"
-          COMMENTSYSTEM=\"%COMMENTSYSTEM{default="metacomment"}%\"
+          COMMENTSYSTEM=\"$expand(preferences.COMMENTSYSTEM or '%COMMENTSYSTEM{default="metacomment"}%')\"
         }$percnt</div>
         [[$web.$topic]] 
         $percntIF{\"'$expand(State)' = 'unpublished'\"

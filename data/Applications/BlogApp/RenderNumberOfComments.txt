@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1367740466" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1367760753" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -23,7 +23,7 @@
 ---+++ metacomment
 <verbatim class="tml">
 %STARTSECTION{"metacomment"}%%METACOMMENTS{
-   topic="$web.$topic"
+   topic="%THETOPIC%"
    approval="on"
    format="$count" 
    limit="1"
