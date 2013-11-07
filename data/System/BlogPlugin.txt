@@ -78,6 +78,7 @@ Note that your posting will not be publicly visible unless you switched its *Sta
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  07 Nov 2013: | rewrite migrating most features to other Foswiki plugins |
 |  24 Jan 2006: | initial version |
 |  Dependencies: | %$DEPENDENCIES% |
 |  Home page: | Foswiki:Extensions/%TOPIC% |
