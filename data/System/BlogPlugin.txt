@@ -73,11 +73,12 @@ Note that your posting will not be publicly visible unless you switched its *Sta
    * Set SHORTDESCRIPTION = Basic blogging features used to implement the BlogUp <nop>WikiApplication
 -->
 |  Plugin Author: | Foswiki:Main.MichaelDaum |
-|  Copyright &copy;: | 2006-2013, http://michaeldaumconsulting.com |
+|  Copyright &copy;: | 2006-2014, http://michaeldaumconsulting.com |
 |  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  18 Mar 2014: | improve css of headings |
 |  07 Nov 2013: | rewrite migrating most features to other Foswiki plugins |
 |  24 Jan 2006: | initial version |
 |  Dependencies: | %$DEPENDENCIES% |

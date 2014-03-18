@@ -23,7 +23,7 @@
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="Complete documentation for the BlogApp"}%
 %META:FIELD{name="Version" attributes="" title="Version" value="2.0"}%
 %META:FIELD{name="Author" attributes="" title="Author" value="Michael Daum"}%
-%META:FIELD{name="Copyright" attributes="" title="Copyright" value="&copy; 2005 - 2013 http://michaeldaumconsulting.com"}%
+%META:FIELD{name="Copyright" attributes="" title="Copyright" value="&copy; 2005 - 2014 http://michaeldaumconsulting.com"}%
 %META:FIELD{name="License" attributes="" title="License" value="Applications.GnuGeneralPublicLicense"}%
 %META:FIELD{name="Dependencies" attributes="" title="Dependencies" value="Applications.ClassificationApp.ClassificationApp"}%
 %META:TOPICMOVED{by="micha" date="1335189669" from="Applications/BlogApp.BlogApp" to="Applications/BlogApp.CompleteDocumentation"}%

@@ -4,6 +4,15 @@
 .blogEntry {
   text-align:justify;
 }
+.blogEntry li,
+.blogEntry h1,
+.blogEntry h2,
+.blogEntry h3,
+.blogEntry h4,
+.blogEntry h5,
+.blogEntry h6 {
+  text-align:left;
+}
 .blogEntriesSticky {
   margin-bottom:1.5em; 
   padding:1.5em;
