@@ -34,7 +34,9 @@ sub initPlugin {
 
   $core = undef;
 
-  Foswiki::Func::registerRESTHandler('blogconvert', \&handleBlogConvert);
+  Foswiki::Func::registerRESTHandler('blogconvert', \&handleBlogConvert, 
+    authenticate => 0
+  );
 
   return 1;
 }
