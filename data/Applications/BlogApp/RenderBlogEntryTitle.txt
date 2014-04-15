@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1377276606" format="1.1" reprev="9" version="10"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1397223725" format="1.1" reprev="11" version="11"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -17,12 +17,9 @@
 %DBCALL{"Applications.RenderWikiTopicView" TITLE_EXTRA="%TITLE_EXTRA%"}% 
 <div class="blogInfo">
   %DBQUERY{
-     topic="%BASEWEB%.%BASETOPIC%"
-     format="<span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span>"
-  }%
-  %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
-    format="&#124; $percntFORMATLIST{
+    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span>
+      <span class='natRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{
       \"$expand(Author or createauthor)\" 
       split=\"\s*,\s*\" 
       format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"<a href='%SCRIPTURLPATH{view}%/%USERSWEB%/$1' rel='author' itemprop='author'>$dollarpercntGETTOPICTITLE{%USERSWEB%.$1}$dollarpercnt</a>\\" else=\\"<nop>$1\\"}$dollarpercnt\" 
@@ -31,12 +28,12 @@
   }%
   %CATINFO{
     "%BASEWEB%.%BASETOPIC%" 
-    header="&#124; "
+    header="<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$name'><noautolink>$title</noautolink></a>"
   }% <!-- -->
   %TAGINFO{
     "%BASEWEB%.%BASETOPIC%"
-    header="&#124; "
+    header="<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$class'><noautolink>$name</noautolink></a>"
   }% <!-- -->
 </div>

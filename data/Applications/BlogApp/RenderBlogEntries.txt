@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1367760968" format="1.1" reprev="27" version="28"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1397223562" format="1.1" reprev="29" version="29"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -70,8 +70,8 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         $percntREDDOT{\"$web.$topic\"}$percnt<!-- -->
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
       </h2>
-      <nop>$formatTime(createdate, '$day $mon $year')
-      &#124; $percntFORMATLIST{ 
+      %JQICON{"fa-calendar"}% <nop>$formatTime(createdate, '$day $mon $year')
+      <span class='natRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
          \"$expand(Author or createauthor)\"  
          split=\"\s*,\s*\"  
          format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
@@ -79,11 +79,11 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
       }$percnt
       $percntCATINFO{
         topic=\"$web.$topic\"
-        header=\"&#124; \"
+        header=\"<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% \"
       }$percnt<!-- -->
       $percntTAGINFO{
         topic=\"$web.$topic\"
-        header=\"&#124; \"
+        header=\"<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% \"
       }$percnt<!-- -->
     </div>
     <div class='blogText hyphenate'>

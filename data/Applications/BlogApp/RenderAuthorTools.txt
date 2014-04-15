@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1350477839" format="1.1" reprev="6" version="10"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1397220321" format="1.1" reprev="11" version="11"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -23,6 +23,7 @@
 <h2 >%MAKETEXT{"Tools"}%</h2>
    * [[BlogEntry][%MAKETEXT{"BlogEntries"}%]]
    * [[Category][%MAKETEXT{"Categories"}%]]
+   * [[WebTagList][%MAKETEXT{"Tags"}%]]
    * [[WebTopicList][%MAKETEXT{"Index"}%]]
    * [[WebChanges][%MAKETEXT{"Changes"}%]]
    * [[WebNotify][%MAKETEXT{"Notifications"}%]]
