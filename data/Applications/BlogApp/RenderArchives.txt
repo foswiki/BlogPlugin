@@ -50,8 +50,6 @@
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 
-</verbatim>
-
 %META:FORM{name="Applications.ApplicationTopic"}%
 %META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%

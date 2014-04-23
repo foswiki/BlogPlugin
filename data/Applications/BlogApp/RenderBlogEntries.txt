@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1397223562" format="1.1" reprev="29" version="29"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1397223562" format="1.1" reprev="29" version="29"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -71,7 +71,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
       </h2>
       %JQICON{"fa-calendar"}% <nop>$formatTime(createdate, '$day $mon $year')
-      <span class='natRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
+      <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
          \"$expand(Author or createauthor)\"  
          split=\"\s*,\s*\"  
          format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
@@ -79,11 +79,11 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
       }$percnt
       $percntCATINFO{
         topic=\"$web.$topic\"
-        header=\"<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% \"
+        header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% \"
       }$percnt<!-- -->
       $percntTAGINFO{
         topic=\"$web.$topic\"
-        header=\"<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% \"
+        header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% \"
       }$percnt<!-- -->
     </div>
     <div class='blogText hyphenate'>
@@ -146,8 +146,6 @@ $percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web
 &copy; 2005-2014 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-</verbatim>
 
 %META:FORM{name="Applications.ApplicationTopic"}%
 %META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%

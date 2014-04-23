@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1397223725" format="1.1" reprev="11" version="11"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1398191715" format="1.1" reprev="11" version="11"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -14,12 +14,17 @@
 ---++ Implementation
 <verbatim class="tml">
 %STARTINCLUDE%<!-- -->
-%DBCALL{"Applications.RenderWikiTopicView" TITLE_EXTRA="%TITLE_EXTRA%"}% 
+<h1> 
+%DBQUERY{topic="%BASEWEB%.%BASETOPIC%" 
+  format="[[$web.$topic][<span itemprop='name'>$expand(topictitle)</span>]] %IF{ 
+      "defined TITLE_EXTRA and not isempty TITLE_EXTRA"  
+      then="<span class='foswikiTopicExtra'>%TITLE_EXTRA%</span>"}% $expand('<div itemprop=\"description\" class=\"foswikiTopicSummary\">' and Summary and '</div>')" 
+}%</h1> 
 <div class="blogInfo">
   %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
     format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span>
-      <span class='natRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{
+      <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{
       \"$expand(Author or createauthor)\" 
       split=\"\s*,\s*\" 
       format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"<a href='%SCRIPTURLPATH{view}%/%USERSWEB%/$1' rel='author' itemprop='author'>$dollarpercntGETTOPICTITLE{%USERSWEB%.$1}$dollarpercnt</a>\\" else=\\"<nop>$1\\"}$dollarpercnt\" 
@@ -28,12 +33,12 @@
   }%
   %CATINFO{
     "%BASEWEB%.%BASETOPIC%" 
-    header="<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% "
+    header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$name'><noautolink>$title</noautolink></a>"
   }% <!-- -->
   %TAGINFO{
     "%BASEWEB%.%BASETOPIC%"
-    header="<span class='natRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% "
+    header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$class'><noautolink>$name</noautolink></a>"
   }% <!-- -->
 </div>

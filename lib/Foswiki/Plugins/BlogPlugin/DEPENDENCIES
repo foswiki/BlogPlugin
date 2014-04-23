@@ -1,5 +1,5 @@
-Foswiki::Plugins::ClassificationPlugin,>=2.00,perl,Required.
-Foswiki::Contrib::WikiWorkbenchContrib,>=1.20,perl,Required.
+Foswiki::Plugins::ClassificationPlugin,>=3.01,perl,Required.
+Foswiki::Contrib::WikiWorkbenchContrib,>=1.31,perl,Required.
 Foswiki::Plugins::DBCachePlugin,>=4.10,perl,Required.
 Foswiki::Plugins::FilterPlugin,>=2.08,perl,Required; 
 Foswiki::Plugins::FlexFormPlugin,>=2.60,perl,Required.
