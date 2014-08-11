@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.0" version="$Rev: 9914 $"}%
+%META:TOPICINFO{author="ProjectContributor" date="1407719264" format="1.1" version="1"}%
    * Set VIEW_TEMPLATE = Applications.AtomView
    * Set FILTER = TopicType=~'\bBlogEntry\b'
    * Set LIMIT = 5
