@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1383743992" format="1.1" reprev="3" version="3"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 ---+!! <nop>%TOPIC%
 %TOC%
 
@@ -78,6 +78,7 @@ Note that your posting will not be publicly visible unless you switched its *Sta
 |  Release: | %$RELEASE% |
 |  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  27 Nov 2014: | added publish/unpublish feature |
 |  15 Apr 2014: | improved topic info layout |
 |  04 Apr 2014: | flag rest handlers that don't require authentication |
 |  18 Mar 2014: | improve css of headings |
@@ -87,9 +88,9 @@ Note that your posting will not be publicly visible unless you switched its *Sta
 |  Home page: | Foswiki:Extensions/%TOPIC% |
 |  Support: | Foswiki:Support/%TOPIC% |
 
-%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1383743750" size="16542" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1383743751" size="46694" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1383743752" size="30666" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1383743753" size="134027" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1383743755" size="374274" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1383743756" size="345020" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1417509621" size="16542" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1417509621" size="46694" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1417509621" size="30666" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1417509621" size="134027" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1417509621" size="374274" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1417509621" size="345020" user="ProjectContributor" version="1"}%

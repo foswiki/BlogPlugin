@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1375429293" format="1.1" reprev="19" version="24"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicType"}%
 %DBCALL{"Applications.RenderTopicInstaller" TEXT="Install '%TOPIC%' TopicType" TYPE="TopicType"}%
 
@@ -33,6 +33,8 @@ This is the central TopicType to store blog entries.
 | Category | cat | 1 |  | categories this blog entry is field to |  |
 | Author | text | 75 | | author(s) of this posting | |
 | State | radio | 2 | published, unpublished | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |  |
+| Publish Date | date | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | |
+| Unpublish Date | date | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | |
 | Sticky | checkbox+values | 4 | on frontpage=frontpage, on category=category | a sticky blog entries is rendered at the top of the frontpage or category independent of the normal timeline | |
 | HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%MAKETEXT{"Generate title"}%</a> | |
 | Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%MAKETEXT{"Generate description"}%</a> | |

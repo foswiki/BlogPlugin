@@ -85,6 +85,7 @@ data/Main/BlogAuthorGroup.txt 0644
 data/System/BlogPlugin.txt 0644
 lib/Foswiki/Plugins/BlogPlugin/Converter.pm 0644
 lib/Foswiki/Plugins/BlogPlugin.pm 0644
+lib/Foswiki/Plugins/BlogPlugin/Publisher.pm 0644
 locale/BlogPlugin/de.po 0644
 locale/BlogPlugin/Foswiki.pot 0644
 pub/System/BlogPlugin/blogplugin.css 0644

@@ -1,0 +1,13 @@
+*,v
+*.gz
+*.swp
+pub/System/BlogPlugin/blogplugin.css
+pub/System/BlogPlugin/blogplugin.js
+BlogPlugin.md5
+BlogPlugin.sha1
+BlogPlugin.tgz
+BlogPlugin.txt
+BlogPlugin.zip
+BlogPlugin_installer
+BlogPlugin_installer.pl
+.changes

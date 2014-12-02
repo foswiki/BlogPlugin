@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1384894791" format="1.1" reprev="6" version="6"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"SolrSearchView"}%
@@ -102,25 +102,25 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"solr::templates::hits::BlogEntry"}%<script id="solrHitTemplate_BlogEntry" type="text/x-jquery-tmpl">
+%TMPL:DEF{"solr::templates::hits::BlogEntry"}%<script id="solrHitTemplate_BlogEntry" type="text/x-jsrender">
 <div class='solrSearchHit solrTopicHit clearfix'>
   {{if thumbnail}}
     <div class="foswikiRight foswikiImage">
-      <img src='%SCRIPTURLPATH{"rest"}%/ImagePlugin/resize?topic=${web}.${topic};file=${encodeURIComponent(thumbnail)};size=120>;crop=on' alt="${title}"  />
+      <img src='%SCRIPTURLPATH{"rest"}%/ImagePlugin/resize?topic={{:web}}.{{:topic}};file={{:~encodeURIComponent(thumbnail)}};size=120>;crop=on' alt="{{:title}}"  />
     </div>
   {{/if}}
-  <h2 style='margin-bottom:0'><a href='${url}'>${title}</a></h2>
+  <h2 style='margin-bottom:0'><a href='{{:url}}'>{{:title}}</a></h2>
   <div class='foswikiTopicInfo' style='margin:0.5em 0'>
-    ${$item.formatDate(createdate)} | ${author} 
+    {{:~formatDate(createdate)}} | {{:author}} 
     {{if field_Category_flat_lst}}
-      | ${$item.renderList("field_Category_flat_lst", ", ", 10)}
+      | {{:~renderList("field_Category_flat_lst", ", ", 10)}}
     {{/if}}
     {{if tag}} 
-      | ${$item.renderList("tag", ", ", 10)}
+      | {{:~renderList("tag", ", ", 10)}}
     {{/if}}
   </div>
   <div class='solrHilite'>
-    {{html $item.getHilite(id)}}
+    {{:~getHilite(id)}}
   </div>
 </div>
 </script>%TMPL:END%

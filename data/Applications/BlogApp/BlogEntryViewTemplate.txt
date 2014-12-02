@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1375433298" format="1.1" reprev="17" version="23"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicView"}%
@@ -16,13 +16,19 @@
 }%<!-- -->
 <!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
 </div>
-%SETVAR{field="State" matches="unpublished" var="ALLOWTOPICVIEW" type="Set" value="BlogAuthorGroup"}%
+%TMPL:P{"accesscontrol"}%<!-- -->
+<div itemprop="articleBody">
+<!-- -->%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"accesscontrol"}%<!-- -->
+%SETVAR{field="State" matches="unpublished" var="ALLOWTOPICVIEW" type="Set" value="BlogAuthorGroup, $percntWIKINAME$percnt"}%
 %SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW" value="details" type="Local"}%
-%SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW_DETAILS" value="BlogAuthorGroup" type="Local"}%
+%SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW_DETAILS" value="BlogAuthorGroup, $percntWIKINAME$percnt" type="Local"}%
 %UNSETVAR{field="State" matches="published" var="ALLOWTOPICVIEW"}%
 %UNSETVAR{field="State" matches="published" var="PERMSET_VIEW"}%
 %UNSETVAR{field="State" matches="published" var="PERMSET_VIEW_DETAILS"}%
-<div itemprop="articleBody">
 <!-- -->%TMPL:END%
 %{</verbatim>}%
 
@@ -39,11 +45,13 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"titleextra"}%%IF{"State = 'unpublished'" then="<span class='foswikiAlert foswikiSmall'>(%MAKETEXT{"unpublished"}%)</span>"}%%TMPL:END%
+%TMPL:DEF{"titleextra"}%%IF{"State = 'unpublished'" 
+   then="<span class='foswikiAlert foswikiSmall'>(%MAKETEXT{"unpublished"}%)</span>"
+}%%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"breadcrumbs"}%%CATINFO{
+%TMPL:DEF{"breadcrumbs::contents"}%%CATINFO{
   topic="%BASEWEB%.%BASETOPIC%"
   header="$percntBREADCRUMBS{recurse=\"topicoff\" separator=\"%TMPL:P{"sep"}%\"}$percnt%TMPL:P{"sep"}%" 
   format="$breadcrumb" 
@@ -57,7 +65,7 @@
 %{</verbatim>}%
 
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="TopicView for BlogEntries"}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%

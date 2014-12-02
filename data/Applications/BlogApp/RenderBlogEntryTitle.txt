@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1398191715" format="1.1" reprev="11" version="11"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -8,6 +8,7 @@
 
 ---+++++ Parameters
    * TITLE_EXTRA
+   * DISPLAYREVISIONINFO: boolean flag to switch on/off revinfo 
 
 %ENDSECTION{name="documentation" type="section"}%
 
@@ -19,8 +20,15 @@
   format="[[$web.$topic][<span itemprop='name'>$expand(topictitle)</span>]] %IF{ 
       "defined TITLE_EXTRA and not isempty TITLE_EXTRA"  
       then="<span class='foswikiTopicExtra'>%TITLE_EXTRA%</span>"}% $expand('<div itemprop=\"description\" class=\"foswikiTopicSummary\">' and Summary and '</div>')" 
-}%</h1> 
-<div class="blogInfo">
+}%</h1>
+%IF{"'%DISPLAYREVISIONINFO{default="on"}%'='on'" 
+   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt" 
+}%<!-- -->%STOPINCLUDE%
+</verbatim>
+
+---++ Revision info
+<verbatim class="tml">
+%STARTSECTION{"revinfo"}%<div class="blogInfo">
   %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
     format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span>
@@ -41,8 +49,7 @@
     header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$class'><noautolink>$name</noautolink></a>"
   }% <!-- -->
-</div>
-<!-- -->%STOPINCLUDE%
+</div>%ENDSECTION{"revinfo"}%
 </verbatim>
 
 ---++ Test
@@ -54,7 +61,6 @@
 &copy; 2005-2014 http://michaeldaumconsulting.com
 
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
 
 %META:FORM{name="Applications.ApplicationTopic"}%
 %META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%

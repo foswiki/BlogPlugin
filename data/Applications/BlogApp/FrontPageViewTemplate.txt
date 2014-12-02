@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1367839892" format="1.1" reprev="14" version="20"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicView"}%
@@ -30,43 +30,12 @@
   id="BLOGPLUGIN::CSS" 
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />" 
 }%<!-- -->
-%TMPL:P{context="InfiniteScrollEnabled" then="DISinfinitescroll"}%<!-- -->
 <!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
 <!-- -->%TMPL:END%
 %{</verbatim>}%
 
-%{<verbatim class="tml">}%
-%TMPL:DEF{"infinitescroll"}%<!-- -->
-%ADDTOZONE{"script"
-  id="BLOGPLUGIN::INFINITESCROLL::JS"
-  text="<literal><script>
-jQuery(function($) {
-  $('.blogEntries:not(.blogEntriesSticky)').infinitescroll({
-    navSelector: '.blogBottomPagination',
-    nextSelector: '.blogBottomPagination .blogNext a:visible',
-    itemSelector: '.blogEntry',
-    pathParse: function(path, page) {
-      //console.log('called pathParse');
-      var next = path.match(/^(.*skip=)\d+(.*)$/).slice(1).join(page*5);
-      //console.log('path='+path+' page='+page+' next='+next);
-      return next;
-    },
-    loadingImg: '%PUBURLPATH%/%SYSTEMWEB%/InfiniteScrollContrib/loading.gif',
-    donetext: '',
-    loadingText:'',
-    loadingMsgRevealSpeed: 0,
-    bufferPx: 100,
-    zeroBased: true
-  });
-});
-</script></literal>"
-  requires="JQUERYPLUGIN::INFINITESCROLL"
-}%%JQREQUIRE{"infinitescroll"}%<!-- -->
-<!-- -->%TMPL:END%
-%{</verbatim>}%
-
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%

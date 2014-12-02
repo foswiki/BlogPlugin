@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="save topic" date="1334852393" format="1.1" reprev="15" version="15"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -13,7 +13,9 @@
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%%DBCALL{
+%STARTINCLUDE%<!-- -->
+<h2 >%WEBLINK{"%BASEWEB%" format="$title"}%</h2>
+%DBCALL{
   "%WEB%.%TOPIC%" 
   section="%IF{"defined SIDEBAR" 
     then="%SIDEBAR%" 
@@ -26,8 +28,7 @@
 <verbatim class="tml">
 %STARTSECTION{"Default"}%<!-- -->
 <div class="blogSideBarSection blogAbout"> 
-  <h2 >%MAKETEXT{"About"}%</h2>
-  <p>%WEBSUMMARY%</p>
+%WEBSUMMARY%
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderRecentComments" 
@@ -45,7 +46,6 @@
 <verbatim class="tml">
 %STARTSECTION{"Admin"}%<!-- -->
 <div class="blogSideBarSection blogAbout"> 
-  <h2 >%MAKETEXT{"About"}%</h2>
   <p>You are in the admin section. This area should only be accessible to admins of this blog.</p>
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
@@ -56,8 +56,7 @@
 <verbatim class="tml">
 %STARTSECTION{"BlogEntry"}%<!-- -->
 <div class="blogSideBarSection blogAbout"> 
-  <h2 >%MAKETEXT{"About"}%</h2>
-  <p>%WEBSUMMARY%</p>
+%WEBSUMMARY%
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderSimilarBlogEntries"}%<!-- -->
@@ -71,8 +70,7 @@
 <verbatim class="tml">
 %STARTSECTION{"Category"}% <!-- -->
 <div class="blogSideBarSection blogAbout"> 
-  <h2 >%MAKETEXT{"About"}%</h2>
-  <p>%WEBSUMMARY%</p>
+%WEBSUMMARY%
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderCategories" CAT="%URLPARAM{"catname" default="%BASETOPIC%"}%"}%<!-- -->

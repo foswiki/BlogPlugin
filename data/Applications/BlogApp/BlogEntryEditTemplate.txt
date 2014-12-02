@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1366714231" format="1.1" reprev="8" version="11"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicEdit"}%
@@ -13,12 +13,38 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"editfields"}%TopicTitle, Summary, Author, State, Sticky%TMPL:END%
+%TMPL:DEF{"editfields"}%TopicTitle, Summary, Author%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"formfields"}%<!-- --> 
+<input type="hidden" name="action" value="text" /> 
+%TMPL:P{"publicationtab"}% 
+%TMPL:P{"categoriestab"}% 
+%TMPL:P{"tagstab"}% 
+%TMPL:P{"seotab"}% 
+<!-- -->%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"publicationtab"}%<!-- -->
+%TAB{"%MAKETEXT{"Publication"}%"}%
+---++ %MAKETEXT{"Publication Rules"}%
+%RENDERFOREDIT{"%BASEWEB%.%BASETOPIC%"
+  form="%TMPL:P{"formdefinition"}%"
+  fields="State, PublishDate, UnpublishDate, Sticky"
+  PublishDate_title="%MAKETEXT{"Publish Date"}%"
+  UnpublishDate_title="%MAKETEXT{"Unpublish Date"}%"
+  State_title="%MAKETEXT{"State"}%"
+  Sticky_title="%MAKETEXT{"Sticky"}%"
+}%
+%ENDTAB%
+<!-- -->%TMPL:END%
 %{</verbatim>}%
 
 
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="Editor for BlogEntries"}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%

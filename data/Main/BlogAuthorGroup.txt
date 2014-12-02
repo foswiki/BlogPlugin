@@ -1,8 +1,6 @@
-%META:TOPICINFO{author="ProjectContributor" date="1139489620" format="1.1" version="1.1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="WikiGroups"}%
----+!! <nop>BlogAuthorGroup
 
-   * Set GROUP = micha, test_group
-   * Set ALLOWTOPICCHANGE = BlogAdminGroup
 
-__Related topics:__ %WIKIUSERSTOPIC%, WikiGroups, %SYSTEMWEB%.AccessControl, BlogAdminGroup
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="MichaelDaum"}%
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

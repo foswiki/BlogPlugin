@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1397223562" format="1.1" reprev="29" version="29"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -118,10 +118,10 @@ $percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web
 <table class='foswikiNullTable' width='100%'>
 <tr> 
 <td class='blogPrev'> 
-<a %IF{"%SKIP% = 0" then="style='display:none'"}%' href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(thePrevSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>&#171;&nbsp;%MAKETEXT{"previous page"}%</a> 
+<a %IF{"%SKIP% = 0" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(thePrevSkip)"}%&limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>&#171;&nbsp;%MAKETEXT{"previous page"}%</a> 
 </td> 
-<td class='blogNext' align='right'> 
-<a %IF{"%CALC{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(theNextSkip)"}%;limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>%MAKETEXT{"next page"}%&nbsp;&#187;</a> 
+<td class='blogNext'> 
+<a %IF{"%CALC{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(theNextSkip)"}%&limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>%MAKETEXT{"next page"}%&nbsp;&#187;</a> 
 </td> 
 </tr>
 </table> 

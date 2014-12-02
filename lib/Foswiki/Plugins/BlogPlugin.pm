@@ -20,22 +20,24 @@ use strict;
 use warnings;
 use Error qw(:try);
 
-our $core;
-our $VERSION = '2.06';
-our $RELEASE = '2.06';
+our $VERSION = '3.00';
+our $RELEASE = '3.00';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'A blogging system for Foswiki';
-our $baseTopic;
-our $baseWeb;
 
 ###############################################################################
 sub initPlugin {
-  ($baseTopic, $baseWeb) = @_;
 
-  $core = undef;
+  Foswiki::Func::registerRESTHandler('publish', \&handleBlogPublish, 
+    authenticate => 1,
+    validate => 0,
+    http_allow => 'GET',
+  );
 
   Foswiki::Func::registerRESTHandler('blogconvert', \&handleBlogConvert, 
-    authenticate => 0
+    authenticate => 1,
+    validate => 0,
+    http_allow => 'GET',
   );
 
   return 1;
@@ -51,6 +53,26 @@ sub handleBlogConvert {
 
   try {
     $converter->convert(@params);
+  }
+  catch Error::Simple with {
+    my $error = shift;
+
+    print STDERR "ERROR: " . $error->{-text} . "\n";
+  };
+
+  return "";
+}
+
+###############################################################################
+sub handleBlogPublish {
+
+  require Foswiki::Plugins::BlogPlugin::Publisher;
+  my $publisher = new Foswiki::Plugins::BlogPlugin::Publisher;
+
+  my @params = @_;
+
+  try {
+    $publisher->publish(@params);
   }
   catch Error::Simple with {
     my $error = shift;
