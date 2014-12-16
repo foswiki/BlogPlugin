@@ -25,20 +25,20 @@ This is the central TopicType to store blog entries.
 %STOPINCLUDE%
 
 ---++ <nop>%TOPIC% form
-| *Name:*| *Type:* | *Size:* | *Values:* | *Description:* | *Attributes:* |
-| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic | Document type  | |
-| <nop>TopicTitle | text | 75 | | title of this blog entry | |
-| Summary | text | 75 | | enter a punch line | |
-| Tag | tag | 30 | | keywords | |
-| Category | cat | 1 |  | categories this blog entry is field to |  |
-| Author | text | 75 | | author(s) of this posting | |
-| State | radio | 2 | published, unpublished | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |  |
-| Publish Date | date | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | |
-| Unpublish Date | date | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | |
-| Sticky | checkbox+values | 4 | on frontpage=frontpage, on category=category | a sticky blog entries is rendered at the top of the frontpage or category independent of the normal timeline | |
-| HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%MAKETEXT{"Generate title"}%</a> | |
-| Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%MAKETEXT{"Generate description"}%</a> | |
-| Meta Keywords | text | 75 | | SEO keywords. Specify a comma separate list of keywords. <a href='#' id='clsGenerateKeywords'>%MAKETEXT{"Generate keywords"}%</a> | |
+| *Name:*| *Type:* | *Size:* | *Values:* | *Description:* | *Attributes:* | *Default:* |
+| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic | Document type  | | |
+| <nop>TopicTitle | text | 75 | | title of this blog entry | | |
+| Summary | text | 75 | | enter a punch line | | |
+| Tag | tag | 30 | | keywords | | |
+| Category | cat | 1 |  | categories this blog entry is field to |  | |
+| Author | text | 75 | | author(s) of this posting | | |
+| State | radio | 2 | published, unpublished | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |  | |
+| Publish Date | date | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | | |
+| Unpublish Date | date | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | | |
+| Sticky | checkbox+values | 4 | on frontpage=frontpage, on category=category | a sticky blog entries is rendered at the top of the frontpage or category independent of the normal timeline | | |
+| HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%MAKETEXT{"Generate title"}%</a> | | |
+| Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%MAKETEXT{"Generate description"}%</a> | | |
+| Meta Keywords | text | 75 | | SEO keywords. Specify a comma separate list of keywords. <a href='#' id='clsGenerateKeywords'>%MAKETEXT{"Generate keywords"}%</a> | | |
 
 %META:FORM{name="Applications.TopicType"}%
 %META:FIELD{name="TopicType" title="TopicType" value="TopicType, DataForm, DocuTopic, ApplicationTopic"}%

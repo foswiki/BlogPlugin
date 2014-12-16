@@ -1,6 +1,7 @@
 *,v
 *.gz
 *.swp
+igp_*
 pub/System/BlogPlugin/blogplugin.css
 pub/System/BlogPlugin/blogplugin.js
 BlogPlugin.md5

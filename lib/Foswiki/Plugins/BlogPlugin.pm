@@ -20,8 +20,8 @@ use strict;
 use warnings;
 use Error qw(:try);
 
-our $VERSION = '3.00';
-our $RELEASE = '3.00';
+our $VERSION = '3.10';
+our $RELEASE = '3.10';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'A blogging system for Foswiki';
 
