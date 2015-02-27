@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1421227361" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -12,6 +12,7 @@ latter is used automatically when !SolrPlugin is installed.
 ---+++++ Parameters
    * LIMIT: max number of comments to show
    * CAT: retrieve recent comments on BlogEntries in that category
+   * MONTHS: age of comments to display by number of months, defaults to 1
 
 %ENDSECTION{name="documentation" type="section"}%
 
@@ -25,7 +26,7 @@ latter is used automatically when !SolrPlugin is installed.
   sort="date"
   reverse="on"
   approved="on"
-  mindate="%CALC{"$TIMEADD($TIME(), -1, month)"}%"
+  mindate="%CALCULATE{"$TIMEADD($TIME(), -%MONTHS{default="1"}%, month)"}%"
   limit="%IF{"defined LIMIT" then="%LIMIT%" else="10"}%"
   header="<div class='blogSideBarSection'>
     <h2 >%IF{"defined CAT and '%CAT%'!=''"
@@ -41,7 +42,7 @@ latter is used automatically when !SolrPlugin is installed.
          align=\"right\"
        }$percnt
        $percntMAKETEXT{\"[_1] replied on [_2] [_3]\" 
-          args=\"<strong>$percntSPACEOUT{$author}$percnt</strong>, &#147;$percntGETTOPICTITLE{\"$web.$topic\"}$percnt&#148;,  $percntCALC{\"$FORMATTIME($timestamp, $day&&nbsp;$mon&&nbsp;$year)\"}$percnt\"
+          args=\"<strong>$percntSPACEOUT{$author}$percnt</strong>, &#147;$percntGETTOPICTITLE{\"$web.$topic\"}$percnt&#148;,  $percntCALCULATE{\"$FORMATTIME($timestamp, $day&&nbsp;$mon&&nbsp;$year)\"}$percnt\"
        }$percnt
        %CLEAR%
      </a>
@@ -63,8 +64,8 @@ latter is used automatically when !SolrPlugin is installed.
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="display a list of recent comments in the current web"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="display a list of recent comments in the current web"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
 %META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

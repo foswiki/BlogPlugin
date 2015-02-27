@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
+%META:TOPICINFO{author="micha" comment="reprev" date="1423753887" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -38,23 +38,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
   reverse="on" 
   hidenull="on"
   web="%BASEWEB%" 
-  header="%IF{"'%SKIP%'!='0'"
-    then="$dollarpercntDBCALL{
-        \\"%WEB%.%TOPIC%\\" 
-        section=\\"pagination%IF{"defined STICKY and '%STICKY%'!=''" then="DISABLED"}%\\" 
-        warn=\\"off\\"
-        LIMIT=\\"%IF{"defined LIMIT" then="%LIMIT%" else="5"}%\\" 
-        SKIP=\\"%IF{"defined SKIP" then="%SKIP%" else="0"}%\\" 
-        COUNT=\\"$count\\"
-        CLASS=\\"blogTopPagination\\"
-        PARAMS=\\"%IF{
-           "defined STICKY and '%STICKY%'!=''" then=";sticky=%STICKY%"
-         }%%IF{
-           "defined CAT and '%CAT%'!=''" then=";catname=%CAT%"
-         }%\\"
-      }$dollarpercnt<!-- -->"
-    }%<!-- -->
-    <div class='blogEntries%IF{"defined STICKY and '%STICKY%' != ''" then=" blogEntriesSticky"}%'>"
+  header="<div class='blogEntries%IF{"defined STICKY and '%STICKY%' != ''" then=" blogEntriesSticky"}%'>"
   format="<div class='blogEntry'>
     <div class='foswikiTopicInfo'>
       <h2>
@@ -148,8 +132,8 @@ $percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web
 %DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
 
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="Render a set of postings to leaf through"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="Render a set of postings to leaf through"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
 %META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

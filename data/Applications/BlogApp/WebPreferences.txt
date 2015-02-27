@@ -1,10 +1,12 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1417509621" format="1.1"  version="1"}%
+%META:TOPICINFO{author="micha" comment="" date="1418974186" format="1.1" version="2"}%
 %TOC%
 
 ---+++ Naming
 Text to be displayed on the sitemap and in the headerbar describing this web
 using a kind of tagline:
    * Set WEBSUMMARY = Blogging application for Foswiki 
+   * Set SITEMAPLIST = off
+
 
 ---++ !AutoTemplatePlugin settings
    * Set VIEW_TEMPLATE_RULES = 
@@ -25,7 +27,7 @@ Definition of DataForms:
 
 
 %META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="ApplicationTopic, WebTool"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="Preferences of the <nop>%25WEB%25 web"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="WikiWorkbench"}%
+%META:FIELD{name="TopicType" title="TopicType" value="ApplicationTopic, WebTool, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="Preferences of the <nop>%25WEB%25 web"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="WikiWorkbench"}%
