@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -13,8 +13,7 @@ This needs Foswiki:Extensions/SolrPlugin
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%<!-- -->
-<noautolink> 
+%STARTINCLUDE%<!-- --><noautolink>%CALCULATE{"$SET(seenEntries,)"}%
 %SOLRSIMILAR{"id:%BASEWEB%.%BASETOPIC%" 
    filter="web:%BASEWEB% type:topic field_TopicType_lst:BlogEntry" 
    fields="web,topic,title,score" 
@@ -40,26 +39,15 @@ This needs Foswiki:Extensions/SolrPlugin
      </li>$percntCALCULATE{\"$SET(seenEntries,$GET(seenEntries)|$topic)\"}$percnt" 
    separator="$n" 
    rows="5" 
-}%<!-- solrsimilar --> 
-</noautolink> 
-<!-- -->%STOPINCLUDE%
+}%</noautolink><!-- -->%STOPINCLUDE%
 </verbatim>
 
 ---++ Test
 %DBCALL{"%TOPIC%"}%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
 
----++ Copyright
-&copy; 2005-2015 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="display a list of related BlogEntries"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
-%META:TOPICMOVED{by="micha" date="1305113619" from="Applications/BlogApp.RenderRelatedBlogEntries" to="Applications/BlogApp.RenderSimilarBlogEntries"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

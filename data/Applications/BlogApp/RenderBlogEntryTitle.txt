@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -14,16 +14,17 @@
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%<!-- -->
-<h1> 
-%DBQUERY{topic="%BASEWEB%.%BASETOPIC%" 
-  format="[[$web.$topic][<span itemprop='name'>$expand(topictitle)</span>]] %IF{ 
-      "defined TITLE_EXTRA and not isempty TITLE_EXTRA"  
-      then="<span class='foswikiTopicExtra'>%TITLE_EXTRA%</span>"}% $expand('<div itemprop=\"description\" class=\"foswikiTopicSummary\">' and Summary and '</div>')" 
+%STARTINCLUDE%<noautolink><h1 itemprop="headline">
+[[%BASEWEB%.%BASETOPIC%][<span itemprop='name'>%GETTOPICTITLE{topic="%BASEWEB%.%BASETOPIC%" rev="%URLPARAM{"rev"}%"}%</span>]] %IF{
+   "defined TITLE_EXTRA and not isempty TITLE_EXTRA" 
+   then="<span class='foswikiTopicExtra'>%TITLE_EXTRA%</span>"
+}%%IF{
+   "'%BASEWEB%.%BASETOPIC%'/Summary"
+   then="<div class='foswikiTopicSummary'>$percntFORMFIELD{\"Summary\" topic=\"%BASEWEB%.%BASETOPIC%\" rev=\"%URLPARAM{"rev"}%\"}$percnt</div>"
 }%</h1>
-%IF{"'%DISPLAYREVISIONINFO{default="on"}%'='on'" 
-   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt" 
-}%<!-- -->%STOPINCLUDE%
+%IF{"'%DISPLAYREVISIONINFO{default="on"}%'='on'"
+   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt"
+}%</noautolink>%STOPINCLUDE%
 </verbatim>
 
 ---++ Revision info
@@ -31,16 +32,21 @@
 %STARTSECTION{"revinfo"}%<div class="blogInfo">
   %DBQUERY{
     topic="%BASEWEB%.%BASETOPIC%" 
-    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span>
+    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(PublishDate or createdate, '$year-$mo-$day')'>$formatTime(PublishDate or createdate, '$day $mon $year')</span>
       <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{
       \"$expand(Author or createauthor)\" 
       split=\"\s*,\s*\" 
-      format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"<a href='%SCRIPTURLPATH{view}%/%USERSWEB%/$1' rel='author' itemprop='author'>$dollarpercntGETTOPICTITLE{%USERSWEB%.$1}$dollarpercnt</a>\\" else=\\"<nop>$1\\"}$dollarpercnt\" 
+      format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"<a href='%SCRIPTURLPATH{view}%/%USERSWEB%/$1' rel='author' itemprop='author'><span itemprop='name'>$dollarpercntGETTOPICTITLE{%USERSWEB%.$1}$dollarpercnt</span></a>\\" else=\\"<nop>$1\\"}$dollarpercnt\" 
       separator=\", \"
     }$percnt"
   }%
+  %DBQUERY{"total_likes>0" 
+     topic="%BASEWEB%.%BASETOPIC%" 
+     format="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-thumbs-o-up" class="fa-flip-horizontal"}% $expand(total_likes)" 
+  }%<!-- --> 
   %CATINFO{
     "%BASEWEB%.%BASETOPIC%" 
+    exclude="TopCategory"
     header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$name'><noautolink>$title</noautolink></a>"
   }% <!-- -->
@@ -55,16 +61,8 @@
 ---++ Test
 %DBCALL{"%TOPIC%"}%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
-
----++ Copyright
-&copy; 2005-2014 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="renders the heading section of a BlogEntry"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="renders the heading section of a BlogEntry"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

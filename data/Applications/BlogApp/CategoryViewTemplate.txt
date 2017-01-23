@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.CategoryView"}%
@@ -13,6 +13,7 @@
 %FORMATLIST{
   "%CATINFO{
     cat="%URLPARAM{"catname" default="%BASETOPIC%"}%" 
+    exclude="TopCategory"
     format="$title"
   }%%IF{"defined time"
      then=", %CALC{"$FORMATTIME(%URLPARAM{"time"}%, $mon $year)"}%"
@@ -55,13 +56,13 @@
 %MAKEINDEX{ 
   "%HIERARCHY{ 
      web="%BASEWEB%" 
-     top="%IF{"defined CAT" then="%CAT%" else="%URLPARAM{"catname" default="%BASETOPIC%"}%"}%" 
-     exclude="%IF{"defined CAT" then="%CAT%" else="%URLPARAM{"catname" default="%BASETOPIC%"}%"}%" 
+     top="%CAT{default="%URLPARAM{"catname" default="%BASETOPIC%"}%"}%" 
+     exclude="%CAT{default="%URLPARAM{"catname" default="%BASETOPIC%"}%"}%" 
      depth="2" 
      hidenull="on"
      format="$trunctitle;$topic;$origweb$n" 
    }%" 
-  cols="%IF{"defined CLASSIFICATIONPLUGIN_NRCOLS" then="%CLASSIFICATIONPLUGIN_NRCOLS%" else="3"}%" 
+  cols="%CLASSIFICATIONPLUGIN_NRCOLS{default="3"}%" 
   split="\n" 
   group=""
   pattern="(.*);(.*);(.*)" 
@@ -71,8 +72,8 @@
   footer="</div></noautolink>"
 }%<!-- -->%TMPL:END%%{</verbatim>}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="special category view for blogs"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FORM{name="Applications.TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="special category view for blogs"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/Applications/BlogApp/RenderArchives.txt:28
+#: data/Applications/BlogApp/RenderArchives.txt:29
 msgid "%1 Archive"
 msgstr "%1 Archiv"
 
@@ -19,28 +19,15 @@ msgstr "%1 Archiv"
 msgid "%1 categories"
 msgstr "%1 Kategorien"
 
-#: data/Applications/BlogApp/RenderRecentComments.txt:43
+#: data/Applications/BlogApp/RenderRecentComments.txt:44
 msgid "%1 replied on %2 %3"
 msgstr "%1 antwortet auf %2 am %3"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:113
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:118
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:121
-msgid "/if"
-msgstr ""
-
-#: data/Applications/BlogApp/RenderSideBar.txt:29
-#: data/Applications/BlogApp/RenderSideBar.txt:48
-#: data/Applications/BlogApp/RenderSideBar.txt:59
-#: data/Applications/BlogApp/RenderSideBar.txt:74
-msgid "About"
-msgstr "&&Uuml;ber"
-
-#: data/Applications/BlogApp/RenderArchives.txt:29
+#: data/Applications/BlogApp/RenderArchives.txt:30
 msgid "Archive"
 msgstr "Archiv"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:88
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:96
 msgid "Author"
 msgstr "Author"
 
@@ -53,120 +40,134 @@ msgstr "Blog-Eintr&&auml;ge"
 msgid "Categories"
 msgstr "Kategorien"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:29
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:76
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:37
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:84
 msgid "Category"
 msgstr "Kategorien"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:27
+#: data/Applications/BlogApp/RenderAuthorTools.txt:28
 msgid "Changes"
 msgstr "&&Auml;nderungen"
 
-#: data/Applications/BlogApp/RenderRecentComments.txt:33
+#: data/Applications/BlogApp/RenderRecentComments.txt:34
 msgid "Comments"
 msgstr "Kommentare"
 
-#: data/Applications/BlogApp/RenderRecentComments.txt:32
+#: data/Applications/BlogApp/RenderRecentComments.txt:33
 msgid "Comments in %1"
 msgstr "Kommentare zu %1"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:49
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
 msgid "Create date"
 msgstr "Erstellungsdatum"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:28
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:80
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:36
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:88
 msgid "Date"
 msgstr "Datum"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:30
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:38
 msgid "Filed in %1"
 msgstr "Abgelegt in %1"
 
-#: data/Applications/BlogApp/BlogEntry.txt:37
-msgid "Get description from content."
-msgstr "Beschreibung vom Text extrahieren."
+#: data/Applications/BlogApp/BlogEntry.txt:39
+#, fuzzy
+msgid "Generate description"
+msgstr "Meta Beschreibung"
+
+#: data/Applications/BlogApp/BlogEntry.txt:40
+#, fuzzy
+msgid "Generate keywords"
+msgstr "Meta Schl&&uuml;sselworte"
 
 #: data/Applications/BlogApp/BlogEntry.txt:38
-msgid "Get from classification."
-msgstr "Extrahiere von Klassifikation"
+#, fuzzy
+msgid "Generate title"
+msgstr "Meta Titel"
 
-#: data/Applications/BlogApp/BlogEntry.txt:36
-msgid "Get from topic title."
-msgstr "Vom Topic-Titel extrahieren"
-
-#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+#: data/Applications/BlogApp/RenderAuthorTools.txt:27
 msgid "Index"
 msgstr "Index"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:48
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:56
 msgid "Last changed"
 msgstr "Zuletzt ge&&auml;ndert"
 
-#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:31
+#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:32
 msgid "Latest"
 msgstr "Neuestes"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
-msgid "Meta desciption"
-msgstr "Meta Beschreibung"
+#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:31
+#, fuzzy
+msgid "Latest in %1"
+msgstr "Neuestes"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:36
-msgid "Meta keywords"
-msgstr "Meta Schl&&uuml;sselworte"
-
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:35
-msgid "Meta title"
-msgstr "Meta Titel"
-
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:50
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:58
 msgid "Name"
 msgstr "Name"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:28
+#: data/Applications/BlogApp/RenderAuthorTools.txt:29
 msgid "Notifications"
 msgstr "Benachrichtigungen"
 
-#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:30
-msgid "Other postings in %1"
-msgstr "Weitere Artikel in %1"
-
-#: data/Applications/BlogApp/RenderAuthorTools.txt:30
+#: data/Applications/BlogApp/RenderAuthorTools.txt:31
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:47
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:30
+msgid "Publication"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:31
+msgid "Publication Rules"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:35
+#, fuzzy
+msgid "Publish Date"
+msgstr "ver&&ouml;ffentlicht"
+
+#: data/Applications/BlogApp/RenderBlogEntries.txt:68
+msgid "Read more"
+msgstr "Weiter lesen"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:55
 msgid "Relevance"
 msgstr "Relevanz"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:30
-msgid "SEO"
-msgstr "SEO"
-
-#: data/Applications/BlogApp/RenderSimilarBlogEntries.txt:23
+#: data/Applications/BlogApp/RenderSimilarBlogEntries.txt:22
 msgid "Similar"
 msgstr "&&Auml;hnliches"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:44
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:52
 msgid "Sort by"
 msgstr "Sortieren nach"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:27
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:92
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:100
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:35
 msgid "State"
 msgstr "Status"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:29
+#: data/Applications/BlogApp/RenderAuthorTools.txt:30
 msgid "Statistics"
 msgstr "Statistiken"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:31
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:38
+msgid "Sticky"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:39
 msgid "Tagged %1"
 msgstr "Verschlagworted mit %1"
 
+#: data/Applications/BlogApp/BlogEntryRenderRss.txt:29
+#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+msgid "Tags"
+msgstr ""
+
 #: data/Applications/BlogApp/WebAtom.txt:3
-#: data/Applications/BlogApp/WebRss.txt:5 data/_BlogTemplate/WebAtom.txt:3
-#: data/_BlogTemplate/WebRss.txt:5
+#: data/Applications/BlogApp/WebRss.txt:5
 msgid "The %1 web of Foswiki, the Free and Open Source Wiki."
 msgstr "Das %1 Web von Foswiki, dem Freien Open Source Wiki."
 
@@ -187,60 +188,67 @@ msgstr ""
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: lib/Foswiki/Plugins/BlogPlugin/Factory.pm:85
-msgid "access not allowed on web"
-msgstr "Zugriff zu diesem Web nicht gestattet"
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:36
+#, fuzzy
+msgid "Unpublish Date"
+msgstr "unver&&ouml;ffentlicht"
 
 #: data/Applications/BlogApp/BlogEntryEditTemplate.txt:8
 msgid "blog entry"
 msgstr "Blog-Eintag"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:124
-msgid "html $item.getHilite(id)"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:116
-msgid "if field_Category_flat_lst"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:119
-msgid "if tag"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:109
-msgid "if thumbnail"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:33
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:41
 msgid "keyword"
 msgstr "Schl&&uuml;sselwort"
 
-#: data/Applications/BlogApp/RenderBlogEntries.txt:88
-msgid "more"
-msgstr "weiter"
-
-#: data/Applications/BlogApp/RenderBlogEntries.txt:122
+#: data/Applications/BlogApp/RenderBlogEntries.txt:123
 msgid "next page"
 msgstr "n&&auml;chste Seite"
 
-#: data/Applications/BlogApp/RenderBlogEntries.txt:119
+#: data/Applications/BlogApp/RenderBlogEntries.txt:120
 msgid "previous page"
 msgstr "vorherige Seite"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:25
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:33
 msgid "published"
 msgstr "ver&&ouml;ffentlicht"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:34
+#: data/Applications/BlogApp/RenderRecentNews.txt:29
+#, fuzzy
+msgid "read more"
+msgstr "weiter"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:42
 msgid "tag"
 msgstr "Schl&&uuml;sselwort"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:32
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:40
 msgid "tagged %1"
 msgstr "verschlagwortet mit %1"
 
-#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:57
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:26
-#: data/Applications/BlogApp/RenderBlogEntries.txt:71
+#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:74
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:34
+#: data/Applications/BlogApp/RenderBlogEntries.txt:53
 msgid "unpublished"
 msgstr "unver&&ouml;ffentlicht"
+
+#~ msgid "About"
+#~ msgstr "&&Uuml;ber"
+
+#~ msgid "Get description from content."
+#~ msgstr "Beschreibung vom Text extrahieren."
+
+#~ msgid "Get from classification."
+#~ msgstr "Extrahiere von Klassifikation"
+
+#~ msgid "Get from topic title."
+#~ msgstr "Vom Topic-Titel extrahieren"
+
+#~ msgid "Other postings in %1"
+#~ msgstr "Weitere Artikel in %1"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "access not allowed on web"
+#~ msgstr "Zugriff zu diesem Web nicht gestattet"

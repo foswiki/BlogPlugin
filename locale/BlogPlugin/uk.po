@@ -1,0 +1,4134 @@
+# Foswiki translation for Ukrainian
+# Translator:
+#   Foswiki:Main/SerhijDubyk, 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: Foswiki $ld\n"
+"Report-Msgid-Bugs-To: foswiki-svn@lists.sourceforge.net\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2009-06-21 22:03+0200\n"
+"Last-Translator: Anjey Lobas <anjey.lobas@gmail.com>\n"
+"Language-Team: <translation@linux.org.ua>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 1.2.1\n"
+"X-Poedit-Language: Ukrainian\n"
+"X-Poedit-Country: UKRAINE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: data/Applications/BlogApp/RenderArchives.txt:29
+msgid "%1 Archive"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderCategories.txt:26
+#, fuzzy
+msgid "%1 categories"
+msgstr "Категорії"
+
+#: data/Applications/BlogApp/RenderRecentComments.txt:44
+msgid "%1 replied on %2 %3"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderArchives.txt:30
+msgid "Archive"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:96
+msgid "Author"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:24
+msgid "BlogEntries"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:25
+#: data/Applications/BlogApp/RenderCategories.txt:27
+msgid "Categories"
+msgstr "Категорії"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:37
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:84
+#, fuzzy
+msgid "Category"
+msgstr "Категорії"
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:28
+msgid "Changes"
+msgstr "Зміни"
+
+#: data/Applications/BlogApp/RenderRecentComments.txt:34
+#, fuzzy
+msgid "Comments"
+msgstr "Коментарі:"
+
+#: data/Applications/BlogApp/RenderRecentComments.txt:33
+#, fuzzy
+msgid "Comments in %1"
+msgstr "Коментарі:"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
+#, fuzzy
+msgid "Create date"
+msgstr "Створити нову тему"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:36
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:88
+msgid "Date"
+msgstr "Дата"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:38
+#, fuzzy
+msgid "Filed in %1"
+msgstr "Не вдається приєднати URL %1"
+
+#: data/Applications/BlogApp/BlogEntry.txt:39
+#, fuzzy
+msgid "Generate description"
+msgstr "Версія"
+
+#: data/Applications/BlogApp/BlogEntry.txt:40
+msgid "Generate keywords"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntry.txt:38
+msgid "Generate title"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:27
+msgid "Index"
+msgstr "Індекс"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:56
+#, fuzzy
+msgid "Last changed"
+msgstr "Недавно змінені теми"
+
+#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:32
+msgid "Latest"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderRecentBlogEntries.txt:31
+#, fuzzy
+msgid "Latest in %1"
+msgstr "(редакція)"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:58
+#, fuzzy
+msgid "Name"
+msgstr "Назва теми"
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:29
+msgid "Notifications"
+msgstr "Повідомлення"
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:31
+msgid "Preferences"
+msgstr "Параметри"
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:30
+msgid "Publication"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:31
+msgid "Publication Rules"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:35
+msgid "Publish Date"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderBlogEntries.txt:68
+#, fuzzy
+msgid "Read more"
+msgstr "Прочитайте"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:55
+msgid "Relevance"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderSimilarBlogEntries.txt:22
+msgid "Similar"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:52
+#, fuzzy
+msgid "Sort by"
+msgstr "Сортувати результати:"
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:100
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:35
+msgid "State"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:30
+msgid "Statistics"
+msgstr "Статистика"
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:38
+msgid "Sticky"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:39
+msgid "Tagged %1"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryRenderRss.txt:29
+#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+msgid "Tags"
+msgstr ""
+
+#: data/Applications/BlogApp/WebAtom.txt:3
+#: data/Applications/BlogApp/WebRss.txt:5
+msgid "The %1 web of Foswiki, the Free and Open Source Wiki."
+msgstr ""
+
+#: data/_BlogTemplate/WebNotify.txt:3
+msgid ""
+"This is a subscription service to be automatically notified by e-mail when "
+"topics change in this %1 web. This is a convenient service, so you do not "
+"have to come back and check all the time if something has changed. To "
+"subscribe, please add a bullet with your %2 in alphabetical order to this "
+"list:"
+msgstr ""
+"Це сервіс підписки, який автоматично повідомить Вас по електронній пошті при "
+"зміні вмісту всіх тем у розділі %1. Цей сервіс зручний тим, що у Вас немає "
+"необхідності кожного разу перевіряти, чи з'явилися нові зміни. Щоб "
+"підписатися просто додайте своє ВікіІм'я %2 до цього списку (в алфавітному "
+"порядку):"
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:23
+msgid "Tools"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:36
+msgid "Unpublish Date"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:8
+msgid "blog entry"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:41
+msgid "keyword"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderBlogEntries.txt:123
+msgid "next page"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderBlogEntries.txt:120
+#, fuzzy
+msgid "previous page"
+msgstr "Огляд недавніх змін у:"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:33
+msgid "published"
+msgstr ""
+
+#: data/Applications/BlogApp/RenderRecentNews.txt:29
+#, fuzzy
+msgid "read more"
+msgstr "Прочитайте"
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:42
+msgid "tag"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:40
+msgid "tagged %1"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:74
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:34
+#: data/Applications/BlogApp/RenderBlogEntries.txt:53
+msgid "unpublished"
+msgstr ""
+
+#~ msgid "%*(%1,day) "
+#~ msgstr "%*(%1, дн.) "
+
+#~ msgid "%*(%1,hour) "
+#~ msgstr "%*(%1, год.) "
+
+#~ msgid "%*(%1,minute) "
+#~ msgstr "%*(%1, хв.) "
+
+#~ msgid "%*(%1,second) "
+#~ msgstr "%*(%1, сек.) "
+
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "%1 - Registration failure for %2 (%3)"
+#~ msgstr "%1 - Помилка реєстрації %2 (%3)"
+
+#~ msgid "%1 - Registration for %2 (%3)"
+#~ msgstr "%1 - Реєстрація для %2 (%3)"
+
+#, fuzzy
+#~ msgid "%1 Web"
+#~ msgstr "Розділ %1"
+
+#, fuzzy
+#~ msgid "%1 added to the %2 group."
+#~ msgstr "%1 переміщена з %2 до %3 користувачем %4"
+
+#, fuzzy
+#~ msgid "%1 cannot be removed from %2"
+#~ msgstr "%1 переміщена з %2 до %3 користувачем %4"
+
+#, fuzzy
+#~ msgid "%1 denied the registration."
+#~ msgstr "Спасибі за реєстрацію"
+
+#~ msgid "%1 has a list of other Foswiki users"
+#~ msgstr "%1 містить список інших користувачів Foswiki"
+
+#, fuzzy
+#~ msgid "%1 has been approved and registered with e-mail %2"
+#~ msgstr "%1 зареєстрований з адресою електронної пошти %2"
+
+#~ msgid ""
+#~ "%1 has been editing the topic for %2 and the lease is still active for "
+#~ "another %3."
+#~ msgstr ""
+#~ "%1 редагував сторінку теми для %2 і блокування все ще активне для іншого "
+#~ "%3"
+
+#~ msgid "%1 has been registered with e-mail %2"
+#~ msgstr "%1 зареєстрований з адресою електронної пошти %2"
+
+#~ msgid "%1 home"
+#~ msgstr "дім %1"
+
+#~ msgid "%1 is an invalid name for a new web"
+#~ msgstr "%1 - неправильне ім'я для нового розділу"
+
+#~ msgid "%1 is currently logged in"
+#~ msgstr "%1 зараз на сайті"
+
+#~ msgid "%1 is currently set to %2"
+#~ msgstr "%1 вже встановлено на %2"
+
+#, fuzzy
+#~ msgid "%1 is editing [[%2][%3]]."
+#~ msgstr "%1 редагує %2."
+
+#~ msgid "%1 is in at least one group and cannot be removed"
+#~ msgstr "%1 входить як мінімум до однієї групи і не може бути вилучений"
+
+#, fuzzy
+#~ msgid "%1 is not a valid form name"
+#~ msgstr "'%1' неправильний %2 "
+
+#, fuzzy
+#~ msgid "%1 is not a valid value for the %2 parameter"
+#~ msgstr "'%1' неправильний %2 "
+
+#~ msgid "%1 is the default topic for deleted attachments."
+#~ msgstr "%1 - сторінка за умовчанням для вилучених файлів"
+
+#~ msgid "%1 may still be editing %2."
+#~ msgstr "%1 можливо все ще редагує %2."
+
+#, fuzzy
+#~ msgid "%1 recent changes in %2 Web"
+#~ msgstr "%1 недавні зміни в розділі %2"
+
+#, fuzzy
+#~ msgid "%1 registration approval required"
+#~ msgstr "Реєстрація"
+
+#, fuzzy
+#~ msgid "%1 registration denied"
+#~ msgstr "Реєстрація"
+
+#, fuzzy
+#~ msgid "%1 removed from the %2 group."
+#~ msgstr "%1 переміщена з %2 до %3 користувачем %4"
+
+#~ msgid "%1 to create another web"
+#~ msgstr "%1 щоб створити інший розділ"
+
+#~ msgid "%1 to customize the web specific preferences"
+#~ msgstr "%1 щоб налаштувати параметри для розділу"
+
+#~ msgid "%1 to start working on the new web"
+#~ msgstr "%1 щоб почати працювати в новому розділі"
+
+#~ msgid "%1 topic does not exist"
+#~ msgstr "тема %1 не існує"
+
+#, fuzzy
+#~ msgid "%1 tried to register with e-mail %2"
+#~ msgstr "%1 зареєстрований з адресою електронної пошти %2"
+
+#, fuzzy
+#~ msgid "%1 was renamed or moved from %2 on %3 by %4"
+#~ msgstr "%1 переміщена з %2 до %3 користувачем %4"
+
+#~ msgid "&Cancel"
+#~ msgstr "Відмінити"
+
+#~ msgid "&History"
+#~ msgstr "Історія"
+
+#, fuzzy
+#~ msgid "&Sequential"
+#~ msgstr "Послідовно"
+
+#, fuzzy
+#~ msgid "'%1' is not a valid [[%2][login username]]."
+#~ msgstr "'%1' неправильний %2 "
+
+# Review in context
+#, fuzzy
+#~ msgid "'Create New Topic' page has moved"
+#~ msgstr "Сторінку 'Створення Нової Теми' було переміщено"
+
+#, fuzzy
+#~ msgid "(%1 login)"
+#~ msgstr "(%1 Ім'я)"
+
+#, fuzzy
+#~ msgid "(%1 validation)"
+#~ msgstr "(%1 перевірка)"
+
+#, fuzzy
+#~ msgid "(%1 vs. %2)"
+#~ msgstr "(%1 у порівнянні з %2)"
+
+#~ msgid "(*Suggestion:* How about uploading your picture to your topic?)"
+#~ msgstr ""
+#~ "(*Підказка:* Може варто б розмістити свою фотографію на особистій "
+#~ "сторінці?)"
+
+#~ msgid "(=all= to show all topics)"
+#~ msgstr "(введіть =all= для виводу без обмежень)"
+
+#, fuzzy
+#~ msgid "(Children in %1 Web)"
+#~ msgstr "(зворотні посилання у розділі %1)"
+
+#~ msgid "(access denied)"
+#~ msgstr "(доступ заборонений)"
+
+#~ msgid "(attach)"
+#~ msgstr "(прикріпити)"
+
+#~ msgid "(backlinks in %1 Web)"
+#~ msgstr "(зворотні посилання у розділі %1)"
+
+#~ msgid "(backlinks in all Webs)"
+#~ msgstr "(зворотні посилання у всіх розділах)"
+
+#~ msgid "(change form)"
+#~ msgstr "(змінити форму)"
+
+#~ msgid "(change language)"
+#~ msgstr "(змінити мову)"
+
+#~ msgid "(changes)"
+#~ msgstr "(зміни)"
+
+#, fuzzy
+#~ msgid "(compare)"
+#~ msgstr "(більше)"
+
+#~ msgid "(delete attachment)"
+#~ msgstr "(вилучити файл)"
+
+#~ msgid "(delete)"
+#~ msgstr "(вилучити)"
+
+#, fuzzy
+#~ msgid "(disabled)"
+#~ msgstr "Редагувати таблицю"
+
+#~ msgid "(edit form)"
+#~ msgstr "(редагувати форму)"
+
+#~ msgid "(edit text)"
+#~ msgstr "(редагувати текст)"
+
+#~ msgid "(edit)"
+#~ msgstr "(редагувати)"
+
+#~ msgid "(more)"
+#~ msgstr "(більше)"
+
+#~ msgid "(move attachment)"
+#~ msgstr "(перемістити файл)"
+
+#~ msgid "(no parent, orphaned topic)"
+#~ msgstr "(немає батька, тема-сирота)"
+
+#~ msgid "(none)"
+#~ msgstr "(порожньо/нічого)"
+
+#~ msgid "(otherwise search %1 Web only)"
+#~ msgstr "(інакше тільки у розділі %1)"
+
+#, fuzzy
+#~ msgid "(redirect denied)"
+#~ msgstr "(доступ заборонений)"
+
+#~ msgid "(rename)"
+#~ msgstr "(перейменувати)"
+
+#~ msgid "(revision %1)"
+#~ msgstr "(редакція)"
+
+#~ msgid "(save error)"
+#~ msgstr "(помилка збереження)"
+
+#~ msgid "(single character first name)"
+#~ msgstr "(одна буква з імені)"
+
+#~ msgid "(single character last name)"
+#~ msgstr "(одна буква з прізвища)"
+
+#~ msgid "(skipped)"
+#~ msgstr "(пропущено)"
+
+#, fuzzy
+#~ msgid ""
+#~ "*Attach new file:* If you select a different file in the browser, it is "
+#~ "this that will be updated or added."
+#~ msgstr ""
+#~ "*Локальний файл:* Якщо Ви виберете інший файл у полі _Локальний файл:_, "
+#~ "то файл буде оновлений або доданий."
+
+#~ msgid ""
+#~ "*Change comment:* If you use _Change Properties_ to change a comment, the "
+#~ "comment shown in the topic will change, but the comment shown against the "
+#~ "attachment history will be the comment when the file was uploaded."
+#~ msgstr ""
+#~ "*Змінити коментар:* Якщо Ви використовуєте _Змінити Властивості_ щоб "
+#~ "змінити коментар, то коментар, показаний на сторінці, зміниться, проте "
+#~ "коментар, що показується в історії прикріплених файлів, буде коментарем "
+#~ "що відноситься до моменту завантаження файлу."
+
+#, fuzzy
+#~ msgid "*Formatting help:*"
+#~ msgstr "Додаткова інформація по розмітці тексту"
+
+#, fuzzy
+#~ msgid ""
+#~ "*Important:* the information provided in this form will be stored in a "
+#~ "database on the web server. This database is accessible to anyone who can "
+#~ "access the server through the web (though passwords will be encrypted, "
+#~ "and e-mail addresses will be obfuscated to help prevent spamming). Your "
+#~ "country, or the country where the server is hosted, may have Data "
+#~ "Protection laws governing the maintenance of such databases. If you are "
+#~ "in doubt, you should contact %1 for details of the Data Protection Policy "
+#~ "of this web server before registering."
+#~ msgstr ""
+#~ "*Важливо:* інформація, вказана в цій формі буде збережена у базі даних "
+#~ "сервера Foswiki. Ця база даних доступна всім, у кого є інтернет-доступ до "
+#~ "сервера (паролі будуть зашифровані, і адреса електронної пошти буде трохи "
+#~ "змінена для захисту від спаму). У Вашій країні або країні, де "
+#~ "розташований сервер, можуть діяти закони про захист інформації, які "
+#~ "регламентують роботу подібних баз даних. Якщо у Вас виникають сумніви, "
+#~ "то, перш ніж реєструватися, Вам слід звернутися до %1 для консультації з "
+#~ "питань політики конфіденційності і захисту даних на цьому сервері."
+
+#, fuzzy
+#~ msgid ""
+#~ "*Properties:* The comment and visibility (i.e. is attachment hidden) can "
+#~ "be changed without uploading a file by pressing \"Change Properties only"
+#~ "\"."
+#~ msgstr ""
+#~ "*Властивості:* Коментар та видимість (тобто чи приховано прикріплений "
+#~ "файл) можуть бути змінені без завантаження файлу шляхом натиснення  "
+#~ "\"Змінити тільки коментар і властивості\"; дивіться <a target="
+#~ "\"HiddenAttachment\" onclick=\"return "
+#~ "launchWindow('%1','HiddenAttachment')\" href=\"%2\" "
+#~ "rel='nofollow'>Прихований Файл</a>."
+
+#~ msgid "*bold* put word/phrase in asterisks: =<nop>*your phrase*="
+#~ msgstr "*жирний* виділити слово/фразу зірочками: =<nop>*Ваша фраза*="
+
+#~ msgid ""
+#~ "*bullet list* 3 spaces, asterisk, 1 space: =&&nbsp;&&nbsp;&&nbsp;*&&nbsp;"
+#~ "your text="
+#~ msgstr ""
+#~ "*ненумерований список* 3 пропуски, зірочка, 1 пропуск: =&&nbsp;&&nbsp;"
+#~ "&&nbsp;*&&nbsp;Ваш текст="
+
+#~ msgid ""
+#~ "*headings* 3 dashes, 1 to 6 pluses, 1 space: =---++&&nbsp;Your Heading="
+#~ msgstr ""
+#~ "*заголовки* 3 тире, від 1 до 6 плюсів, 1 пропуск: =---++&&nbsp;Ваш "
+#~ "заголовок="
+
+#~ msgid "*italic* put word/phrase in underscores: =_<nop>your words_="
+#~ msgstr ""
+#~ "*курсив* виділити слово/фразу знаками підкреслення: =_<nop>Ваша фраза_="
+
+#~ msgid "*monospaced* put word/phrase in equal signs: =<nop>=your words=="
+#~ msgstr ""
+#~ "*моноширинний* виділити слово/фразу знаками рівності: =<nop>=Ваша фраза=="
+
+#~ msgid "*paragraphs* separate with blank line"
+#~ msgstr "*абзаци* необхідно розділяти порожнім рядком"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid ""
+#~ "<a href='%1'>RSS feed</a>, recent changes with <a href='%2'>50</a>, <a "
+#~ "href='%3' rel='nofollow'>100</a>, <a href='%4' rel='nofollow'>200</a>, <a "
+#~ "href='%5' rel='nofollow'>500</a>, <a href='%6' rel='nofollow'>1000</a> "
+#~ "topics, <a href='%7' rel='nofollow'>all changes</a>"
+#~ msgstr ""
+#~ "<a href='%1'>RSS потік</a>, недавні зміни <a href='%2'>50</a>, <a "
+#~ "href='%3' rel='nofollow'>100</a>, <a href='%4' rel='nofollow'>200</a>, <a "
+#~ "href='%5' rel='nofollow'>500</a>, <a href='%6' rel='nofollow'>1000</a> "
+#~ "теми, <a href='%7' rel='nofollow'>всі зміни</a>"
+
+#~ msgid "<em>in %1 web</em> only"
+#~ msgstr "тільки <em>у розділі %1 </em>"
+
+#~ msgid "<em>in all public webs</em>"
+#~ msgstr "<em>у всіх загальнодоступних розділах</em>"
+
+#, fuzzy
+#~ msgid "<nop>WikiName:"
+#~ msgstr "Назва теми"
+
+#~ msgid ""
+#~ "A =.txt= extension is appended to some filenames for security reasons"
+#~ msgstr "Розширення =.txt= додано до деяких імен файлів з міркувань безпеки"
+
+#, fuzzy
+#~ msgid ""
+#~ "A Foswiki site is divided into webs; each one represents one subject, one "
+#~ "area of collaboration. You are trying to %1 in a web that does not exist."
+#~ msgstr ""
+#~ "%1 поділений на розділи; кожен розділ представляє одну тематику або одну "
+#~ "область взаємодії. Ви намагаєтеся %2 у неіснуючому розділі."
+
+#~ msgid ""
+#~ "A color starts with a # sign, followed by 6 hexadecimal numbers, e.g. "
+#~ "=#FFFF00=."
+#~ msgstr ""
+#~ "Визначення кольору починається з символу #, за яким слідують 6 "
+#~ "шістнадцяткових цифр, наприклад, =#FFFF00=."
+
+#~ msgid "A confirmation e-mail has been sent to %1"
+#~ msgstr "Лист підтвердження відправлений по електронній пошті: %1"
+
+#~ msgid ""
+#~ "A link to a topic located in another web is written like %1. Make sure "
+#~ "that the name of the web is not spelt wrongly on the previous page; fix "
+#~ "the link if necessary."
+#~ msgstr ""
+#~ "Посилання на тему, розташовану в сусідньому розділі, пишеться як %1. "
+#~ "Перевірте правильність написання імені розділу на попередній сторінці; "
+#~ "при необхідності поправте посилання."
+
+#, fuzzy
+#~ msgid ""
+#~ "A new system-generated password for your username '%1' (!WikiName %2) has "
+#~ "been sent to your registered e-mail address. If your e-mail address is no "
+#~ "longer valid, please contact %3."
+#~ msgstr ""
+#~ "Новий пароль автоматично згенерований для Вашого ІменіКористувача %1 (!"
+#~ "ВікіІм'я %2) висланий на введений Вами при реєстрації адреса електронної "
+#~ "пошти. Якщо ця адреса більше не дійсна, то зверніться, будь ласка, до %3"
+
+#~ msgid "Access Denied"
+#~ msgstr "Доступ заборонений"
+
+#~ msgid "Access check on %1 failed"
+#~ msgstr "Перевірка доступу для %1 закінчилася невдало"
+
+#~ msgid "Access keys"
+#~ msgstr "Швидкі клавіші"
+
+#, fuzzy
+#~ msgid "Access keys:"
+#~ msgstr "Швидкі клавіші"
+
+#~ msgid "Action"
+#~ msgstr "Дія"
+
+#, fuzzy
+#~ msgid "Action %1: %2 by user %3."
+#~ msgstr "Дія %1: %2."
+
+#, fuzzy
+#~ msgid "Actions"
+#~ msgstr "Дія"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "Добавлено"
+
+#, fuzzy
+#~ msgid "Add Members to %1"
+#~ msgstr "Додати рядок"
+
+#, fuzzy
+#~ msgid "Add a new form to <nop>%1"
+#~ msgstr "Виберіть нову форму для %1"
+
+#~ msgid "Add form"
+#~ msgstr "Додати форму"
+
+#, fuzzy
+#~ msgid "Add members"
+#~ msgstr "Додати рядок"
+
+#~ msgid "Add row"
+#~ msgstr "Додати рядок"
+
+#, fuzzy
+#~ msgid "Add user management options to this topic."
+#~ msgstr "Редагувати налаштування цієї теми"
+
+#, fuzzy
+#~ msgid "Adding a %1 preference in WebPreferences"
+#~ msgstr "Додавання змінної %1 у [[WebPreferences][Параметри розділу]]"
+
+#, fuzzy
+#~ msgid "Admin Foswiki User Authentication"
+#~ msgstr "Ідентифікація користувача TWiki"
+
+#~ msgid "Admin Maintenance"
+#~ msgstr "Адміністрування"
+
+#, fuzzy
+#~ msgid "Administration"
+#~ msgstr "Реєстрація"
+
+#~ msgid "Advanced search"
+#~ msgstr "Розширений пошук"
+
+#~ msgid ""
+#~ "After submitting this form your e-mail will be changed, and you will be "
+#~ "returned to this form."
+#~ msgstr ""
+#~ "Після відправки цієї форми адреса Вашої електронної пошти буде змінена, а "
+#~ "потім Ви будете повернені до цієї ж форми."
+
+#~ msgid "After submitting this form your password will be changed."
+#~ msgstr "Після відправки цієї форми Ваш пароль буде змінений."
+
+#, fuzzy
+#~ msgid ""
+#~ "After submitting this form, you will receive an e-mail with your new, "
+#~ "system-generated password, and a link to a page where you can change it."
+#~ msgstr ""
+#~ "Після відправки цієї форми Ви отримаєте електронний лист з Вашим новим "
+#~ "*згенерованим системою* паролем, і посилання на сторінку, де Ви можете "
+#~ "змінити його."
+
+#~ msgid "All public webs"
+#~ msgstr "У всіх загальнодоступних розділах"
+
+#, fuzzy
+#~ msgid "Allow only <nop>WikiWord for the new topic name"
+#~ msgstr "Дозволити не <nop>ВікіСлово для назви нової теми"
+
+#, fuzzy
+#~ msgid ""
+#~ "Alternatively hit back to go back to %SYSTEMWEB%.UserRegistration and "
+#~ "choose a different username."
+#~ msgstr ""
+#~ "Ви також можете повернутися до System.UserRegistration і вибрати інше "
+#~ "ім'я користувача "
+
+#, fuzzy
+#~ msgid "An attachment with the same name already exists in this topic."
+#~ msgstr "Файл вже на сторінці нової теми."
+
+#~ msgid ""
+#~ "An e-mail could not be delivered. Please notify your %1 administrator, %2"
+#~ msgstr ""
+#~ "Повідомлення електронної пошти не може бути доставлене. Будь ласка, "
+#~ "повідомте про це Вашого %1 адміністратора %2"
+
+#~ msgid ""
+#~ "An error page will be shown if either of the topics are locked by another "
+#~ "user."
+#~ msgstr ""
+#~ "Буде виведено повідомлення про помилку якщо хоч би одна із сторінок "
+#~ "заблокована іншим користувачем"
+
+#~ msgid "And populated with topics from the base web"
+#~ msgstr "І показані разом з темами з основного розділу"
+
+#~ msgid "Attach"
+#~ msgstr "Прикріпити файл"
+
+#, fuzzy
+#~ msgid "Attach a file"
+#~ msgstr "Прикріпити новий файл"
+
+#, fuzzy
+#~ msgid ""
+#~ "Attach an image or document to this topic; manage existing attachments (a)"
+#~ msgstr ""
+#~ "title='Прикріпити зображення або документ до цієї сторінки' "
+#~ "accesskey='a'>Прикріпити"
+
+#~ msgid "Attach file to %1"
+#~ msgstr "Прикріпити файл %1"
+
+#~ msgid "Attach image or document on %1"
+#~ msgstr "Прикріпити зображення або документ %1"
+
+#~ msgid "Attach new file"
+#~ msgstr "Прикріпити новий файл"
+
+#~ msgid "Attachment"
+#~ msgstr "Прикріплений файл"
+
+#~ msgid "Attachment '%1' does not exist"
+#~ msgstr "Файл '%1' не існує"
+
+#~ msgid "Attachment delete failed"
+#~ msgstr "Файл не вилучено"
+
+#, fuzzy
+#~ msgid "Attachment does not exist."
+#~ msgstr "Файл не існує"
+
+#, fuzzy
+#~ msgid "Attachment history"
+#~ msgstr "Прикріплені файли"
+
+#~ msgid "Attachment move failed"
+#~ msgstr "Не вдалося перемістити файл"
+
+#, fuzzy
+#~ msgid "Attachment name:"
+#~ msgstr "Прикріплений файл"
+
+#~ msgid "Attachments"
+#~ msgstr "Прикріплені файли"
+
+#, fuzzy
+#~ msgid "Attachments %1"
+#~ msgstr "Прикріплені файли для %1"
+
+#~ msgid "Attachments of %1"
+#~ msgstr "Прикріплені файли для %1"
+
+#~ msgid "Attachments will not be shown in topic view page."
+#~ msgstr "(Прикріплені файли не будуть показані на сторінці теми)."
+
+#~ msgid "Attention"
+#~ msgstr "Увага"
+
+#~ msgid "Attribute"
+#~ msgstr "Атрибут"
+
+#~ msgid "Automated notification of topic changes"
+#~ msgstr "Автоматичне повідомлення про зміни на сторінці теми"
+
+#~ msgid "Available Information"
+#~ msgstr "Доступна інформація"
+
+#~ msgid "Back to topic"
+#~ msgstr "Повернутися до теми"
+
+#~ msgid "Backlinks"
+#~ msgstr "Зворотні посилання"
+
+#~ msgid "Backlinks to %1 in %2 Web"
+#~ msgstr "Зворотні посилання на %1 у розділі %2"
+
+#~ msgid "Backlinks to %1 in all Webs"
+#~ msgstr "Зворотні посилання на %1 у всіх розділах"
+
+#, fuzzy
+#~ msgid "Backlinks:"
+#~ msgstr "Зворотні посилання"
+
+#~ msgid "Bad password"
+#~ msgstr "Поганий пароль"
+
+#~ msgid "Base web %1 is missing or does not exist"
+#~ msgstr "Базовий розділ %1 відсутній або не існує"
+
+#~ msgid "Both body and title"
+#~ msgstr "У тексті сторінки і в заголовку"
+
+#~ msgid ""
+#~ "By default, viewing the Trash web is restricted to %1. If you would like "
+#~ "to allow all users to view the Trash web, remove the =ALLOWWEBVIEW= "
+#~ "restriction in WebPreferences."
+#~ msgstr ""
+#~ "За умовчанням, проглядання розділу Сміття дозволене лише %1. Якщо Ви "
+#~ "бажаєте дозволити всім користувачам проглядання цього розділу, видаліть "
+#~ "обмеження  =ALLOWWEBVIEW= зі [[WebPreferences][Параметрів розділу]]."
+
+#~ msgid "Can't find user %1"
+#~ msgstr "Не вдалося знайти користувача %1"
+
+#~ msgid "Can't get an e-mail address for %1 (required for password reset)"
+#~ msgstr ""
+#~ "Не можу отримати адресу електронної пошти %1 (потрібно для скидання "
+#~ "пароля)"
+
+#~ msgid "Cancel"
+#~ msgstr "Відміна"
+
+#~ msgid "Cancel editing and discard changes"
+#~ msgstr "Відмінити редагування і відмовитися від змін"
+
+#, fuzzy
+#~ msgid "Cancel upload"
+#~ msgstr "Відміна"
+
+#~ msgid "Cannot create %1 because it already exists."
+#~ msgstr "Неможливо створити %1 оскільки він вже існує."
+
+#~ msgid "Cannot create web %1 because it already exists"
+#~ msgstr "Неможливо створити розділ %1 оскільки він вже існує"
+
+#~ msgid "Cannot rename %1 to %2 because it already exists."
+#~ msgstr "Неможливо перейменувати %1 у %2 оскільки %2 вже існує."
+
+#~ msgid "Case sensitive"
+#~ msgstr "З урахуванням регістра"
+
+#, fuzzy
+#~ msgid "Change E-mail Address"
+#~ msgstr "Адреса електронної пошти:"
+
+#~ msgid "Change Password"
+#~ msgstr "Змінити  пароль"
+
+#~ msgid "Change comment and properties only"
+#~ msgstr "Змінити тільки коментар і властивості"
+
+#, fuzzy
+#~ msgid "Change e-mail address"
+#~ msgstr "Невірна адреса електронної пошти"
+
+#, fuzzy
+#~ msgid "Change form"
+#~ msgstr "Змінити з:"
+
+#, fuzzy
+#~ msgid "Change from"
+#~ msgstr "Змінити з:"
+
+#~ msgid "Change language"
+#~ msgstr "Змінити мову"
+
+#~ msgid "Change links in topics that refer to !%1 in any Web:"
+#~ msgstr ""
+#~ "Змінити посилання на сторінках тем, які посилаються на !%1 у всіх "
+#~ "розділах:"
+
+#~ msgid "Change links in topics that refer to !%1 in the %2 Web:"
+#~ msgstr ""
+#~ "Змінити посилання на сторінках тем, які посилаються на !%1 у розділі %2:"
+
+#~ msgid "Change links in topics that refer to %1 in any Web:"
+#~ msgstr ""
+#~ "Змінити посилання на сторінках тем, які посилаються на %1 у всіх розділах:"
+
+#~ msgid "Change links in topics that refer to %1 in the %2 Web:"
+#~ msgstr ""
+#~ "Змінити посилання на сторінках тем, які посилаються на %1 у розділі %2:"
+
+#~ msgid "Change password"
+#~ msgstr "Змінити пароль"
+
+#~ msgid "Change topic"
+#~ msgstr "Змінити тему"
+
+#, fuzzy
+#~ msgid "Changed by:"
+#~ msgstr "Змінений(і) "
+
+#, fuzzy
+#~ msgid "Changed on"
+#~ msgstr "Змінено"
+
+#~ msgid "Changed:"
+#~ msgstr "Змінений(і):"
+
+#~ msgid "Changes from r%1 to r%2"
+#~ msgstr "Зміни з r%1 по r%2"
+
+#~ msgid "Checked topics will be updated to point to the new topic location."
+#~ msgstr ""
+#~ "Текст відмічених тем буде оновлений так, щоб вказувати на нове "
+#~ "розташування теми."
+
+#~ msgid "Checked topics will be updated to point to the new web name."
+#~ msgstr ""
+#~ "Текст відмічених тем буде оновлений так, щоб вказувати на нове ім'я "
+#~ "розділу."
+
+#~ msgid "Child topics in %1 web"
+#~ msgstr "Дочірні теми в розділі %1"
+
+#, fuzzy
+#~ msgid "Children of %1 in %2 Web"
+#~ msgstr "Зворотні посилання на %1 у розділі %2"
+
+#~ msgid "Choose a new form for %1"
+#~ msgstr "Виберіть нову форму для %1"
+
+#~ msgid "Clear all"
+#~ msgstr "Очистити усе"
+
+#, fuzzy
+#~ msgid "Clear all topics"
+#~ msgstr "Очистити усе"
+
+#~ msgid ""
+#~ "Click to move topic back to previous location, with option to change "
+#~ "references."
+#~ msgstr ""
+#~ "Натисніть тут, щоб перемістити тему на колишнє місце з можливістю зміни "
+#~ "посилань."
+
+#~ msgid "Close"
+#~ msgstr "Закрити"
+
+#~ msgid "Color %1 has an invalid format"
+#~ msgstr "Колір %1 має неправильний формат"
+
+#~ msgid "Comment"
+#~ msgstr "Коментар"
+
+#~ msgid "Compare revisions"
+#~ msgstr "Порівняти редакції"
+
+#, fuzzy
+#~ msgid "Confirm password:"
+#~ msgstr "Ваш пароль:"
+
+#~ msgid "Confirm rename or move"
+#~ msgstr "Підтвердити перейменування або переміщення"
+
+#~ msgid "Conflict"
+#~ msgstr "Конфлікт"
+
+#~ msgid "Contact %1 if you have any questions."
+#~ msgstr "Зв'яжіться з %1 якщо у Вас є питання."
+
+#, fuzzy
+#~ msgid "Context"
+#~ msgstr "Країна:"
+
+#~ msgid "Continue and try to rename web?"
+#~ msgstr "Продовжити і спробувати перейменувати розділ?"
+
+#, fuzzy
+#~ msgid "Copy topic"
+#~ msgstr "До теми:"
+
+#, fuzzy
+#~ msgid "Copy topic..."
+#~ msgstr "До теми:"
+
+#~ msgid ""
+#~ "Copyright &&copy; by the contributing authors. All material on this "
+#~ "collaboration platform is the property of the contributing authors."
+#~ msgstr ""
+#~ "Авторські права &&copy; закріплені за авторами проекту. Всі матеріали по "
+#~ "цій платформі співпраці є їх власністю."
+
+#, fuzzy
+#~ msgid ""
+#~ "Copyright &&copy; by the contributing authors. All material on this site "
+#~ "is the property of the contributing authors."
+#~ msgstr ""
+#~ "Авторські права &&copy; закріплені за авторами проекту. Всі матеріали по "
+#~ "цій платформі співпраці є їх власністю."
+
+#~ msgid "Could not create the new web %1"
+#~ msgstr "Неможливо створити новий розділ %1"
+
+#~ msgid "Could not find template"
+#~ msgstr "Неможливо знайти шаблон"
+
+#~ msgid "Could not save %1."
+#~ msgstr "Не вдалося зберегти %1."
+
+#, fuzzy
+#~ msgid "Country:"
+#~ msgstr "Країна:"
+
+#~ msgid "Create New Topic"
+#~ msgstr "Створити нову тему"
+
+#~ msgid "Create New Topic in %1 Web"
+#~ msgstr "Створити нову тему в розділі %1"
+
+#~ msgid "Create a link to the attached file"
+#~ msgstr "Створити посилання на прикріплений файл."
+
+#, fuzzy
+#~ msgid "Create a new group"
+#~ msgstr "Створити нову тему"
+
+#, fuzzy
+#~ msgid "Create a new table"
+#~ msgstr "Створити нову тему"
+
+#, fuzzy
+#~ msgid "Create group"
+#~ msgstr "Створити нову тему"
+
+#, fuzzy
+#~ msgid "Create new FAQ topic"
+#~ msgstr "Створити нову тему"
+
+#, fuzzy
+#~ msgid "Create new topic"
+#~ msgstr "Створити нову тему"
+
+#~ msgid "Create personal sidebar"
+#~ msgstr "Створити особисту панель"
+
+#~ msgid "Create the topic"
+#~ msgstr "Створити тему"
+
+#~ msgid "Create this topic"
+#~ msgstr "Створити цю тему"
+
+#~ msgid "Creating a suitable Form Definition topic"
+#~ msgstr "Створення відповідної сторінки Визначення Форми"
+
+#~ msgid "Current location:"
+#~ msgstr "Поточне розміщення:"
+
+#, fuzzy
+#~ msgid "Current password:"
+#~ msgstr "Поточний пароль"
+
+#~ msgid "Dear %1"
+#~ msgstr "Любий(а) %1"
+
+#~ msgid "Debug"
+#~ msgstr "Відладка"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "Шаблон за умовчанням"
+
+#~ msgid "Default template"
+#~ msgstr "Шаблон за умовчанням"
+
+#~ msgid "Delete"
+#~ msgstr "Вилучити"
+
+#, fuzzy
+#~ msgid "Delete attachment %1"
+#~ msgstr "Вилучити файл"
+
+#~ msgid "Delete last row"
+#~ msgstr "Вилучити останній рядок"
+
+#~ msgid "Delete topic"
+#~ msgstr "Вилучити тему"
+
+#~ msgid "Delete topic..."
+#~ msgstr "Вилучити тему..."
+
+#~ msgid "Describe the file so other people know what it is."
+#~ msgstr "Опишіть файл так, щоб інші люди зрозуміли що це."
+
+#, fuzzy
+#~ msgid "Detailed topic list for %1 Web"
+#~ msgstr "Дочірні теми в розділі %1"
+
+#~ msgid "Did you want to [[%1][reset %2's password]]?"
+#~ msgstr "Ви хочете [[%1][скинути пароль %2]]?"
+
+#, fuzzy
+#~ msgid "Difference Topic"
+#~ msgstr "Відмінності:"
+
+#~ msgid "Difference:"
+#~ msgstr "Відмінності:"
+
+#~ msgid "Do not show attachment in table"
+#~ msgstr "Не показувати список прикріплених файлів у вигляді таблиці"
+
+#, fuzzy
+#~ msgid "Documentation"
+#~ msgstr "Поточне розміщення:"
+
+#~ msgid "Don't show:"
+#~ msgstr "Не показувати:"
+
+#~ msgid ""
+#~ "During deletion of attachment =%1= an error was found. Please notify your "
+#~ "%2 administrator."
+#~ msgstr ""
+#~ "Під час вилучення файлу =%1= відбулася помилка. Будь ласка, повідомте "
+#~ "Вашого адміністратора %2."
+
+#, fuzzy
+#~ msgid "During move of attachment =%1= to %2 an error was found."
+#~ msgstr ""
+#~ "Під час переміщення файлу %1 до %2 відбулася помилка. Будь ласка, "
+#~ "повідомте Вашого адміністратора %3."
+
+#~ msgid ""
+#~ "During rename of topic %1 to %2 an error (%3) was found. Please notify "
+#~ "your %4 administrator."
+#~ msgstr ""
+#~ "Під час перейменування теми %1 у %2 відбулася помилка (%3). Будь ласка, "
+#~ "повідомте Вашого адміністратора %4."
+
+#~ msgid ""
+#~ "During rename of web %1 to %2 an error (%3) was found. Please notify your "
+#~ "%4 administrator."
+#~ msgstr ""
+#~ "Під час перейменування розділу %1 у %2 відбулася помилка (%3). Будь "
+#~ "ласка, повідомте Вашого адміністратора %4."
+
+#, fuzzy
+#~ msgid "During rename of web %1 to %2 an error was found."
+#~ msgstr ""
+#~ "Під час переміщення файлу %1 до %2 відбулася помилка. Будь ласка, "
+#~ "повідомте Вашого адміністратора %3."
+
+#~ msgid ""
+#~ "During save of %1 an error was found by the version control system. "
+#~ "Please notify your %2 administrator."
+#~ msgstr ""
+#~ "Під час збереження %1 система управління версіями виявила помилку. Будь "
+#~ "ласка, повідомте про це Вашого адміністратора %2."
+
+#~ msgid "E-mail changed successfully!"
+#~ msgstr "Адреса електронної пошти успішно змінена!"
+
+#~ msgid "Each preference has the syntax"
+#~ msgstr "Кожен параметр має синтаксис"
+
+#~ msgid "Edit"
+#~ msgstr "Редагувати"
+
+#, fuzzy
+#~ msgid "Edit %*(%1,file)"
+#~ msgstr "%*(%1, хв.) "
+
+#~ msgid "Edit Anyway"
+#~ msgstr "Все одно редагувати"
+
+#, fuzzy
+#~ msgid "Edit settings for this topic..."
+#~ msgstr "Редагувати налаштування цієї теми"
+
+#~ msgid "Edit this table"
+#~ msgstr "Редагувати цю таблицю"
+
+#, fuzzy
+#~ msgid "Edit this topic text (e)"
+#~ msgstr "Редагувати текст цієї сторінки"
+
+#~ msgid "Edit topic preference settings"
+#~ msgstr "Редагувати налаштування сторінки"
+
+#, fuzzy
+#~ msgid "Editable"
+#~ msgstr "Редагувати таблицю"
+
+#~ msgid ""
+#~ "Either the code is not valid, or you have already confirmed your "
+#~ "registration using it."
+#~ msgstr ""
+#~ "Або введений код невірний, або Ви вже підтвердили свою реєстрацію з його "
+#~ "використанням."
+
+#~ msgid ""
+#~ "Either you did not specify a file name, or the file you are trying to "
+#~ "upload %1 has no content. You may not upload an empty file."
+#~ msgstr ""
+#~ "Або Ви не вказали ім'я файлу, або прикріплюваний файл %1 порожній. Не "
+#~ "слід завантажувати порожній файл."
+
+#, fuzzy
+#~ msgid "Email address:"
+#~ msgstr "Адреса електронної пошти:"
+
+#~ msgid "Enlarge edit box"
+#~ msgstr "Розширити область редагування"
+
+#, fuzzy
+#~ msgid "Enter parent name"
+#~ msgstr "Новий батьківський розділ:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Enter the topic name as WikiWord or check the allow non-Wiki Word box."
+#~ msgstr ""
+#~ "Будь ласка, поверніться <a href=\"javascript:history.go(-1)\">на "
+#~ "попередню сторінку</a>, використовуючи стандартні засоби навігації Вашого "
+#~ "браузера, і виберіть таку назву теми, яка була б %1.ВікіІм'я або "
+#~ "переконаєтеся в тому, що Ви вирішили використовувати не-ВікіІмена"
+
+#, fuzzy
+#~ msgid "Enter users or groups to add to this group"
+#~ msgstr "Спочатку вилучте користувача з груп(и) %1."
+
+#~ msgid "Error registering new user"
+#~ msgstr "Помилка реєстрації нового користувача"
+
+#~ msgid "Error registering user %1"
+#~ msgstr "Помилка реєстрації користувача %1"
+
+#~ msgid "Error saving topic"
+#~ msgstr "Помилка збереження сторінки"
+
+#~ msgid "Error: File attachment at %1,%2 does not exist"
+#~ msgstr "Помилка: файл в %1,%2 не існує"
+
+#~ msgid ""
+#~ "Error: Unsupported content type: %1 (Must be =text/html=, =text/plain= or "
+#~ "=text/css=)"
+#~ msgstr ""
+#~ "Помилка: Не підтримуваний тип вмісту: %1 (Повинно бути =text/html=, =text/"
+#~ "plain= або ж =text/css=)"
+
+#~ msgid "Error: Unsupported protocol. (Must be 'http://domain/...')"
+#~ msgstr "Помилка: Не підтримуваний протокол. (Мабуть 'http://domain/...')"
+
+#~ msgid "Errors"
+#~ msgstr "Помилки"
+
+#, fuzzy
+#~ msgid "Errors adding members to group"
+#~ msgstr "Помилка збереження сторінки"
+
+#, fuzzy
+#~ msgid "Errors removing members from groups"
+#~ msgstr "Помилка збереження сторінки"
+
+#, fuzzy
+#~ msgid "Evil person"
+#~ msgstr "Змінити особисті дані"
+
+#~ msgid "Fields marked %1 are required"
+#~ msgstr "Помічені %1 поля обов'язкові для заповнення"
+
+#, fuzzy
+#~ msgid "Fields marked <span class='required'>*</span> are required."
+#~ msgstr "Помічені %1 поля обов'язкові для заповнення"
+
+#~ msgid "File has been uploaded with different name"
+#~ msgstr "Файл був завантажений з іншим ім'ям"
+
+#, fuzzy
+#~ msgid "Find topics that are children of %1 ..."
+#~ msgstr "Знайти теми, що посилаються на %1 ..."
+
+#~ msgid "Find topics that link to %1 ..."
+#~ msgstr "Знайти теми, що посилаються на %1 ..."
+
+#, fuzzy
+#~ msgid "First"
+#~ msgstr "Ім'я:"
+
+#, fuzzy
+#~ msgid "First name:"
+#~ msgstr "Ім'я:"
+
+#~ msgid "Force new revision"
+#~ msgstr "Створити нову редакцію"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "Забули пароль?"
+
+#~ msgid "Form Definition %1 missing"
+#~ msgstr "Відсутнє визначення форми %1"
+
+#, fuzzy
+#~ msgid "Form definition"
+#~ msgstr "Відсутнє визначення форми"
+
+#, fuzzy
+#~ msgid "Form definition '%1' not found"
+#~ msgstr "Відсутнє визначення форми %1"
+
+#~ msgid "Form definition missing"
+#~ msgstr "Відсутнє визначення форми"
+
+#, fuzzy
+#~ msgid "Formatted Search"
+#~ msgstr "Змінити пошук"
+
+#, fuzzy
+#~ msgid "Foswiki User Authentication"
+#~ msgstr "Ідентифікація користувача TWiki"
+
+#, fuzzy
+#~ msgid "Foswiki password reset for %1"
+#~ msgstr "Пароль TWiki скинутий для %1"
+
+#, fuzzy
+#~ msgid "Globe"
+#~ msgstr "Закрити"
+
+#~ msgid "Go back"
+#~ msgstr "Повернутися"
+
+#, fuzzy
+#~ msgid ""
+#~ "Go back in your browser and insert values for all mandatory fields before "
+#~ "saving again"
+#~ msgstr ""
+#~ "Поверніться <a href=\"javascript:history.go(-1)\">назад</a> у Вашому "
+#~ "браузері та заповніть усі обов'язкові поля."
+
+#~ msgid "Go back in your browser and save your changes locally."
+#~ msgstr ""
+#~ "Поверніться <a href=\"javascript:history.go(-1)\">на попередню сторінку</"
+#~ "a>, використовуючи стандартну навігацію браузера і збережіть Ваші зміни "
+#~ "локально."
+
+#~ msgid "Good examples:"
+#~ msgstr "Хороші приклади:"
+
+#, fuzzy
+#~ msgid "Group"
+#~ msgstr "Групи"
+
+#, fuzzy
+#~ msgid "Group name"
+#~ msgstr "Назва теми"
+
+#~ msgid "Groups"
+#~ msgstr "Групи"
+
+#~ msgid "Hello %1!"
+#~ msgstr "Привіт %1!"
+
+#~ msgid "Help"
+#~ msgstr "Допомога"
+
+#~ msgid "Hide file"
+#~ msgstr "Приховати файл"
+
+#, fuzzy
+#~ msgid "History"
+#~ msgstr "Історія"
+
+#~ msgid "How about attaching your photo?"
+#~ msgstr "Як щодо додати сюди Ваше фото?"
+
+#~ msgid "How to activate your %1 registration"
+#~ msgstr "Як активувати Вашу %1 реєстрацію"
+
+#~ msgid ""
+#~ "However, the filename has been changed from %1 to %2. Please make a note "
+#~ "of it."
+#~ msgstr "Зверніть увагу, що ім'я файлу змінилося з %1 на %2."
+
+#~ msgid "I forgot my password"
+#~ msgstr "Я забув свій пароль"
+
+#~ msgid ""
+#~ "Ideas, requests, problems regarding %1? <a href='%2'>Send feedback</a>"
+#~ msgstr ""
+#~ "Є ідеї, питання або проблеми, пов'язані з %1? <a href='%2'>Зв'яжіться з "
+#~ "нами</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "If that's not the problem, it may be because you have a setting of %1 "
+#~ "that is pointing to a template that doesn't exist."
+#~ msgstr ""
+#~ "Перевірте вказані Вами властивості у налаштуваннях для {TemplateDir}. "
+#~ "Якщо проблема не в цьому, то, можливо, що встановлена Вами властивість %1 "
+#~ "указує на шаблон, який не існує."
+
+#~ msgid "If this line isn't present see _upgrade_ section below"
+#~ msgstr "Якщо такий рядок відсутній, шукайте нижче розділ _Оновлення_"
+
+#~ msgid "If this topic is missing create it, otherwise check it for errors."
+#~ msgstr ""
+#~ "Якщо ця тема відсутня - створіть її,  якщо існує - перевірте назви теми "
+#~ "на наявність помилок."
+
+#, fuzzy
+#~ msgid ""
+#~ "If you are developing a Foswiki application, see %1 for a description of "
+#~ "the correct parameters."
+#~ msgstr ""
+#~ "Якщо Ви розробляєте <nop>TWikiApplication, то див. опис відповідних "
+#~ "параметрів у %1."
+
+#~ msgid "If you came here by clicking on a question mark link"
+#~ msgstr "Якщо Ви потрапили сюди клацнувши на знак питання"
+
+#, fuzzy
+#~ msgid "If you enter a different name, make sure the topic exists."
+#~ msgstr "Якщо Ви ввели інше ім'я, переконаєтеся, що сторінка існує."
+
+#~ msgid ""
+#~ "If you got this e-mail by mistake: Somebody (%1) registered at the %2 "
+#~ "site using your mail address %3. Contact %4 if this is in error."
+#~ msgstr ""
+#~ "Якщо Ви не чекали на цей лист: хтось (%1) реєструвався на %2, "
+#~ "використовуючи Вашу адресу електронної пошти: %3. Повідомите, будь ласка, "
+#~ "%4 якщо це не Ви."
+
+#~ msgid "If you have any questions about registration, send an e-mail to %1."
+#~ msgstr ""
+#~ "Якщо у Вас є питання по реєстрації, відправте повідомлення по електронній "
+#~ "пошті: %1"
+
+#~ msgid "If you have any questions, please contact %1."
+#~ msgstr "Якщо у Вас є які-небудь питання, будь ласка, пишіть %1."
+
+#~ msgid "If you haven't set a password yet or you want to reset it, go to: %1"
+#~ msgstr ""
+#~ "Якщо Ви не задали пароль або хочете його скинути, перейдіть за "
+#~ "посиланням: %1"
+
+#~ msgid ""
+#~ "If you received a link to this topic in an e-mail or just want to look at "
+#~ "the topic, [[%1][cancel save]] to go to %2."
+#~ msgstr ""
+#~ "Якщо Ви отримали посилання на цю тему повідомленням по електронній пошті "
+#~ "або просто хотіли на неї подивитися [[%1][відмініть збереження]] щоб "
+#~ "перейти до %2."
+
+#~ msgid "If you want to create the topic"
+#~ msgstr "Якщо Ви хочете створити тему"
+
+#~ msgid "If you would like to create this web"
+#~ msgstr "Якщо Ви хочете створити цей розділ"
+
+#~ msgid ""
+#~ "If your old e-mail addresses are all invalid (you can't receive mail "
+#~ "there any more) and you have forgotten your password, please contact %1 "
+#~ "for help."
+#~ msgstr ""
+#~ "Якщо Ваша стара адреса електронної пошти невірна (або Ви не можете більше "
+#~ "отримувати на нього пошту) і Ви забули свій пароль, будь ласка, "
+#~ "зв'яжіться %1 для того, щоб отримати допомогу."
+
+#, fuzzy
+#~ msgid "Image %1 of %2"
+#~ msgstr "Розділ %1 не існує"
+
+#~ msgid ""
+#~ "Images will be displayed, for other attachments a link will be created."
+#~ msgstr ""
+#~ "(Зображення будуть відображені, для решти прикріплених файлів буде "
+#~ "створено посилання)."
+
+#~ msgid "In reversed order"
+#~ msgstr "У зворотному порядку"
+
+#, fuzzy
+#~ msgid ""
+#~ "In some cases, Foswiki changes the name of the uploaded file to make it "
+#~ "safe and accessible across all platforms:"
+#~ msgstr ""
+#~ "В деяких випадках TWiki змінює ім'я завантажуваного файлу, роблячи його "
+#~ "безпечнішим та допустимим для всіх платформ:"
+
+#~ msgid "Incorrect Password"
+#~ msgstr "Невірний пароль"
+
+#, fuzzy
+#~ msgid "Incorrect Prefix"
+#~ msgstr "Невірне %1"
+
+#, fuzzy
+#~ msgid "Incorrect [[%1][WikiName]]"
+#~ msgstr "Невірні %1.WikiNames:"
+
+#, fuzzy
+#~ msgid "Incorrect [[%1][WikiNames:]]"
+#~ msgstr "Невірні %1.WikiNames:"
+
+#, fuzzy
+#~ msgid "Incorrect [[%1][username]]"
+#~ msgstr "Невірні %1.WikiNames:"
+
+#~ msgid "Incorrect parameters to the =%1= script"
+#~ msgstr "Невірні параметри в скрипті =%1="
+
+#, fuzzy
+#~ msgid "Indent"
+#~ msgstr "Індекс"
+
+#, fuzzy
+#~ msgid "Insert an attachment"
+#~ msgstr "Вилучити файл"
+
+#~ msgid "Invalid Activation Code"
+#~ msgstr "Невірний код активації"
+
+#~ msgid "Invalid e-mail address"
+#~ msgstr "Невірна адреса електронної пошти"
+
+#, fuzzy
+#~ msgid "Invalid topic name."
+#~ msgstr "Назва теми"
+
+# Need to check it in context
+#~ msgid ""
+#~ "It is probably OK to go ahead and edit - unless you intend to change data "
+#~ "in a form attached to the topic. If %1 actually _does_ save the topic "
+#~ "while you are editing, your changes will be merged, and nothing will be "
+#~ "lost. Form data cannot easily be merged though, so in this case you are "
+#~ "recommended to check with %1 first."
+#~ msgstr ""
+#~ "Ймовірно Ви можете почати редагування прямо зараз, якщо тільки не маєте "
+#~ "наміру змінювати дані у формах, розміщених на сторінці теми. Навіть якщо "
+#~ "%1 збереже цю сторінку під час того, як Ви її редагуєте, внесені зміни "
+#~ "будуть об'єднані без втрати інформації. Врахуйте, що дані у формах не "
+#~ "можуть бути об'єднані так просто, тому, в цьому випадку, рекомендуємо Вам "
+#~ "спочатку застосувати зміни %1."
+
+#, fuzzy
+#~ msgid ""
+#~ "It's usually best to choose a %1 for the new topic name, otherwise "
+#~ "automatic linking may not work. Characters not allowed in topic names, "
+#~ "such as spaces will automatically be removed."
+#~ msgstr ""
+#~ "Для нової теми найкраще вибрати назву у форматі <a target='WikiWord' "
+#~ "onclick=\"return launchWindow('%1','WikiWord')\" href='%1' "
+#~ "rel='nofollow'>WikiWord</a>, в протилежному випадку автоматична генерація "
+#~ "посилань може не функціонувати. Недопустимі в назві теми символи, такі як "
+#~ "пробіли, автоматично видалятимуться."
+
+#~ msgid ""
+#~ "It's usually best to choose a short name for the new web, as it is easier "
+#~ "to link to them later on. Characters not allowed in web names, such as "
+#~ "spaces will automatically be removed."
+#~ msgstr ""
+#~ "Для новоого розділу краще всього вибрати просте коротке ім'я, оскільки "
+#~ "потім буде простіше на нього посилатися. В іменах розділів неприпустимі "
+#~ "символи, такі як, наприклад, пропуски, будуть автоматично вилучені з "
+#~ "імені розділу."
+
+#~ msgid "Jump"
+#~ msgstr "Перейти"
+
+#, fuzzy
+#~ msgid "Jump to first revision"
+#~ msgstr "Порівняти редакції"
+
+#, fuzzy
+#~ msgid "Keyword search"
+#~ msgstr "Змінити пошук"
+
+#, fuzzy
+#~ msgid "Last"
+#~ msgstr "Прізвище:"
+
+#, fuzzy
+#~ msgid "Last edited by"
+#~ msgstr "Останньому хто редагував"
+
+#~ msgid "Last editor"
+#~ msgstr "Останньому хто редагував"
+
+#, fuzzy
+#~ msgid "Last modified"
+#~ msgstr "Часу останньої зміни"
+
+#~ msgid "Last modified time"
+#~ msgstr "Часу останньої зміни"
+
+#, fuzzy
+#~ msgid "Last name:"
+#~ msgstr "Прізвище:"
+
+#~ msgid "Limit results to:"
+#~ msgstr "Обмежити виведення результатів:"
+
+#~ msgid "Line: %1"
+#~ msgstr "Рядок: %1"
+
+#~ msgid "Line: %1 to %2"
+#~ msgstr "Рядок: з %1 по %2"
+
+#~ msgid "Link"
+#~ msgstr "Посилання"
+
+#~ msgid "List topics that start with the letter:"
+#~ msgstr "Показати теми, що починаються з букви:"
+
+#, fuzzy
+#~ msgid "Literal search"
+#~ msgstr "Простий пошук"
+
+#, fuzzy
+#~ msgid "Load content"
+#~ msgstr "Надані Вами відомості:"
+
+#~ msgid "Login"
+#~ msgstr "Увійти"
+
+#, fuzzy
+#~ msgid "Login username:"
+#~ msgstr "Ім'я користувача %1"
+
+#~ msgid "Logon"
+#~ msgstr "Вхід"
+
+#~ msgid "Logout"
+#~ msgstr "Вийти"
+
+#~ msgid "Mail to"
+#~ msgstr "Написати лист"
+
+#~ msgid "Make search:"
+#~ msgstr "Провести пошук:"
+
+#~ msgid "Missing Fields"
+#~ msgstr "Відсутні поля"
+
+#~ msgid "Missing action command"
+#~ msgstr "Не визначена дія, пов'язана з командою"
+
+#~ msgid "Modify search"
+#~ msgstr "Змінити пошук"
+
+#~ msgid "More Actions on Topic %1"
+#~ msgstr "Другие действия над темой %1"
+
+#, fuzzy
+#~ msgid "More actions for %1:"
+#~ msgstr "Другие действия над темой %1"
+
+#, fuzzy
+#~ msgid "More character formats"
+#~ msgstr "у вигляді початкового тексту"
+
+#~ msgid "More formatting help"
+#~ msgstr "Додаткова інформація по розмітці тексту"
+
+#, fuzzy
+#~ msgid "More on hiding attachments"
+#~ msgstr "Перемісити чи вилучити прикріплені файли"
+
+#, fuzzy
+#~ msgid "More topic actions"
+#~ msgstr "Інші операції..."
+
+#~ msgid "More topic actions..."
+#~ msgstr "Інші операції..."
+
+#~ msgid "More..."
+#~ msgstr "Більше..."
+
+#, fuzzy
+#~ msgid ""
+#~ "More: delete or rename this topic; set parent topic; view and compare "
+#~ "revisions (m)"
+#~ msgstr ""
+#~ "title='Вилучити або перейменувати цю тему; встановити батьківську тему; "
+#~ "подивитися і порівняти редакції' accesskey='m'>Інші дії над темою"
+
+#~ msgid "Move"
+#~ msgstr "Перемістити"
+
+#, fuzzy
+#~ msgid "Move %1 to Trash Web"
+#~ msgstr "Перемістити до розділу:"
+
+#, fuzzy
+#~ msgid "Move attachment %1"
+#~ msgstr "Перемістити файл"
+
+#~ msgid "Move file attachment"
+#~ msgstr "Перемістити прикріплений файл"
+
+#~ msgid "Move or delete attachment"
+#~ msgstr "Перемісити чи вилучити прикріплені файли"
+
+#~ msgid "Move to web:"
+#~ msgstr "Перемістити до розділу:"
+
+#, fuzzy
+#~ msgid "Move to web: %1"
+#~ msgstr "Перемістити до розділу:"
+
+#~ msgid "Move topic to web:"
+#~ msgstr "Перемістити тему до розділу:"
+
+#~ msgid "Move/Rename"
+#~ msgstr "Перемістити / перейменувати"
+
+#~ msgid "My Links"
+#~ msgstr "Мої посилання"
+
+#~ msgid "NEW"
+#~ msgstr "НОВА"
+
+#, fuzzy
+#~ msgid "Name of copy"
+#~ msgstr "Кількість тем:"
+
+#~ msgid "Name of new web is missing"
+#~ msgstr "Відсутнє ім'я нового розділу"
+
+#, fuzzy
+#~ msgid "Navigate to a similar topic"
+#~ msgstr "Хочете швидко перейти до схожих тем?"
+
+#, fuzzy
+#~ msgid "New User Registration failed"
+#~ msgstr "%1 - Помилка реєстрації %2 (%3)"
+
+#, fuzzy
+#~ msgid "New e-mails (space-separated list):"
+#~ msgstr "Нові адреси електронної пошти (список розділений пропусками)"
+
+#~ msgid "New or changed topics in %1, since %2:"
+#~ msgstr "Нові або змінені теми у %1, після %2:"
+
+#~ msgid "New parent web:"
+#~ msgstr "Новий батьківський розділ:"
+
+#, fuzzy
+#~ msgid "New password:"
+#~ msgstr "Новий пароль"
+
+#~ msgid "New topic name %1 is not a %2"
+#~ msgstr "Нова назва теми %1 не %2"
+
+#~ msgid "New web name:"
+#~ msgstr "Нове ім'я розділу:"
+
+#~ msgid "Newer revision:"
+#~ msgstr "Молодша редакція:"
+
+#, fuzzy
+#~ msgid "No backlinks in public webs"
+#~ msgstr "(зворотні посилання у всіх розділах)"
+
+#, fuzzy
+#~ msgid "No backlinks in this web"
+#~ msgstr "(зворотні посилання у розділі %1)"
+
+#, fuzzy
+#~ msgid "No changes"
+#~ msgstr "(зміни)"
+
+#, fuzzy
+#~ msgid "No child topics found."
+#~ msgstr "Немає дочерніх тим"
+
+#, fuzzy
+#~ msgid "No members"
+#~ msgstr "Додати рядок"
+
+#~ msgid "No permission to view %1"
+#~ msgstr "Немає прав для перегляду %1"
+
+#, fuzzy
+#~ msgid "No topic to subscribe to"
+#~ msgstr "Перемістити тему до розділу:"
+
+#, fuzzy
+#~ msgid "No topics to update."
+#~ msgstr "Перемістити тему до розділу:"
+
+#~ msgid "No users to reset passwords for."
+#~ msgstr "Нікому скидати паролі."
+
+#~ msgid "Not recommended when deleting a topic."
+#~ msgstr "Не рекомендовано при вилученні теми."
+
+#, fuzzy
+#~ msgid "Notation"
+#~ msgstr "Повідомлення"
+
+#~ msgid ""
+#~ "Note that any URLs that refer to the attachment will be broken after this "
+#~ "move."
+#~ msgstr ""
+#~ "Відмітьте, що будь-які посилання на прикріплений файл будуть зіпсовані "
+#~ "після цього переміщення."
+
+#~ msgid "Note:"
+#~ msgstr "Примітка:"
+
+#, fuzzy
+#~ msgid "Notification help"
+#~ msgstr "Повідомлення"
+
+#~ msgid "Number of topics:"
+#~ msgstr "Кількість тем:"
+
+#, fuzzy
+#~ msgid "Number of topics: %1"
+#~ msgstr "Кількість тем:"
+
+#, fuzzy
+#~ msgid "Numbered list"
+#~ msgstr "Кількість тем:"
+
+#~ msgid "OK"
+#~ msgstr "Гаразд"
+
+#~ msgid "Older revision:"
+#~ msgstr "Старша редакція:"
+
+#, fuzzy
+#~ msgid ""
+#~ "On this system, once you are registered, you may also log in using your "
+#~ "email address."
+#~ msgstr ""
+#~ "Як зареєструєтеся, то зможете заходити використовуючи Ваші %1 та пароль."
+
+#, fuzzy
+#~ msgid "Only administrators are allowed to remove other accounts."
+#~ msgstr "Тільки членам %1 дозволено виконати цю дію."
+
+#~ msgid "Only members of the %1 are allowed to perform this action."
+#~ msgstr "Тільки членам %1 дозволено виконати цю дію."
+
+#, fuzzy
+#~ msgid "Only update linked topics in %1 web"
+#~ msgstr "Дочірні теми в розділі %1"
+
+#, fuzzy
+#~ msgid "Optionally change attachment name:"
+#~ msgstr "Зміните назву теми, якщо це необхідно:"
+
+#~ msgid "Optionally change topic name:"
+#~ msgstr "Зміните назву теми, якщо це необхідно:"
+
+#, fuzzy
+#~ msgid "Optionally enter a different attachment name:"
+#~ msgstr "Введіть іншу назву теми, якщо це необхідно:"
+
+#~ msgid "Optionally enter a different topic name:"
+#~ msgstr "Введіть іншу назву теми, якщо це необхідно:"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Дія"
+
+#, fuzzy
+#~ msgid "Organisation name:"
+#~ msgstr "Назва організації:"
+
+#, fuzzy
+#~ msgid "Organisation website:"
+#~ msgstr "Назва організації:"
+
+#~ msgid "Password"
+#~ msgstr "Пароль"
+
+#~ msgid "Password changed successfully!"
+#~ msgstr "Пароль успішно змінений!"
+
+#~ msgid "Password could not be changed"
+#~ msgstr "Пароль не може бути змінений"
+
+#~ msgid "Password reset failed"
+#~ msgstr "Не вдалося скинути пароль"
+
+#, fuzzy
+#~ msgid "Password reset failed."
+#~ msgstr "Не вдалося скинути пароль"
+
+#, fuzzy
+#~ msgid "Password:"
+#~ msgstr "Пароль"
+
+#, fuzzy
+#~ msgid "Passwords disabled"
+#~ msgstr "Не вдалося скинути пароль"
+
+#~ msgid "Passwords do not match"
+#~ msgstr "Паролі не співпадають"
+
+#, fuzzy
+#~ msgid "Pending registration not found"
+#~ msgstr "Відсутнє визначення форми %1"
+
+#, fuzzy
+#~ msgid "Permissions"
+#~ msgstr "Редакції"
+
+#~ msgid "Pick one of the %1."
+#~ msgstr "Взяти один з %1."
+
+#, fuzzy
+#~ msgid "Place for trashed topics and attachments."
+#~ msgstr "Місце для вилучених файлів"
+
+#~ msgid "Placeholder for trashed attachments"
+#~ msgstr "Місце для вилучених файлів"
+
+#, fuzzy
+#~ msgid "Please confirm your password."
+#~ msgstr "Ваш пароль:"
+
+#~ msgid "Please contact %1 if you have any questions."
+#~ msgstr "Якщо у Вас є питання, зв'яжіться з %1."
+
+#~ msgid "Please contact %1."
+#~ msgstr "Будь ласка, зв'яжіться з %1."
+
+#, fuzzy
+#~ msgid "Please enter a WikiName."
+#~ msgstr "Невірна адреса електронної пошти"
+
+#, fuzzy
+#~ msgid "Please enter a login username."
+#~ msgstr "Невірна адреса електронної пошти"
+
+#, fuzzy
+#~ msgid "Please enter a password."
+#~ msgstr "Скинути пароль"
+
+#, fuzzy
+#~ msgid "Please enter a valid email address."
+#~ msgstr "Невірна адреса електронної пошти"
+
+#, fuzzy
+#~ msgid "Please enter the same password as above."
+#~ msgstr "Скинути пароль"
+
+#, fuzzy
+#~ msgid "Please enter your first name."
+#~ msgstr ""
+#~ "Повідомлення електронної пошти не може бути доставлене. Будь ласка, "
+#~ "повідомте про це Вашого %1 адміністратора %2"
+
+#, fuzzy
+#~ msgid "Please enter your last name."
+#~ msgstr "Скинути пароль"
+
+#~ msgid "Please go _back_ in your browser and try a new name."
+#~ msgstr ""
+#~ "Будь ласка, поверніться <a href=\"javascript:history.go(-1)\">на "
+#~ "попередню сторінку</a>, використовуючи стандартні засоби навігації Вашого "
+#~ "браузера, і спробуйте ввести інше ім'я."
+
+#~ msgid "Please go back in your browser and check again."
+#~ msgstr ""
+#~ "Будь ласка, поверніться <a href=\"javascript:history.go(-1)\">на "
+#~ "попередню сторінку</a>, використовуючи стандартні засоби навігації Вашого "
+#~ "браузера, і спробуйте ще раз."
+
+#, fuzzy
+#~ msgid ""
+#~ "Please go back in your browser and choose a topic name that is a "
+#~ "[[%SYSTEMWEB%.WikiWord][WikiWord]] or clear the only-WikiWord box"
+#~ msgstr ""
+#~ "Будь ласка, поверніться <a href=\"javascript:history.go(-1)\">на "
+#~ "попередню сторінку</a>, використовуючи стандартні засоби навігації Вашого "
+#~ "браузера, і виберіть таку назву теми, яка була б %1.ВікіІм'я або "
+#~ "переконаєтеся в тому, що Ви вирішили використовувати не-ВікіІмена"
+
+#~ msgid "Please go back in your browser and try again."
+#~ msgstr ""
+#~ "Поверніться, будь ласка <a href=\"javascript:history.go(-1)\">назад</a> і "
+#~ "спробуйте знову."
+
+#, fuzzy
+#~ msgid ""
+#~ "Please go back in your browser and upload using a different filename."
+#~ msgstr ""
+#~ "Будь ласка, поверніться <a href=\"javascript:history.go(-1)\">на "
+#~ "попередню сторінку</a>, використовуючи стандартні засоби навігації Вашого "
+#~ "браузера, і спробуйте ввести інше ім'я."
+
+#, fuzzy
+#~ msgid ""
+#~ "Please make sure you spelled the [[%1][username]] correctly and try "
+#~ "again. If you get stuck, please contact %2."
+#~ msgstr ""
+#~ "Будь ласка, перевірте правильність написання %1 та спробуйте ще раз. Якщо "
+#~ "Ви здивовані, будь ласка, відправте електронний лист за адресою %2."
+
+#, fuzzy
+#~ msgid "Please notify your %1 administrator."
+#~ msgstr ""
+#~ "Повідомлення електронної пошти не може бути доставлене. Будь ласка, "
+#~ "повідомте про це Вашого %1 адміністратора %2"
+
+#~ msgid ""
+#~ "Please visit %1 to change your password to something more memorable for "
+#~ "you."
+#~ msgstr ""
+#~ "Щоб змінити Ваш пароль на щось більш пам'ятне, будь ласка, перейдіть за "
+#~ "посиланням %1."
+
+#~ msgid "Preferences for"
+#~ msgstr "Параметри для"
+
+#, fuzzy
+#~ msgid "Press Cancel otherwise."
+#~ msgstr "Інакше натисніть Відмінити."
+
+#, fuzzy
+#~ msgid "Preview"
+#~ msgstr "попередній перегляд"
+
+#~ msgid "Properties"
+#~ msgstr "Властивості"
+
+#, fuzzy
+#~ msgid "Put it back..."
+#~ msgstr "повернути на місце"
+
+#, fuzzy
+#~ msgid "Query Search"
+#~ msgstr "Пошук у розділі"
+
+#, fuzzy
+#~ msgid "Question:"
+#~ msgstr "Версія"
+
+#~ msgid "Quiet save"
+#~ msgstr "Тихо зберегти"
+
+#~ msgid ""
+#~ "Read %1 to get a quick overview of this collaboration platform. To learn "
+#~ "more, study the TwentyMinuteTutorial, which is accessible from the same "
+#~ "link."
+#~ msgstr ""
+#~ "Прочитайте %1 щоб отримати оглядове уявлення про цю платформу для "
+#~ "організації спільної роботи. Щоб дізнатися більше, вивчіть "
+#~ "TwentyMinuteTutorial, доступний за тим же посиланням."
+
+#~ msgid "Recently changed topics"
+#~ msgstr "Недавно змінені теми"
+
+#, fuzzy
+#~ msgid "Recently changed topics in %1 Web"
+#~ msgstr "Недавно змінені теми"
+
+#, fuzzy
+#~ msgid "Recently changed topics in all Webs"
+#~ msgstr "Недавно змінені теми"
+
+#~ msgid "Refresh"
+#~ msgstr "Поновити"
+
+#~ msgid "Register"
+#~ msgstr "Реєструватися"
+
+#, fuzzy
+#~ msgid "Registered users"
+#~ msgstr "Реєструватися"
+
+#~ msgid "Registration"
+#~ msgstr "Реєстрація"
+
+#~ msgid "Registration codes can only be used once."
+#~ msgstr "Реєстраційні коди можуть бути використані тільки один раз."
+
+#, fuzzy
+#~ msgid "Registration for %1 has been denied"
+#~ msgstr "Реєстраційні коди можуть бути використані тільки один раз."
+
+#, fuzzy
+#~ msgid "Registration has been denied"
+#~ msgstr "Реєстраційні коди можуть бути використані тільки один раз."
+
+#~ msgid "Regular expression search"
+#~ msgstr "З використанням регулярних виразів"
+
+#, fuzzy
+#~ msgid "Related Topics for Administrators:"
+#~ msgstr ""
+#~ "Повідомлення електронної пошти не може бути доставлене. Будь ласка, "
+#~ "повідомте про це Вашого %1 адміністратора %2"
+
+#, fuzzy
+#~ msgid "Related Topics:"
+#~ msgstr "Зв'язані теми"
+
+#~ msgid "Related topics:"
+#~ msgstr "Зв'язані теми:"
+
+#~ msgid "Remember me"
+#~ msgstr "Пам'ятати мене"
+
+#~ msgid "Remember me on this computer"
+#~ msgstr "Пам'ятати мене на цьому комп'ютері"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remember to update your user topic [[%1]] if you want your e-mail change "
+#~ "to be reflected there as well."
+#~ msgstr ""
+#~ "Пам'ятаєте, що Вам також слід поновити інформацію на своїй персональній "
+#~ "сторінці, якщо Ви хочете, щоб іншим користувачам сталі доступні зведення "
+#~ "про зміни адреси Вашої електронної пошти."
+
+#~ msgid "Remember your password?"
+#~ msgstr "Нагадати Ваш пароль?"
+
+#, fuzzy
+#~ msgid "Remove Members from %1"
+#~ msgstr "Пам'ятати мене"
+
+#, fuzzy
+#~ msgid "Remove the member from the group(s) %1 first."
+#~ msgstr "Спочатку вилучте користувача з груп(и) %1."
+
+#~ msgid "Rename"
+#~ msgstr "Перейменувати"
+
+#~ msgid "Rename failed"
+#~ msgstr "Не вдалося перейменувати"
+
+#, fuzzy
+#~ msgid "Rename or move %1"
+#~ msgstr "Перейменувати або перемістити тему"
+
+#~ msgid "Rename or move topic"
+#~ msgstr "Перейменувати або перемістити тему"
+
+#, fuzzy
+#~ msgid "Rename or move topic..."
+#~ msgstr "Перейменувати або перемістити тему"
+
+#, fuzzy
+#~ msgid "Rename, move or delete this web"
+#~ msgstr "Перейменувати, перемістити або вилучити цей розділ:"
+
+#~ msgid "Rename/Move"
+#~ msgstr "Перейменувати/перемістити"
+
+#, fuzzy
+#~ msgid "Replace"
+#~ msgstr "Замінити форму...."
+
+#~ msgid "Replace form..."
+#~ msgstr "Замінити форму...."
+
+#, fuzzy
+#~ msgid "Request Validation"
+#~ msgstr "Реєстрація"
+
+#~ msgid "Reset Password"
+#~ msgstr "Скинути пароль"
+
+#~ msgid "Reset password"
+#~ msgstr "Скинути пароль"
+
+#, fuzzy
+#~ msgid "Restore"
+#~ msgstr "Відновити"
+
+#, fuzzy
+#~ msgid "Restore and Continue"
+#~ msgstr "Відновити тему"
+
+#, fuzzy
+#~ msgid "Restore and exit"
+#~ msgstr "Відновити тему"
+
+#~ msgid "Restore topic"
+#~ msgstr "Відновити тему"
+
+#~ msgid "Results from %1 web"
+#~ msgstr "Результати по розділу \"%1\"."
+
+#, fuzzy
+#~ msgid "Results from %1 web:"
+#~ msgstr "Результати по розділу \"%1\"."
+
+#, fuzzy
+#~ msgid "Return to %1"
+#~ msgstr "Повернутися до %1."
+
+#~ msgid "Return to %1."
+#~ msgstr "Повернутися до %1."
+
+#, fuzzy
+#~ msgid "Return to [_0]"
+#~ msgstr "Повернутися до %1."
+
+#, fuzzy
+#~ msgid "Retype new password:"
+#~ msgstr "Введіть новий пароль повторно"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rev %1 was edited by %2 while you were still editing, and saved as Rev %3."
+#~ msgstr "Поки Ви продовжуєте редагувати %2 була збережена редакція %1."
+
+#~ msgid "Review recent changes in:"
+#~ msgstr "Огляд недавніх змін у:"
+
+#~ msgid "Revision"
+#~ msgstr "Редакція"
+
+#, fuzzy
+#~ msgid "Revision history of %1"
+#~ msgstr "Історія версій %1"
+
+#~ msgid "Revisions"
+#~ msgstr "Редакції"
+
+#~ msgid "S = Save, C = Cancel"
+#~ msgstr "S = зберегти, C = відміна"
+
+#~ msgid ""
+#~ "S = Save, Q = Quiet save, K = Save and Continue, P = Preview, C = Cancel"
+#~ msgstr ""
+#~ "S = зберегти, Q = зберегти без повідомлень, K = застосувати зміни, P = "
+#~ "передперегляд, C = відмінити"
+
+#~ msgid "Save"
+#~ msgstr "Сохранить"
+
+#, fuzzy
+#~ msgid "Save and Continue"
+#~ msgstr "value='Зберегти та продовжити' accesskey='k'"
+
+#, fuzzy
+#~ msgid "Save and exit"
+#~ msgstr "Збережено у:"
+
+#~ msgid "Save table"
+#~ msgstr "Зберегти таблицю"
+
+#~ msgid "Saved to:"
+#~ msgstr "Збережено у:"
+
+#~ msgid "Search"
+#~ msgstr "Пошук"
+
+#, fuzzy
+#~ msgid "Search && Replace"
+#~ msgstr "(результат пошуку)"
+
+#~ msgid "Search all webs for topics that link to here"
+#~ msgstr "Знайти по всіх розділах теми, що посилаються сюди"
+
+#, fuzzy
+#~ msgid "Search for updates"
+#~ msgstr "Інші параметри пошуку:"
+
+#, fuzzy
+#~ msgid "Search in %1 Web"
+#~ msgstr "(зворотні посилання у всіх розділах)"
+
+#, fuzzy
+#~ msgid "Search in all webs"
+#~ msgstr "(зворотні посилання у всіх розділах)"
+
+#, fuzzy
+#~ msgid "Search more topics in this web"
+#~ msgstr "Шукати схожі теми у всіх відкритих розділах"
+
+#, fuzzy
+#~ msgid "Search options"
+#~ msgstr "Інші параметри пошуку:"
+
+#, fuzzy
+#~ msgid "Search result"
+#~ msgstr "(результат пошуку)"
+
+#, fuzzy
+#~ msgid "Search results"
+#~ msgstr "(результат пошуку)"
+
+#~ msgid "Search string"
+#~ msgstr "Рядок пошуку"
+
+#, fuzzy
+#~ msgid "Search the %1 Web for all children of this topic."
+#~ msgstr "Шукати у розділі %1 теми, що посилаються на цю"
+
+#~ msgid "Search the %1 Web for topics that link to here"
+#~ msgstr "Шукати у розділі %1 теми, що посилаються на цю"
+
+#~ msgid "Search where:"
+#~ msgstr "Де шукати:"
+
+#~ msgid "Searched:"
+#~ msgstr "Знайдено:"
+
+#~ msgid "Security Note:"
+#~ msgstr "Примітка по безпеці:"
+
+#~ msgid "See %1 for a list of existing users or register as new user in %2."
+#~ msgstr ""
+#~ "Дивіться у %1 щодо списку існуючих користувачів або реєструйтеся як новий "
+#~ "у %2."
+
+#~ msgid "See %1 for information about Form Definitions."
+#~ msgstr "Дивіться %1 для інформації про визначення форм"
+
+#~ msgid "See also the faster %1"
+#~ msgstr "Дивіться стисло %1"
+
+#~ msgid "See also the verbose %1."
+#~ msgstr "Дивіться докладніше %1."
+
+#~ msgid "See also:"
+#~ msgstr "Дивіться також:"
+
+#, fuzzy
+#~ msgid "See changes since:"
+#~ msgstr "Огляд недавніх змін у:"
+
+#~ msgid "Select"
+#~ msgstr "Вибрати"
+
+#~ msgid "Select a new local file to update attachment"
+#~ msgstr ""
+#~ "Виберіть новий файл на своєму комп'ютері, щоб поновити прикріплений файл"
+
+#, fuzzy
+#~ msgid "Select all topics"
+#~ msgstr "Вибрати усе"
+
+#, fuzzy
+#~ msgid "Select groups to join:"
+#~ msgstr "Встановити нового батька для теми"
+
+#, fuzzy
+#~ msgid "Select members to remove from this group:"
+#~ msgstr "Спочатку вилучте користувача з груп(и) %1."
+
+#, fuzzy
+#~ msgid "Select the group to join:"
+#~ msgstr "Встановити нового батька для теми"
+
+#, fuzzy
+#~ msgid "Select topic parent"
+#~ msgstr "Встановити нового батька для теми"
+
+#~ msgid ""
+#~ "Select, copy and paste your signature text to the bottom of your entry"
+#~ msgstr "Виділіть, скопіюйте та вставте свій підпис знизу під Вашим записом"
+
+#~ msgid "Sequential"
+#~ msgstr "Послідовно"
+
+#~ msgid "Set all"
+#~ msgstr "Встановити все"
+
+#~ msgid "Set new topic parent"
+#~ msgstr "Встановити нового батька для теми"
+
+#, fuzzy
+#~ msgid "Show %1 revisions up to revision %2"
+#~ msgstr "Проглянути попередню редакцію"
+
+#, fuzzy
+#~ msgid "Show attachments help"
+#~ msgstr "Показать прикрепленные файлы"
+
+#~ msgid "Show help"
+#~ msgstr "Показати підказку"
+
+#~ msgid "Shrink edit box"
+#~ msgstr "Стиснути вікно редагування"
+
+#~ msgid "Side by side"
+#~ msgstr "У дві колонки"
+
+#~ msgid "Size"
+#~ msgstr "Розмір"
+
+#~ msgid "Some add schedule information and vacation notice."
+#~ msgstr ""
+#~ "Деякі додають зведення про свій розклад та повідомлення про відсутність у "
+#~ "певний час."
+
+#~ msgid "Some characters such as =&#126;=, =$=, =@=, =%= are removed"
+#~ msgstr "Деякі символи, такі як =&#126;=, =$=, =@=, =%= були вилучені"
+
+#~ msgid ""
+#~ "Some mail tools have an error that causes them to send the same request "
+#~ "twice when you click on a link. It you did this, it is possible that you "
+#~ "actually *have* registered successfully."
+#~ msgstr ""
+#~ "Деякі клієнти електронної пошти обробляють клацання по посиланню "
+#~ "помилково таким чином, що один і той же запит відправляється двічі. "
+#~ "Можливо, що Ви *вже* реєструвалися."
+
+#~ msgid ""
+#~ "Some people turn it into a personal portal with favorite links, what they "
+#~ "work on, what help they'd like, etc."
+#~ msgstr ""
+#~ "Деякі люди перетворять це в персональний портал вибраних посилань, з "
+#~ "якими вони працюють, які їм зручні, і так далі."
+
+#~ msgid "Spaces are replaced by underscores"
+#~ msgstr "Пропуски замінені знаками підкреслення"
+
+#~ msgid "Submit"
+#~ msgstr "Застосувати"
+
+#~ msgid "Submitted content:"
+#~ msgstr "Надані Вами відомості:"
+
+#~ msgid "Subscribe / Unsubscribe in:"
+#~ msgstr "Підписатися / відписатися від:"
+
+#, fuzzy
+#~ msgid "Subscribe to this topic"
+#~ msgstr "Створити цю тему"
+
+#, fuzzy
+#~ msgid "Subscribe to this topic (s)"
+#~ msgstr "Створити цю тему"
+
+#, fuzzy
+#~ msgid "Success adding members to group"
+#~ msgstr "Помилка збереження сторінки"
+
+#, fuzzy
+#~ msgid "Success removing members from group"
+#~ msgstr "Спочатку вилучте користувача з груп(и) %1."
+
+#~ msgid "Summaries"
+#~ msgstr "Виводи за наслідками пошуку"
+
+#~ msgid ""
+#~ "TIP: to search for all topics that contain =\"SOAP\"=, =\"WSDL\"=, a "
+#~ "literal =\"web service\"=, but not =\"shampoo\"=, write:"
+#~ msgstr ""
+#~ "ПОРАДА: наприклад, щоб знайти всі сторінки, що містять слова =\"SOAP\"=, ="
+#~ "\"WSDL\"=, а також словосполучення =\"web service\"=, без слова =\"shampoo"
+#~ "\"=, введіть:"
+
+#, fuzzy
+#~ msgid "Template %1 does not exist"
+#~ msgstr "Розділ %1 не існує"
+
+#, fuzzy
+#~ msgid "Text"
+#~ msgstr "У тексті сторінки"
+
+#~ msgid "Text body"
+#~ msgstr "У тексті сторінки"
+
+#, fuzzy
+#~ msgid "Thank you for approving this registration"
+#~ msgstr "Спасибі за реєстрацію"
+
+#, fuzzy
+#~ msgid "Thank you for denying this registration"
+#~ msgstr "Спасибі за реєстрацію"
+
+#~ msgid "Thank you for registering"
+#~ msgstr "Спасибі за реєстрацію"
+
+#~ msgid ""
+#~ "Thank you for registering in the %1 collaboration platform. Please save "
+#~ "this e-mail for future reference."
+#~ msgstr ""
+#~ "Спасибі, що Ви реєструвалися на інформаційному ресурсі %1, платформі для "
+#~ "сумісної творчості та роботи. Будь ласка, збережіть це повідомлення, в "
+#~ "нім міститься інформація, яка може потрібно Вам в майбутньому."
+
+#~ msgid ""
+#~ "Thank you for registering in the %1 collaboration platform. Your "
+#~ "verification code is %2."
+#~ msgstr ""
+#~ "Спасибі, що Ви реєструвалися на інформаційному ресурсі %1, платформі для "
+#~ "спільної творчості та роботи. Ваш код підтвердження %2."
+
+#~ msgid "The %1 topic already exists"
+#~ msgstr "Тема %1 вже існує"
+
+#~ msgid "The %1 web does not exist"
+#~ msgstr "Розділ %1 не існує"
+
+#~ msgid ""
+#~ "The %1 web is the sandbox you can use for testing. Everybody is welcome "
+#~ "to add or delete some stuff. It is recommended to walk through the %2 to "
+#~ "get a jumpstart on the %3 tool. A good rule of thumb is to add at the end "
+#~ "of the page and sign and date it with your %4."
+#~ msgstr ""
+#~ "Розділ %1 це пісочниця, де Ви можете тренуватися. Тут кожен може додавати "
+#~ "або вилучати що хоче. Рекомендуємо спершу прочитати %2, щоб отримати "
+#~ "ввідну інформацію по інструментарію %3. Хорошим тоном вважається додавати "
+#~ "замітку в кінець сторінки, а також ставити підпис у вигляді Вашого "
+#~ "ВікіІмені (%4) та дати."
+
+#, fuzzy
+#~ msgid "The %1 web of %2."
+#~ msgstr "Розділ %1 не існує"
+
+#, fuzzy
+#~ msgid ""
+#~ "The Web/Topic path: '%1' has missing components, or contains invalid "
+#~ "characters."
+#~ msgstr "Увага: Неможливо ВКЛАСТИ %1 кілька разів, тема вже вкладена. %2"
+
+#, fuzzy
+#~ msgid ""
+#~ "The [[%1][WikiName]] field must be your first and last name written as a "
+#~ "[[%2][WikiWord]], e.g. your capitalized first and last name with spaces "
+#~ "removed."
+#~ msgstr ""
+#~ "У полі %1 обов'язково вкажіть Ваше ім'я та прізвище в %2, тобто "
+#~ "Ім'яПрізвище, з великої букви і без пропусків. "
+
+#~ msgid "The activation code %1 is invalid."
+#~ msgstr "%1 - невірний код активації."
+
+#~ msgid "The attachment and any history will be moved to the new topic."
+#~ msgstr "Прикріплені файли та вся історія будуть переміщені у нову тему."
+
+#~ msgid ""
+#~ "The chances are good that %1 has simply navigated away from the edit page "
+#~ "without saving."
+#~ msgstr ""
+#~ "Найімовірніше що %1 просто покинув редагування сторінки без збереження."
+
+#~ msgid ""
+#~ "The checkmarked topics will be updated (another form will appear which "
+#~ "will _eventually_ allow you to rename any topics that were locked)"
+#~ msgstr ""
+#~ "Відмічені теми будуть оновлені (з'явиться інша форма, яка _у результаті_ "
+#~ "дасть можливість перейменувати будь-яку раніше заблоковану тему)"
+
+#, fuzzy
+#~ msgid "The e-mail address for this account has been rejected."
+#~ msgstr "У цього облікового запису невірна адреса електронної пошти."
+
+#, fuzzy
+#~ msgid ""
+#~ "The e-mail address for this account is already registered to another user."
+#~ msgstr "У цього облікового запису невірна адреса електронної пошти."
+
+#~ msgid "The e-mail address for this account is not valid."
+#~ msgstr "У цього облікового запису невірна адреса електронної пошти."
+
+#~ msgid "The entry for user %1 was missing in the password system."
+#~ msgstr ""
+#~ "У системі доступу відсутній запис, що відносяться до користувача %1."
+
+#~ msgid "The file has been uploaded and attached properly to the %1 topic."
+#~ msgstr "Файл був завантажений і правильно прикріплений до сторінки теми %1."
+
+#~ msgid "The following topics are locked for edit, and cannot be moved:"
+#~ msgstr "Наступні теми закриті для редагування і не можуть бути переміщені:"
+
+#~ msgid ""
+#~ "The following topics refer to topics in this web, but are being edited:"
+#~ msgstr ""
+#~ "Наступні теми посилаються на теми в цьому розділі, але в даний час кимось "
+#~ "редагуються:"
+
+#~ msgid ""
+#~ "The following topics refer to topics in this web, but you are denied "
+#~ "access to them:"
+#~ msgstr ""
+#~ "Наступні теми посилаються на теми в цьому розділі, але у Вас немає до них "
+#~ "доступу:"
+
+#~ msgid "The form should be defined in the topic %1"
+#~ msgstr "Форма повинна бути визначена на сторінці теми %1"
+
+#~ msgid "The lease on this topic expired %1 ago."
+#~ msgstr "Блокування цієї сторіночки застаріло %1 тому"
+
+#~ msgid "The new topic chosen must already exist."
+#~ msgstr "Вибирана нова тема повинна існувати."
+
+#~ msgid "The new web has been created"
+#~ msgstr "Створений новий розділ"
+
+#~ msgid "The password you entered in the *old password* field is incorrect."
+#~ msgstr "Введений пароль у полі *старий пароль* невірний."
+
+#~ msgid "The required field %1 was not filled in."
+#~ msgstr "Обов'язкове поле %1 не було заповнено."
+
+#~ msgid "The topic is in an old format"
+#~ msgstr "Тема в старому форматі"
+
+#~ msgid "The two passwords you entered do not match."
+#~ msgstr "Два введених Вами паролі не співпадають."
+
+#, fuzzy
+#~ msgid "The user has been removed from the Authentication System."
+#~ msgstr "Ваше ім'я користувача було вилучене з системи аутентифікації."
+
+#~ msgid "There are problems with renaming this web:"
+#~ msgstr "Виникли проблеми з перейменуванням розділу:"
+
+#~ msgid "There has been a problem adding your user id to the Password system."
+#~ msgstr ""
+#~ "Виникла проблема з додаванням Вашого ідентифікатора користувача у систему "
+#~ "доступу."
+
+#~ msgid "There should be a line that includes %1, look for %2 (or %3)"
+#~ msgstr "Тут повинен бути рядок, що включає %1, шукайте %2 (або %3)"
+
+#, fuzzy
+#~ msgid "There were errors removing %1 from the %2 group."
+#~ msgstr "%1 переміщена з %2 до %3 користувачем %4"
+
+#~ msgid "This can be automatically upgraded by:"
+#~ msgstr "Це може бути автоматично оновлено при допомозі:"
+
+#~ msgid "This could be for several reasons:"
+#~ msgstr "Це могло відбутися через наступні причини:"
+
+#, fuzzy
+#~ msgid ""
+#~ "This form is used to change your registered e-mail addresses. Your "
+#~ "registered addresses are used by Foswiki for sending you e-mails, "
+#~ "including notifications of password changes. The addresses you register "
+#~ "via this form are kept secret and will *not* be published anywhere on "
+#~ "this site."
+#~ msgstr ""
+#~ "Ця форма призначена для зміни вказаної Вами при реєстрації адреси "
+#~ "електронної пошти. Вказана Вами при реєстрації адреса електронної пошти "
+#~ "використовується TWiki для відправки Вам повідомлень, включаючи "
+#~ "повідомлення про зміну пароля. Адреси електронної пошти, що реєструються "
+#~ "Вами за допомогою даної форми зберігаються в секреті і *не* будуть "
+#~ "опубліковані ніде на цьому сайті. "
+
+#~ msgid "This is an automated e-mail from %1."
+#~ msgstr "Це автоматичне повідомлення від %1."
+
+#~ msgid "This is an automated e-mail notification of user registration in %1."
+#~ msgstr "Це автоматичне повідомлення про реєстрацію користувача в %1."
+
+#, fuzzy
+#~ msgid "This is not a valid WikiName."
+#~ msgstr "'%1' неправильний %2 "
+
+#~ msgid ""
+#~ "This is the Trash. Here you can undelete topics; deleted attachments are "
+#~ "in TrashAttachment."
+#~ msgstr ""
+#~ "Це Звалище. Тут Ви можете відновити раніше вилучені теми; вилучені файли "
+#~ "знаходяться в TrashAttachment."
+
+#, fuzzy
+#~ msgid "This must be a unique WikiName."
+#~ msgstr "'%1' неправильний %2 "
+
+#, fuzzy
+#~ msgid "This must be a valid login username."
+#~ msgstr "'%1' неправильний %2 "
+
+#~ msgid ""
+#~ "This name has been chosen so it doesn't conflict with any other topics "
+#~ "already in the %1 web."
+#~ msgstr ""
+#~ "Це ім'я було вибране оскільки воно не конфліктує ні з однією з інших назв "
+#~ "тем вже розміщених у розділі %1 ."
+
+#, fuzzy
+#~ msgid "This page was cached on %1."
+#~ msgstr "Ця тема переміщена до %1"
+
+#~ msgid "This requires the form definition to be present."
+#~ msgstr "Необхідно, щоб було представлено визначення форми."
+
+#~ msgid "This site requires at least %1 character passwords"
+#~ msgstr "Потрібно ввести пароль завдовжки не менше %1 символів"
+
+#, fuzzy
+#~ msgid "This system is configured to use usernames."
+#~ msgstr "'%1' неправильний %2 "
+
+#~ msgid "This topic:"
+#~ msgstr "Ця тема:"
+
+#~ msgid ""
+#~ "Those changes have been merged with yours to create Rev %1. Text fields "
+#~ "will have been merged, but other data such as form fields may have "
+#~ "overwritten the other users changes. Please inspect the topic to make "
+#~ "sure it is OK, especially if you made any changes to form fields."
+#~ msgstr ""
+#~ "Інші зміни суміщені з Вашими і створена редакція %1. Текстові поля "
+#~ "суміщені, але інші дані, такі, як поля форм, могли бути перезаписані "
+#~ "змінами інших користувачів. Будь ласка, проглянете уважно сторінку, щоб "
+#~ "переконатися, що все гаразд, особливо якщо Ви вносили будь-які зміни до "
+#~ "полів форм. "
+
+#, fuzzy
+#~ msgid "Title:"
+#~ msgstr "Заголовок теми"
+
+#, fuzzy
+#~ msgid "To approve this registration, visit %2"
+#~ msgstr "Спасибі за реєстрацію"
+
+#, fuzzy
+#~ msgid "To attachment:"
+#~ msgstr "Прикріплені файли"
+
+#, fuzzy
+#~ msgid "To block this registration, visit %2"
+#~ msgstr "Спасибі за реєстрацію"
+
+#~ msgid "To edit the topic anyway, click "
+#~ msgstr "Якщо Ви наполягаєте на редагуванні сторінки, натисніть "
+
+#, fuzzy
+#~ msgid "To login as another user please do so [[%1][here]]."
+#~ msgstr "Ви можете подивитися відмінності [[%1][тут]]."
+
+#~ msgid "To see if %1 has finished editing yet, click "
+#~ msgstr "Щоб побачити, чи закінчив вже %1 редагувати, клацніть"
+
+#, fuzzy
+#~ msgid "To topic"
+#~ msgstr "До теми:"
+
+#~ msgid "To topic:"
+#~ msgstr "До теми:"
+
+#, fuzzy
+#~ msgid "To web"
+#~ msgstr "У розділ:"
+
+#~ msgid "To web:"
+#~ msgstr "У розділ:"
+
+#, fuzzy
+#~ msgid "Topic"
+#~ msgstr "До теми:"
+
+#, fuzzy
+#~ msgid "Topic %1 does not exist"
+#~ msgstr "тема %1 не існує"
+
+#~ msgid "Topic Save Error"
+#~ msgstr "Помилка збереження сторінки"
+
+#~ msgid "Topic attachments"
+#~ msgstr "Прикріплені файли"
+
+#~ msgid "Topic can not be upgraded from old style category table"
+#~ msgstr "Тема не може бути оновлена з таблиці категорій старого стилю"
+
+#, fuzzy
+#~ msgid "Topic data"
+#~ msgstr "Назва теми"
+
+#, fuzzy
+#~ msgid "Topic history"
+#~ msgstr "Заголовок теми"
+
+#, fuzzy
+#~ msgid "Topic list for %1 Web"
+#~ msgstr "Теми у розділі %1:"
+
+#~ msgid "Topic name"
+#~ msgstr "Назва теми"
+
+#~ msgid "Topic name:"
+#~ msgstr "Назва теми:"
+
+#~ msgid "Topic parent:"
+#~ msgstr "Батьківська тема:"
+
+#~ msgid "Topic save error"
+#~ msgstr "Помилка збереження сторінки"
+
+#~ msgid "Topic title"
+#~ msgstr "Заголовок теми"
+
+#~ msgid "Topic was merged"
+#~ msgstr "Зміни суміщені"
+
+#~ msgid "Topic will be named: "
+#~ msgstr "Тема буде названа: "
+
+#~ msgid "Topics in %1 web:"
+#~ msgstr "Теми у розділі %1:"
+
+#~ msgid "Topics per web"
+#~ msgstr "Тем у розділі"
+
+#~ msgid ""
+#~ "Topics which are currently being edited by other users in the %1 Web:"
+#~ msgstr ""
+#~ "Теми, які в даний час редагуються іншими користувачами у розділі %1:"
+
+#~ msgid ""
+#~ "Topics which refer to this web and are are currently being edited by "
+#~ "other users:"
+#~ msgstr ""
+#~ "Теми, які посилаються на даний розділ, і в даний час редагуються іншими "
+#~ "користувачами:"
+
+#~ msgid ""
+#~ "Topics which refer to this web that you do not have permission to change:"
+#~ msgstr "Теми, що посилаються на цей розділ який Ви не можете змінювати:"
+
+#~ msgid "Total matches"
+#~ msgstr "Всього збігів"
+
+#~ msgid "Try Again"
+#~ msgstr "Спробувати ще раз"
+
+#, fuzzy
+#~ msgid "Undo last change"
+#~ msgstr "Не изменены"
+
+#~ msgid "Unrecognized action command %1"
+#~ msgstr "Нерозпізнана команда %1"
+
+#, fuzzy
+#~ msgid "Unsupported [[%1][username]]"
+#~ msgstr "Невірні %1.WikiNames:"
+
+#, fuzzy
+#~ msgid "Update"
+#~ msgstr "Оновити посилання"
+
+#~ msgid "Update attachment %1 on %2"
+#~ msgstr "Поновити файл %1 прикріплений до %2"
+
+#~ msgid "Update links"
+#~ msgstr "Оновити посилання"
+
+#, fuzzy
+#~ msgid "Upgrade group topic..."
+#~ msgstr "До теми:"
+
+#, fuzzy
+#~ msgid "Upgraded group"
+#~ msgstr "Створити нову тему"
+
+#, fuzzy
+#~ msgid "Upload a file"
+#~ msgstr "Завантажити файл"
+
+#~ msgid "Upload file"
+#~ msgstr "Завантажити файл"
+
+#, fuzzy
+#~ msgid "Upload multiple attachments in one zip file"
+#~ msgstr "Поновити файл %1 прикріплений до %2"
+
+#~ msgid "Upload up to %1 KB."
+#~ msgstr "Максимальний розмір %1 КБ."
+
+#~ msgid "Uploaded file %1 exceeds limit of %2 KB"
+#~ msgstr "Завантажений файл %1 перевищив допустимі  %2 KB"
+
+#~ msgid "Uploaded file is too big"
+#~ msgstr "Завантажуваний файл задуже великий"
+
+#~ msgid "Use %1 instead."
+#~ msgstr "Тоді скористайтеся [[%1][Змінити пароль]]. "
+
+#~ msgid "Use template:"
+#~ msgstr "Використовувати шаблон:"
+
+#, fuzzy
+#~ msgid "User %1 not in group, cannot be removed"
+#~ msgstr "%1 входить як мінімум до однієї групи і не може бути вилучений"
+
+#~ msgid "User Account %1 Deleted"
+#~ msgstr "Обліковий запис %1 вилучена"
+
+#, fuzzy
+#~ msgid "User Account was not supplied"
+#~ msgstr "Обліковий запис %1 вилучена"
+
+#~ msgid "User Reference"
+#~ msgstr "Керівництво користувача"
+
+#, fuzzy
+#~ msgid "User Registration"
+#~ msgstr "Реєстрація"
+
+#~ msgid "Username"
+#~ msgstr "Ім'я користувача"
+
+#, fuzzy
+#~ msgid "Username %1."
+#~ msgstr "Ім'я користувача"
+
+#, fuzzy
+#~ msgid "Username or email address"
+#~ msgstr "Невірна адреса електронної пошти"
+
+#~ msgid "Users"
+#~ msgstr "Користувачі"
+
+#~ msgid ""
+#~ "Users with automatically generated passwords should proceed immediately "
+#~ "to [[%1][change password]] to change their password to something "
+#~ "memorable."
+#~ msgstr ""
+#~ "Користувачі з автоматично згенерованими паролями повинні негайно [[%1]"
+#~ "[змінити пароль]] на той що краще запам'ятовується."
+
+#~ msgid "Version"
+#~ msgstr "Версія"
+
+#~ msgid "Version history"
+#~ msgstr "Історія версій"
+
+#~ msgid "Version history of %1"
+#~ msgstr "Історія версій %1"
+
+#, fuzzy
+#~ msgid "View complete topic history"
+#~ msgstr "Проглянути повну історію змін сторінки"
+
+#~ msgid "View difference"
+#~ msgstr "Подивитися відмінності"
+
+#, fuzzy
+#~ msgid "View differences"
+#~ msgstr "Подивитися відмінності"
+
+#, fuzzy
+#~ msgid "View earlier"
+#~ msgstr "Проглянути шаблони"
+
+#, fuzzy
+#~ msgid "View later"
+#~ msgstr "Проглянути шаблони"
+
+#~ msgid "View previous topic revision"
+#~ msgstr "Проглянути попередню редакцію"
+
+#~ msgid "View raw text without formatting"
+#~ msgstr "Проглянути початковий текст, без форматування"
+
+#, fuzzy
+#~ msgid "View revision"
+#~ msgstr "Молодша редакція:"
+
+#, fuzzy
+#~ msgid "View sequential topic history"
+#~ msgstr "Проглянути повну історію змін сторінки"
+
+#~ msgid "View templates"
+#~ msgstr "Проглянути шаблони"
+
+#~ msgid "View topic"
+#~ msgstr "Проглянути тему"
+
+#~ msgid "View total topic history"
+#~ msgstr "Проглянути повну історію змін сторінки"
+
+#, fuzzy
+#~ msgid "View without formatting (v)"
+#~ msgstr "Проглянути початковий текст, без форматування"
+
+#, fuzzy
+#~ msgid "Warning: 'include' topic does not exist!"
+#~ msgstr "Примітка: ця тема не існує"
+
+#~ msgid "Warning: Can't INCLUDE %1 repeatedly, topic is already included. %2"
+#~ msgstr "Увага: Неможливо ВКЛАСТИ %1 кілька разів, тема вже вкладена. %2"
+
+#, fuzzy
+#~ msgid ""
+#~ "Warning: Can't INCLUDE '%1', path is empty or contains illegal characters."
+#~ msgstr "Увага: Неможливо ВКЛАСТИ %1 кілька разів, тема вже вкладена. %2"
+
+#, fuzzy
+#~ msgid "Warning: Can't find named section %3 in topic %1.%2"
+#~ msgstr "Увага: Не можу знайти тему %1.%2"
+
+#~ msgid "Warning: Can't find topic %1.%2"
+#~ msgstr "Увага: Не можу знайти тему %1.%2"
+
+#, fuzzy
+#~ msgid "Warning: Can't find web %1 for topic %2"
+#~ msgstr "Увага: Не можу знайти тему %1.%2"
+
+#~ msgid "Warning: Could not send confirmation email"
+#~ msgstr "Увага: Не вдалося послати підтвердження по електронній пошті"
+
+#~ msgid "Warning: This site does not allow %<nop>INCLUDE% of URLs"
+#~ msgstr ""
+#~ "Увага: Цей сайт не дозволяє використовувати %<nop>INCLUDE% для URL адрес"
+
+#, fuzzy
+#~ msgid "Warning: \\'include\\' topic <nop>%1 does not exist!"
+#~ msgstr "Примітка: ця тема не існує"
+
+#, fuzzy
+#~ msgid "Warning: \\'include\\' topic does not exist!"
+#~ msgstr "Примітка: ця тема не існує"
+
+#, fuzzy
+#~ msgid "Warning: table definition in \\'include\\' topic %1 does not exist!"
+#~ msgstr "Примітка: ця тема не існує"
+
+#, fuzzy
+#~ msgid "Web"
+#~ msgstr "Розділи"
+
+#~ msgid "Webs"
+#~ msgstr "Розділи"
+
+#~ msgid "Welcome to the %1 web"
+#~ msgstr "Ласкаво просимо у розділ %1"
+
+#~ msgid "Who"
+#~ msgstr "Хто"
+
+#, fuzzy
+#~ msgid "Word search"
+#~ msgstr "Змінити пошук"
+
+#~ msgid "Would you like to go to:"
+#~ msgstr "Куди б Ви хотіли перейти:"
+
+#, fuzzy
+#~ msgid ""
+#~ "You *must* have at least one valid registered e-mail to be able to reset "
+#~ "your password. If none of your registered e-mail addresses is valid, and "
+#~ "you have forgotten your password, contact %1."
+#~ msgstr ""
+#~ "У Вас *повинен* бути хоч би одна правильно зареєстрована адреса "
+#~ "електронної пошти, щоб можна було скинути Ваш пароль. Якщо жодна із "
+#~ "зареєстрованих Вами адрес електронної пошти не є правильна і Ви забули "
+#~ "свій пароль, пишіть %1."
+
+#, fuzzy
+#~ msgid "You are already registered."
+#~ msgstr "Ви вже зареєстровані"
+
+#~ msgid "You are also listed in the %1 topic"
+#~ msgstr "Ви також перераховані на сторінці %1"
+
+#~ msgid "You are denied access to the following topics in the web:"
+#~ msgstr "Ви не маєте доступу до наступних тем цього розділу:"
+
+#~ msgid ""
+#~ "You are encouraged to go ahead and edit - unless you intend to change "
+#~ "data in a form attached to the topic. If %1 actually _does_ save while "
+#~ "you are editing, your changes will be merged, and nothing will be lost. "
+#~ "Form data cannot easily be merged though, so in this case you are "
+#~ "recommended to check with %1 first."
+#~ msgstr ""
+#~ "Ви можете спокійно продовжити редагування - якщо тільки Ви не маєте "
+#~ "наміру змінювати дані у формах, розміщених на сторінці. Навіть якщо %1 "
+#~ "прямо_зараз_збереже цю сторінку, тоді як Ви редагуєте, внесені зміни "
+#~ "будуть суміщені, і ніяка інформація втрачена не буде. Врахуйте, що дані "
+#~ "форми не можуть бути суміщені так просто, і якщо це необхідно, ми "
+#~ "рекомендуємо Вам  спочатку зафіксувати зміни %1."
+
+#~ msgid "You are here:"
+#~ msgstr "Ви зараз тут:"
+
+#~ msgid ""
+#~ "You are recommended to choose short names, preferably less than 10 "
+#~ "characters, starting with an upper-case alphabetic character and using "
+#~ "only alphanumeric characters. If you want to create a template web (a web "
+#~ "just used as a base to create new webs) choose a name that starts with an "
+#~ "underscore and has only alphanumeric characters."
+#~ msgstr ""
+#~ "Рекомендуємо Вам вибирати короткі імена, з числом символів менше 10, що "
+#~ "починаються із заголовної букви і не містять інших символів, окрім букв і "
+#~ "цифр. Якщо Ви маєте намір створити шаблон розділу (спеціальний розділ, "
+#~ "який використовується тільки для створення на його основі нових розділів) "
+#~ "вибирайте ім'я, що починається з символу підкреслення і не містить інших "
+#~ "символів, окрім букв та цифр."
+
+#, fuzzy
+#~ msgid "You are trying to access an attachment that does not exist."
+#~ msgstr "Ви намагаєтеся %1 неіснуючий файл."
+
+#, fuzzy
+#~ msgid ""
+#~ "You are trying to create a topic from a template that does not exist."
+#~ msgstr "Ви намагаєтеся %1 тему, яка(ої) не існує."
+
+#, fuzzy
+#~ msgid ""
+#~ "You are trying to perform an action on a topic that does not exist "
+#~ "(action '%1')."
+#~ msgstr "Ви намагаєтеся %1 тему, яка(ої) не існує."
+
+#, fuzzy
+#~ msgid "You are trying to rename a topic that does not exist."
+#~ msgstr "Ви намагаєтеся %1 тему, яка(ої) не існує."
+
+#~ msgid ""
+#~ "You can [[%1][create a new web]] if you have permission. Contact %2 if "
+#~ "you have any questions."
+#~ msgstr ""
+#~ "Ви можете [[%1][створити новий розділ]] якщо у Вас є на це права. "
+#~ "Зв'яжіться з %2 якщо є питання."
+
+#~ msgid ""
+#~ "You can also use the names of the standard HTML colors (black, silver, "
+#~ "gray, white, maroon, red, purple, fuchsia, green, lime, olive, yellow, "
+#~ "navy, blue, teal, or aqua)"
+#~ msgstr ""
+#~ "Ви також можете використовувати назви стандартних для кольорів HTML "
+#~ "(black, silver,  gray, white, maroon, red, purple, fuchsia, green, lime, "
+#~ "olive, yellow, navy, blue, teal или aqua)"
+
+#~ msgid "You can change your password at via %1"
+#~ msgstr "Ви можете змінити свій пароль при допомозі %1"
+
+#~ msgid "You can give this web a different name."
+#~ msgstr "Ви можете дати цьому розділу інше ім'я."
+
+#, fuzzy
+#~ msgid ""
+#~ "You cannot alter your username: you have to get the administrator to do "
+#~ "this for you."
+#~ msgstr "Можливо Ви повинні попросити адміністратора %1, зробити це."
+
+#~ msgid "You cannot register twice, the name %1 is already registered."
+#~ msgstr "Ви не можете реєструватися двічі, ім'я %1 вже зареєстровано."
+
+#~ msgid "You have *not* been registered."
+#~ msgstr "Ви *не* були зареєстровані."
+
+#~ msgid ""
+#~ "You may be able to get your Wiki administrator to change the settings if "
+#~ "they are inappropriate for your environment."
+#~ msgstr ""
+#~ "Ви можете спробувати попросити Вашого адміністратора Wiki змінити "
+#~ "налаштування якщо вони не підходять Вашому оточенню."
+
+#~ msgid "You may need to close your browser to make this change take effect."
+#~ msgstr ""
+#~ "Можливо, Вам доведеться закрити вікно Вашого браузера щоб ці зміни набули "
+#~ "чинності."
+
+#~ msgid ""
+#~ "You now need to verify your e-mail address. You can do so by entering %1 "
+#~ "in the form presented to you when this e-mail was sent, or by visiting %2"
+#~ msgstr ""
+#~ "Тепер необхідно підтвердити адресу Вашої електронної пошти. Ви можете "
+#~ "зробити це, ввівши %1 у форму, представлену Вам при відправці даного "
+#~ "повідомлення, або перейшовши за посиланням %2"
+
+#~ msgid "You will probably have to ask your administrator, %1, to do this."
+#~ msgstr "Можливо Ви повинні попросити адміністратора %1, зробити це."
+
+#, fuzzy
+#~ msgid "Your [[%1][username]]:"
+#~ msgstr "Невірні %1.WikiNames:"
+
+#~ msgid ""
+#~ "Your activation code has been sent to %1.  Either click on the link in "
+#~ "your e-mail or enter the code in the box below to activate your "
+#~ "membership. (This code is of the form \"YourName.xxxxxxxxxx\")"
+#~ msgstr ""
+#~ "Ваш код підтвердження реєстрації висланий за адресою %1.  Відкрийте "
+#~ "посилання в отриманому Вами листі або введіть код в текстове поле нижче "
+#~ "щоб підтвердити Вашу реєстрацію. (Цей код має вигляд: \"ВашеІм'я."
+#~ "xxxxxxxxxx\")"
+
+#, fuzzy
+#~ msgid "Your language has been changed to %1. [[%2][click to proceed]]."
+#~ msgstr "Ваш пароль змінений на %1."
+
+#~ msgid "Your password has been changed to %1."
+#~ msgstr "Ваш пароль змінений на %1."
+
+#, fuzzy
+#~ msgid "Your password has not been changed."
+#~ msgstr "Ваш пароль змінений на %1."
+
+#, fuzzy
+#~ msgid "Your password must be at least %1 characters long."
+#~ msgstr "Потрібно ввести пароль завдовжки не менше %1 символів"
+
+#, fuzzy
+#~ msgid "Your password:"
+#~ msgstr "Ваш пароль:"
+
+#~ msgid ""
+#~ "Your personal %1 topic is located at %2. You can customize it as you like:"
+#~ msgstr ""
+#~ "Ваша персональна сторінка %1 розташована в %2. Ви можете змінити її на "
+#~ "свій розсуд:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Your registered e-mail address(es) are updated to: <noautolink>%1</"
+#~ "noautolink>."
+#~ msgstr ""
+#~ "Зареєстрована(і) Вами адреса(и) електронної пошти змінена(і) на: %1."
+
+#, fuzzy
+#~ msgid "Your signature to copy/paste"
+#~ msgstr "Ваш підпис для копіювання/вставки:"
+
+#~ msgid "Your signature to copy/paste:"
+#~ msgstr "Ваш підпис для копіювання/вставки:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Your system may not support changing passwords through Foswiki. Check "
+#~ "with your Wiki administrator."
+#~ msgstr ""
+#~ "Ваша система можливо не підтримує зміну паролів через Wiki. Зв'яжіться з "
+#~ "адміністратором TWiki."
+
+#~ msgid ""
+#~ "[multiple of 3 spaces] * [space] Set [space] VARIABLENAME [space] = "
+#~ "[value]"
+#~ msgstr ""
+#~ "[кратне 3-м пропускам] * [пропуск] Set [пропуск] ІМ'ЯЗМІННОЇ [пропуск] = "
+#~ "[значення]"
+
+#~ msgid "_language_name"
+#~ msgstr "Українська"
+
+#~ msgid "access denied on root"
+#~ msgstr "доступ відхилений"
+
+#~ msgid "access denied on topic"
+#~ msgstr "доступ до теми відхилений"
+
+#~ msgid "access denied on web"
+#~ msgstr "доступ до розділу відхилений"
+
+#~ msgid "access not allowed on root"
+#~ msgstr "доступ заборонений"
+
+#~ msgid "access not allowed on topic"
+#~ msgstr "доступ до теми заборонений"
+
+#~ msgid "access not allowed on web"
+#~ msgstr "доступ до розділу заборонений"
+
+#~ msgid "accesskey='c'"
+#~ msgstr "accesskey='c'"
+
+#~ msgid "and"
+#~ msgstr "та"
+
+#~ msgid "change, update, previous revisions, move, delete..."
+#~ msgstr "змінити, поновити, попередні редакції, перемістити, вилучити..."
+
+#, fuzzy
+#~ msgid "close display options"
+#~ msgstr "Інші операції..."
+
+#, fuzzy
+#~ msgid "default as defined in the %1"
+#~ msgstr "Форма повинна бути визначена на сторінці теми %1"
+
+#~ msgid "don't forget to check your Topic Settings"
+#~ msgstr "не забудьте перевірити налаштування Вашої персональної сторінки"
+
+#, fuzzy
+#~ msgid "edit"
+#~ msgstr "(редагувати)"
+
+#, fuzzy
+#~ msgid "edit form"
+#~ msgstr "(редагувати форму)"
+
+#~ msgid "fields are required."
+#~ msgstr " - ці поля необхідно заповнити."
+
+#~ msgid "help"
+#~ msgstr "допомога"
+
+#~ msgid "hints on good style"
+#~ msgstr "Керівництво по хорошому стилю"
+
+#~ msgid "in raw text format"
+#~ msgstr "у вигляді початкового тексту"
+
+#~ msgid "indicates mandatory fields"
+#~ msgstr "указує обов'язкові поля"
+
+#~ msgid "manage"
+#~ msgstr "управління"
+
+#~ msgid "more..."
+#~ msgstr "більше..."
+
+#~ msgid "now %1"
+#~ msgstr "зараз %1"
+
+#~ msgid "or"
+#~ msgstr "або"
+
+#~ msgid "preview"
+#~ msgstr "попередній перегляд"
+
+#, fuzzy
+#~ msgid "public view access"
+#~ msgstr "У всіх загальнодоступних розділах"
+
+#, fuzzy
+#~ msgid "restore"
+#~ msgstr "Відновити"
+
+#, fuzzy
+#~ msgid "restore form"
+#~ msgstr "Відновити тему"
+
+#~ msgid "retrieved at %1"
+#~ msgstr "Знайдено в %1"
+
+#, fuzzy
+#~ msgid "revision %1"
+#~ msgstr "(редакція)"
+
+#, fuzzy
+#~ msgid "set preferences"
+#~ msgstr "(встановити параметри)"
+
+#~ msgid ""
+#~ "title='Attach an image or document to this topic' accesskey='a'>&Attach"
+#~ msgstr ""
+#~ "title='Прикріпити зображення або документ до цієї сторінки' "
+#~ "accesskey='a'>Прикріпити"
+
+#, fuzzy
+#~ msgid "title='Attach an image or document to this topic'>Attach"
+#~ msgstr ""
+#~ "title='Прикріпити зображення або документ до цієї сторінки' "
+#~ "accesskey='a'>Прикріпити"
+
+#~ msgid "title='Create new topic' accesskey='c'>&Create"
+#~ msgstr "title='Створити нову тему' accesskey='c'>Створити"
+
+#~ msgid ""
+#~ "title='Delete or rename this topic; set parent topic; view and compare "
+#~ "revisions' accesskey='m'>&More topic actions"
+#~ msgstr ""
+#~ "title='Вилучити або перейменувати цю тему; встановити батьківську тему; "
+#~ "подивитися і порівняти редакції' accesskey='m'>Інші дії над темою"
+
+#, fuzzy
+#~ msgid "title='Edit Wiki text' accesskey='w'>Edit &wiki text"
+#~ msgstr "title='Редагувати текст цієї теми' accesskey='e'>Редагувати"
+
+#, fuzzy
+#~ msgid "title='Edit this topic text' >Edit"
+#~ msgstr "title='Редагувати текст цієї теми' accesskey='e'>Редагувати"
+
+#~ msgid "title='Edit this topic text' accesskey='e'>&Edit"
+#~ msgstr "title='Редагувати текст цієї теми' accesskey='e'>Редагувати"
+
+#, fuzzy
+#~ msgid "title='Interwoven' accesskey='i'>&interwoven"
+#~ msgstr "title='Проглядання теми' accesskey='v'>Подивитися тему"
+
+#~ msgid ""
+#~ "title='Search all webs for topics that link to here' accesskey='l'>A&ll "
+#~ "Webs"
+#~ msgstr ""
+#~ "title='Знайти теми, що посилаються сюди, у всіх розділах' "
+#~ "accesskey='l'>Всі розділи"
+
+#~ msgid ""
+#~ "title='Search the %1 Web for topics that link to here' accesskey='b'>We&b"
+#~ msgstr ""
+#~ "title='Шукати у розділі %1 теми, які сюди посилаються' "
+#~ "accesskey='b'>Розділ"
+
+#, fuzzy
+#~ msgid "title='Side by side' accesskey='s'>&side by side"
+#~ msgstr "title='Проглядання теми' accesskey='v'>Подивитися тему"
+
+#, fuzzy
+#~ msgid "title='Subscribe to this topic' accesskey='s'>&Subscribe"
+#~ msgstr "title='Редагувати текст цієї теми' accesskey='e'>Редагувати"
+
+#, fuzzy
+#~ msgid "title='Unsubscribe from this topic' accesskey='s'>Un&subscribe"
+#~ msgstr "title='Редагувати текст цієї теми' accesskey='e'>Редагувати"
+
+#, fuzzy
+#~ msgid "title='View complete topic history' accesskey='h'>&History"
+#~ msgstr ""
+#~ "title='Проглянути повну історію змін сторінки' accesskey='h'>Історія"
+
+#~ msgid "title='View topic' accesskey='v'>&View topic"
+#~ msgstr "title='Проглядання теми' accesskey='v'>Подивитися тему"
+
+#, fuzzy
+#~ msgid "title='View without formatting' accesskey='v'>&View wiki text"
+#~ msgstr ""
+#~ "title='Проглянути початковий текст, без форматування' "
+#~ "accesskey='v'>Початковий текст"
+
+#~ msgid "value='Cancel' accesskey='c'"
+#~ msgstr "value='Відмінити' accesskey='c'"
+
+#~ msgid "value='Discard' accesskey='d'"
+#~ msgstr "value='Відмовитися' accesskey='d'"
+
+#~ msgid "value='Preview' accesskey='p'"
+#~ msgstr "value='Передперегляд' accesskey='p'"
+
+#~ msgid "value='Quiet save' accesskey='q'"
+#~ msgstr "value='Зберегти без повідомлення' accesskey='q'"
+
+#~ msgid "value='Save and Continue' accesskey='k'"
+#~ msgstr "value='Зберегти та продовжити' accesskey='k'"
+
+#~ msgid "value='Save' accesskey='s'"
+#~ msgstr "value='Зберегти' accesskey='s"
+
+#~ msgid "view"
+#~ msgstr "Проглянути"
+
+#~ msgid ""
+#~ "International (8-bit) characters are removed (replaced by US-ASCII "
+#~ "equivalents for Latin-1)"
+#~ msgstr ""
+#~ "Символи міжнародного (8-ми бітового) кодування вилучені (заміщені US-"
+#~ "ASACII еквівалентами кодування Latin-1)"
+
+#~ msgid "Notes:"
+#~ msgstr "Примітки:"
+
+#, fuzzy
+#~ msgid "Move or Delete %1:"
+#~ msgstr "Перемісити чи вилучити прикріплені файли"
+
+#~ msgid "Attachments help"
+#~ msgstr "Довідка щодо прикріплених файлів"
+
+#~ msgid "checkboxes of referenced topics"
+#~ msgstr "перемикачі сторінок, що посилаються"
+
+#, fuzzy
+#~ msgid "Upload"
+#~ msgstr "Завантажити файл"
+
+#~ msgid "Pick from a list"
+#~ msgstr "Вибрати зі списку"
+
+#, fuzzy
+#~ msgid "%1.LoginName:"
+#~ msgstr "Ваше [[%1.LoginName][Ім'яКористувача]]"
+
+#~ msgid "Login name %1"
+#~ msgstr "Ім'я користувача %1"
+
+#, fuzzy
+#~ msgid "Your %1.LoginName:"
+#~ msgstr "Ваше [[%1.LoginName][Ім'яКористувача]]"
+
+#~ msgid "Incorrect %1"
+#~ msgstr "Невірне %1"
+
+#~ msgid "The %1 field must match the {LoginNameFilterIn} filter for this site"
+#~ msgstr ""
+#~ "Поле %1 повинно співпадати з {LoginNameFilterIn} фільтром для цього сайту."
+
+#~ msgid "Click here"
+#~ msgstr "Нажмите здесь"
+
+#, fuzzy
+#~ msgid ":firstName"
+#~ msgstr "Ім'я:"
+
+#, fuzzy
+#~ msgid ":name"
+#~ msgstr "Перейменувати"
+
+#, fuzzy
+#~ msgid ":nickname"
+#~ msgstr "Назва теми"
+
+#, fuzzy
+#~ msgid ":selection"
+#~ msgstr "Дія"
+
+#, fuzzy
+#~ msgid ":topic"
+#~ msgstr "До теми:"
+
+#~ msgid "Hello %1"
+#~ msgstr "Привіт %1"
+
+#, fuzzy
+#~ msgid "for"
+#~ msgstr "або"
+
+#, fuzzy
+#~ msgid "if nickname"
+#~ msgstr "Назва теми"
+
+#, fuzzy
+#~ msgid "TextFormatting"
+#~ msgstr "*Допомога по форматуванню:*"
+
+#~ msgid "&Edit text"
+#~ msgstr "Редагувати текст"
+
+#, fuzzy
+#~ msgid ""
+#~ "A more extensive changes list is available via [[%1][Recent changes]]."
+#~ msgstr ""
+#~ "Більш розширений список змін доступний за посиланням [[%1][Недавні "
+#~ "зміни]] "
+
+#, fuzzy
+#~ msgid "Create topic"
+#~ msgstr "Створити тему"
+
+#~ msgid "Current parent:"
+#~ msgstr "Поточний батько:"
+
+#~ msgid "Edit personal data"
+#~ msgstr "Змінити особисті дані"
+
+#~ msgid "Edit text"
+#~ msgstr "Редагувати текст"
+
+#~ msgid "Error: %1"
+#~ msgstr "Помилка: %1"
+
+#~ msgid ""
+#~ "If your user topic is not protected from changes by other people, and you "
+#~ "don't register an e-mail address using this form, then your user account "
+#~ "could be hijacked by someone else."
+#~ msgstr ""
+#~ "Якщо Ваша персональна сторінка не захищена від змін іншими людьми, і Ви "
+#~ "не реєстрували адресу електронної пошти за допомогою цієї форми, то Ваш "
+#~ "обліковий запис може бути зламаний будь-ким."
+
+#, fuzzy
+#~ msgid "Show"
+#~ msgstr "Показати підказку"
+
+#, fuzzy
+#~ msgid "Use a topic name in %SYSTEMWEB%.WikiNotation"
+#~ msgstr "(Використовуйте ім'я теми у System.WikiNotation)"
+
+#, fuzzy
+#~ msgid "You cannot register on this site."
+#~ msgstr "Ви не можете реєструватися двічі, ім'я %1 вже зареєстровано."
+
+#, fuzzy
+#~ msgid ""
+#~ "You really ought to register a valid e-mail address. If Foswiki can't "
+#~ "find a registered e-mail for you in the secret database, it will look in "
+#~ "your user topic for a form field called Email. If this form field does "
+#~ "not exist it will look for a line like this:"
+#~ msgstr ""
+#~ "Вам дійсно необхідно зареєструвати правильну адресу електронної пошти. "
+#~ "Якщо TWiki не зможе знайти зареєстровану Вами адресу електронної пошти в "
+#~ "секретній базі даних, то шукатиме на Вашій персональній сторінці рядок "
+#~ "подібну цьому:"
+
+#~ msgid ""
+#~ "Your user topic has not been renamed. Please e-mail %1 to request this."
+#~ msgstr ""
+#~ "Ваша персональна сторінка не була перейменована. Будь ласка, відправте "
+#~ "повідомлення на %1 із запитом."
+
+#, fuzzy
+#~ msgid "later"
+#~ msgstr "Дата"
+
+#, fuzzy
+#~ msgid "revisions up to"
+#~ msgstr "Редакції"
+
+#, fuzzy
+#~ msgid "Attachment metadata"
+#~ msgstr "Не вдалося перемістити файл"
+
+#, fuzzy
+#~ msgid ""
+#~ "Get help on <a target='Macros' class='foswikiPopUp' href='%1' "
+#~ "rel='nofollow'>Setting topic preferences</a>."
+#~ msgstr ""
+#~ "Отримати допомогу з питання <a target='Macros' onclick=\"return "
+#~ "launchWindow('%1','Macros')\" href='%2' rel='nofollow'>Як встановити "
+#~ "властивості теми</a>."
+
+#, fuzzy
+#~ msgid ""
+#~ "Get help on <a target='ManagingTopics' class='foswikiPopUp' href='%1' "
+#~ "rel='nofollow'>Renaming and moving topics</a>."
+#~ msgstr ""
+#~ "Отримати допомогу з питання<a target='ManagingTopics' onclick=\"return "
+#~ "launchWindow('%1','ManagingTopics')\" href=\"%2\" rel='nofollow'>Як "
+#~ "перейменувати або перемістити тему</a>."
+
+#, fuzzy
+#~ msgid ""
+#~ "Get help on <a target='ManagingWebs' class='foswikiPopUp' href='%1' "
+#~ "rel='nofollow'>Renaming and moving webs</a>."
+#~ msgstr ""
+#~ "Отримати допомогу з питання<a target='ManagingTopics' onclick=\"return "
+#~ "launchWindow('%1','ManagingTopics')\" href=\"%2\" rel='nofollow'>Як "
+#~ "перейменувати або перемістити тему</a>."
+
+#~ msgid "Read new revision help text in new window"
+#~ msgstr "Отримати довідкову інформацію по новій редакції у новому вікні"
+
+#~ msgid "S = Save, Q = Quiet save, K = Save and Continue, D = Discard"
+#~ msgstr ""
+#~ "S = зберегти, Q = зберегти без повідомлень, K = застосувати зміни, D = "
+#~ "відмовитися"
+
+#~ msgid "%1 - complete Foswiki documentation, Quick Start to Reference"
+#~ msgstr ""
+#~ "%1 - повна документація по Foswiki, швидкий перехід до довідкової "
+#~ "інформації"
+
+#~ msgid "%1 - just for me"
+#~ msgstr "%1 - тільки для мене"
+
+#~ msgid "%1 - starting points on Foswiki"
+#~ msgstr "%1 - перше знайомство з Foswiki"
+
+#~ msgid "%1 - try out Foswiki on your own"
+#~ msgstr "%1 - спробуйте Foswiki самостійно"
+
+#~ msgid "%1 - view a short introductory presentation on Foswiki for beginners"
+#~ msgstr "%1 - подивитися коротку ввідну презентацію Foswiki для початківців"
+
+#~ msgid "%1 for changing your email address"
+#~ msgstr "%1 щоб змінити адреси електронної пошти"
+
+#~ msgid "%1 for changing your password"
+#~ msgstr "%1 для зміни Вашого пароля"
+
+#~ msgid "%1 is a list of Foswiki user documentation"
+#~ msgstr "%1 - список документації користувача Foswiki"
+
+#, fuzzy
+#~ msgid "%1 lists all Foswiki user tools"
+#~ msgstr "%1 список інструментарію користувача Foswiki"
+
+#~ msgid "(how you log in) LoginName:"
+#~ msgstr "(вводиться на вході) Ім'яКористувача:"
+
+#~ msgid "(identifies you to others) WikiName:"
+#~ msgstr "(як Вас бачать інші користувачі) ВікіІм'я:"
+
+#~ msgid "(optional)"
+#~ msgstr "(не обов'язково)"
+
+#~ msgid "(recommended)"
+#~ msgstr "(рекомендується)"
+
+#~ msgid "(search results)"
+#~ msgstr "(результати пошуку)"
+
+#~ msgid "Add your name to the list of users in the %1 topic in the %2 web."
+#~ msgstr "Додасть Ваше ім'я до списку користувачів теми %1 розділу %2."
+
+#~ msgid "Advanced Search"
+#~ msgstr "Розширений пошук"
+
+#~ msgid "Create <nop>TestTopic###"
+#~ msgstr "Створити пробну тему"
+
+#~ msgid "Create a new auto-numbered test topic:"
+#~ msgstr "Створити нову пробну тему, сторінку з автонумерацією:"
+
+#~ msgid "Create a new document by name:"
+#~ msgstr "Створити новий документ по імені:"
+
+#~ msgid "Create by Name"
+#~ msgstr "Створити за іменем"
+
+#~ msgid ""
+#~ "Create your personal %1 topic using your WikiName as topic name, and add "
+#~ "the data you submitted to the topic."
+#~ msgstr ""
+#~ "Створить Вашу особисту сторінку %1 використовуючи [[WikiName][ВікіІм'я]] "
+#~ "як її ім'я та додасть на неї, введені Вами при реєстрації, дані."
+
+#~ msgid ""
+#~ "Finish creating an account for you, so that you can start editing pages "
+#~ "using your WikiName."
+#~ msgstr ""
+#~ "Завершить створення облікового запису, після чого Ви зможете редагувати "
+#~ "сторінки, використовуючи своє [[WikiName][ВікіІм'я]]."
+
+#, fuzzy
+#~ msgid ""
+#~ "Foswiki's user interface is available in several languages. If you want "
+#~ "to change the language for this session, choose one of the following and "
+#~ "hit \"Change language\". Otherwise, follow the \"Cancel\" link on the "
+#~ "bottom of the page to return to the previous topic."
+#~ msgstr ""
+#~ "Интерфейс TWiki доступний на декількох мовах. Якщо Ви хочете змінити мову "
+#~ "поточної сесії, виберіть одну з нижченаведених та натисніть \"Змінити мову"
+#~ "\". Інакше, слідуйте за посиланням \"Відмінити\", розташованою знизу "
+#~ "поточної сторінки, щоб повернутися до попередньої теми."
+
+#~ msgid ""
+#~ "If you already know the name of the topic, enter the name of the topic "
+#~ "into the [[%1][Jump box]] at the top"
+#~ msgstr ""
+#~ "Якщо Ви вже знаєте назву теми, на яку хочете перейти, то введіть її у "
+#~ "поле  [[%1][Перейти]] зверху сторінки"
+
+#~ msgid "List all topics in the %1 web in alphabetical order"
+#~ msgstr "Вивести всі теми розділу %1 в алфавітному порядку"
+
+#~ msgid "Move attachment to web:"
+#~ msgstr "Перемістити файл до розділу:"
+
+#~ msgid "Organisation URL:"
+#~ msgstr "URL організації:"
+
+#~ msgid "Other Country"
+#~ msgstr "Інша країна"
+
+#~ msgid "Otherwise, use this form to get a new one e-mailed to you."
+#~ msgstr ""
+#~ "Інакше, скористайтеся цією формою, щоб отримати новий пароль по "
+#~ "електронній пошті."
+
+#~ msgid "Personal Preferences"
+#~ msgstr "Особисті параметри"
+
+#, fuzzy
+#~ msgid "Raw edit"
+#~ msgstr "Останньому хто редагував"
+
+#~ msgid ""
+#~ "Registered users can [[%1][change]] and [[%2][reset]] their passwords."
+#~ msgstr ""
+#~ "Зареєстровані користувачі можуть [[%1][змінювати]] та [[%2][скидати]] "
+#~ "свої паролі."
+
+#~ msgid "Rename/move topic..."
+#~ msgstr "Перейменувати/перемістити тему..."
+
+#~ msgid "Rename/move/delete web..."
+#~ msgstr "Перейменувати/перемістити/вилучити розділ..."
+
+#~ msgid "Retype password:"
+#~ msgstr "Введіть пароль повторно:"
+
+#~ msgid "Send you a confirmation of your registration by e-mail."
+#~ msgstr "Відправити підтвердження Вашої реєстрації по електронній пошті."
+
+#~ msgid "Show tool-tip topic info on mouse-over of %1 links, on or off:"
+#~ msgstr ""
+#~ "Показувати підказки при наведенні миші на %1 посилання, вкл. або викл.:"
+
+#~ msgid "Simple search"
+#~ msgstr "Простий пошук"
+
+#~ msgid "Test Topics"
+#~ msgstr "Пробні теми"
+
+#, fuzzy
+#~ msgid ""
+#~ "To edit pages on this Foswiki site, you must have a registered user name "
+#~ "and password."
+#~ msgstr ""
+#~ "Щоб редагувати сторінки цього [[TWikiSite][сайту TWiki]], Ви повинні бути "
+#~ "зареєстрованим користувачем."
+
+#~ msgid "To register as a new user, simply fill out this form:"
+#~ msgstr "Для реєстрації нового користувача, просто заповніть наступну форму:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Uncomment preference settings to activate them (remove the #-sign). Help "
+#~ "and details on preference settings are available in %1."
+#~ msgstr ""
+#~ "Розкоментуйте змінні параметрів для їх активації (вилучіть символ - #). "
+#~ "Допомога та детальіше щодо змінних параметрів див. тут %1."
+
+#~ msgid "Web Search"
+#~ msgstr "Пошук у розділі"
+
+#~ msgid ""
+#~ "When %1 receives the form, it will mail an account activation code to the "
+#~ "e-mail address you gave above. Enter that activation code in the "
+#~ "following screen, or follow the link in the e-mail, to activate your "
+#~ "account. Once your account is activated, %1 will:"
+#~ msgstr ""
+#~ "Коли Ви заповните цю форму %1 відправить код активації за вказаною Вами "
+#~ "адресою електронної пошти. Введіть отриманий код на наступній сторінці "
+#~ "або відкрийте посилання в отриманому повідомленні, щоб активувати Ваш "
+#~ "обліковий запис. Як тільки Ваш обліковий запис буде активований, %1 буде:"
+
+#~ msgid ""
+#~ "You can set your favorite language permanently by setting the %1 variable "
+#~ "in your user topic."
+#~ msgstr ""
+#~ "Ви можете зафіксувати вибір мови, визначивши змінну %1 на Вашій "
+#~ "персональній сторінці."
+
+#~ msgid "advanced search"
+#~ msgstr "розширений пошук"
+
+#~ msgid "looking for references in _all public webs_"
+#~ msgstr "відстежуючи посилання у _всіх публічних розділах_"
+
+#~ msgid "%1 Web Home"
+#~ msgstr "%1 Головна сторінка розділу"
+
+#~ msgid "(oops)"
+#~ msgstr "(ой)"
+
+#~ msgid "(semicolon =;= for and)"
+#~ msgstr "(використовуйте крапку з комою =;= для логічного *\"ТА\"*)"
+
+#~ msgid "Create '%1'"
+#~ msgstr "Створити '%1'"
+
+#~ msgid "Did you spell the %1 correctly?"
+#~ msgstr "Чи правильно Ви написали %1?"
+
+#~ msgid "Do show:"
+#~ msgstr "Показувати:"
+
+#~ msgid "Do you wish to create the topic %1?"
+#~ msgstr "Хочете створити тему %1?"
+
+#~ msgid "Internal error when sending email to %1."
+#~ msgstr ""
+#~ "Відбулася внутрішня помилка при спробі відправити повідомлення "
+#~ "електронної пошти за адресою %1."
+
+#~ msgid "List more similar topic in this web"
+#~ msgstr "Показати подібні теми в цьому розділі"
+
+#~ msgid "Note: This topic does not exist"
+#~ msgstr "Примітка: ця тема не існує"
+
+#~ msgid "Opens page in new window"
+#~ msgstr "Відкрити сторінку в новому вікні"
+
+#~ msgid "Remember, a %1 is case sensitive."
+#~ msgstr ""
+#~ "Пам'ятаєте, що при написанні %1 слід розрізняти рядкові  та прописні "
+#~ "букви."
+
+#~ msgid "Similar topics in this web (if any):"
+#~ msgstr "Подібні теми в цьому розділі (якщо є):"
+
+#~ msgid ""
+#~ "The %1 web of TWiki. TWiki is a Web-Based Collaboration Platform for the "
+#~ "Enterprise."
+#~ msgstr ""
+#~ "Це розділ %1 з TWiki. TWiki — це заснована на WWW платформа для "
+#~ "забезпечення спільної роботи, створена професіоналами і для професіоналів."
+
+#~ msgid "The topic %1 you are trying to access does not exist, yet."
+#~ msgstr "Тема %1, до якої Ви намагаєтеся отримати доступ, ще не створена."
+
+#~ msgid ""
+#~ "This topic name is not recommended because it will not be linked "
+#~ "automatically. See %1 for details"
+#~ msgstr ""
+#~ "Така назва теми не рекомендується, оскільки посилання не буде встановлено "
+#~ "автоматично. Подробиці див. у %1 "
+
+#~ msgid "WARNING:"
+#~ msgstr "УВАГА:"
+
+#~ msgid "about !BookView"
+#~ msgstr "про !BookView"
+
+#~ msgid "about regular expression search"
+#~ msgstr "про пошук з використанням регулярних виразів"
+
+#~ msgid "looking for references in _%1 web_ only"
+#~ msgstr "відстежуючи посилання тільки у _розділі %1_"
+
+#~ msgid "All topics in %1"
+#~ msgstr "Всі теми у %1"
+
+#, fuzzy
+#~ msgid "or %1"
+#~ msgstr "сейчас %1"
+
+#~ msgid "&WYSIWYG"
+#~ msgstr "Визуальный редактор"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please see <a target='Macros' onclick=\"return "
+#~ "launchWindow('%1','FileAttachment')\" href='' "
+#~ "rel='nofollow'>FileAttachment</a> for more information about attaching "
+#~ "files."
+#~ msgstr ""
+#~ "*Подсказка:* Вы можете прочитать в <a target='Macros' onclick=\"return "
+#~ "launchWindow('%1','FileAttachment')\" href='' "
+#~ "rel='nofollow'>FileAttachment</a> дополнительную информацию о "
+#~ "прикреплении файлов."
+
+#~ msgid "WYSIWYG"
+#~ msgstr "Визуальный редактор"
+
+#~ msgid "title='Create this topic' accesskey='w'>Create (&WYSIWYG)"
+#~ msgstr ""
+#~ "title='Редактировать текст этой темы в визуальном редакторе' "
+#~ "accesskey='w'>Создать (в визуальном редакторе)"
+
+#~ msgid "title='Edit this topic text' accesskey='w'>&WYSIWYG"
+#~ msgstr ""
+#~ "title='Редактировать текст этой темы в визуальном редакторе' "
+#~ "accesskey='w'>Визуально"
+
+#~ msgid "value='Checkpoint' accesskey='k'"
+#~ msgstr "value='Применить изменения' accesskey='k'"
+
+#~ msgid "%1 has a list of other TWiki users."
+#~ msgstr "%1 содержит список других пользователей TWiki."
+
+#~ msgid ""
+#~ "During save of file %1 an error was found by the version control system. "
+#~ "Please notify your %2 administrator."
+#~ msgstr ""
+#~ "Во время сохранения файла %1 система управления версиями обнаружила "
+#~ "ошибку. Пожалуйста, известите об этом Вашего администратора %2."
+
+#, fuzzy
+#~ msgid "Hello %1!</strong>"
+#~ msgstr "Привет %1"
+
+#~ msgid ""
+#~ "Once you have created the topic, consider adding links in related topics "
+#~ "to the new topic so that there are more ways people can discover it."
+#~ msgstr ""
+#~ "Как только Вы создали тему, рассмотрите возможность добавления ссылок на "
+#~ "нее из других, смежных тем, чтобы вновь созданную тему люди могли найти "
+#~ "возможно большим числом способов."
+
+#~ msgid "See %1 for more information."
+#~ msgstr "Cмотрите подробнее в %1."
+
+#~ msgid ""
+#~ "This form applies only if TWiki uses a {PasswordManager} that supports "
+#~ "changing passwords. Otherwise replace this topic with a note describing "
+#~ "how to change the password in your organization."
+#~ msgstr ""
+#~ "Эта форма применяется, когда TWiki использует {PasswordManager}, который "
+#~ "поддерживает смену паролей. В противном случае Вам следует заменить "
+#~ "содержимое этой страницы примечанием, которое бы описывало метод смены "
+#~ "пароля, принятый в Вашей организации."
+
+#~ msgid ""
+#~ "*Bug:* Internet Explorer 4.0 or earlier: If you get an \"Internal Server "
+#~ "Error\" message when you upload a file, you need to try again. It should "
+#~ "work the second time."
+#~ msgstr ""
+#~ "*Ошибка:* Для Internet Explorer версии 4.0 или более ранней: Если Вы "
+#~ "получили сообщение \"Internal Server Error\" (внутренняя ошибка сервера) "
+#~ "при загрузке файла, следует попытаться еще раз. Со второго раза должно "
+#~ "сработать."
+
+#~ msgid ""
+#~ "<a target='ManagingWebs' onclick=\"return "
+#~ "launchWindow('%1','ManagingWebs')\" href='%2' rel='nofollow'>Get help on "
+#~ "managing webs</a>"
+#~ msgstr ""
+#~ "<a target='ManagingWebs' onclick=\"return "
+#~ "launchWindow('%1','УправлениеРазделами')\" href='%2' "
+#~ "rel='nofollow'>Справка по Управлению Разделами</a>"
+
+#~ msgid ""
+#~ "<span class='twikiAlert'><b>Do not forget</b></span> to save your changes."
+#~ msgstr ""
+#~ "<span class='twikiAlert'><b>Не забудьте</b></span> сохранить сделанные "
+#~ "Вами изменения."
+
+#~ msgid "Deleted"
+#~ msgstr "Удалено"
+
+#~ msgid "Existing form data will be lost! (still available in old version)"
+#~ msgstr ""
+#~ "Имеющиеся в форме данные будут потеряны! (но останутся доступны в старой "
+#~ "версии)"
+
+#~ msgid "Hide attachments"
+#~ msgstr "Скрыть прикрепленные файлы"
+
+#~ msgid "History:"
+#~ msgstr "История:"
+
+#~ msgid "Language Changed"
+#~ msgstr "Язык изменен"
+
+#~ msgid "Not recommended when deleting a web."
+#~ msgstr "Не рекомендовано при удалении раздела."
+
+#~ msgid "Notices:"
+#~ msgstr "Заметки:"
+
+#~ msgid "Revision:"
+#~ msgstr "Редакция:"
+
+#~ msgid ""
+#~ "Step 2: Continue to <input type='submit' class='twikiButton' "
+#~ "value='Edit' /> and save %1 to activate the new parent"
+#~ msgstr ""
+#~ "Шаг 2 Продолжите <input type='submit' class='twikiButton' "
+#~ "value='Редактировать' /> и сохраните %1 чтобы установить нового родителя"
+
+#~ msgid "Subwebs must be enabled."
+#~ msgstr "Подразделы должны быть разрешены."
+
+#~ msgid "The checkmarked topics will be updated."
+#~ msgstr "Отмеченные темы будут обновлены."
+
+#~ msgid "There is no size limit for uploaded files."
+#~ msgstr "Нет ограничения на размер для загруженных файлов."
+
+#~ msgid "To *cancel* and discard any changes: Press the [Discard] button."
+#~ msgstr ""
+#~ "Для *отмены* и отказа от всех изменений: Нажмите кнопку [Отказаться]."
+
+#~ msgid "To *save* changes: Press the [Save Changes] button."
+#~ msgstr "Чтобы *сохранить* изменения: Нажмите кнопку [Сохранить Изменения]."
+
+#~ msgid ""
+#~ "To delete this web: move this web to the Trash web by renaming it to %1."
+#~ msgstr ""
+#~ "Чтобы удалить раздел: отправьте этот раздел в Корзину для разделов, "
+#~ "переименовав его в %1."
+
+#~ msgid "To make *more changes*: Go back in your browser."
+#~ msgstr "Чтобы *продолжить изменения*: Вернитесь с помощью Вашего браузера."
+
+#~ msgid "Use monospace font"
+#~ msgstr "Использовать моноширинный шрифт"
+
+#~ msgid "Use proportional spaced font"
+#~ msgstr "Использовать пропорциональный  шрифт"
+
+#~ msgid "You can move the topic to a different web."
+#~ msgstr "Вы можете переместить тему в другой раздел."
+
+#~ msgid "You can review your changes in your personal TWiki topic %1"
+#~ msgstr ""
+#~ "Вы можете просмотреть изменения Вашей персональной TWiki страницы %1"
+
+#~ msgid "none (remove topic parent)"
+#~ msgstr "none (убрать родительскую тему)"
+
+#~ msgid "to edit the topic anyway."
+#~ msgstr "непременно редактировать эту тему."
+
+#~ msgid "to see if %1 has finished editing yet."
+#~ msgstr "посмотреть, не закончил ли %1 редактирование."
+
+#~ msgid "To edit the topic anyway, hit 'Edit Anyway'."
+#~ msgstr ""
+#~ "Если Вы настаиваете на редактировании страницы, нажмите 'Всё равно "
+#~ "редактировать'."
+
+#~ msgid "To see if %1 has finished editing yet, click 'Try Again'."
+#~ msgstr ""
+#~ "Чтобы увидеть, закончил ли уже %1 редактировать, кликните 'Попробовать "
+#~ "еще раз'."

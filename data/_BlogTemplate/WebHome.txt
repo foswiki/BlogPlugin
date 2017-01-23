@@ -1,10 +1,19 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
 
 
-%META:PREFERENCE{name="TOPICTITLE" title="TOPICTITLE" type="Local" value="Blog"}%
+%META:FORM{name="Applications.ClassificationApp.SeoTopic"}%
+%META:FIELD{name="TopicType" title="TopicType" value="SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value=""}%
+%META:FIELD{name="Tag" title="Tag" value=""}%
+%META:FIELD{name="Category" title="Category" value=""}%
+%META:FIELD{name="HTMLTitle" title="HTML Title" value=""}%
+%META:FIELD{name="MetaDescription" title="Meta Description" value=""}%
+%META:FIELD{name="MetaKeywords" title="Meta Keywords" value=""}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
 %META:PREFERENCE{name="PERMSET_CHANGE" title="PERMSET_CHANGE" type="Local" value="nobody"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="Applications.BlogApp.FrontPageView"}%
 %META:PREFERENCE{name="HTMLTITLE" title="HTMLTITLE" type="Set" value="Blog %25IF%7b%22defined HTMLTITLESEP%22 then=%22%25HTMLTITLESEP%25%22 else=%22-%22%7d%25 %25WIKITOOLNAME%25"}%
 %META:PREFERENCE{name="CACHEABLE" title="CACHEABLE" type="Set" value="on"}%
-%META:PREFERENCE{name="CACHEEXPIRE" title="CACHEEXPIRE" type="Set" value="+5m"}%
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%

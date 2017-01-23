@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicType"}%
 %DBCALL{"Applications.RenderTopicInstaller" TEXT="Install '%TOPIC%' TopicType" TYPE="TopicType"}%
 
@@ -10,7 +10,6 @@ This is the central TopicType to store blog entries.
 %STARTINCLUDE%
 %DBCALL{"Applications.RenderSimpleTopicCreator" 
   VALUE=""
-  FORM="%WEB%.%TOPIC%"
   EDITOR="Applications.BlogApp.BlogEntryEdit"
   EXTRA="<input type='hidden' name='State' value='unpublished' /><input type='hidden' name='DISPLAYCOMMENTS' value='on' />"
   PARENT="none"
@@ -26,23 +25,27 @@ This is the central TopicType to store blog entries.
 
 ---++ <nop>%TOPIC% form
 | *Name:*| *Type:* | *Size:* | *Values:* | *Description:* | *Attributes:* | *Default:* |
-| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic | Document type  | | |
+| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic | Document type  | | |
 | <nop>TopicTitle | text | 75 | | title of this blog entry | | |
-| Summary | text | 75 | | enter a punch line | | |
-| Tag | tag | 30 | | keywords | | |
-| Category | cat | 1 |  | categories this blog entry is field to |  | |
+| Summary | text | 75 | | enter a punch line | c |  |
+| Tag | tag | 30 | | keywords |  | |
+| Category | cat | 1 |  | categories this blog entry is field to |  |  |
 | Author | text | 75 | | author(s) of this posting | | |
-| State | radio | 2 | published, unpublished | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |  | |
-| Publish Date | date | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | | |
-| Unpublish Date | date | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | | |
+| State | radio | 2 | published, unpublished | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry | | unpublished |
+| Publish Date | date2 | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | | |
+| Unpublish Date | date2 | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | | |
 | Sticky | checkbox+values | 4 | on frontpage=frontpage, on category=category | a sticky blog entries is rendered at the top of the frontpage or category independent of the normal timeline | | |
 | HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%MAKETEXT{"Generate title"}%</a> | | |
 | Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%MAKETEXT{"Generate description"}%</a> | | |
 | Meta Keywords | text | 75 | | SEO keywords. Specify a comma separate list of keywords. <a href='#' id='clsGenerateKeywords'>%MAKETEXT{"Generate keywords"}%</a> | | |
+| Meta Image | select2 | 30 | , %ATTACHMENTS{format="$name" separator=", "}% | name of attachment used as open graph image thumbnail |  | |
 
 %META:FORM{name="Applications.TopicType"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicType, DataForm, DocuTopic, ApplicationTopic"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Inheritance" attributes="" title="Inheritance" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicType, DataForm, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value="Blog Entry"}%
+%META:FIELD{name="Summary" title="Summary" value="a posting published in a blog web"}%
+%META:FIELD{name="Icon" title="Icon" value="fa-rss"}%
+%META:FIELD{name="Editor" title="Editor" value="Applications.BlogApp.BlogEntryEditTemplate"}%
+%META:FIELD{name="Template" title="Template" value="Applications.BlogApp.BlogEntryTemplate"}%
+%META:FIELD{name="TopicNaming" title="Topic Naming" value=""}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

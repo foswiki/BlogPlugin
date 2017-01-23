@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -14,13 +14,10 @@
 ---++ Implementation
 <verbatim class="tml">
 %STARTINCLUDE%<!-- -->
-<h2 >%WEBLINK{"%BASEWEB%" format="$title"}%</h2>
+%WEBLINK{format="<h2 class='webLink'><a class='$marker' href='$url'>$title</a></h2>" web="%BASEWEB%"}%
 %DBCALL{
   "%WEB%.%TOPIC%" 
-  section="%IF{"defined SIDEBAR" 
-    then="%SIDEBAR%" 
-    else="%FORMATLIST{"%FORMFIELD{"TopicType" topic="%BASEWEB%.%BASETOPIC"}%" limit="1" null="Default"}%"
-  }%"
+  section="%SIDEBAR{default="%FORMATLIST{"%FORMFIELD{"TopicType" topic="%BASEWEB%.%BASETOPIC"}%" limit="1" null="Default"}%"}%"
 }%%JQREQUIRE{"serialpager"}%%STOPINCLUDE%
 </verbatim>
 
@@ -62,7 +59,7 @@
 %DBCALL{"Applications.BlogApp.RenderSimilarBlogEntries"}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderRecentBlogEntries"
   LIMIT="5"
-  CAT="%CATINFO{topic="%BASEWEB%.%BASETOPIC%" format="$name" limit="1"}%"
+  CAT="%CATINFO{topic="%BASEWEB%.%BASETOPIC%" format="$name" limit="1" exclude="TopCategory"}%"
 }%<!-- -->%ENDSECTION{"BlogEntry"}%
 </verbatim>
 
@@ -88,17 +85,9 @@
 %STARTSECTION{"Nosidebar"}%%ENDSECTION{"Nosidebar"}%
 </verbatim>
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
 
----++ Copyright
-&copy; 2005-2014 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="sidebar for the blog app"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="sidebar for the blog app"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

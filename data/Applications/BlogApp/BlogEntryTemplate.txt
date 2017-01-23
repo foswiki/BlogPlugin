@@ -1,11 +1,12 @@
-%META:TOPICINFO{author="ProjectContributor" date="1425051371" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicTemplate"}%
 %STARTSECTION{"teaser"}%
 
 %ENDSECTION{"teaser"}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicTemplate"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value="BlogEntryTemplate"}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FORM{name="Applications.TopicTemplate"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicTemplate, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value=""}%
+%META:FIELD{name="ForTopicType" title="For TopicType" value=""}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

@@ -382,19 +382,17 @@ sub convertBlogEntry {
 
   my @fields = ();
 
-  push @fields,
-    {
+  push @fields, {
     name => "TopicType",
     title => "TopicType",
-    value => "BlogEntry, ClassifiedTopic, CategorizedTopic, TaggedTopic",
-    };
+    value => "BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic",
+  };
 
-  push @fields,
-    {
+  push @fields, {
     name => "TopicTitle",
     title => "<nop>TopicTitle",
     value => $meta->get("FIELD", "TopicTitle")->{value},
-    };
+  };
 
   my $tags = join(", ", split(/[\s,]+/, $meta->get("FIELD", "BlogTag")->{value}));
   print STDERR "### ... tags=$tags\n";

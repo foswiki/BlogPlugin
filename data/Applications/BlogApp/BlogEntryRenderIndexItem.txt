@@ -1,0 +1,67 @@
+%META:TOPICINFO{author="micha" comment="reprev" date="1467995753" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="TopicFunction"}%
+%TOC{depth="2"}%
+
+---++ Documentation
+%STARTSECTION{name="documentation" type="section"}%
+This method is called by RenderCategory to display
+a summary for an object of type ClassifiedTopic.
+
+---+++++ Parameters
+   * OBJECT
+   * THEICON
+
+%ENDSECTION{name="documentation" type="section"}%
+
+---++ Implementation
+<verbatim class="tml">
+%STARTINCLUDE%<!-- -->
+%DBQUERY{topic="%OBJECT%"
+  format="<div class='clsIndexItem clsTopicItem clsCassifiedTopicItem clearfix'>
+    %IF{"defined THEICON" then="$percntJQICON{%THEICON%}$percnt"}%<!-- -->
+    $percntDBCALL{\"$web.$topic->Applications.RenderTopicThumbnail\" 
+      TYPE=\"plain\" 
+      ALIGN=\"right\"
+      CROP=\"west\"
+    }$percnt<!-- -->
+    [[$web.$topic][$expand(topictitle)]]&nbsp;$percntREDDOT{\"$web.$topic\"}$percnt
+    $expand('<div class=\"foswikiTopicSummary\">' and Summary and '</div>')<!-- -->
+    <div class='foswikiTopicInfo'>
+      <span class='clsAuthorDateInfo'>
+        <!-- -->$formatTime(publishdate) 
+        <span class='foswikiRevisionSep'>&#124;</span> 
+        <nop>$percntGETTOPICTITLE{\"
+             $percntUSERINFO{\"$expand(Author or info.author)\"
+               format=\"$wikiusername\"
+             }$percnt\"
+        }$percnt
+      </span>
+      $percntCATINFO{\"$web.$topic\" 
+        header=\" <span class='foswikiRevisionSep'>&#124;</span> <span class='clsCatInfo'>\" 
+        exclude=\"TopCategory|%URLPARAM{"catname" default="%BASETOPIC%"}%\"
+        separator=\"&#44; \"
+        footer=\"</span>\"
+      }$percnt$percntTAGINFO{\"$web.$topic\" 
+        header=\" <span class='foswikiRevisionSep'>&#124;</span> <span class='clsTagInfo'>\" 
+        separator=\"&#44; \"
+        limit=\"5\"
+        footer=\"</span>\"
+      }$percnt<!-- -->
+      $percntIF{\"'$expand(total_likes)'>0\"
+         then=\"<span class='foswikiRevisionSep'>&#124;</span> <span class='clsLikeInfo'>$percntTRANSLATE{\"[quant,_1,like,likes]\" args=\"$expand(total_likes)\"}$percnt</span>\"
+      }$percnt<!-- -->
+    </div>
+  </div>"
+}%<!-- -->%STOPINCLUDE%
+</verbatim>
+
+---++ Test
+%DBCALL{"%TOPIC%" OBJECT="ThisIsATest"}%
+
+%DBCALL{"%TOPIC%" OBJECT="BlogEntry0"}%
+
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="Render a summary for a BlogEntries"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

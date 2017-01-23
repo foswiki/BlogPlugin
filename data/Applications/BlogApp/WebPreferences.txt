@@ -1,17 +1,28 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+---+!! %TOPIC%
+
 %TOC%
 
----+++ Naming
+---++ Naming
 Text to be displayed on the sitemap and in the headerbar describing this web
 using a kind of tagline:
    * Set WEBSUMMARY = Blogging application for Foswiki 
    * Set SITEMAPLIST = off
 
-
 ---++ !AutoTemplatePlugin settings
    * Set VIEW_TEMPLATE_RULES = 
      .+\..+Category => Applications.BlogApp.CategoryView,
      WebSearch.* => Applications.BlogApp.BlogSearchView
+
+---++ Wiki application settings
+   * Set WEBFORMS = Applications.WikiTopic
+   * Set CLASSIFICATIONPLUGIN_AUTOREPARENT = on
+   * Set NOWYSIWYG = on
+
+---++ Translations
+
+   * Set CONTENT_LEXICON = WebLexicon
+   * Set WEBMETADATA = Applications.LexiconForm
 
 ---+++ Access rights
    * Set #DENYWEBVIEW =
@@ -19,15 +30,5 @@ using a kind of tagline:
    * Set #DENYWEBCHANGE = 
    * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
    * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
+   * Set DENYWEBCOMMENT = %USERSWEB%.WikiGuest
 
----+++ Misc
-Definition of DataForms:
-   * Set WEBFORMS = Applications.ApplicationTopic, Applications.TopicStub, Applications.WikiTopic
-   * Set CLASSIFICATIONPLUGIN_AUTOREPARENT = on
-
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="ApplicationTopic, WebTool, WikiTopic"}%
-%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" title="Summary" value="Preferences of the <nop>%25WEB%25 web"}%
-%META:FIELD{name="WikiApplication" title="WikiApplication" value="WikiWorkbench"}%

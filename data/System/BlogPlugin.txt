@@ -1,5 +1,7 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 ---+!! <nop>%TOPIC%
+%FORMFIELD{"Description"}%
+
 %TOC%
 
 This plugin comes as a !WikiApp to run a weblog using Foswiki. 
@@ -65,32 +67,157 @@ as well as a form to create a new one.
 
 Note that your posting will not be publicly visible unless you switched its *State* property to *published*.  
 
----++ Plugin Installation Instructions
+---++ Importing <nop>WordPress Content
+
+%TOPIC% comes with a conversion tool to convert a WXR, the native way of <nop>WordPress to export its data to an XML file, into
+Foswiki content. This content will then make up a new web that you can run using this plugin. I.e. it will extract all tags and
+categories as well as comments.
+
+The basic command to do so is:
+
+<verbatim>
+cd <foswiki-dir>/bin
+./rest /BlogPlugin/importWordPress ... param=value ... 
+</verbatim>
+
+The =importWordPress= REST handler takes a couple of parameters, most imporantly the name of the XML file holding the blog data.
+It can either convert all of the data or just one blog posting given its ID.
+
+| *Parameter* | *Description* |
+| =file= | path to the WXR file |
+| =id= | ID of a single blog posting to convert; by default _all_ postings are converted |
+| =target= | name of a web to be created |
+| =override= | boolean flag weather to override the target web if it already exists |
+| =template= | template web to be used, defaults to =_BlogTemplate= |
+| =dry= | boolean flag to switch on/off real operations; you might want to test conversion first by enabling this flag |
+
+During conversion of postings a list of "downloadables" is collected and then fetched dynamically from the current <nop>WordPress site.
+This is foremost any images being used in postings.
+
+There are a couple of features that are currently _not_ converted to its Foswiki equivalent:
+
+   * embedded videos: please have a look at Foswiki:Extensions/OEmbedPlugin how to do so easily afterwards
+   * image galleries: have a look at Foswiki:Extensions/ImageGalleryPlugin
+
+These <nop>WordPress macros will stay as they are in the text of a posting and will have to be fixed manually by now.
+
+URLs of blog postings are created based on their title: spaces are removed and remaining words are concatenated forming a proper <nop>WikiWord.
+Any converted topic will contain the original URL of its <nop>WordPress as a comment at the end of the text. In case you'd like to replace
+the previous <nop>WordPress blog with Foswiki you may use the =createRedirectMap= to create a map of URLs used by the web server underneath
+to redirect old <np>WordPress URLs to new Foswiki URLs.
+
+---++ Bulk-redirects from <nop>WordPress to Foswiki URLs
+
+<verbatim>
+cd <foswiki-dir>/bin
+./rest /BlogPlugin/createRedirectMap ... param=value ...
+</verbatim>
+
+Parameters resemble those of the =importWordPress= REST handler as it operates on the same WXR file.
+
+| *Parameter* | *Description* |
+| =file= | path to the WXR file |
+| =id= | ID of a single blog posting to create a redirect for |
+| =target= | name of the web holding the new Foswiki blog |
+| =path= | (optional) view path to blog postings, defaults to =$Foswiki::cfg{ScriptUrlPaths}{view}= |
+| =format= | specify the output format, can be =nginx= or =apache= (default)
+
+Note for now the format of the resulting redirect map is only valid for Nginx out of the box. The output will look like this:
+
+For apache (default):
+<verbatim>
+/foswiki-patch-release-1-1-10/ /bin/view/Blog/FoswikiPatchRelease1110
+/translations-needed-for-foswiki-2-1/ /bin/view/Blog/TranslationsNeededForFoswiki21
+/foswiki-2-1-beta-available-for-testing/ /bin/view/Blog/Foswiki21BetaIsAvailableForTesting
+/foswiki-2-1-released/ /bin/view/Blog/Foswiki21HasBeenReleased
+/foswiki-2-1-2-available/ /bin/view/Blog/Foswiki212Available
+</verbatim>
+
+Store the result in  =/etc/apache2/foswiki-blog.txt= or the like and make use of it within a redirect rule such as 
+
+<verbatim>
+RewriteMap foswikiblog "txt:/etc/apache2/foswiki-blog.txt"
+RewriteRule "^/(.*)" "/${foswikiblog:$1|NOTFOUND}" [PT]
+</verbatim>
+
+For nginx:
+<verbatim>
+~*/foswiki-patch-release-1-1-10/? /bin/view/Blog/FoswikiPatchRelease1110;
+~*/translations-needed-for-foswiki-2-1/? /bin/view/Blog/TranslationsNeededForFoswiki21;
+~*/foswiki-2-1-beta-available-for-testing/? /bin/view/Blog/Foswiki21BetaIsAvailableForTesting;
+~*/foswiki-2-1-released/? /bin/view/Blog/Foswiki21HasBeenReleased;
+~*/foswiki-2-1-2-available/? /bin/view/Blog/Foswiki212Available;
+</verbatim>
+
+Store the result in =/etc/nginx/foswiki.map= and add a rule such as 
+
+<verbatim>
+map $uri $redirect_uri {
+   include /etc/nginx/foswiki.map;
+}
+</verbatim>
+
+to your nginx global site settings.
+
+---++ Automatic publishing / unpublishing blog postings
+
+Each posting has got three valus that specify whether it is visible to the outside (published) or not (unpublished). Unpublished blog postings will have according access control rules set automatically 
+to hide them from public access. 
+
+| *Field* | *Description* |
+| State | possible values are =published=, =unpublished=: only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |
+| Publish Date | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |
+| Unpublish Date | only blog entries in state published are readable by other users; unpublished blog entries are only visible for the authors of this blog entry |
+
+Automatic publishing is controled by the =publish= REST handler called regularly by a cron job such as:
+
+<verbatim>
+0 0 * * 0 cd <foswiki-dir>/bin && ./rest/BlogPlugin/publish
+</verbatim>
+
+---++ Installation Instructions
 %$INSTALL_INSTRUCTIONS%
 
----++ Plugin Info
-<!-- provided for compatibility only
-   * Set SHORTDESCRIPTION = Basic blogging features used to implement the BlogUp <nop>WikiApplication
--->
-|  Plugin Author: | Foswiki:Main.MichaelDaum |
-|  Copyright &copy;: | 2006-2014, http://michaeldaumconsulting.com |
-|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
-|  Release: | %$RELEASE% |
-|  Version: | %$VERSION% |
-|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+---++ Dependencies
+%$DEPENDENCIES%
+
+---++ Change History
+%TABLE{columnwidths="7em" tablewidth="100%"}%
+|  23 Jan 2017: | improved compatibility with <nop>PatternSkin; \
+                  using date2 instead of date formfield now; \
+                  improved <nop>OpenGraph meta data in blog postings; \
+                  disabled <nop>HyphenateContrib by default now due to typography issues; \
+                  fixed calculation of comments; \
+                  fixed rendering of breadcrumbs; \
+                  fixed solr-based blog search; \
+                  display type hierarchy on <nop>CompleteDocumentation now; \
+                  improvements to <nop>FrontPageViewTemplate, <nop>RenderArchives, <nop>RenderBlogEntries, <nop>RenderBlogEntryPagination, <nop>RenderBlogEntryTitle, <nop>RenderRecentBlogEntries, <nop>RenderSimilarBlogEntries; \
+                  improvements to rss and atom feeds, i.e. make them cacheable by default; \
+                  new <nop>WordPress importer; \
+                  index a =publishdate= property for dbcache entries; \
+                  added new default <nop>WebLexicon feature part of latest <nop>WikiWorkbench and <nop>MultiLingualPlugin; \
+                  added <nop>SeoTopic to blog template to be able to create seo pages that aren't necessarily a blog posting; \
+                  added translation files for almost all supported languages, still low coverage |
 |  27 Nov 2014: | added publish/unpublish feature |
 |  15 Apr 2014: | improved topic info layout |
 |  04 Apr 2014: | flag rest handlers that don't require authentication |
 |  18 Mar 2014: | improve css of headings |
 |  07 Nov 2013: | rewrite migrating most features to other Foswiki plugins |
 |  24 Jan 2006: | initial version |
-|  Dependencies: | %$DEPENDENCIES% |
-|  Home page: | Foswiki:Extensions/%TOPIC% |
-|  Support: | Foswiki:Support/%TOPIC% |
 
-%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1425051371" size="16542" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1425051371" size="46694" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1425051371" size="30666" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1425051371" size="134027" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1425051371" size="374274" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1425051371" size="345020" user="ProjectContributor" version="1"}%
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="Foswiki:Main.MichaelDaum"}%
+%META:FIELD{name="Version" title="Version" value="%25$VERSION%25"}%
+%META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
+%META:FIELD{name="Description" title="Description" value="A blogging system for Foswiki"}%
+%META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25TOPIC%25"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2006-2016, http://michaeldaumconsulting.com"}%
+%META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
+%META:FIELD{name="Home" title="Home" value="Foswiki:Extensions/%25TOPIC%25"}%
+%META:FIELD{name="Support" title="Support" value="Foswiki:Support/%25TOPIC%25"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1485171728" size="16542" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1485171728" size="46694" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1485171728" size="30666" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1485171728" size="134027" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1485171728" size="374274" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1485171728" size="345020" user="ProjectContributor" version="1"}%

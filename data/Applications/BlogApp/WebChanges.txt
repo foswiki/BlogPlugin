@@ -1,8 +1,8 @@
-%META:TOPICINFO{author="ProjectContributor" date="1425051371" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" date="1485171728" format="1.1" version="1"}%
 %INCLUDE{"%SYSTEMWEB%.WebChanges"}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" attributes="" title="TopicType" value=""}%
+%META:FORM{name="Applications.WebTool"}%
+%META:FIELD{name="TopicType" attributes="" title="TopicType" value="WebTool"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value="WebChanges"}%
 %META:FIELD{name="Summary" attributes="" title="Summary" value="Most recent changes in this web"}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="WikiWorkbench"}%

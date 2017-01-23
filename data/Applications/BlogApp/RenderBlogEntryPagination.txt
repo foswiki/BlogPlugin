@@ -1,75 +1,41 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
 ---++ Documentation
 %STARTSECTION{name="documentation" type="section"}%
-%RED%TODO%ENDCOLOR%
 
 ---+++++ Parameters
    * CLASS: to be added to the container
+   * THEWEB: web to search for blog entries, default BASEWEB
 %ENDSECTION{name="documentation" type="section"}%
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%<!-- -->
-<noautolink>
-<div class="blogPagination %CLASS% blogEntryPagination foswikiSmallish foswikiHideOnPrint">
-<table class='foswikiNullTable' width='100%'>
-<tr>
-  <td valign='top'>
-    %DBPREV{
-      search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
-      order="created"
-      reverse="on"
-      format="&#171;&nbsp;"
-    }%<!-- -->
-  </td>
-  <td valign='top' class='blogPrev' width='50%'>
-    %DBPREV{
-      search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
-      order="created"
-      reverse="on"
-      format="[[$web.$topic]]"
-    }%<!-- -->
-  </td>
-  <td valign='top' class='blogNext' width='50%' align='right'> 
-    %DBNEXT{
-      search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
-      order="created"
-      reverse="on"
-      format="[[$web.$topic]]"
-    }%<!-- --> 
-  </td>
-  <td valign='top'>
-    %DBNEXT{
-      search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
-      order="created"
-      reverse="on"
-      format="&nbsp;&#187;"
-    }%<!-- -->
-  </td>
-</tr>
-</table>
+%STARTINCLUDE%<!-- --><noautolink>
+<div class="blogPagination foswikiSmallish foswikiHideOnPrint clearfix %CLASS{default=""}%">
+%DBPREV{
+  web="%THEWEB{default="%BASEWEB%"}%"
+  search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
+  order="publishdate"
+  reverse="on"
+  format="<div class='blogPrev'>[[$web.$topic]]</div>"
+}%%DBNEXT{
+   web="%THEWEB{default="%BASEWEB%"}%"
+   search="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate'" 
+   order="publishdate"
+   reverse="on"
+   format="<div class='blogNext'>[[$web.$topic]]</div>"
+}%<!-- --> 
 </div>
-</noautolink>
-<!-- -->%STOPINCLUDE%
+</noautolink><!-- -->%STOPINCLUDE%
 </verbatim>
 
 ---++ Test
-%DBCALL{"%TOPIC%"}%
+%DBCALL{"%TOPIC%" THEWEB="%URLPARAM{"theweb"}%"}%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
-
----++ Copyright
-&copy; 2005-2014 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="renders a navigation to link to the prev and next posting on the timeline"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="renders a navigation to link to the prev and next posting on the timeline"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

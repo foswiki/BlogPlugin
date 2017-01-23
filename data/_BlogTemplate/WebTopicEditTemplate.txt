@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1435666518" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="WebHome"}%
 %STARTSECTION{"teaser"}%
 
@@ -15,4 +15,3 @@
 %META:FIELD{name="Sticky" attributes="" title="Sticky" value=""}%
 %META:FIELD{name="MetaDescription" attributes="" title="Meta Description" value=""}%
 %META:FIELD{name="MetaKeywords" attributes="" title="Meta Keywords" value=""}%
-%META:DISQUS{name="21211fec12bb65e87ce0bb936929c2ef"}%

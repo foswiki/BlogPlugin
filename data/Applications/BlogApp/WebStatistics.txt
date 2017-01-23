@@ -1,6 +1,23 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1485129582" format="1.1" reprev="28" version="426"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---++ Statistics for <nop>%BASEWEB% Web
 
 | *Month:* | *Topic <br /> views:* | *Topic <br /> saves:* | *File <br /> uploads:* | *Most popular <br /> topic views:* | *Top contributors for <br /> topic save and uploads:* |
 | <!--statDate--> | <!--statViews--> | <!--statSaves--> | <!--statUploads--> | <!--statTopViews--> | <!--statTopContributors--> |
+| Jan 2017 |  16 |  10 |  0 | &nbsp;&nbsp;4 [[WebHome]]<br />&nbsp;&nbsp;4 [[RenderBlogEntries]]<br />&nbsp;&nbsp;2 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;2 [[RenderArchives]]<br />&nbsp;&nbsp;2 [[FrontPageViewTemplate]]<br />&nbsp;&nbsp;1 [[TopicFunction]]<br />&nbsp;&nbsp;1 [[TopicView]] | &nbsp;10 Home.MichaelDaum |
+| Dec 2016 |  10 |  2 |  0 | &nbsp;&nbsp;3 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;2 [[TopicView]]<br />&nbsp;&nbsp;2 [[RenderNumberOfComments]] | &nbsp;&nbsp;2 Home.MichaelDaum |
+| Nov 2016 |  5 |  0 |  0 | &nbsp;&nbsp;2 [[WebLexicon]]<br />&nbsp;&nbsp;2 [[WebPreferences]]<br />&nbsp;&nbsp;1 [[WebHome]] |  |
+| Oct 2016 |  5 |  0 |  0 | &nbsp;&nbsp;2 [[BlogEntry0]]<br />&nbsp;&nbsp;1 [[BlogEntry]]<br />&nbsp;&nbsp;1 [[TopicType]]<br />&nbsp;&nbsp;1 [[BlogEntryEditTemplate]] |  |
+| Sep 2016 |  0 |  0 |  0 |  |  |
+| Aug 2016 |  1 |  0 |  0 | &nbsp;&nbsp;1 [[WebHome]] |  |
+| Jul 2016 |  29 |  21 |  0 | &nbsp;&nbsp;8 [[BlogEntryRenderIndexItem]]<br />&nbsp;&nbsp;6 [[BlogEntry0]]<br />&nbsp;&nbsp;4 [[ThisIsATest]]<br />&nbsp;&nbsp;4 [[RenderBlogEntries]]<br />&nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;1 [[BlogEntry]]<br />&nbsp;&nbsp;1 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;1 [[TopicType]]<br />&nbsp;&nbsp;1 [[RenderBlogEntryTitle]] | &nbsp;21 Home.MichaelDaum |
+| Jun 2016 |  0 |  0 |  0 |  |  |
+| May 2016 |  0 |  0 |  0 |  |  |
+| Apr 2016 |  6 |  5 |  0 | &nbsp;&nbsp;3 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;3 [[WebPreferences]] | &nbsp;&nbsp;5 Home.MichaelDaum |
+| Mar 2016 |  8 |  7 |  0 | &nbsp;&nbsp;3 [[RenderSideBar]]<br />&nbsp;&nbsp;2 [[RenderBlogEntries]]<br />&nbsp;&nbsp;1 [[RenderArchives]]<br />&nbsp;&nbsp;1 [[CategoryViewTemplate]]<br />&nbsp;&nbsp;1 [[RenderRecentComments]] | &nbsp;&nbsp;7 Home.MichaelDaum |
+| Feb 2016 |  0 |  0 |  0 |  |  |
+| Jan 2016 |  1 |  1 |  0 | &nbsp;&nbsp;1 [[CompleteDocumentation]] | &nbsp;&nbsp;1 Home.MichaelDaum |
+| Dec 2015 |  0 |  0 |  0 |  |  |
+| Nov 2015 |  22 |  23 |  0 | &nbsp;&nbsp;6 [[RenderBlogEntries]]<br />&nbsp;&nbsp;4 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;4 [[RenderArchives]]<br />&nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;2 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;1 [[RenderRecentBlogEntries]]<br />&nbsp;&nbsp;1 [[RenderRecentNews]]<br />&nbsp;&nbsp;1 [[RenderBlogEntryPagination]] | &nbsp;23 Home.MichaelDaum |
+| Oct 2015 |  1 |  1 |  0 | &nbsp;&nbsp;1 [[WebHome]] | &nbsp;&nbsp;1 Home.MichaelDaum |
+| Sep 2015 |  5 |  7 |  0 | &nbsp;&nbsp;2 [[WebHome]]<br />&nbsp;&nbsp;2 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;1 [[RenderBlogEntries]] | &nbsp;&nbsp;7 Home.MichaelDaum |

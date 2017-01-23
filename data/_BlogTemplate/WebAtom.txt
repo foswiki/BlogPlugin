@@ -1,4 +1,9 @@
-%META:TOPICINFO{author="ProjectContributor" date="1425051371" format="1.0" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" date="1485171728" format="1.0" version="1"}%
    * Set VIEW_TEMPLATE = Applications.AtomView
    * Set FILTER = TopicType=~'\bBlogEntry\b'
-   * Set LIMIT = 5
+   * Set LIMIT = 10
+   * Set CACHEABLE = on
+   * Set CACHEEXPIRE = +1d
+   * Set SKIN = xml
+
+%META:PREFERENCE{name="DISPLAYCOMMENTS" title="DISPLAYCOMMENTS" type="Local" value="off"}%

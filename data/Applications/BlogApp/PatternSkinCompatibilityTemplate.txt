@@ -1,5 +1,9 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
+%{<verbatim class="tml">}%
+%TMPL:INCLUDE{"metacomments"}%
+%{</verbatim>}%
+
 %{<verbatim class="tml">}%
 %TMPL:DEF{"sidebar"}%<div id="patternSideBar">
 <div id="patternClearHeaderLeft"></div>
@@ -10,14 +14,40 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
+%TMPL:DEF{"blogplugin::sidebar"}%%DBCALL{"Applications.BlogApp.RenderSideBar"}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"comments"}%%IF{
+  "$'DISPLAYCOMMENTS'='on' and not context save and not context preview and not context edit"
+  then="$percntTMPL:P{\"comments::system::%COMMENTSYSTEM{default="metacomment"}%\"}$percnt"
+}%<!-- -->
+%TMPL:P{"metacomments::init"}%<!-- -->
+<!-- -->%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"comments::system::disqus"}%%DISQUS%%TMPL:END%
+%TMPL:DEF{"comments::system::metacomment"}%%JQREQUIRE{"loader"}%<div class="jqLoader" data-url="%SCRIPTURLPATH{"rest"}%/RenderPlugin/template?name=metacomments;expand=metacomments;render=on;topic=%WEB%.%TOPIC%" data-skin=""></div>%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
 %TMPL:DEF{"topicinfo"}%%TMPL:END%
 %TMPL:DEF{"contentheader"}%%TMPL:END%
 %TMPL:DEF{"contentfooter"}%%TMPL:END%
 %TMPL:DEF{"sidebar:webindicator"}%%TMPL:END%
 %{</verbatim>}%
 
+%{<verbatim class="tml">}%
+%TMPL:DEF{"content"}%<!-- -->
+%TMPL:P{"beforetext"}%<!-- -->
+%TMPL:P{"text"}%<!-- -->
+%TMPL:P{"aftertext"}%<!-- -->
+%TMPL:P{"comments"}%<!-- -->
+<!-- -->%TMPL:END%
+%{</verbatim>}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
+%META:FORM{name="Applications.TopicView"}%
 %META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="some basic mappings into PatternSkin"}%

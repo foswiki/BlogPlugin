@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -9,6 +9,7 @@
 ---+++++ Parameters
    * LIMIT: maximal number of BlogEntries to list
    * CAT: optionally render restrict list to this category 
+   * THEWEB: blog web, defaults to BASEWEB
 
 %ENDSECTION{name="documentation" type="section"}%
 
@@ -19,18 +20,18 @@
   "TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate' AND topic != '%BASETOPIC%'
    %IF{"defined CAT and '%CAT%'!=''" then="AND topic ISA '%CAT%'"}% 
   " 
-  order="createdate" 
+  web="%THEWEB{default="%BASEWEB%"}%"
+  order="publishdate" 
   reverse="on" 
   limit="%IF{"defined LIMIT" then="%LIMIT%" else="10"}%"  
   hidenull="on" 
-  web="%BASEWEB%" 
-  exclude="%CALCULATE{"$GET(seenEntries)"}%"
+  exclude="placeholder%CALCULATE{"$GET(seenEntries)"}%"
   header="<div class='blogSideBarSection blogSideBarRecent'> 
     <h2 >%IF{"defined CAT and '%CAT%'!=''"
-        then="%MAKETEXT{"Other postings in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
+        then="%MAKETEXT{"Latest in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
         else="%MAKETEXT{"Latest"}%"
       }%</h2>
-    <$nopdirtyarea><ul>"
+    <ul>"
   format="<li>
     <a href='%SCRIPTURLPATH{"view"}%/$web/$topic'>
       $percntDBCALL{\"Applications.RenderTopicThumbnail\" 
@@ -40,7 +41,7 @@
       <br /><span class='foswikiTopicInfo foswikiSmallish'>$formfield(Summary)</span>
       %CLEAR%
     </a></li>"
-  footer="</ul></$nopdirtyarea></div>"
+  footer="</ul></div>"
 }% 
 </noautolink>%STOPINCLUDE%
 </verbatim>
@@ -50,16 +51,8 @@
 %DBCALL{"%TOPIC%"}%
 %ENDSECTION{"test"}%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
-
----++ Copyright
-&copy; 2005-2015 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="display a list of recent BlogEntries for the sidebar"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

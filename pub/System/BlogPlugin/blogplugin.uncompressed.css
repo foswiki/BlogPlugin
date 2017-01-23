@@ -3,6 +3,10 @@
 }
 .blogEntry {
   text-align:justify;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 .blogEntry li,
 .blogEntry h1,
@@ -17,7 +21,7 @@
   margin-top:0;
 }
 .blogEntriesSticky {
-  margin-bottom:1.5em; 
+  margin-bottom:2.7692em;
   padding:1.5em;
   background-color:#f5f5f5;
   border:1px solid #e7e7e7;
@@ -25,23 +29,28 @@
      -moz-border-radius: 5px; 
   -webkit-border-radius: 5px; 
 }
-.blogEntriesSticky h2 {
-  margin-top:0px;
-}
 .blogEntriesSticky .blogEntry:last-child {
   margin-bottom:0px;
 }
-.blogEntries .blogEntry {
+.blogEntry {
   margin-bottom:2.7692em;
 }
 .blogEntryInfo {
   margin:1em 0em;
 }
+.blogPrev::before {
+  content:"\00AB";
+  margin-right:0.25em;
+}
+.blogNext::after {
+  content:"\00BB";
+  margin-left:0.25em;
+}
 .blogPrev {
-  text-align:left;
+  float:left;
 }
 .blogNext {
-  text-align:right;
+  float:right;
 }
 .blogPrev a,
 .blogNext a {
@@ -49,13 +58,20 @@
 }
 .blogEntryPagination,
 .blogBottomPagination {
-  margin:3em 0;
+  margin:3em 0 0;
 }
 .blogTopPagination {
   margin:0em 0em 1em;
 }
 .blogSideBarSection strong {
   color:inherit;
+}
+.blogEntry img {
+  max-width:100%;
+  height:auto;
+}
+.blogEntry img.jqIcon {
+  max-width:inherit;
 }
 .blogEntry .imagePlain_right {
   margin-left:1em;
@@ -70,13 +86,16 @@
   margin-top:0px;
   color:gray;
 }
+.solrTopicInfo, .solrHilite, .solrTopicSummary, .solrRevision {
+  padding-left:0;
+}
+.solrSearchHitsList h2 {
+  border:0;
+  margin:0;
+}
 
 #patternScreen .blogEntry {
   margin-top:1em;
-}
-#patternScreen .blogEntries {
-  margin-top:1em;
-  margin-bottom:1.5em;
 }
 #patternScreen .blogEntriesSticky > .blogEntry:first-child {
   margin-top:0;

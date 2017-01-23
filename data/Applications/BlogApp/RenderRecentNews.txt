@@ -1,0 +1,76 @@
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
+%META:TOPICPARENT{name="TopicFunction"}%
+%TOC{depth="2"}%
+
+---++ Documentation
+%STARTSECTION{name="documentation" type="section"}%
+
+---+++++ Parameters
+   * SKIP: number of items to skip, default 0
+   * LIMIT: number of items to show, default 4
+   * THEWEB: web holding blog entries, default Blog
+   * SHOWREVINFO: on/off, default on
+
+%ENDSECTION{name="documentation" type="section"}%
+
+---++ Implementation
+<verbatim class="tml">
+%STARTINCLUDE%<noautolink>
+%DBQUERY{
+  "TopicType=~'\bBlogEntry\b' AND State!='unpublished' AND Tag!~'\bblogonly\b'"
+  exclude="WebTopicEditTemplate"
+  web="%THEWEB{default="Blog"}%" 
+  order="publishdate"
+  format="<div class='foswikiIndexItem clearfix'>
+   <h3>[[$web.$topic]]</h3>
+   %IF{"'%SHOWREVINFO{default="on"}%'='on'"
+      then="$dollarpercntDBCALL{\\"$percntWEB$percnt.$percntTOPIC$percnt\\" section=\\"revinfo\\" object=\\"$dollarweb.$dollartopic\\"}$dollarpercnt"
+   }%<!-- -->
+   $percntDBCALL{\"$web.$topic\" section=\"teaser\" warn=\"off\"}$percnt ... [[$web.$topic][%TRANSLATE{"read more"}%]]<!-- -->
+  </div>"
+  separator="$n<hr />$n"
+  limit="%LIMIT{default="4"}%"
+  skip="%SKIP{default="0"}%"
+  reverse="on"
+}%
+</noautolink>%STOPINCLUDE%
+</verbatim>
+
+---++ Revision Info
+<verbatim class="tml">
+%STARTSECTION{"revinfo"}%<div class="foswikiGrayText"> 
+  %DBQUERY{ 
+    topic="%object%"  
+    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span> 
+      <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
+      \"$expand(Author or createauthor)\"  
+      split=\"\s*,\s*\"  
+      format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"<a href='%SCRIPTURLPATH{view}%/%USERSWEB%/$1' rel='author' itemprop='author'>$dollarpercntGETTOPICTITLE{%USERSWEB%.$1}$dollarpercnt</a>\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
+      separator=\", \" 
+    }$percnt
+    $percntIF{\"'$expand(total_likes)'>0\"
+       then=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-thumbs-o-up" class="fa-flip-horizontal"}% $expand(total_likes)\"
+    }$percnt<!-- -->" 
+  }% 
+  %CATINFO{ 
+    "%object%"  
+    exclude="TopCategory"
+    header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% " 
+    format="<a href='$url' rel='tag' itemprop='keywords' class='$name'>$title</a>" 
+  }% <!-- --> 
+  %TAGINFO{ 
+    "%object%" 
+    header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% " 
+    format="<a href='$url' rel='tag' itemprop='keywords' class='$class'>$name</a>" 
+  }% <!-- --> 
+</div>%ENDSECTION{"revinfo"}%
+</verbatim>
+
+---++ Test
+%DBCALL{"%TOPIC%" THEWEB="Blog"}%
+
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value=""}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

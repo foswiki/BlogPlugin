@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -15,6 +15,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
    * NOSTICKY: same as STICKY but with inverse logic
    * FROM_TIME: lower boundary of timespan to display in epoch seconds 
    * TO_TIME: uppwer boundary of timespan to display in epoch seconds 
+   * ONLYTEASER: switch "on" to just render the teaser section; defaults to rendering the full posting
 %ENDSECTION{name="documentation" type="section"}%
 
 ---++ Implementation
@@ -25,23 +26,23 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
   "TopicType=~'\bBlogEntry\b'
    AND State != 'unpublished'
    AND topic != 'WebTopicEditTemplate'
-   %IF{"defined FROM_TIME and '%FROM_TIME%' != ''" then="AND createdate >= '%FROM_TIME%'"}%
-   %IF{"defined TO_TIME and '%TO_TIME%' != ''" then="AND createdate < '%TO_TIME%'"}%
-   %IF{"defined CAT and '%CAT%' != ''" then="AND topic ISA '%CAT%'"}%
-   %IF{"defined TAG and '%TAG%' != ''" then="AND Tag=~'\b%TAG%\b'"}%
-   %IF{"defined STICKY and '%STICKY%' != ''" then="AND Sticky=~'\b%STICKY%\b'"}%
-   %IF{"defined NOSTICKY and '%NOSTICKY%' != ''" then="AND ! Sticky=~'\b%NOSTICKY%\b'"}%
+   %IF{"'%FROM_TIME{default=""}%' != ''" then="AND publishdate >= '%FROM_TIME%'"}%
+   %IF{"'%TO_TIME{default=""}%' != ''" then="AND publishdate < '%TO_TIME%'"}%
+   %IF{"'%CAT{default=""}%' != ''" then="AND topic ISA '%CAT%'"}%
+   %IF{"'%TAG{default=""}%' != ''" then="AND Tag=~'\b%TAG%\b'"}%
+   %IF{"'%STICKY{default=""}%' != ''" then="AND Sticky=~'\b%STICKY%\b'"}%
+   %IF{"'%NOSTICKY{default=""}%' != ''" then="AND !(Sticky=~'\b%NOSTICKY%\b')"}%
   "
-  limit="%IF{"defined LIMIT" then="%LIMIT%" else="5"}%" 
-  skip="%IF{"defined SKIP" then="%SKIP%" else="0"}%" 
-  order="created" 
+  limit="%LIMIT{default="5"}%" 
+  skip="%SKIP{default="0"}%" 
+  sort="publishdate" 
   reverse="on" 
   hidenull="on"
   web="%BASEWEB%" 
-  header="<div class='blogEntries%IF{"defined STICKY and '%STICKY%' != ''" then=" blogEntriesSticky"}%'>"
+  header="%IF{"'%STICKY{default=""}%' != ''" then="<div class='blogEntriesSticky'>"}%"
   format="<div class='blogEntry'>
     <div class='foswikiTopicInfo'>
-      <h2>
+      <h1>
         <div class='blogCommentCount foswikiRight'>
         $percntDBCALL{\"Applications.BlogApp.RenderNumberOfComments\"
           THETOPIC=\"$web.$topic\"
@@ -53,62 +54,74 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         }$percnt<!-- -->
         $percntREDDOT{\"$web.$topic\"}$percnt<!-- -->
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
-      </h2>
-      %JQICON{"fa-calendar"}% <nop>$formatTime(createdate, '$day $mon $year')
-      <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
-         \"$expand(Author or createauthor)\"  
-         split=\"\s*,\s*\"  
-         format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
-         separator=\", \" 
-      }$percnt
-      $percntCATINFO{
-        topic=\"$web.$topic\"
-        header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% \"
-      }$percnt<!-- -->
-      $percntTAGINFO{
-        topic=\"$web.$topic\"
-        header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% \"
-      }$percnt<!-- -->
+      </h1>
+      %IF{"'%STICKY{default=""}%' = ''"  
+         then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt" 
+      }%<!-- -->
     </div>
-    <div class='blogText hyphenate'>
-$percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web.$topic][%MAKETEXT{"more"}%]]</span>
-      %CLEAR%
+    <div class='blogText clearfix'>
+$percntDBCALL{\"$web.$topic\" 
+   $percntIF{\"'%ONLYTEASER{default="off"}%'='on' AND '$expand(_sections)'!=''\" 
+      then=\"section=\\"teaser\\"\"
+   }$percnt
+}$percnt 
+       <div class='blogMore'>[[$web.$topic][%MAKETEXT{"Read more"}%]]</div>
     </div>
     </div>"
-   footer="</div>
+   footer="%IF{"'%STICKY{default=""}%' != ''" then="</div>"}%
      $percntDBCALL{\"%WEB%.%TOPIC%\" 
-       section=\"pagination%IF{"defined STICKY and '%STICKY%'!=''" then="DISABLED"}%\" 
+       section=\"pagination%IF{"'%STICKY{default=""}%'!=''" then="DISABLED"}%\" 
        warn=\"off\"
-       LIMIT=\"%IF{"defined LIMIT" then="%LIMIT%" else="5"}%\"  
-       SKIP=\"%IF{"defined SKIP" then="%SKIP%" else="0"}%\"  
+       LIMIT=\"%LIMIT{default="5"}%\"  
+       SKIP=\"%SKIP{default="0"}%\"  
        COUNT=\"$count\" 
        CLASS=\"blogBottomPagination\"
        PARAMS=\"%IF{
-           "defined STICKY and '%STICKY%'!=''" then=";sticky=%STICKY%"
+           "'%STICKY{default=""}%'!=''" then="&sticky=%STICKY%"
          }%%IF{
-           "defined CAT and '%CAT%'!=''" then=";catname=%CAT%"
+           "'%CAT{default=""}%'!=''" then="&catname=%CAT%"
          }%\"
      }$percnt<!-- -->"
 }%<!-- -->
+</pre>
 </noautolink>
 <!-- -->%STOPINCLUDE%
+</verbatim>
+
+---++ Revinfo
+<verbatim class="tml">
+%STARTSECTION{"revinfo"}%%JQICON{"fa-calendar"}% <nop>$formatTime(publishdate, '$day $mon $year')
+<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
+   \"$expand(Author or createauthor)\"  
+   split=\"\s*,\s*\"  
+   format=\"$dollarpercntIF{\\"istopic '%USERSWEB%.$1'\\" then=\\"[[%USERSWEB%.$1]]\\" else=\\"<nop>$1\\"}$dollarpercnt\"  
+   separator=\", \" 
+}$percnt
+$percntIF{\"'$expand(total_likes)'>0\"
+   then=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-thumbs-o-up" class="fa-flip-horizontal"}% $expand(total_likes)\"
+}$percnt<!-- -->
+$percntCATINFO{
+   topic=\"$web.$topic\"
+   exclude=\"TopCategory\"
+   header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% \"
+}$percnt<!-- -->
+$percntTAGINFO{
+   topic=\"$web.$topic\"
+   header=\"<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% \"
+}$percnt<!-- -->%ENDSECTION{"revinfo"}%
 </verbatim>
 
 ---++ Pagination
 <verbatim class="tml">
 %STARTSECTION{"pagination"}%<!-- -->
-<div class='blogPagination %CLASS% foswikiSmallish'> 
-%CALC{"$SET(theNextSkip,$EVAL(%SKIP%+%LIMIT%))$SET(thePrevSkip,$EVAL(%SKIP%-%LIMIT%))$IF($GET(thePrevSkip) < 0,$SET(thePrevSkip,0))"}%<!-- -->
-<table class='foswikiNullTable' width='100%'>
-<tr> 
-<td class='blogPrev'> 
-<a %IF{"%SKIP% = 0" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(thePrevSkip)"}%&limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>&#171;&nbsp;%MAKETEXT{"previous page"}%</a> 
-</td> 
-<td class='blogNext'> 
-<a %IF{"%CALC{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}% href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALC{"$GET(theNextSkip)"}%&limit=%LIMIT%%IF{"defined PARAMS" then="%PARAMS%"}%'>%MAKETEXT{"next page"}%&nbsp;&#187;</a> 
-</td> 
-</tr>
-</table> 
+%CALCULATE{"$SET(theNextSkip,$EVAL(%SKIP{default="0"}%+%LIMIT{default="5"}%))$SET(thePrevSkip,$EVAL(%SKIP{default="0"}%-%LIMIT{default="5}%))$IF($GET(thePrevSkip) < 0,$SET(thePrevSkip,0))"}%<!-- -->
+<div class='blogPagination foswikiSmallish foswikiHideOnPrint clearfix %CLASS{default=""}%'> 
+<div class='blogPrev' %IF{"%SKIP{default="0"}% = 0" then="style='display:none'"}%> 
+<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(thePrevSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%MAKETEXT{"previous page"}%</a> 
+</div> 
+<div class='blogNext' %IF{"%CALCULATE{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}%>
+<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(theNextSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%MAKETEXT{"next page"}%</a> 
+</div> 
 </div><!-- -->%ENDSECTION{"pagination"}%
 </verbatim>
 
@@ -124,16 +137,8 @@ $percntDBCALL{\"$web.$topic\"}$percnt <span class='blogMore'>&#8230;&nbsp;[[$web
 %DBCALL{"%TOPIC%" STICKY="frontpage"}%
 %ENDTWISTY%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
-
----++ Copyright
-&copy; 2005-2014 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="Render a set of postings to leaf through"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

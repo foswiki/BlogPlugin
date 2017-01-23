@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicView"}%
@@ -7,35 +7,34 @@
 %{<verbatim class="tml">}%
 %TMPL:DEF{"revinfo"}%%TMPL:END%
 %TMPL:DEF{"beforetext"}%%TMPL:END%
+%TMPL:DEF{"bodyclass"}%%TMPL:PREV% blogFrontPage%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"content"}%<!-- -->
+%TMPL:DEF{"text"}%%CLEAR%
 %DBCALL{
   "Applications.BlogApp.RenderBlogEntries"
   CAT="%URLPARAM{"catname"}%"
   SKIP="%URLPARAM{"skip" default="0"}%"
   STICKY="%IF{"$'URLPARAM{skip}'" then="disabled" else="frontpage"}%"
   NOSTICKY=""
-}%<!-- -->
-%DBCALL{
+  ONLYTEASER="%ONLYTEASER%"
+}%%DBCALL{
   "Applications.BlogApp.RenderBlogEntries"
   CAT="%URLPARAM{"catname"}%"
   LIMIT="%URLPARAM{"limit" default="5"}%"
   SKIP="%URLPARAM{"skip" default="0"}%"
   NOSTICKY="frontpage"
   STICKY=""
-}%
-%ADDTOZONE{"head" 
+  ONLYTEASER="%ONLYTEASER%"
+}%%ADDTOZONE{"head" 
   id="BLOGPLUGIN::CSS" 
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />" 
-}%<!-- -->
-<!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
-<!-- -->%TMPL:END%
+}%%JQREQUIRE{"hyphenator" warn="off"}%<!-- -->%TMPL:END%
 %{</verbatim>}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
+%META:FORM{name="Applications.TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value=""}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%

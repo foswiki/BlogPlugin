@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicEdit"}%
@@ -18,7 +18,6 @@
 
 %{<verbatim class="tml">}%
 %TMPL:DEF{"formfields"}%<!-- --> 
-<input type="hidden" name="action" value="text" /> 
 %TMPL:P{"publicationtab"}% 
 %TMPL:P{"categoriestab"}% 
 %TMPL:P{"tagstab"}% 
@@ -43,7 +42,7 @@
 %{</verbatim>}%
 
 
-%META:FORM{name="Applications.ApplicationTopic"}%
+%META:FORM{name="Applications.TopicView"}%
 %META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
 %META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" attributes="c" title="Summary" value="Editor for BlogEntries"}%

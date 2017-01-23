@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"SolrSearchView"}%
@@ -8,6 +8,14 @@
 %TMPL:DEF{"solr::defaultweb"}%%BASEWEB%%TMPL:END%
 %TMPL:DEF{"solr::input::checkboxes"}%%TMPL:END%
 %TMPL:DEF{"solr::displayas"}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"solr::assets"}%%TMPL:PREV%%ADDTOZONE{"head"
+  id="BLOGPLUGIN::CSS"
+  requires="SOLRPLUGIN"
+  text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />"
+}%%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -61,7 +69,7 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"solr::extrafilter"}%field_TopicType_lst:BlogEntry -topic:WebTopicEditTemplate%TMPL:END%
+%TMPL:DEF{"solr::extrafilter"}%web:%BASEWEB% field_TopicType_lst:BlogEntry -topic:WebTopicEditTemplate%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -109,7 +117,7 @@
       <img src='%SCRIPTURLPATH{"rest"}%/ImagePlugin/resize?topic={{:web}}.{{:topic}};file={{:~encodeURIComponent(thumbnail)}};size=120>;crop=on' alt="{{:title}}"  />
     </div>
   {{/if}}
-  <h2 style='margin-bottom:0'><a href='{{:url}}'>{{:title}}</a></h2>
+  <h2><a href='{{:url}}'>{{:title}}</a></h2>
   <div class='foswikiTopicInfo' style='margin:0.5em 0'>
     {{:~formatDate(createdate)}} | {{:author}} 
     {{if field_Category_flat_lst}}
@@ -126,8 +134,8 @@
 </script>%TMPL:END%
 %{</verbatim>}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="Solr search for blogs"}%
+%META:FORM{name="Applications.TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="Solr search for blogs"}%
 %META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -27,7 +27,7 @@ latter is used automatically when !SolrPlugin is installed.
   reverse="on"
   approved="on"
   mindate="%CALCULATE{"$TIMEADD($TIME(), -%MONTHS{default="1"}%, month)"}%"
-  limit="%IF{"defined LIMIT" then="%LIMIT%" else="10"}%"
+  limit="%LIMIT{default="10"}%"
   header="<div class='blogSideBarSection'>
     <h2 >%IF{"defined CAT and '%CAT%'!=''"
         then="%MAKETEXT{"Comments in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
@@ -56,16 +56,8 @@ latter is used automatically when !SolrPlugin is installed.
 ---++ Test
 %DBCALL{"%TOPIC%"}%
 
-%DBCALL{"Applications.RenderFunctionCallers"}%
-
----++ Copyright
-&copy; 2005-2014 http://michaeldaumconsulting.com
-
-%DBCALL{"Applications.GnuGeneralPublicLicense" section="notice"}%
-
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction, WikiTopic"}%
+%META:FORM{name="Applications.TopicFunction"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="display a list of recent comments in the current web"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Applications.WikiTopicEdit"}%

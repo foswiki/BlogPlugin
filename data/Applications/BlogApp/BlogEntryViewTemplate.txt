@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1425051371" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicView"}%
@@ -6,7 +6,7 @@
 
 %{<verbatim class="tml">}%
 %TMPL:DEF{"beforetext"}%<!-- -->
-<div class="blogEntry hyphenate">
+<div class="blogEntry clearfix">
 <div class="foswikiTopicInfo">
 %DBCALL{"Applications.BlogApp.RenderBlogEntryTitle" TITLE_EXTRA="%TMPL:P{"titleextra"}%"}%<!-- -->
 %JQREQUIRE{"button"}%<!-- -->
@@ -14,7 +14,6 @@
   id="BLOGPLUGIN::CSS"
   text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />"
 }%<!-- -->
-<!-- %JQREQUIRE{"hyphenator" warn="off"}% -->
 </div>
 %TMPL:P{"accesscontrol"}%<!-- -->
 <div itemprop="articleBody">
@@ -22,10 +21,36 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
+%TMPL:DEF{"comments"}%%IF{"State!='unpublished'"
+   then="$percntTMPL:PREV$percnt"
+}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"comments"}%%IF{
+  "State!='unpublished' and $'DISPLAYCOMMENTS'='on' and $'COMMENTFORMAT'!='insidetab' and not context save and not context preview and not context edit"
+  then="$percntTMPL:P{\"comments::system::%COMMENTSYSTEM{default="metacomment"}%\"}$percnt"
+}%<!-- -->
+%TMPL:P{"metacomments::init"}%<!-- -->
+<!-- -->%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"breadcrumbs::contents"}%%CATINFO{
+  topic="%BASEWEB%.%BASETOPIC%"
+  exclude="TopCategory"
+  header="$percntBREADCRUMBS{recurse=\"topicoff\" separator=\"%TMPL:P{"sep"}%\"}$percnt%TMPL:P{"sep"}%" 
+  format="$breadcrumb" 
+  separator="%TMPL:P{"sep"}%"
+  null="$percntBREADCRUMBS{separator=\"$percntTMPL:P{\"sep\"}$percnt\"}$percnt"
+}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
 %TMPL:DEF{"accesscontrol"}%<!-- -->
-%SETVAR{field="State" matches="unpublished" var="ALLOWTOPICVIEW" type="Set" value="BlogAuthorGroup, $percntWIKINAME$percnt"}%
+%SETVAR{field="State" matches="unpublished" var="ALLOWTOPICVIEW" type="Set" value="BlogAuthorGroup,$percntFORMFIELD{\"Author\" format=\" $value,\"}$percnt $percntWIKINAME$percnt"}%
 %SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW" value="details" type="Local"}%
-%SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW_DETAILS" value="BlogAuthorGroup, $percntWIKINAME$percnt" type="Local"}%
+%SETVAR{field="State" matches="unpublished" var="PERMSET_VIEW_DETAILS" value="BlogAuthorGroup,$percntFORMFIELD{\"Author\" format=\" $value,\"}$percnt $percntWIKINAME$percnt" type="Local"}%
 %UNSETVAR{field="State" matches="published" var="ALLOWTOPICVIEW"}%
 %UNSETVAR{field="State" matches="published" var="PERMSET_VIEW"}%
 %UNSETVAR{field="State" matches="published" var="PERMSET_VIEW_DETAILS"}%
@@ -35,8 +60,8 @@
 %{<verbatim class="tml">}%
 %TMPL:DEF{"aftertext"}%<!-- -->
 </div>
-%DBCALL{"Applications.BlogApp.RenderBlogEntryPagination" CLASS="blogBottomPagination"}%
 </div>
+%DBCALL{"Applications.BlogApp.RenderBlogEntryPagination" CLASS="blogBottomPagination"}%
 <!-- -->%TMPL:END%
 %{</verbatim>}%
 
@@ -51,21 +76,11 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"breadcrumbs::contents"}%%CATINFO{
-  topic="%BASEWEB%.%BASETOPIC%"
-  header="$percntBREADCRUMBS{recurse=\"topicoff\" separator=\"%TMPL:P{"sep"}%\"}$percnt%TMPL:P{"sep"}%" 
-  format="$breadcrumb" 
-  separator="%TMPL:P{"sep"}%"
-  null="$percntBREADCRUMBS{separator=\"$percntTMPL:P{\"sep\"}$percnt\"}$percnt"
-}%%TMPL:END%
-%{</verbatim>}%
-
-%{<verbatim class="tml">}%
 %TMPL:DEF{"sidebar"}%%DBCALL{"Applications.BlogApp.RenderSideBar" SIDEBAR="BlogEntry"}%%TMPL:END%
 %{</verbatim>}%
 
-%META:FORM{name="Applications.ApplicationTopic"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="TopicView for BlogEntries"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FORM{name="Applications.TopicView"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="TopicView for BlogEntries"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
