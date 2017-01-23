@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1485197114" format="1.1" reprev="1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -31,7 +31,7 @@
 %DBCALL{"Applications.BlogApp.RenderRecentComments" 
   LIMIT="5" 
   %IF{"'%BASEWEB%.%BASETOPIC%'/TopicType=~'Category'" 
-    then="CAT=\"%URLPARAM{"catname" default="%BASETOPIC%"}%\"
+    then="CAT=\"%URLPARAM{"catname" default="%BASETOPIC%"}%"
   }%
 }%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderCategories"}%<!-- -->
@@ -56,7 +56,9 @@
 %WEBSUMMARY%
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
-%DBCALL{"Applications.BlogApp.RenderSimilarBlogEntries"}%<!-- -->
+%IF{"context SolrPluginEnabled"
+   then="$percntDBCALL{\"Applications.BlogApp.RenderSimilarBlogEntries\"}$percnt"
+}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderRecentBlogEntries"
   LIMIT="5"
   CAT="%CATINFO{topic="%BASEWEB%.%BASETOPIC%" format="$name" limit="1" exclude="TopCategory"}%"

@@ -23,7 +23,7 @@ use Error qw(:try);
 use Foswiki::Func();
 use Foswiki::Plugins::DBCachePlugin();
 
-our $VERSION = '4.00';
+our $VERSION = '4.01';
 our $RELEASE = '23 Jan 2017';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'A blogging system for Foswiki';
