@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -19,7 +19,7 @@ This needs Foswiki:Extensions/SolrPlugin
    fields="web,topic,title,score" 
    like="category,tag"
    header="<div class='blogSideBarSection blogSideBarSimilar'>
-     <h2 >%MAKETEXT{"Similar"}%</h2><ul>"  
+     <h2 >%TRANSLATE{"Similar"}%</h2><ul>"  
    footer="</ul></div>" 
    format="<li> 
        <a href='%SCRIPTURLPATH{"view"}%/$web/$topic' title='score: $score'> 

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"SolrSearchView"}%
@@ -30,16 +30,16 @@
     header=",$n"
     format="  \"$name\": \"$title\"$children"
 }%,
-  "published": "%MAKETEXT{"published"}%",
-  "unpublished": "%MAKETEXT{"unpublished"}%",
-  "field_State_s": "%MAKETEXT{"State"}%",
-  "createdate": "%MAKETEXT{"Date"}%",
-  "category": "%MAKETEXT{"Category"}%",
-  "Filed in": "%MAKETEXT{"Filed in [_1]"}%",
-  "Tagged": "%MAKETEXT{"Tagged [_1]"}%",
-  "tagged": "%MAKETEXT{"tagged [_1]"}%",
-  "keyword": "%MAKETEXT{"keyword"}%",
-  "tag": "%MAKETEXT{"tag"}%"
+  "published": "%TRANSLATE{"published"}%",
+  "unpublished": "%TRANSLATE{"unpublished"}%",
+  "field_State_s": "%TRANSLATE{"State"}%",
+  "field_PublishDate_dt": "%TRANSLATE{"Date"}%",
+  "category": "%TRANSLATE{"Category"}%",
+  "Filed in": "%TRANSLATE{"Filed in [_1]"}%",
+  "Tagged": "%TRANSLATE{"Tagged [_1]"}%",
+  "tagged": "%TRANSLATE{"tagged [_1]"}%",
+  "keyword": "%TRANSLATE{"keyword"}%",
+  "tag": "%TRANSLATE{"tag"}%"
 }
 </div>
 </literal>%TMPL:END%
@@ -49,13 +49,13 @@
 %TMPL:DEF{"solr::sortby"}%<!-- -->
 <table class='foswikiNullTable'>
   <tr>
-    <th>%MAKETEXT{"Sort by"}%:&nbsp;</th>
+    <th>%TRANSLATE{"Sort by"}%:&nbsp;</th>
     <td>
       <select class='foswikiSelect' id='solrSorting' data-default-sort="%TMPL:P{"solr::defaultsort"}%">
-        <option class='foswikiOption' value='score desc'>%MAKETEXT{"Relevance"}%</option>
-        <option class='foswikiOption' value='date desc'>%MAKETEXT{"Last changed"}%</option>
-        <option class='foswikiOption' value='createdate desc'>%MAKETEXT{"Create date"}%</option>
-        <option class='foswikiOption' value='title_sort asc'>%MAKETEXT{"Name"}%</option>
+        <option class='foswikiOption' value='score desc'>%TRANSLATE{"Relevance"}%</option>
+        <option class='foswikiOption' value='date desc'>%TRANSLATE{"Last changed"}%</option>
+        <option class='foswikiOption' value='field_pulishdate_dt desc'>%TRANSLATE{"Publish Date"}%</option>
+        <option class='foswikiOption' value='title_sort asc'>%TRANSLATE{"Name"}%</option>
       </select>
     </td>
   </tr>
@@ -69,7 +69,7 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"solr::extrafilter"}%web:%BASEWEB% field_TopicType_lst:BlogEntry -topic:WebTopicEditTemplate%TMPL:END%
+%TMPL:DEF{"solr::extrafilter"}%web:%FORMATLIST{"%BASEWEB%" split="/" separator="."}% field_TopicType_lst:BlogEntry -topic:WebTopicEditTemplate%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -81,11 +81,11 @@
   id="category" 
   sort="index" 
   multivalue="true"
-  title="%MAKETEXT{"Category"}%"
+  title="%TRANSLATE{"Category"}%"
 }%
 %TMPL:P{"solr::facetrange"
-  id="createdate"
-  title="%MAKETEXT{"Date"}%"
+  id="field_PublishDate_dt"
+  title="%TRANSLATE{"Date"}%"
   start="1970-01-01T00:00:00Z"
   gap="+1MONTH"
   hidesingle="false"
@@ -93,11 +93,11 @@
 }%
 %TMPL:P{"solr::facet"
   id="createauthor"
-  title="%MAKETEXT{"Author"}%"
+  title="%TRANSLATE{"Author"}%"
 }%
 %TMPL:P{"solr::facet"
   id="field_State_s"
-  title="%MAKETEXT{"State"}%"
+  title="%TRANSLATE{"State"}%"
 }%
 <!-- -->%TMPL:END%
 %{</verbatim>}%
@@ -119,7 +119,7 @@
   {{/if}}
   <h2><a href='{{:url}}'>{{:title}}</a></h2>
   <div class='foswikiTopicInfo' style='margin:0.5em 0'>
-    {{:~formatDate(createdate)}} | {{:author}} 
+    {{:~formatDate(field_PublishDate_dt)}} | {{:author}} 
     {{if field_Category_flat_lst}}
       | {{:~renderList("field_Category_flat_lst", ", ", 10)}}
     {{/if}}
@@ -135,7 +135,7 @@
 %{</verbatim>}%
 
 %META:FORM{name="Applications.TopicView"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="Solr search for blogs"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

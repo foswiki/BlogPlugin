@@ -1,14 +1,22 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
 ---++ Documentation
 %STARTSECTION{name="documentation" type="section"}%
+This function renders a list of recent BlogEntries in the given web. Only published postings
+will be rendered as well as those _not_ tagged "blogonly". Each posting's teaser will be extracted.
+
+See also:
+
+   * [[RenderBlogEntries]]
 
 ---+++++ Parameters
    * SKIP: number of items to skip, default 0
    * LIMIT: number of items to show, default 4
    * THEWEB: web holding blog entries, default Blog
+   * CAT: categories to extract (optional)
+   * TAG: tagged entries to be extracted (optional)
    * SHOWREVINFO: on/off, default on
 
 %ENDSECTION{name="documentation" type="section"}%
@@ -17,21 +25,29 @@
 <verbatim class="tml">
 %STARTINCLUDE%<noautolink>
 %DBQUERY{
-  "TopicType=~'\bBlogEntry\b' AND State!='unpublished' AND Tag!~'\bblogonly\b'"
+  "TopicType=~'\bBlogEntry\b' AND State!='unpublished' AND Tag!~'\bblogonly\b'
+   %IF{"'%CAT{default=""}%' != ''" then="AND topic ISA '%CAT%'"}% 
+   %IF{"'%TAG{default=""}%' != ''" then="AND Tag=~'\b%TAG%\b'"}%  
+  "
   exclude="WebTopicEditTemplate"
   web="%THEWEB{default="Blog"}%" 
-  order="publishdate"
-  format="<div class='foswikiIndexItem clearfix'>
-   <h3>[[$web.$topic]]</h3>
+  sort="publishdate"
+  format="<div class='blogEntry clearfix'>
+   <h2>[[$web.$topic]]</h2>
    %IF{"'%SHOWREVINFO{default="on"}%'='on'"
       then="$dollarpercntDBCALL{\\"$percntWEB$percnt.$percntTOPIC$percnt\\" section=\\"revinfo\\" object=\\"$dollarweb.$dollartopic\\"}$dollarpercnt"
    }%<!-- -->
-   $percntDBCALL{\"$web.$topic\" section=\"teaser\" warn=\"off\"}$percnt ... [[$web.$topic][%TRANSLATE{"read more"}%]]<!-- -->
+   $percntDBCALL{\"$web.$topic\" section=\"teaser\" warn=\"off\"}$percnt<!-- -->
+   $percntCLEAR$percnt
+   <p class='blogMore'>[[$web.$topic][%TRANSLATE{"Read more"}%]]</p>
   </div>"
-  separator="$n<hr />$n"
+  separator="$n"
   limit="%LIMIT{default="4"}%"
   skip="%SKIP{default="0"}%"
   reverse="on"
+}%%ADDTOZONE{"head"
+  id="BLOGPLUGIN::CSS"
+  text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />"
 }%
 </noautolink>%STOPINCLUDE%
 </verbatim>
@@ -41,7 +57,7 @@
 %STARTSECTION{"revinfo"}%<div class="foswikiGrayText"> 
   %DBQUERY{ 
     topic="%object%"  
-    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(createdate, '$year-$mo-$day')'>$formatTime(createdate, '$day $mon $year')</span> 
+    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(publishdate, '$year-$mo-$day')'>$formatTime(publishdate)</span> 
       <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
       \"$expand(Author or createauthor)\"  
       split=\"\s*,\s*\"  

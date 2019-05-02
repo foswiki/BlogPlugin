@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1485197114" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -13,25 +13,31 @@
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%<!-- -->
-%WEBLINK{format="<h2 class='webLink'><a class='$marker' href='$url'>$title</a></h2>" web="%BASEWEB%"}%
+%STARTINCLUDE%%WEBLINK{
+   format="<h2 class='webLink'><a class='$marker' href='$url'>$title</a></h2>" 
+   web="%BASEWEB%"
+}%
 %DBCALL{
-  "%WEB%.%TOPIC%" 
-  section="%SIDEBAR{default="%FORMATLIST{"%FORMFIELD{"TopicType" topic="%BASEWEB%.%BASETOPIC"}%" limit="1" null="Default"}%"}%"
+   "%WEB%.%TOPIC%" 
+   section="%SIDEBAR{
+      default="%FORMATLIST{"%FORMFIELD{"TopicType" topic="%BASEWEB%.%BASETOPIC"}%" 
+                  limit="1" 
+                  null="Default"
+               }%"
+      }%"
 }%%JQREQUIRE{"serialpager"}%%STOPINCLUDE%
 </verbatim>
 
 ---++ Default sidebar
 <verbatim class="tml">
-%STARTSECTION{"Default"}%<!-- -->
-<div class="blogSideBarSection blogAbout"> 
+%STARTSECTION{"Default"}%<div class="blogSideBarSection blogAbout"> 
 %WEBSUMMARY%
 </div> 
 %DBCALL{"Applications.BlogApp.RenderAuthorTools"}%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderRecentComments" 
   LIMIT="5" 
   %IF{"'%BASEWEB%.%BASETOPIC%'/TopicType=~'Category'" 
-    then="CAT=\"%URLPARAM{"catname" default="%BASETOPIC%"}%"
+    then="CAT=\"%URLPARAM{"catname" default="%BASETOPIC%"}%\""
   }%
 }%<!-- -->
 %DBCALL{"Applications.BlogApp.RenderCategories"}%<!-- -->

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -20,22 +20,22 @@
 
 <verbatim class="tml">
 %STARTSECTION{"tools"}%<div class="blogSideBarSection blogAuthorTools">
-<h2 >%MAKETEXT{"Tools"}%</h2>
-   * [[BlogEntry][%MAKETEXT{"BlogEntries"}%]]
-   * [[Category][%MAKETEXT{"Categories"}%]]
-   * [[WebTagList][%MAKETEXT{"Tags"}%]]
-   * [[WebTopicList][%MAKETEXT{"Index"}%]]
-   * [[WebChanges][%MAKETEXT{"Changes"}%]]
-   * [[WebNotify][%MAKETEXT{"Notifications"}%]]
-   * [[WebStatistics][%MAKETEXT{"Statistics"}%]]
-   * [[WebPreferences][%MAKETEXT{"Preferences"}%]]
+<h2 >%TRANSLATE{"Tools"}%</h2>
+   * [[BlogEntry][%TRANSLATE{"BlogEntries"}%]]%IF{"istopic 'TopicTemplate'" then="
+   * [[TopicTemplate][%TRANSLATE{"Templates"}%]]"}%
+   * [[Category][%TRANSLATE{"Categories"}%]]
+   * [[WebTagList][%TRANSLATE{"Tags"}%]]
+   * [[WebTopicList][%TRANSLATE{"Index"}%]]
+   * [[WebChanges][%TRANSLATE{"Changes"}%]]
+   * [[WebNotify][%TRANSLATE{"Notifications"}%]]
+   * [[WebStatistics][%TRANSLATE{"Statistics"}%]]
+   * [[WebPreferences][%TRANSLATE{"Preferences"}%]]
 </div>%ENDSECTION{"tools"}%
 </verbatim>
 
 
-
 %META:FORM{name="Applications.TopicFunction"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="tools visible to blog authors"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="tools visible to blog authors"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

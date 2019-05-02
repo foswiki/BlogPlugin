@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -28,8 +28,8 @@
   exclude="placeholder%CALCULATE{"$GET(seenEntries)"}%"
   header="<div class='blogSideBarSection blogSideBarRecent'> 
     <h2 >%IF{"defined CAT and '%CAT%'!=''"
-        then="%MAKETEXT{"Latest in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
-        else="%MAKETEXT{"Latest"}%"
+        then="%TRANSLATE{"Latest in [_1]" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
+        else="%TRANSLATE{"Latest"}%"
       }%</h2>
     <ul>"
   format="<li>

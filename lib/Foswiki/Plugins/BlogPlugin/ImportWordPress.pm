@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2015-2017 Michael Daum http://michaeldaumconsulting.com
+# Copyright (C) 2015-2019 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -149,7 +149,7 @@ sub createRedirectMap {
       $oldPath =~ s/\/?$/\/?/;
       print "~*". $oldPath . " " . $newPath . ";\n";
     } else {
-      print $oldPath . " " . $newPath . "\n";
+      print "RewriteRule " . $oldPath . " " . $newPath . " [R=301,L]\n";
     }
 
     $index++;
@@ -332,7 +332,6 @@ sub createBlogEntry {
 
   my $date = $hash->{pubDate};
   $date = Foswiki::Time::parseTime($date, 1);
-  my $formattedDate = Foswiki::Time::formatTime($date, '$day $mon $year');
 
   my @tags = @{$hash->{tags}};
   my @cats = @{$hash->{category}};
@@ -357,7 +356,6 @@ sub createBlogEntry {
 
   #writeDebug("topicTitle=$topicTitle");
   #writeDebug("topic=$topic");
-  #writeDebug("date=$date ($formattedDate)");
   #writeDebug("author=$author");
   #writeDebug("tags=@tags");
   #writeDebug("cats=".join(", ", sort @cats));
@@ -532,189 +530,189 @@ sub _transliterate {
   my $string = shift;
 
   if ($Foswiki::cfg{Site}{CharSet} =~ /^utf-?8$/i) {
-    $string =~ s/\xc3\xa0/a/go;    # a grave
-    $string =~ s/\xc3\xa1/a/go;    # a acute
-    $string =~ s/\xc3\xa2/a/go;    # a circumflex
-    $string =~ s/\xc3\xa3/a/go;    # a tilde
-    $string =~ s/\xc3\xa4/ae/go;   # a uml
-    $string =~ s/\xc3\xa5/a/go;    # a ring above
-    $string =~ s/\xc3\xa6/ae/go;   # ae
-    $string =~ s/\xc4\x85/a/go;    # a ogonek
+    $string =~ s/\xc3\xa0/a/g;    # a grave
+    $string =~ s/\xc3\xa1/a/g;    # a acute
+    $string =~ s/\xc3\xa2/a/g;    # a circumflex
+    $string =~ s/\xc3\xa3/a/g;    # a tilde
+    $string =~ s/\xc3\xa4/ae/g;   # a uml
+    $string =~ s/\xc3\xa5/a/g;    # a ring above
+    $string =~ s/\xc3\xa6/ae/g;   # ae
+    $string =~ s/\xc4\x85/a/g;    # a ogonek
 
-    $string =~ s/\xc3\x80/A/go;    # A grave
-    $string =~ s/\xc3\x81/A/go;    # A acute
-    $string =~ s/\xc3\x82/A/go;    # A circumflex
-    $string =~ s/\xc3\x83/A/go;    # A tilde
-    $string =~ s/\xc3\x84/Ae/go;   # A uml
-    $string =~ s/\xc3\x85/A/go;    # A ring above
-    $string =~ s/\xc3\x86/AE/go;   # AE
-    $string =~ s/\xc4\x84/A/go;    # A ogonek
+    $string =~ s/\xc3\x80/A/g;    # A grave
+    $string =~ s/\xc3\x81/A/g;    # A acute
+    $string =~ s/\xc3\x82/A/g;    # A circumflex
+    $string =~ s/\xc3\x83/A/g;    # A tilde
+    $string =~ s/\xc3\x84/Ae/g;   # A uml
+    $string =~ s/\xc3\x85/A/g;    # A ring above
+    $string =~ s/\xc3\x86/AE/g;   # AE
+    $string =~ s/\xc4\x84/A/g;    # A ogonek
 
-    $string =~ s/\xc3\xa7/c/go;    # c cedille
-    $string =~ s/\xc4\x87/c/go;    # c acute
-    $string =~ s/\xc4\x8d/c/go;    # c caron
-    $string =~ s/\xc3\x87/C/go;    # C cedille
-    $string =~ s/\xc4\x86/C/go;    # C acute
-    $string =~ s/\xc4\x8c/C/go;    # C caron
+    $string =~ s/\xc3\xa7/c/g;    # c cedille
+    $string =~ s/\xc4\x87/c/g;    # c acute
+    $string =~ s/\xc4\x8d/c/g;    # c caron
+    $string =~ s/\xc3\x87/C/g;    # C cedille
+    $string =~ s/\xc4\x86/C/g;    # C acute
+    $string =~ s/\xc4\x8c/C/g;    # C caron
 
-    $string =~ s/\xc4\x8f/d/go;    # d caron
-    $string =~ s/\xc4\x8e/D/go;    # D caron
+    $string =~ s/\xc4\x8f/d/g;    # d caron
+    $string =~ s/\xc4\x8e/D/g;    # D caron
 
-    $string =~ s/\xc3\xa8/e/go;    # e grave
-    $string =~ s/\xc3\xa9/e/go;    # e acute
-    $string =~ s/\xc3\xaa/e/go;    # e circumflex
-    $string =~ s/\xc3\xab/e/go;    # e uml
-    $string =~ s/\xc4\x9b/e/go;    # e caron
+    $string =~ s/\xc3\xa8/e/g;    # e grave
+    $string =~ s/\xc3\xa9/e/g;    # e acute
+    $string =~ s/\xc3\xaa/e/g;    # e circumflex
+    $string =~ s/\xc3\xab/e/g;    # e uml
+    $string =~ s/\xc4\x9b/e/g;    # e caron
 
-    $string =~ s/\xc4\x99/e/go;    # e ogonek
-    $string =~ s/\xc4\x98/E/go;    # E ogonek
-    $string =~ s/\xc4\x9a/E/go;    # E caron
+    $string =~ s/\xc4\x99/e/g;    # e ogonek
+    $string =~ s/\xc4\x98/E/g;    # E ogonek
+    $string =~ s/\xc4\x9a/E/g;    # E caron
 
-    $string =~ s/\xc3\xb2/o/go;    # o grave
-    $string =~ s/\xc3\xb3/o/go;    # o acute
-    $string =~ s/\xc3\xb4/o/go;    # o circumflex
-    $string =~ s/\xc3\xb5/o/go;    # o tilde
-    $string =~ s/\xc3\xb6/oe/go;   # o uml
-    $string =~ s/\xc3\xb8/o/go;    # o stroke
+    $string =~ s/\xc3\xb2/o/g;    # o grave
+    $string =~ s/\xc3\xb3/o/g;    # o acute
+    $string =~ s/\xc3\xb4/o/g;    # o circumflex
+    $string =~ s/\xc3\xb5/o/g;    # o tilde
+    $string =~ s/\xc3\xb6/oe/g;   # o uml
+    $string =~ s/\xc3\xb8/o/g;    # o stroke
 
-    $string =~ s/\xc3\xb3/o/go;    # o acute
-    $string =~ s/\xc3\x93/O/go;    # O acute
+    $string =~ s/\xc3\xb3/o/g;    # o acute
+    $string =~ s/\xc3\x93/O/g;    # O acute
 
-    $string =~ s/\xc3\x92/O/go;    # O grave
-    $string =~ s/\xc3\x93/O/go;    # O acute
-    $string =~ s/\xc3\x94/O/go;    # O circumflex
-    $string =~ s/\xc3\x95/O/go;    # O tilde
-    $string =~ s/\xc3\x96/Oe/go;   # O uml
+    $string =~ s/\xc3\x92/O/g;    # O grave
+    $string =~ s/\xc3\x93/O/g;    # O acute
+    $string =~ s/\xc3\x94/O/g;    # O circumflex
+    $string =~ s/\xc3\x95/O/g;    # O tilde
+    $string =~ s/\xc3\x96/Oe/g;   # O uml
 
-    $string =~ s/\xc3\xb9/u/go;    # u grave
-    $string =~ s/\xc3\xba/u/go;    # u acute
-    $string =~ s/\xc3\xbb/u/go;    # u circumflex
-    $string =~ s/\xc3\xbc/ue/go;   # u uml
-    $string =~ s/\xc5\xaf/u/go;    # u ring above
+    $string =~ s/\xc3\xb9/u/g;    # u grave
+    $string =~ s/\xc3\xba/u/g;    # u acute
+    $string =~ s/\xc3\xbb/u/g;    # u circumflex
+    $string =~ s/\xc3\xbc/ue/g;   # u uml
+    $string =~ s/\xc5\xaf/u/g;    # u ring above
 
-    $string =~ s/\xc3\x99/U/go;    # U grave
-    $string =~ s/\xc3\x9a/U/go;    # U acute
-    $string =~ s/\xc3\x9b/U/go;    # U circumflex
-    $string =~ s/\xc3\x9c/Ue/go;   # U uml
-    $string =~ s/\xc5\xae/U/go;    # U ring above
+    $string =~ s/\xc3\x99/U/g;    # U grave
+    $string =~ s/\xc3\x9a/U/g;    # U acute
+    $string =~ s/\xc3\x9b/U/g;    # U circumflex
+    $string =~ s/\xc3\x9c/Ue/g;   # U uml
+    $string =~ s/\xc5\xae/U/g;    # U ring above
 
-    $string =~ s/\xc5\x99/r/go;    # r caron
-    $string =~ s/\xc5\x98/R/go;    # R caron
+    $string =~ s/\xc5\x99/r/g;    # r caron
+    $string =~ s/\xc5\x98/R/g;    # R caron
 
-    $string =~ s/\xc3\x9f/ss/go;   # sharp s
-    $string =~ s/\xc5\x9b/s/go;    # s acute
-    $string =~ s/\xc5\xa1/s/go;    # s caron
-    $string =~ s/\xc5\x9a/S/go;    # S acute
-    $string =~ s/\xc5\xa0/S/go;    # S caron
+    $string =~ s/\xc3\x9f/ss/g;   # sharp s
+    $string =~ s/\xc5\x9b/s/g;    # s acute
+    $string =~ s/\xc5\xa1/s/g;    # s caron
+    $string =~ s/\xc5\x9a/S/g;    # S acute
+    $string =~ s/\xc5\xa0/S/g;    # S caron
 
-    $string =~ s/\xc5\xa5/t/go;    # t caron
-    $string =~ s/\xc5\xa4/T/go;    # T caron
+    $string =~ s/\xc5\xa5/t/g;    # t caron
+    $string =~ s/\xc5\xa4/T/g;    # T caron
 
-    $string =~ s/\xc3\xb1/n/go;    # n tilde
-    $string =~ s/\xc5\x84/n/go;    # n acute
-    $string =~ s/\xc5\x88/n/go;    # n caron
-    $string =~ s/\xc5\x83/N/go;    # N acute
-    $string =~ s/\xc5\x87/N/go;    # N caron
+    $string =~ s/\xc3\xb1/n/g;    # n tilde
+    $string =~ s/\xc5\x84/n/g;    # n acute
+    $string =~ s/\xc5\x88/n/g;    # n caron
+    $string =~ s/\xc5\x83/N/g;    # N acute
+    $string =~ s/\xc5\x87/N/g;    # N caron
 
-    $string =~ s/\xc3\xbe/y/go;    # y acute
-    $string =~ s/\xc3\xbf/y/go;    # y uml
+    $string =~ s/\xc3\xbe/y/g;    # y acute
+    $string =~ s/\xc3\xbf/y/g;    # y uml
 
-    $string =~ s/\xc3\xac/i/go;    # i grave
-    $string =~ s/\xc3\xab/i/go;    # i acute
-    $string =~ s/\xc3\xac/i/go;    # i circumflex
-    $string =~ s/\xc3\xad/i/go;    # i uml
+    $string =~ s/\xc3\xac/i/g;    # i grave
+    $string =~ s/\xc3\xab/i/g;    # i acute
+    $string =~ s/\xc3\xac/i/g;    # i circumflex
+    $string =~ s/\xc3\xad/i/g;    # i uml
 
-    $string =~ s/\xc5\x82/l/go;    # l stroke
-    $string =~ s/\xc4\xbe/l/go;    # l caron
-    $string =~ s/\xc5\x81/L/go;    # L stroke
-    $string =~ s/\xc4\xbd/L/go;    # L caron
+    $string =~ s/\xc5\x82/l/g;    # l stroke
+    $string =~ s/\xc4\xbe/l/g;    # l caron
+    $string =~ s/\xc5\x81/L/g;    # L stroke
+    $string =~ s/\xc4\xbd/L/g;    # L caron
 
-    $string =~ s/\xc5\xba/z/go;    # z acute
-    $string =~ s/\xc5\xb9/Z/go;    # Z acute
-    $string =~ s/\xc5\xbc/z/go;    # z dot
-    $string =~ s/\xc5\xbb/Z/go;    # Z dot
-    $string =~ s/\xc5\xbe/z/go;    # z caron
-    $string =~ s/\xc5\xbd/Z/go;    # Z caron
+    $string =~ s/\xc5\xba/z/g;    # z acute
+    $string =~ s/\xc5\xb9/Z/g;    # Z acute
+    $string =~ s/\xc5\xbc/z/g;    # z dot
+    $string =~ s/\xc5\xbb/Z/g;    # Z dot
+    $string =~ s/\xc5\xbe/z/g;    # z caron
+    $string =~ s/\xc5\xbd/Z/g;    # Z caron
   } else {
-    $string =~ s/\xe0/a/go;        # a grave
-    $string =~ s/\xe1/a/go;        # a acute
-    $string =~ s/\xe2/a/go;        # a circumflex
-    $string =~ s/\xe3/a/go;        # a tilde
-    $string =~ s/\xe4/ae/go;       # a uml
-    $string =~ s/\xe5/a/go;        # a ring above
-    $string =~ s/\xe6/ae/go;       # ae
-    $string =~ s/\x01\x05/a/go;    # a ogonek
+    $string =~ s/\xe0/a/g;        # a grave
+    $string =~ s/\xe1/a/g;        # a acute
+    $string =~ s/\xe2/a/g;        # a circumflex
+    $string =~ s/\xe3/a/g;        # a tilde
+    $string =~ s/\xe4/ae/g;       # a uml
+    $string =~ s/\xe5/a/g;        # a ring above
+    $string =~ s/\xe6/ae/g;       # ae
+    $string =~ s/\x01\x05/a/g;    # a ogonek
 
-    $string =~ s/\xc0/A/go;        # A grave
-    $string =~ s/\xc1/A/go;        # A acute
-    $string =~ s/\xc2/A/go;        # A circumflex
-    $string =~ s/\xc3/A/go;        # A tilde
-    $string =~ s/\xc4/Ae/go;       # A uml
-    $string =~ s/\xc5/A/go;        # A ring above
-    $string =~ s/\xc6/AE/go;       # AE
-    $string =~ s/\x01\x04/A/go;    # A ogonek
+    $string =~ s/\xc0/A/g;        # A grave
+    $string =~ s/\xc1/A/g;        # A acute
+    $string =~ s/\xc2/A/g;        # A circumflex
+    $string =~ s/\xc3/A/g;        # A tilde
+    $string =~ s/\xc4/Ae/g;       # A uml
+    $string =~ s/\xc5/A/g;        # A ring above
+    $string =~ s/\xc6/AE/g;       # AE
+    $string =~ s/\x01\x04/A/g;    # A ogonek
 
-    $string =~ s/\xe7/c/go;        # c cedille
-    $string =~ s/\x01\x07/C/go;    # c acute
-    $string =~ s/\xc7/C/go;        # C cedille
-    $string =~ s/\x01\x06/c/go;    # C acute
+    $string =~ s/\xe7/c/g;        # c cedille
+    $string =~ s/\x01\x07/C/g;    # c acute
+    $string =~ s/\xc7/C/g;        # C cedille
+    $string =~ s/\x01\x06/c/g;    # C acute
 
-    $string =~ s/\xe8/e/go;        # e grave
-    $string =~ s/\xe9/e/go;        # e acute
-    $string =~ s/\xea/e/go;        # e circumflex
-    $string =~ s/\xeb/e/go;        # e uml
-    $string =~ s/\x01\x19/e/go;    # e ogonek
-    $string =~ s/\xc4\x18/E/go;    # E ogonek
+    $string =~ s/\xe8/e/g;        # e grave
+    $string =~ s/\xe9/e/g;        # e acute
+    $string =~ s/\xea/e/g;        # e circumflex
+    $string =~ s/\xeb/e/g;        # e uml
+    $string =~ s/\x01\x19/e/g;    # e ogonek
+    $string =~ s/\xc4\x18/E/g;    # E ogonek
 
-    $string =~ s/\xf2/o/go;        # o grave
-    $string =~ s/\xf3/o/go;        # o acute
-    $string =~ s/\xf4/o/go;        # o circumflex
-    $string =~ s/\xf5/o/go;        # o tilde
-    $string =~ s/\xf6/oe/go;       # o uml
-    $string =~ s/\xf8/oe/go;       # o stroke
+    $string =~ s/\xf2/o/g;        # o grave
+    $string =~ s/\xf3/o/g;        # o acute
+    $string =~ s/\xf4/o/g;        # o circumflex
+    $string =~ s/\xf5/o/g;        # o tilde
+    $string =~ s/\xf6/oe/g;       # o uml
+    $string =~ s/\xf8/oe/g;       # o stroke
 
-    $string =~ s/\xd3/o/go;        # o acute
-    $string =~ s/\xf3/O/go;        # O acute
+    $string =~ s/\xd3/o/g;        # o acute
+    $string =~ s/\xf3/O/g;        # O acute
 
-    $string =~ s/\xd2/O/go;        # O grave
-    $string =~ s/\xd3/O/go;        # O acute
-    $string =~ s/\xd4/O/go;        # O circumflex
-    $string =~ s/\xd5/O/go;        # O tilde
-    $string =~ s/\xd6/Oe/go;       # O uml
+    $string =~ s/\xd2/O/g;        # O grave
+    $string =~ s/\xd3/O/g;        # O acute
+    $string =~ s/\xd4/O/g;        # O circumflex
+    $string =~ s/\xd5/O/g;        # O tilde
+    $string =~ s/\xd6/Oe/g;       # O uml
 
-    $string =~ s/\xf9/u/go;        # u grave
-    $string =~ s/\xfa/u/go;        # u acute
-    $string =~ s/\xfb/u/go;        # u circumflex
-    $string =~ s/\xfc/ue/go;       # u uml
+    $string =~ s/\xf9/u/g;        # u grave
+    $string =~ s/\xfa/u/g;        # u acute
+    $string =~ s/\xfb/u/g;        # u circumflex
+    $string =~ s/\xfc/ue/g;       # u uml
 
-    $string =~ s/\xd9/U/go;        # U grave
-    $string =~ s/\xda/U/go;        # U acute
-    $string =~ s/\xdb/U/go;        # U circumflex
-    $string =~ s/\xdc/Ue/go;       # U uml
+    $string =~ s/\xd9/U/g;        # U grave
+    $string =~ s/\xda/U/g;        # U acute
+    $string =~ s/\xdb/U/g;        # U circumflex
+    $string =~ s/\xdc/Ue/g;       # U uml
 
-    $string =~ s/\xdf/ss/go;       # sharp s
-    $string =~ s/\x01\x5b/s/go;    # s acute
-    $string =~ s/\x01\x5a/S/go;    # S acute
+    $string =~ s/\xdf/ss/g;       # sharp s
+    $string =~ s/\x01\x5b/s/g;    # s acute
+    $string =~ s/\x01\x5a/S/g;    # S acute
 
-    $string =~ s/\xf1/n/go;        # n tilde
-    $string =~ s/\x01\x44/n/go;    # n acute
-    $string =~ s/\x01\x43/N/go;    # N acute
+    $string =~ s/\xf1/n/g;        # n tilde
+    $string =~ s/\x01\x44/n/g;    # n acute
+    $string =~ s/\x01\x43/N/g;    # N acute
 
-    $string =~ s/\xfe/y/go;        # y acute
-    $string =~ s/\xff/y/go;        # y uml
+    $string =~ s/\xfe/y/g;        # y acute
+    $string =~ s/\xff/y/g;        # y uml
 
-    $string =~ s/\xec/i/go;        # i grave
-    $string =~ s/\xed/i/go;        # i acute
-    $string =~ s/\xee/i/go;        # i circumflex
-    $string =~ s/\xef/i/go;        # i uml
+    $string =~ s/\xec/i/g;        # i grave
+    $string =~ s/\xed/i/g;        # i acute
+    $string =~ s/\xee/i/g;        # i circumflex
+    $string =~ s/\xef/i/g;        # i uml
 
-    $string =~ s/\x01\x42/l/go;    # l stroke
-    $string =~ s/\x01\x41/L/go;    # L stroke
+    $string =~ s/\x01\x42/l/g;    # l stroke
+    $string =~ s/\x01\x41/L/g;    # L stroke
 
-    $string =~ s/\x01\x7a/z/go;    # z acute
-    $string =~ s/\x01\x79/Z/go;    # Z acute
-    $string =~ s/\x01\x7c/z/go;    # z dot
-    $string =~ s/\x01\x7b/Z/go;    # Z dot
+    $string =~ s/\x01\x7a/z/g;    # z acute
+    $string =~ s/\x01\x79/Z/g;    # Z acute
+    $string =~ s/\x01\x7c/z/g;    # z dot
+    $string =~ s/\x01\x7b/Z/g;    # Z dot
   }
 
   return $string;

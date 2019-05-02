@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.BlogApp.CategoryView"}%
@@ -11,8 +11,7 @@
 
 
 %META:FORM{name="Applications.TopicView"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="TopicView for categories (PatternSkin variation)"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
-%META:TOPICMOVED{by="micha" date="1329312691" from="Applications/BlogApp.PatternSkinViewTemplate" to="Applications/BlogApp.PatternSkinCategoryViewTemplate"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="TopicView for categories (PatternSkin variation)"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

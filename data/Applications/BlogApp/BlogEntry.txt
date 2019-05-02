@@ -1,31 +1,38 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicType"}%
 %DBCALL{"Applications.RenderTopicInstaller" TEXT="Install '%TOPIC%' TopicType" TYPE="TopicType"}%
 
 ---++ Documentation
 %STARTSECTION{name="documentation" type="section"}%
-This is the central TopicType to store blog entries.
+This is the central TopicType to store blog entries. See also
+
+   * [[%TOPIC%EditTemplate]]
+   * [[%TOPIC%ViewTemplate]]
 %ENDSECTION{name="documentation" type="section"}%
 
 %STARTINCLUDE%
 %DBCALL{"Applications.RenderSimpleTopicCreator" 
   VALUE=""
-  EDITOR="Applications.BlogApp.BlogEntryEdit"
   EXTRA="<input type='hidden' name='State' value='unpublished' /><input type='hidden' name='DISPLAYCOMMENTS' value='on' />"
   PARENT="none"
-  TEMPLATE="Applications.BlogApp.BlogEntryTemplate"
 }%
 
 %DBCALL{"Applications.RenderTopicsOfType" 
-  FIELDS="TopicTitle, Author, State, Tag, Category, Changed"
+  FIELDS="TopicTitle, publishauthor, State, Tag, Category, publishdate, Changed"
   ROWS="20"
   FILTER="topic!='WebTopicEditTemplate'"
+  publishauthor_title="%TRANSLATE{"Author"}%"
+  publishdate_title="%TRANSLATE{"Published"}%"
+  State_title="%TRANSLATE{"State"}%"
+  Tag_title="%TRANSLATE{"Tag"}%"
+  Category_title="%TRANSLATE{"Category"}%"
+  Changed_title="%TRANSLATE{"Changed"}%"
 }%
 %STOPINCLUDE%
 
 ---++ <nop>%TOPIC% form
 | *Name:*| *Type:* | *Size:* | *Values:* | *Description:* | *Attributes:* | *Default:* |
-| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic | Document type  | | |
+| TopicType | label | 1 | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic | Document type  | | BlogEntry, SeoTopic, ClassifiedTopic, CategorizedTopic, TaggedTopic, WikiTopic |
 | <nop>TopicTitle | text | 75 | | title of this blog entry | | |
 | Summary | text | 75 | | enter a punch line | c |  |
 | Tag | tag | 30 | | keywords |  | |
@@ -35,9 +42,9 @@ This is the central TopicType to store blog entries.
 | Publish Date | date2 | 10 | | date when this posting will be published automatically; leave it empty in case you manage publication state manually | | |
 | Unpublish Date | date2 | 10 | | date when this posting will be unpublished again automatically; leave it empty in case you manage publication state manually | | |
 | Sticky | checkbox+values | 4 | on frontpage=frontpage, on category=category | a sticky blog entries is rendered at the top of the frontpage or category independent of the normal timeline | | |
-| HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%MAKETEXT{"Generate title"}%</a> | | |
-| Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%MAKETEXT{"Generate description"}%</a> | | |
-| Meta Keywords | text | 75 | | SEO keywords. Specify a comma separate list of keywords. <a href='#' id='clsGenerateKeywords'>%MAKETEXT{"Generate keywords"}%</a> | | |
+| HTML Title | text | 75 | | controls the title being added to the html page, defaults to <nop>TopicTitle if. <a href='#' id='clsGenerateTitle'>%TRANSLATE{"Generate title"}%</a> | | |
+| Meta Description | textarea | 80x2 | | SEO description. Use a maximum of 160 chars for the description. <a href='#' id='clsGenerateDescription'>%TRANSLATE{"Generate description"}%</a> | | |
+| Meta Keywords | text | 75 | | SEO keywords. Specify a comma separate list of keywords. <a href='#' id='clsGenerateKeywords'>%TRANSLATE{"Generate keywords"}%</a> | | |
 | Meta Image | select2 | 30 | , %ATTACHMENTS{format="$name" separator=", "}% | name of attachment used as open graph image thumbnail |  | |
 
 %META:FORM{name="Applications.TopicType"}%
@@ -47,5 +54,10 @@ This is the central TopicType to store blog entries.
 %META:FIELD{name="Icon" title="Icon" value="fa-rss"}%
 %META:FIELD{name="Editor" title="Editor" value="Applications.BlogApp.BlogEntryEditTemplate"}%
 %META:FIELD{name="Template" title="Template" value="Applications.BlogApp.BlogEntryTemplate"}%
-%META:FIELD{name="TopicNaming" title="Topic Naming" value=""}%
+%META:FIELD{name="TopicNamingMode" title="Topic Naming Mode" value="default"}%
+%META:FIELD{name="TopicNameTemplate" title="Topic Name Template" value=""}%
+%META:FIELD{name="TopicNameSource" title="Topic Name Source" value="[name=TopicTitle]"}%
+%META:FIELD{name="TopicNamePrefix" title="Topic Name Prefix" value=""}%
+%META:FIELD{name="TopicNameSuffix" title="Topic Name Suffix" value=""}%
+%META:FIELD{name="TopicNameTransliterate" title="Topic Name Transliterate" value="true"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

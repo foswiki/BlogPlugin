@@ -56,9 +56,8 @@
 .blogNext a {
   text-decoration:none;
 }
-.blogEntryPagination,
 .blogBottomPagination {
-  margin:3em 0 0;
+  margin:3em 0;
 }
 .blogTopPagination {
   margin:0em 0em 1em;

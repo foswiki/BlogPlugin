@@ -16,23 +16,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Finnish\n"
 
-#: data/Applications/BlogApp/RenderArchives.txt:29
+#: data/Applications/BlogApp/RenderArchives.txt:30
 msgid "%1 Archive"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderCategories.txt:26
+#: data/Applications/BlogApp/RenderCategories.txt:27
 #, fuzzy
 msgid "%1 categories"
 msgstr "Kategoriat"
 
-#: data/Applications/BlogApp/RenderRecentComments.txt:44
-msgid "%1 replied on %2 %3"
-msgstr ""
-
-#: data/Applications/BlogApp/RenderArchives.txt:30
+#: data/Applications/BlogApp/RenderArchives.txt:31
 msgid "Archive"
 msgstr ""
 
+#: data/Applications/BlogApp/BlogEntry.txt:24
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:96
 msgid "Author"
 msgstr ""
@@ -41,18 +38,24 @@ msgstr ""
 msgid "BlogEntries"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:25
-#: data/Applications/BlogApp/RenderCategories.txt:27
+#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+#: data/Applications/BlogApp/RenderCategories.txt:28
 msgid "Categories"
 msgstr "Kategoriat"
 
+#: data/Applications/BlogApp/BlogEntry.txt:28
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:37
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:84
 #, fuzzy
 msgid "Category"
 msgstr "Kategoriat"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:28
+#: data/Applications/BlogApp/BlogEntry.txt:29
+#, fuzzy
+msgid "Changed"
+msgstr "Muuttanut:"
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:29
 msgid "Changes"
 msgstr "Muutokset"
 
@@ -66,11 +69,6 @@ msgstr "Kommentit:"
 msgid "Comments in %1"
 msgstr "Kommentit:"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
-#, fuzzy
-msgid "Create date"
-msgstr "Luo uusi aihe"
-
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:36
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:88
 msgid "Date"
@@ -81,20 +79,20 @@ msgstr "Päiväys"
 msgid "Filed in %1"
 msgstr "URLin %1 lisääminen epäonnistui"
 
-#: data/Applications/BlogApp/BlogEntry.txt:39
+#: data/Applications/BlogApp/BlogEntry.txt:46
 #, fuzzy
 msgid "Generate description"
 msgstr "Versio"
 
-#: data/Applications/BlogApp/BlogEntry.txt:40
+#: data/Applications/BlogApp/BlogEntry.txt:47
 msgid "Generate keywords"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntry.txt:38
+#: data/Applications/BlogApp/BlogEntry.txt:45
 msgid "Generate title"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:27
+#: data/Applications/BlogApp/RenderAuthorTools.txt:28
 msgid "Index"
 msgstr "Hakemisto"
 
@@ -117,27 +115,35 @@ msgstr "(versio %1)"
 msgid "Name"
 msgstr "Aiheen nimi"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:29
+#: data/Applications/BlogApp/RenderAuthorTools.txt:30
 msgid "Notifications"
 msgstr "Huomautukset"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:31
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:9
+msgid ""
+"Permission settings temporarily disabled as this posting is currently "
+"unpublished."
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:32
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:30
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
 msgid "Publication"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:31
-msgid "Publication Rules"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:35
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:41
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
 msgid "Publish Date"
 msgstr ""
 
+#: data/Applications/BlogApp/BlogEntry.txt:25
+msgid "Published"
+msgstr ""
+
 #: data/Applications/BlogApp/RenderBlogEntries.txt:68
+#: data/Applications/BlogApp/RenderRecentNews.txt:42
 #, fuzzy
 msgid "Read more"
 msgstr "Lue"
@@ -155,28 +161,38 @@ msgstr ""
 msgid "Sort by"
 msgstr "Lajittele tulokset:"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
+#: data/Applications/BlogApp/BlogEntry.txt:26
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:43
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:100
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:35
 msgid "State"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:30
+#: data/Applications/BlogApp/RenderAuthorTools.txt:31
 msgid "Statistics"
 msgstr "Tilastot"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:38
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:44
 msgid "Sticky"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntry.txt:27
+msgid "Tag"
 msgstr ""
 
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:39
 msgid "Tagged %1"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryRenderRss.txt:29
-#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+#: data/Applications/BlogApp/BlogEntryRenderRss.txt:32
+#: data/Applications/BlogApp/RenderAuthorTools.txt:27
 msgid "Tags"
 msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:25
+#, fuzzy
+msgid "Templates"
+msgstr "Näytä sivupohjat"
 
 #: data/Applications/BlogApp/WebAtom.txt:3
 #: data/Applications/BlogApp/WebRss.txt:5
@@ -200,12 +216,14 @@ msgstr ""
 msgid "Tools"
 msgstr "Työkalut"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:36
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:42
 msgid "Unpublish Date"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:8
-msgid "blog entry"
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:10
+msgid ""
+"Warning: Incompatible permission settings detected. Use the =Edit settings= "
+"dialog to change the ACLs."
 msgstr ""
 
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:41
@@ -225,11 +243,6 @@ msgstr "Esikatsele viimeisimpiä muutoksia:"
 msgid "published"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderRecentNews.txt:29
-#, fuzzy
-msgid "read more"
-msgstr "Lue"
-
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:42
 msgid "tag"
 msgstr ""
@@ -238,11 +251,19 @@ msgstr ""
 msgid "tagged %1"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:74
+#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:81
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:34
 #: data/Applications/BlogApp/RenderBlogEntries.txt:53
 msgid "unpublished"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Create date"
+#~ msgstr "Luo uusi aihe"
+
+#, fuzzy
+#~ msgid "read more"
+#~ msgstr "Lue"
 
 #~ msgid "%*(%1,day) "
 #~ msgstr "%*(%1,päivä) "
@@ -995,9 +1016,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Changed on"
 #~ msgstr "Muutettu"
-
-#~ msgid "Changed:"
-#~ msgstr "Muuttanut:"
 
 #~ msgid "Changes from r%1 to r%2"
 #~ msgstr "Muutokset v%1 - v%2"
@@ -3217,9 +3235,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "View sequential topic history"
 #~ msgstr "Näytä aiheen täysi historia"
-
-#~ msgid "View templates"
-#~ msgstr "Näytä sivupohjat"
 
 #~ msgid "View topic"
 #~ msgstr "Näytä aihe"

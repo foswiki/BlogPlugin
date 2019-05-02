@@ -1,6 +1,35 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1485129582" format="1.1" reprev="28" version="426"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---++ Statistics for <nop>%BASEWEB% Web
 
 | *Month:* | *Topic <br /> views:* | *Topic <br /> saves:* | *File <br /> uploads:* | *Most popular <br /> topic views:* | *Top contributors for <br /> topic save and uploads:* |
 | <!--statDate--> | <!--statViews--> | <!--statSaves--> | <!--statUploads--> | <!--statTopViews--> | <!--statTopContributors--> |
+| May 2019 |  0 |  0 |  0 |  |  |
+| Apr 2019 |  0 |  0 |  0 |  |  |
+| Mar 2019 |  23 |  0 |  0 | &nbsp;23 [[RenderArchives]] |  |
+| Feb 2019 |  0 |  0 |  0 |  |  |
+| Jan 2019 |  0 |  0 |  0 |  |  |
+| Dec 2018 |  0 |  0 |  0 |  |  |
+| Nov 2018 |  0 |  0 |  0 |  |  |
+| Oct 2018 |  7 |  19 |  0 | &nbsp;&nbsp;2 [[WebHome]]<br />&nbsp;&nbsp;2 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;2 [[RenderSideBar]]<br />&nbsp;&nbsp;1 [[TopicView]] | &nbsp;19 Home.MichaelDaum |
+| Sep 2018 |  27 |  6 |  0 | &nbsp;&nbsp;5 [[PatternSkinCompatibilityTemplate]]<br />&nbsp;&nbsp;3 [[BlogEntry]]<br />&nbsp;&nbsp;2 [[FrontPageViewTemplate]]<br />&nbsp;&nbsp;2 [[WebHome]]<br />&nbsp;&nbsp;2 [[BlogEntryEditTemplate]]<br />&nbsp;&nbsp;2 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;2 [[BlogEntryTemplate]]<br />&nbsp;&nbsp;2 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;1 [[BlogSearchViewTemplate]]<br />&nbsp;&nbsp;1 [[PatternSkinBlogEntryViewTemplate]]<br />&nbsp;&nbsp;1 [[CategoryViewTemplate]] | &nbsp;&nbsp;6 Home.MichaelDaum |
+| Aug 2018 |  4 |  0 |  0 | &nbsp;&nbsp;2 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;1 [[SoftwareCategory]]<br />&nbsp;&nbsp;1 [[WebHome]] |  |
+| Jul 2018 |  23 |  6 |  0 | &nbsp;&nbsp;5 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;4 [[TopicFunction]]<br />&nbsp;&nbsp;3 [[RenderBlogEntries]]<br />&nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;2 [[TopicView]]<br />&nbsp;&nbsp;2 [[RenderRecentComments]]<br />&nbsp;&nbsp;2 [[BlogEntryRenderIndexItem]]<br />&nbsp;&nbsp;1 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;1 [[RenderRecentNews]] | &nbsp;&nbsp;6 Home.MichaelDaum |
+| Jun 2018 |  11 |  3 |  0 | &nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;3 [[RenderRecentNews]]<br />&nbsp;&nbsp;2 [[WebPreferences]]<br />&nbsp;&nbsp;2 [[BlogEntryEditTemplate]]<br />&nbsp;&nbsp;1 [[WebLexicon]] | &nbsp;&nbsp;3 Home.MichaelDaum |
+| May 2018 |  80 |  36 |  0 | &nbsp;14 [[RenderRecentNews]]<br />&nbsp;10 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;8 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;8 [[WebHome]]<br />&nbsp;&nbsp;7 [[CompleteDocumentation]]<br />&nbsp;&nbsp;6 [[BlogEntry]]<br />&nbsp;&nbsp;5 [[PatternSkinCategoryViewTemplate]]<br />&nbsp;&nbsp;5 [[BlogEntryEditTemplate]]<br />&nbsp;&nbsp;3 [[PatternSkinBlogEntryViewTemplate]]<br />&nbsp;&nbsp;3 [[TopicView]]<br />&nbsp;&nbsp;2 [[TopicFunction]] | &nbsp;36 Home.MichaelDaum |
+| Apr 2018 |  7 |  2 |  0 | &nbsp;&nbsp;4 [[RenderArchives]]<br />&nbsp;&nbsp;2 [[WebHome]]<br />&nbsp;&nbsp;1 [[WebSearch]] | &nbsp;&nbsp;2 Home.MichaelDaum |
+| Mar 2018 |  7 |  3 |  0 | &nbsp;&nbsp;2 [[BlogEntryRenderRss]]<br />&nbsp;&nbsp;2 [[RenderRecentNews]]<br />&nbsp;&nbsp;2 [[CompleteDocumentation]]<br />&nbsp;&nbsp;1 [[WebHome]] | &nbsp;&nbsp;3 Home.MichaelDaum |
+| Feb 2018 |  6 |  1 |  0 | &nbsp;&nbsp;2 [[BlogEntry]]<br />&nbsp;&nbsp;2 [[WebHome]]<br />&nbsp;&nbsp;1 [[TopicType]]<br />&nbsp;&nbsp;1 [[RenderRecentNews]] | &nbsp;&nbsp;1 Home.MichaelDaum |
+| Jan 2018 |  0 |  0 |  0 |  |  |
+| Dec 2017 |  0 |  0 |  0 |  |  |
+| Nov 2017 |  3 |  1 |  0 | &nbsp;&nbsp;2 [[RenderRecentNews]]<br />&nbsp;&nbsp;1 [[WebHome]] | &nbsp;&nbsp;1 Home.MichaelDaum |
+| Oct 2017 |  0 |  0 |  0 |  |  |
+| Sep 2017 |  93 |  54 |  0 | &nbsp;44 [[HumorCategory]]<br />&nbsp;&nbsp;6 [[CategoryViewTemplate]]<br />&nbsp;&nbsp;5 [[NewsCategory]]<br />&nbsp;&nbsp;4 [[RenderSideBar]]<br />&nbsp;&nbsp;3 [[WebHome]]<br />&nbsp;&nbsp;3 [[Category]]<br />&nbsp;&nbsp;3 [[TopicFunction]]<br />&nbsp;&nbsp;2 [[SoftwareCategory]]<br />&nbsp;&nbsp;2 [[ReviewCategory]]<br />&nbsp;&nbsp;2 [[WebPreferences]]<br />&nbsp;&nbsp;2 [[WebDesignCategory]] | &nbsp;54 Home.MichaelDaum |
+| Aug 2017 |  3 |  1 |  0 | &nbsp;&nbsp;2 [[RenderRecentNews]]<br />&nbsp;&nbsp;1 [[WebHome]] | &nbsp;&nbsp;1 Home.MichaelDaum |
+| Jul 2017 |  5 |  0 |  0 | &nbsp;&nbsp;2 [[FrontPageViewTemplate]]<br />&nbsp;&nbsp;1 [[WebHome]]<br />&nbsp;&nbsp;1 [[TopicFunction]]<br />&nbsp;&nbsp;1 [[RenderBlogEntries]] |  |
+| Jun 2017 |  34 |  7 |  0 | &nbsp;&nbsp;6 [[WebHome]]<br />&nbsp;&nbsp;5 [[RenderBlogEntries]]<br />&nbsp;&nbsp;4 [[BlogEntryViewTemplate]]<br />&nbsp;&nbsp;3 [[BlogEntryRenderRss]]<br />&nbsp;&nbsp;3 [[TopicFunction]]<br />&nbsp;&nbsp;3 [[BlogSearchViewTemplate]]<br />&nbsp;&nbsp;2 [[TopicView]]<br />&nbsp;&nbsp;2 [[RenderBlogEntryTitle]]<br />&nbsp;&nbsp;2 [[BlogEntry]]<br />&nbsp;&nbsp;1 [[RenderRecentNews]]<br />&nbsp;&nbsp;1 [[TopicType]] | &nbsp;&nbsp;7 Home.MichaelDaum |
+| May 2017 |  44 |  25 |  0 | &nbsp;10 [[Category]]<br />&nbsp;&nbsp;4 [[NewsCategory]]<br />&nbsp;&nbsp;4 [[WebDesignCategory]]<br />&nbsp;&nbsp;4 [[KnowledgeManagementCategory]]<br />&nbsp;&nbsp;4 [[HumorCategory]]<br />&nbsp;&nbsp;2 [[SoftwareCategory]]<br />&nbsp;&nbsp;2 [[ReviewCategory]]<br />&nbsp;&nbsp;2 [[BlogEntryRenderRss]]<br />&nbsp;&nbsp;2 [[TechnologyCategory]]<br />&nbsp;&nbsp;2 [[TopCategory]]<br />&nbsp;&nbsp;2 [[CategoryViewTemplate]] | &nbsp;25 Home.MichaelDaum |
+| Apr 2017 |  0 |  0 |  0 |  |  |
+| Mar 2017 |  1 |  0 |  0 | &nbsp;&nbsp;1 [[WebNotify]] |  |
+| Feb 2017 |  12 |  0 |  0 | &nbsp;&nbsp;4 [[WebHome]]<br />&nbsp;&nbsp;3 [[RenderBlogEntries]]<br />&nbsp;&nbsp;2 [[FrontPageViewTemplate]]<br />&nbsp;&nbsp;2 [[RenderBlogEntryPagination]]<br />&nbsp;&nbsp;1 [[BlogEntryViewTemplate]] |  |
+| Jan 2017 |  80 |  44 |  0 | &nbsp;26 [[BlogEntry]]<br />&nbsp;&nbsp;9 [[WebHome]]<br />&nbsp;&nbsp;7 [[BlogEntry0]]<br />&nbsp;&nbsp;6 [[TopicFunction]]<br />&nbsp;&nbsp;6 [[RenderSideBar]]<br />&nbsp;&nbsp;5 [[ThisIsATest]]<br />&nbsp;&nbsp;4 [[RenderBlogEntries]]<br />&nbsp;&nbsp;3 [[RenderSimilarBlogEntries]]<br />&nbsp;&nbsp;2 [[RenderAuthorTools]]<br />&nbsp;&nbsp;2 [[WebLexicon]]<br />&nbsp;&nbsp;2 [[FrontPageViewTemplate]] | &nbsp;44 Home.MichaelDaum |

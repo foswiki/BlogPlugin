@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -13,24 +13,25 @@
 
 ---++ Implementation
 <verbatim class="tml">
-%STARTINCLUDE%<!-- -->
-%HIERARCHY{
+%STARTINCLUDE%%HIERARCHY{
   web="%BASEWEB%"
-  top="%IF{"defined CAT and '%CAT%'!=''" then="%CAT%" else="TopCategory"}%"
-  exclude="%IF{"defined CAT and '%CAT%'!=''" then="%CAT%" else="TopCategory"}%"
+  top="%IF{"'%CAT{default=""}%'!=''" then="%CAT%" else="TopCategory"}%"
+  exclude="%IF{"'%CAT{default=""}%'!=''" then="%CAT%" else="TopCategory"}%"
   hidenull="on"
   depth="2"
-  filter="TopicType=~'\bBlogEntry\b' AND State != 'unpublished'"
+  filter="TopicType=~'\bBlogEntry\b' AND State != 'unpublished' AND topic != 'WebTopicEditTemplate' %IF{"defined time"
+   then="AND publishdate >= %URLPARAM{"time"}% AND publishdate < %DATETIME{"%URLPARAM{"time"}%" delta="in 1 month" lang="en" format="$epoch"}%"
+  }%"
   header="<div class='blogSideBarSection blogCategories'>
-    <h2 >%IF{"defined CAT and '%CAT%' !='' and '%CAT%' != 'TopCategory'"
-           then="%MAKETEXT{"[_1] categories" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
-           else="%MAKETEXT{"Categories"}%"
+    <h2 >%IF{"'%CAT{default=""}%'!='' and '%CAT{default=""}%'!='TopCategory'"
+           then="%TRANSLATE{"[_1] categories" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
+           else="%TRANSLATE{"Categories"}%"
         }%</h2>
     <div class='jqSerialPager'><ul>"
   footer="</ul></div></div>"
   subheader=""
   subfooter=""
-  format="<li><a href='$url'><span class='foswikiRight'>$count</span><img src='$icon' />&nbsp;$title</a></li>"
+  format="<li><a href='$url'><span class='foswikiRight'>$count</span>$icon&nbsp;$title</a></li>"
 }%<!-- -->%STOPINCLUDE%
 </verbatim>
 
@@ -39,7 +40,7 @@
 
 
 %META:FORM{name="Applications.TopicFunction"}%
-%META:FIELD{name="TopicType" title="TopicType" value="DocuTopic, TopicFunction"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="display a list of categories in the sidebar"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="display a list of categories in the sidebar"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

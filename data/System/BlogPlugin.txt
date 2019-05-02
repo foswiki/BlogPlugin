@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 ---+!! <nop>%TOPIC%
 %FORMFIELD{"Description"}%
 
@@ -125,22 +125,19 @@ Parameters resemble those of the =importWordPress= REST handler as it operates o
 Note for now the format of the resulting redirect map is only valid for Nginx out of the box. The output will look like this:
 
 For apache (default):
-<verbatim>
-/foswiki-patch-release-1-1-10/ /bin/view/Blog/FoswikiPatchRelease1110
-/translations-needed-for-foswiki-2-1/ /bin/view/Blog/TranslationsNeededForFoswiki21
-/foswiki-2-1-beta-available-for-testing/ /bin/view/Blog/Foswiki21BetaIsAvailableForTesting
-/foswiki-2-1-released/ /bin/view/Blog/Foswiki21HasBeenReleased
-/foswiki-2-1-2-available/ /bin/view/Blog/Foswiki212Available
-</verbatim>
-
-Store the result in  =/etc/apache2/foswiki-blog.txt= or the like and make use of it within a redirect rule such as 
 
 <verbatim>
-RewriteMap foswikiblog "txt:/etc/apache2/foswiki-blog.txt"
-RewriteRule "^/(.*)" "/${foswikiblog:$1|NOTFOUND}" [PT]
+RewriteRule /foswiki-patch-release-1-1-10/ /bin/view/Blog/FoswikiPatchRelease1110 [R=301,L]
+RewriteRule /translations-needed-for-foswiki-2-1/ /bin/view/Blog/TranslationsNeededForFoswiki21 [R=301,L]
+RewriteRule /foswiki-2-1-beta-available-for-testing/ /bin/view/Blog/Foswiki21BetaIsAvailableForTesting [R=301,L]
+RewriteRule /foswiki-2-1-released/ /bin/view/Blog/Foswiki21HasBeenReleased [R=301,L]
+RewriteRule /foswiki-2-1-2-available/ /bin/view/Blog/Foswiki212Available [R=301,L]
 </verbatim>
+
+Store the result in  =/etc/apache2/conf-enabled/foswiki-blog-redirects.conf= or the like to make sure it is included by apache.
 
 For nginx:
+
 <verbatim>
 ~*/foswiki-patch-release-1-1-10/? /bin/view/Blog/FoswikiPatchRelease1110;
 ~*/translations-needed-for-foswiki-2-1/? /bin/view/Blog/TranslationsNeededForFoswiki21;
@@ -172,7 +169,7 @@ to hide them from public access.
 Automatic publishing is controled by the =publish= REST handler called regularly by a cron job such as:
 
 <verbatim>
-0 0 * * 0 cd <foswiki-dir>/bin && ./rest/BlogPlugin/publish
+0 0 * * * cd <foswiki-dir>/bin && ./rest/BlogPlugin/publish
 </verbatim>
 
 ---++ Installation Instructions
@@ -183,6 +180,7 @@ Automatic publishing is controled by the =publish= REST handler called regularly
 
 ---++ Change History
 %TABLE{columnwidths="7em" tablewidth="100%"}%
+|  02 May 2019: | major rewrite based on new !WikiWorkbench and !ClassificationPlugin |
 |  23 Jan 2017: | improved compatibility with <nop>PatternSkin; \
                   using date2 instead of date formfield now; \
                   improved <nop>OpenGraph meta data in blog postings; \
@@ -211,13 +209,13 @@ Automatic publishing is controled by the =publish= REST handler called regularly
 %META:FIELD{name="Release" title="Release" value="%25$RELEASE%25"}%
 %META:FIELD{name="Description" title="Description" value="A blogging system for Foswiki"}%
 %META:FIELD{name="Repository" title="Repository" value="https://github.com/foswiki/%25TOPIC%25"}%
-%META:FIELD{name="Copyright" title="Copyright" value="2006-2016, http://michaeldaumconsulting.com"}%
+%META:FIELD{name="Copyright" title="Copyright" value="2006-2019, http://michaeldaumconsulting.com"}%
 %META:FIELD{name="License" title="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
 %META:FIELD{name="Home" title="Home" value="Foswiki:Extensions/%25TOPIC%25"}%
 %META:FIELD{name="Support" title="Support" value="Foswiki:Support/%25TOPIC%25"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1485171728" size="16542" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1485171728" size="46694" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1485171728" size="30666" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1485171728" size="134027" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1485171728" size="374274" user="ProjectContributor" version="1"}%
-%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1485171728" size="345020" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap6.png" attachment="BlogPluginSnap6.png" attr="" comment="Frontpage sidebar" date="1556792547" size="16542" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap5.png" attachment="BlogPluginSnap5.png" attr="" comment="BlogEntry Sidebar" date="1556792547" size="46694" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap4.png" attachment="BlogPluginSnap4.png" attr="" comment="Tagging" date="1556792547" size="30666" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap3.png" attachment="BlogPluginSnap3.png" attr="" comment="Editor" date="1556792547" size="134027" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap2.png" attachment="BlogPluginSnap2.png" attr="" comment="BlogEntry view" date="1556792547" size="374274" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="BlogPluginSnap1.png" attachment="BlogPluginSnap1.png" attr="t" comment="Frontpage" date="1556792547" size="345020" user="ProjectContributor" version="1"}%

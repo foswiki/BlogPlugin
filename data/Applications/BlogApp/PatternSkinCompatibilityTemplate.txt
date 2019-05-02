@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"metacomments"}%
@@ -8,7 +8,7 @@
 %TMPL:DEF{"sidebar"}%<div id="patternSideBar">
 <div id="patternClearHeaderLeft"></div>
 <div id="patternSideBarContents">
-%TMPL:P{"sidebar:webindicator"}%<!-- -->
+%TMPL:P{"sidebar:webindicator"}%
 %TMPL:P{"blogplugin::sidebar"}%
 </div></div>%TMPL:END%
 %{</verbatim>}%
@@ -21,9 +21,9 @@
 %TMPL:DEF{"comments"}%%IF{
   "$'DISPLAYCOMMENTS'='on' and not context save and not context preview and not context edit"
   then="$percntTMPL:P{\"comments::system::%COMMENTSYSTEM{default="metacomment"}%\"}$percnt"
-}%<!-- -->
-%TMPL:P{"metacomments::init"}%<!-- -->
-<!-- -->%TMPL:END%
+}%
+%TMPL:P{"metacomments::init"}%
+%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -39,16 +39,17 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"content"}%<!-- -->
-%TMPL:P{"beforetext"}%<!-- -->
-%TMPL:P{"text"}%<!-- -->
-%TMPL:P{"aftertext"}%<!-- -->
-%TMPL:P{"comments"}%<!-- -->
-<!-- -->%TMPL:END%
+%TMPL:DEF{"content"}%
+%TMPL:P{"beforetext"}%
+%TMPL:P{"text"}%
+%TMPL:P{"aftertext"}%
+%TMPL:P{"comments"}%
+%TMPL:END%
 %{</verbatim>}%
 
 %META:FORM{name="Applications.TopicView"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="some basic mappings into PatternSkin"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="some basic mappings into PatternSkin"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
+%META:DISQUS{name="fe8b01f7d61eb083d26dd503e518d453" date="1537425636"}%

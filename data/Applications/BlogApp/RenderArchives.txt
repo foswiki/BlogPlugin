@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -16,23 +16,24 @@
 <verbatim class="tml">
 %STARTINCLUDE%<noautolink>
 %DBSTATS{
-   "TopicType=~'\bBlogEntry\b' %IF{"defined CAT and '%CAT%'!=''" then="AND topic ISA '%CAT%'"}% AND State!='unpublished' AND topic != 'WebTopicEditTemplate'"
+   "TopicType=~'\bBlogEntry\b' %IF{"'%CAT{default=""}%'!=''" then="AND topic ISA '%CAT%'"}% AND State!='unpublished' AND topic != 'WebTopicEditTemplate'"
    web="%THEWEB{default="%BASEWEB%"}%"
    field="publishdate"
    hidenull="on"
    sort="publishdate"
+   dateformat="$mon $year"
    reverse="on"
    pattern="((\w+) (\d\d\d\d))"
    header="<div class='blogSideBarSection blogSideBarArchive'>
      <h2 >
-       %IF{"defined CAT and '%CAT%'!=''" 
-         then="%MAKETEXT{"[_1] Archive" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
-         else="%MAKETEXT{"Archive"}%"
+       %IF{"'%CAT{default=""}%'!=''" 
+         then="%TRANSLATE{"[_1] Archive" args="%CATINFO{cat="%CAT%" format="$title"}%"}%"
+         else="%TRANSLATE{"Archive"}%"
        }%
      </h2>
      <div class='jqSerialPager'><ul>"
    format="<li>
-     <a href='%SCRIPTURLPATH{"view"}%/%THEWEB{default="%BASEWEB%"}%/TopCategory?time=$percntCALC{\"$TIME(01 $key2 $key3)\"}$percnt$percntIF{\"not '%CAT%'=~'^([%]CAT%)?$'\" 
+     <a href='%SCRIPTURLPATH{"view"}%/%THEWEB{default="%BASEWEB%"}%/TopCategory?time=$percntDATETIME{\"01 $key2 $key3\" format=\"$epoch\"}$percnt$percntIF{\"'%CAT{default=""}%'!=''\" 
             then=\"&catname=%CAT%\"
           }$percnt'>
        <span class='foswikiRight'>$count</span>$key
@@ -42,9 +43,22 @@
 </verbatim>
 
 ---++ Test
-%STARTSECTION{"test"}%
-%DBCALL{"%TOPIC%" THEWEB="%URLPARAM{"theweb"}%"}%
-%ENDSECTION{"test"}%
+---+++ Test 1
+
+%STARTSECTION{"test1"}%%DBCALL{"%TOPIC%" THEWEB="%URLPARAM{"theweb" default="Blog"}%"}%%ENDSECTION{"test1"}%
+
+---+++ Test 2
+
+%STARTSECTION{"test2"}%%DBSTATS{
+   "TopicType=~'\bBlogEntry\b'"
+   web="%THEWEB{default="%BASEWEB%"}%"   
+   field="publishdate"
+   hidenull="on"
+   sort="publishdate"
+   reverse="on"
+   _pattern="((\w+) (\d\d\d\d))"
+   format="   * $key1, $key2, $key3"
+}%%ENDSECTION{"test2"}%
 
 %META:FORM{name="Applications.TopicFunction"}%
 %META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%

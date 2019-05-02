@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2014-2017 Michael Daum http://michaeldaumconsulting.com
+# Copyright (C) 2014-2019 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -42,15 +42,40 @@ sub publish {
   my ($this, $session, $subject, $verb, $response) = @_;
 
   my $request = $session->{request};
-  my $sourceWeb = $request->param("web") || $session->{webName};
+  my $publishWeb = $request->param("web");
 
-  throw Error::Simple("no source web specified")
-    unless $sourceWeb;
+  my @webs = ();
 
-  throw Error::Simple("no such web $sourceWeb")
-    unless Foswiki::Func::webExists($sourceWeb);
+  if ($publishWeb) {
+    push @webs, $publishWeb;
+  } else {
+    foreach my $publishWeb (Foswiki::Func::getListOfWebs('user')) {
+      push @webs, $publishWeb;
+    }
+  }
+
+  foreach my $w (@webs) {
+    $this->publishWeb($session, $w);
+  }
+}
+
+###############################################################################
+sub publishWeb {
+  my ($this, $session, $publishWeb) = @_;
+
+  throw Error::Simple("no such web $publishWeb")
+    unless Foswiki::Func::webExists($publishWeb);
+
+  # does this web have the BlogEntry TopicType
+  return unless Foswiki::Func::topicExists($publishWeb, "BlogEntry");
+
+  my $request = $session->{request};
 
   $this->{debug} = Foswiki::Func::isTrue($request->param("debug"), 0);
+
+  my $dry = Foswiki::Func::isTrue($request->param("dry"), 0);
+
+  #$this->writeDebug("searching for blog entries in $publishWeb");
 
   # search all BlogEntry topics in the source web
   my $matches = Foswiki::Func::query(
@@ -58,18 +83,18 @@ sub publish {
     undef,
     {
       type => 'query',
-      web => $sourceWeb,
+      web => $publishWeb,
     }
   );
 
   my $count = 0;
-  my $now = Foswiki::Time::parseTime(Foswiki::Time::formatTime(time(), '$day $month $year'), 1);
+  my $now = time();;
   my $context = Foswiki::Func::getContext();
 
   while ($matches->hasNext) {
     my $webTopic = $matches->next;
 
-    my ($web, $topic) = Foswiki::Func::normalizeWebTopicName($sourceWeb, $webTopic);
+    my ($web, $topic) = Foswiki::Func::normalizeWebTopicName($publishWeb, $webTopic);
 
     my ($meta, $text) = Foswiki::Func::readTopic($web, $topic);
 
@@ -105,7 +130,7 @@ sub publish {
     } 
 
     next if !defined($newState) || $currentState eq $newState;
-    $this->writeDebug("setting status to '$newState' for $topic");
+    $this->writeDebug("setting status to '$newState' for $web.$topic");
     $state->{value} = $newState;
 
     # okay do it now
@@ -129,7 +154,7 @@ sub publish {
     }
 
     $context->{save} = 1;
-    Foswiki::Func::saveTopic($web, $topic, $meta, $text);
+    Foswiki::Func::saveTopic($web, $topic, $meta, $text) unless $dry;
     $context->{save} = 0;
 
     Foswiki::Func::setPreferencesValue("VIEW_TEMPLATE", $origTemplate)
@@ -143,7 +168,7 @@ sub publish {
     
   }
 
-  $this->writeDebug("published $count blog entrie(s) in web $sourceWeb");
+  $this->writeDebug("(un)published $count blog entrie(s) in $publishWeb") if $count;
 }
 
 1;

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---+!! <nop>%WEB% Web Preferences
 
@@ -10,6 +10,7 @@
    * Set NOSEARCHALL = 
    * Set WEBBGCOLOR = 
    * Set NOAUTOLINK = on
+   * Set ONLYTEASER = on
 
 ---++ !WebComponents
    * [[WebTopicEditTemplate]]: template for new topics
@@ -17,6 +18,24 @@
    * [[WebLinks]]: sidebar links, overrides [[%USERSWEB%.SiteLinks]], or [[%SYSTEMWEB%.SiteLinks]]
    * [[WebSideBar]]: sidebar navigation, overrides [[%USERSWEB%.SiteSideBar]], or [[%SYSTEMWEB%.SiteSideBar]]
    * [[WebBottomBar]]: bottom part, overrides [[%USERSWEB%.SiteBottomBar]], or [[%SYSTEMWEB%.SiteBottomBar]]
+   
+---++ Topic creator settings
+
+*TopicType step:*
+
+   * Set TOPICCREATOR_SHOW_DEFAULT_TYPE = off
+   * Set TOPICCREATOR_SELECT_TYPE = BlogEntry
+   * #Set TOPICCREATOR_EXCLUDE_TYPE = 
+   * #Set TOPICCREATOR_INCLUDE_TYPE = 
+
+*<nop>TopicTemplate step:*
+
+   * #Set TOPICCREATOR_SHOW_DEFAULT_TEMPLATE = off
+   * #Set TOPICCREATOR_SELECT_TEMPLATE = 
+   * #Set TOPICCREATOR_EXCLUDE_TEMPLATE =
+   * #Set TOPICCREATOR_INCLUDE_TEMPLATE = 
+
+
 
 ---++ Skin settings
 

@@ -13,3 +13,4 @@ pub/System/BlogPlugin/blogplugin.js
 /BlogPlugin_installer
 /BlogPlugin_installer.pl
 .changes
+locale/**/*.mo

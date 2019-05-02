@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -16,22 +16,26 @@
    format="<item rdf:about=\"%SCRIPTURL{"view"}%/$web/$topic\">
        <title>$expand(topictitle)</title>
        <link>%SCRIPTURL{"view"}%/$web/$topic</link>
-       <dc:creator>$expand(Author or @createauthor.topictitle)</dc:creator>
-       <dc:date>$formatTime(createdate, '$year-$mo-$dayT$hour:$minute:$secondsZ')</dc:date>
+       <dc:creator>$expand(@publishauthor.topictitle)</dc:creator>
+       <dc:date>$formatTime(publishdate, '$year-$mo-$dayT$hour:$minute:$secondsZ')</dc:date>
        <dc:subject>$percntCATINFO{\"$web.$topic\" format=\"$dollartitle\"}$percnt, $expand(Tag)</dc:subject>
        <dc:contributor>
          <rdf:Description link=\"%SCRIPTURL{"view"}%/%USERSWEB%/$expand(Author or createauthor)\">
            <rdf:value>$expand(Author @createauthor.topictitle)</rdf:value>
          </rdf:Description>
        </dc:contributor>
-      <description> <![CDATA[ $percntDBCALL{\"%OBJECT%\"}$percnt$percntTAGINFO{
-           \"$web.$topic\"
-           header=\"<p>%MAKETEXT{"Tags"}%: \"
-           format=\"$dollarname\"
-           separator=\", \"
-           footer=\"</p>\"
-         }$percnt
-       ]]></description>
+      <description> <![CDATA[
+$percntDBCALL{\"%OBJECT%\"}$percnt
+<!-- -->
+$percntTAGINFO{
+   \"$web.$topic\"
+   header=\"<p>%TRANSLATE{"Tags"}%: \"
+   format=\"$dollarname\"
+   separator=\", \"
+   footer=\"</p>\"
+}$percnt
+<!-- -->
+      ]]></description>
     </item>"
 }%%STOPINCLUDE%
 </verbatim>
@@ -42,4 +46,3 @@
 %META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
 %META:FIELD{name="Summary" title="Summary" value="renders an item for a blog posting in an rss feed"}%
 %META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%
-%META:TOPICMOVED{by="micha" date="1438506421" from="Applications/BlogApp.RenderRss" to="Applications/BlogApp.BlogEntryRenderRss"}%

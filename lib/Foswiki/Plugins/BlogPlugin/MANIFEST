@@ -1,6 +1,8 @@
+!noci
 data/Applications/BlogApp/ApplicationTopic.txt 0644
 data/Applications/BlogApp/BlogEntry0.txt 0644
 data/Applications/BlogApp/BlogEntryEditTemplate.txt 0644
+data/Applications/BlogApp/BlogEntryRenderIndexItem.txt 0644
 data/Applications/BlogApp/BlogEntryRenderRss.txt 0644
 data/Applications/BlogApp/BlogEntryTemplate.txt 0644
 data/Applications/BlogApp/BlogEntry.txt 0644
@@ -22,6 +24,7 @@ data/Applications/BlogApp/NewsCategory.txt 0644
 data/Applications/BlogApp/PatternSkinBlogEntryViewTemplate.txt 0644
 data/Applications/BlogApp/PatternSkinCategoryViewTemplate.txt 0644
 data/Applications/BlogApp/PatternSkinCompatibilityTemplate.txt 0644
+data/Applications/BlogApp/PatternSkinFrontPageViewTemplate.txt 0644
 data/Applications/BlogApp/RenderArchives.txt 0644
 data/Applications/BlogApp/RenderAuthorTools.txt 0644
 data/Applications/BlogApp/RenderBlogEntries.txt 0644
@@ -75,7 +78,9 @@ data/_BlogTemplate/WebPreferences.txt 0644
 data/_BlogTemplate/WebRss.txt 0644
 data/_BlogTemplate/WebSearch.txt 0644
 data/_BlogTemplate/WebSideBar.txt 0644
+data/_BlogTemplate/WebTagCloud.txt 0644
 data/_BlogTemplate/WebTagList.txt 0644
+data/_BlogTemplate/WebTopicEditTemplate.txt 0644
 data/_BlogTemplate/WebTopicList.txt 0644
 data/Main/BlogAdminGroup.txt 0644
 data/Main/BlogAuthorGroup.txt 0644

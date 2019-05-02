@@ -20,23 +20,20 @@ msgstr ""
 "X-Poedit-Country: Taiwan\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: data/Applications/BlogApp/RenderArchives.txt:29
+#: data/Applications/BlogApp/RenderArchives.txt:30
 msgid "%1 Archive"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderCategories.txt:26
+#: data/Applications/BlogApp/RenderCategories.txt:27
 #, fuzzy
 msgid "%1 categories"
 msgstr "類別"
 
-#: data/Applications/BlogApp/RenderRecentComments.txt:44
-msgid "%1 replied on %2 %3"
-msgstr ""
-
-#: data/Applications/BlogApp/RenderArchives.txt:30
+#: data/Applications/BlogApp/RenderArchives.txt:31
 msgid "Archive"
 msgstr ""
 
+#: data/Applications/BlogApp/BlogEntry.txt:24
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:96
 msgid "Author"
 msgstr ""
@@ -45,18 +42,24 @@ msgstr ""
 msgid "BlogEntries"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:25
-#: data/Applications/BlogApp/RenderCategories.txt:27
+#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+#: data/Applications/BlogApp/RenderCategories.txt:28
 msgid "Categories"
 msgstr "類別"
 
+#: data/Applications/BlogApp/BlogEntry.txt:28
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:37
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:84
 #, fuzzy
 msgid "Category"
 msgstr "類別"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:28
+#: data/Applications/BlogApp/BlogEntry.txt:29
+#, fuzzy
+msgid "Changed"
+msgstr "變更："
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:29
 msgid "Changes"
 msgstr "更新"
 
@@ -70,11 +73,6 @@ msgstr "評論:"
 msgid "Comments in %1"
 msgstr "評論:"
 
-#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
-#, fuzzy
-msgid "Create date"
-msgstr "建立帳號"
-
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:36
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:88
 msgid "Date"
@@ -85,20 +83,20 @@ msgstr "日期"
 msgid "Filed in %1"
 msgstr "外掛失敗"
 
-#: data/Applications/BlogApp/BlogEntry.txt:39
+#: data/Applications/BlogApp/BlogEntry.txt:46
 #, fuzzy
 msgid "Generate description"
 msgstr "描述"
 
-#: data/Applications/BlogApp/BlogEntry.txt:40
+#: data/Applications/BlogApp/BlogEntry.txt:47
 msgid "Generate keywords"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntry.txt:38
+#: data/Applications/BlogApp/BlogEntry.txt:45
 msgid "Generate title"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:27
+#: data/Applications/BlogApp/RenderAuthorTools.txt:28
 msgid "Index"
 msgstr "索引"
 
@@ -121,27 +119,35 @@ msgstr "最新版本: %1"
 msgid "Name"
 msgstr "名:"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:29
+#: data/Applications/BlogApp/RenderAuthorTools.txt:30
 msgid "Notifications"
 msgstr "通知"
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:31
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:9
+msgid ""
+"Permission settings temporarily disabled as this posting is currently "
+"unpublished."
+msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:32
 msgid "Preferences"
 msgstr "設定"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:30
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
 msgid "Publication"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:31
-msgid "Publication Rules"
-msgstr ""
-
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:35
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:41
+#: data/Applications/BlogApp/BlogSearchViewTemplate.txt:57
 msgid "Publish Date"
 msgstr ""
 
+#: data/Applications/BlogApp/BlogEntry.txt:25
+msgid "Published"
+msgstr ""
+
 #: data/Applications/BlogApp/RenderBlogEntries.txt:68
+#: data/Applications/BlogApp/RenderRecentNews.txt:42
 #, fuzzy
 msgid "Read more"
 msgstr "閱讀"
@@ -159,28 +165,38 @@ msgstr ""
 msgid "Sort by"
 msgstr "結果排序依:"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:37
+#: data/Applications/BlogApp/BlogEntry.txt:26
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:43
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:100
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:35
 msgid "State"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderAuthorTools.txt:30
+#: data/Applications/BlogApp/RenderAuthorTools.txt:31
 msgid "Statistics"
 msgstr "統計"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:38
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:44
 msgid "Sticky"
+msgstr ""
+
+#: data/Applications/BlogApp/BlogEntry.txt:27
+msgid "Tag"
 msgstr ""
 
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:39
 msgid "Tagged %1"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryRenderRss.txt:29
-#: data/Applications/BlogApp/RenderAuthorTools.txt:26
+#: data/Applications/BlogApp/BlogEntryRenderRss.txt:32
+#: data/Applications/BlogApp/RenderAuthorTools.txt:27
 msgid "Tags"
 msgstr ""
+
+#: data/Applications/BlogApp/RenderAuthorTools.txt:25
+#, fuzzy
+msgid "Templates"
+msgstr "檢視範本"
 
 #: data/Applications/BlogApp/WebAtom.txt:3
 #: data/Applications/BlogApp/WebRss.txt:5
@@ -204,12 +220,14 @@ msgstr ""
 msgid "Tools"
 msgstr "工具箱"
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:36
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:42
 msgid "Unpublish Date"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:8
-msgid "blog entry"
+#: data/Applications/BlogApp/BlogEntryEditTemplate.txt:10
+msgid ""
+"Warning: Incompatible permission settings detected. Use the =Edit settings= "
+"dialog to change the ACLs."
 msgstr ""
 
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:41
@@ -230,11 +248,6 @@ msgstr "重做前入改變"
 msgid "published"
 msgstr ""
 
-#: data/Applications/BlogApp/RenderRecentNews.txt:29
-#, fuzzy
-msgid "read more"
-msgstr "閱讀"
-
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:42
 msgid "tag"
 msgstr ""
@@ -243,11 +256,19 @@ msgstr ""
 msgid "tagged %1"
 msgstr ""
 
-#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:74
+#: data/Applications/BlogApp/BlogEntryViewTemplate.txt:81
 #: data/Applications/BlogApp/BlogSearchViewTemplate.txt:34
 #: data/Applications/BlogApp/RenderBlogEntries.txt:53
 msgid "unpublished"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Create date"
+#~ msgstr "建立帳號"
+
+#, fuzzy
+#~ msgid "read more"
+#~ msgstr "閱讀"
 
 #~ msgid "!WikiName"
 #~ msgstr "!主題名稱"
@@ -1030,9 +1051,6 @@ msgstr ""
 
 #~ msgid "Changed on"
 #~ msgstr "改變於"
-
-#~ msgid "Changed:"
-#~ msgstr "變更："
 
 #~ msgid "Changes from r%1 to r%2"
 #~ msgstr "由 r%1 改成 r%2"
@@ -3732,9 +3750,6 @@ msgstr ""
 
 #~ msgid "View sequential topic history"
 #~ msgstr "依序檢視主題歷史紀錄"
-
-#~ msgid "View templates"
-#~ msgstr "檢視範本"
 
 #~ msgid "View topic"
 #~ msgstr "檢視主題"

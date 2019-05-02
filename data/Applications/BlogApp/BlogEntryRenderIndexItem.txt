@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="micha" comment="reprev" date="1467995753" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -27,15 +27,10 @@ a summary for an object of type ClassifiedTopic.
     [[$web.$topic][$expand(topictitle)]]&nbsp;$percntREDDOT{\"$web.$topic\"}$percnt
     $expand('<div class=\"foswikiTopicSummary\">' and Summary and '</div>')<!-- -->
     <div class='foswikiTopicInfo'>
-      <span class='clsAuthorDateInfo'>
-        <!-- -->$formatTime(publishdate) 
-        <span class='foswikiRevisionSep'>&#124;</span> 
-        <nop>$percntGETTOPICTITLE{\"
-             $percntUSERINFO{\"$expand(Author or info.author)\"
-               format=\"$wikiusername\"
-             }$percnt\"
-        }$percnt
-      </span>
+      <!-- -->$formatTime(publishdate) 
+      <!-- -->$percntUSERINFO{\"$expand(info.author)\"
+        format=\"<span class='foswikiRevisionSep'>&#124;</span> <nop>$dollarpercntGETTOPICTITLE{\\"$wikiusername\\"}$dollarpercnt\"
+      }$percnt
       $percntCATINFO{\"$web.$topic\" 
         header=\" <span class='foswikiRevisionSep'>&#124;</span> <span class='clsCatInfo'>\" 
         exclude=\"TopCategory|%URLPARAM{"catname" default="%BASETOPIC%"}%\"

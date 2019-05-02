@@ -1,6 +1,6 @@
 # Plugin for Foswiki - The Free and Open Source Wiki, http://foswiki.org/
 #
-# Copyright (C) 2005-2017 Michael Daum http://michaeldaumconsulting.com
+# Copyright (C) 2005-2019 Michael Daum http://michaeldaumconsulting.com
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -23,8 +23,8 @@ use Error qw(:try);
 use Foswiki::Func();
 use Foswiki::Plugins::DBCachePlugin();
 
-our $VERSION = '4.01';
-our $RELEASE = '23 Jan 2017';
+our $VERSION = '5.00';
+our $RELEASE = '2 May 2019';
 our $NO_PREFS_IN_TOPIC = 1;
 our $SHORTDESCRIPTION = 'A blogging system for Foswiki';
 
@@ -56,6 +56,13 @@ sub initPlugin {
   );
 
   Foswiki::Plugins::DBCachePlugin::registerIndexTopicHandler(\&dbcacheIndexTopicHandler);
+
+  if ($Foswiki::cfg{Plugins}{SolrPlugin} && $Foswiki::cfg{Plugins}{SolrPlugin}{Enabled}) {
+    require Foswiki::Plugins::SolrPlugin;
+    Foswiki::Plugins::SolrPlugin::registerIndexTopicHandler(sub {
+      return indexTopicHandler(@_);
+    });
+  }
 
   return 1;
 }
@@ -159,7 +166,56 @@ sub dbcacheIndexTopicHandler {
   $publishDate = $obj->fastget("createdate") unless $publishDate;
 
   $obj->set('publishdate', $publishDate);
+
+  my $publishAuthor;
+  $field = $meta->get('FIELD', 'Author');
+  $publishAuthor = $field->{value} if $field;
+  $publishAuthor = $obj->fastget("createauthor") unless $publishAuthor;
+
+  $obj->set('publishauthor', $publishAuthor);
 }
+
+###############################################################################
+sub indexTopicHandler {
+  my ($indexer, $doc, $web, $topic, $meta, $text) = @_;
+
+  ($meta) = Foswiki::Func::readTopic($web, $topic) unless $meta;
+
+  my $formName = $meta->getFormName;
+  return unless $formName && $formName =~ /BlogEntry/; # Hm, shall we make this a standard field?
+
+  # normalize PublishDate, PublishAuthor
+  my $publishDate;
+  my $publishAuthor;
+
+  my $field = $meta->get('FIELD', 'PublishDate');
+  $publishDate = $field->{value} if $field;
+  $publishDate = Foswiki::Time::parseTime($publishDate) if $publishDate;
+
+  $field = $meta->get('FIELD', 'PublishAuthor');
+  $publishAuthor = $field->{value} if $field;
+
+  my ($createDate, $createAuthor) = Foswiki::Func::getRevisionInfo($web, $topic, 1);
+  $publishDate = $createDate unless $publishDate;
+  $publishAuthor = $createAuthor unless $publishAuthor;
+
+  $publishDate = Foswiki::Time::formatTime($publishDate, '$iso', 'gmtime') if $publishDate;
+
+  $field = $indexer->getField($doc, "field_PublishDate_dt");
+  if ($field) {
+    $field->value($publishDate);
+  } else {
+    $doc->add_fields('field_PublishDate_dt' => $publishDate);
+  }
+
+  $field = $indexer->getField($doc, "field_PublishAuthor_s");
+  if ($field) {
+    $field->value($publishDate);
+  } else {
+    $doc->add_fields('field_PublishAuthor_s' => $publishAuthor);
+  }
+}
+
 
 1;
 

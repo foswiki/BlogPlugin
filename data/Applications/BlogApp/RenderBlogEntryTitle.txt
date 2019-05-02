@@ -1,29 +1,29 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
 ---++ Documentation
 %STARTSECTION{name="documentation" type="section"}%
-%RED%TODO%ENDCOLOR%
 
 ---+++++ Parameters
+   * THETOPIC, defaults to BASEWEB.BASETOPIC
    * TITLE_EXTRA
-   * DISPLAYREVISIONINFO: boolean flag to switch on/off revinfo 
+   * SHOWREVINFO: boolean flag to switch on/off revinfo 
 
 %ENDSECTION{name="documentation" type="section"}%
 
 ---++ Implementation
 <verbatim class="tml">
 %STARTINCLUDE%<noautolink><h1 itemprop="headline">
-[[%BASEWEB%.%BASETOPIC%][<span itemprop='name'>%GETTOPICTITLE{topic="%BASEWEB%.%BASETOPIC%" rev="%URLPARAM{"rev"}%"}%</span>]] %IF{
+[[%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%][<span itemprop='name'>%GETTOPICTITLE{topic="%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%" rev="%URLPARAM{"rev"}%"}%</span>]] %IF{
    "defined TITLE_EXTRA and not isempty TITLE_EXTRA" 
    then="<span class='foswikiTopicExtra'>%TITLE_EXTRA%</span>"
 }%%IF{
-   "'%BASEWEB%.%BASETOPIC%'/Summary"
-   then="<div class='foswikiTopicSummary'>$percntFORMFIELD{\"Summary\" topic=\"%BASEWEB%.%BASETOPIC%\" rev=\"%URLPARAM{"rev"}%\"}$percnt</div>"
+   "'%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%'/Summary"
+   then="<div class='foswikiTopicSummary'>$percntFORMFIELD{\"Summary\" topic=\"%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%\" rev=\"%URLPARAM{"rev"}%\"}$percnt</div>"
 }%</h1>
-%IF{"'%DISPLAYREVISIONINFO{default="on"}%'='on'"
-   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt"
+%IF{"'%SHOWREVINFO{default="on"}%'='on'"
+   then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\" THETOPIC=\"%THETOPIC{default="%BASEWEB%.%BASETOPIC%"}%\"}$percnt"
 }%</noautolink>%STOPINCLUDE%
 </verbatim>
 
@@ -31,8 +31,8 @@
 <verbatim class="tml">
 %STARTSECTION{"revinfo"}%<div class="blogInfo">
   %DBQUERY{
-    topic="%BASEWEB%.%BASETOPIC%" 
-    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(PublishDate or createdate, '$year-$mo-$day')'>$formatTime(PublishDate or createdate, '$day $mon $year')</span>
+    topic="%THETOPIC%" 
+    format="%JQICON{"fa-calendar"}% <span itemprop='datePublished' content='$formatTime(publishdate, '$year-$mo-$day')'>$formatTime(publishdate)</span>
       <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{
       \"$expand(Author or createauthor)\" 
       split=\"\s*,\s*\" 
@@ -41,17 +41,17 @@
     }$percnt"
   }%
   %DBQUERY{"total_likes>0" 
-     topic="%BASEWEB%.%BASETOPIC%" 
+     topic="%THETOPIC%" 
      format="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-thumbs-o-up" class="fa-flip-horizontal"}% $expand(total_likes)" 
   }%<!-- --> 
   %CATINFO{
-    "%BASEWEB%.%BASETOPIC%" 
+    "%THETOPIC%" 
     exclude="TopCategory"
     header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-folder"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$name'><noautolink>$title</noautolink></a>"
   }% <!-- -->
   %TAGINFO{
-    "%BASEWEB%.%BASETOPIC%"
+    "%THETOPIC%"
     header="<span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-tag"}% "
     format="<a href='$url' rel='tag' itemprop='keywords' class='$class'><noautolink>$name</noautolink></a>"
   }% <!-- -->
@@ -59,7 +59,7 @@
 </verbatim>
 
 ---++ Test
-%DBCALL{"%TOPIC%"}%
+%DBCALL{"%TOPIC%" THETOPIC="BlogEntry0" }%
 
 %META:FORM{name="Applications.TopicFunction"}%
 %META:FIELD{name="TopicType" title="TopicType" value="TopicFunction, DocuTopic, ApplicationTopic, WikiTopic"}%

@@ -1,15 +1,14 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.SeoTopicEdit"}%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"topictype"}%%MAKETEXT{"blog entry"}%%TMPL:END%
-%{</verbatim>}%
-
-%{<verbatim class="tml">}%
-%TMPL:DEF{"formdefinition"}%Applications.BlogApp.BlogEntry%TMPL:END%
+%TMPL:DEF{"permissionstab::message"}%%IF{"'%WEB%.%TOPIC%'/State='unpublished'"
+   then="<div class='foswikiInfoMessage'>%MAKETEXT{"Permission settings temporarily disabled as this posting is currently unpublished."}%</div>"
+   else="<div class='foswikiErrorMessage'>%MAKETEXT{"Warning: Incompatible permission settings detected. Use the =Edit settings= dialog to change the ACLs."}%</div>"
+}%%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -17,25 +16,32 @@
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
-%TMPL:DEF{"formfields"}%<!-- --> 
+%TMPL:DEF{"formfields"}%%{}%
 %TMPL:P{"publicationtab"}% 
 %TMPL:P{"categoriestab"}% 
 %TMPL:P{"tagstab"}% 
 %TMPL:P{"seotab"}% 
-<!-- -->%TMPL:END%
+%TMPL:P{"accesscontrol"}%
+%{}%%TMPL:END%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"accesscontrol"}%%{}%
+%SETVAR{field="State" matches="unpublished" var="ALLOWTOPICVIEW" type="Set" value="$percntFORMATLIST{\"BlogAuthorGroup,$percntFORMFIELD{\"Author\"}$percnt, $percntWIKINAME$percnt\"}$percnt"}%
+%UNSETVAR{field="State" matches="published" var="ALLOWTOPICVIEW"}%
+%{}%%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
 %TMPL:DEF{"publicationtab"}%<!-- -->
-%TAB{"%MAKETEXT{"Publication"}%"}%
----++ %MAKETEXT{"Publication Rules"}%
+%TAB{"%TRANSLATE{"Publication"}%"}%
 %RENDERFOREDIT{"%BASEWEB%.%BASETOPIC%"
   form="%TMPL:P{"formdefinition"}%"
   fields="State, PublishDate, UnpublishDate, Sticky"
-  PublishDate_title="%MAKETEXT{"Publish Date"}%"
-  UnpublishDate_title="%MAKETEXT{"Unpublish Date"}%"
-  State_title="%MAKETEXT{"State"}%"
-  Sticky_title="%MAKETEXT{"Sticky"}%"
+  PublishDate_title="%TRANSLATE{"Publish Date"}%"
+  UnpublishDate_title="%TRANSLATE{"Unpublish Date"}%"
+  State_title="%TRANSLATE{"State"}%"
+  Sticky_title="%TRANSLATE{"Sticky"}%"
 }%
 %ENDTAB%
 <!-- -->%TMPL:END%
@@ -43,7 +49,7 @@
 
 
 %META:FORM{name="Applications.TopicView"}%
-%META:FIELD{name="TopicType" title="TopicType" value="TopicView, WikiTopic"}%
-%META:FIELD{name="TopicTitle" attributes="" title="<nop>TopicTitle" value=""}%
-%META:FIELD{name="Summary" attributes="c" title="Summary" value="Editor for BlogEntries"}%
-%META:FIELD{name="WikiApplication" attributes="" title="WikiApplication" value="BlogApp"}%
+%META:FIELD{name="TopicType" title="TopicType" value="TopicView, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value="Editor for BlogEntries"}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

@@ -1,5 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
----+!! %TOPIC%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1" version="1"}%
 
 %TOC%
 
@@ -21,7 +20,7 @@ using a kind of tagline:
 
 ---++ Translations
 
-   * Set CONTENT_LEXICON = WebLexicon
+   * Set WEBLEXICON = Applications.ClassificatonApp.WebLexicon, Applications.WebLexicon
    * Set WEBMETADATA = Applications.LexiconForm
 
 ---+++ Access rights
@@ -32,3 +31,9 @@ using a kind of tagline:
    * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
    * Set DENYWEBCOMMENT = %USERSWEB%.WikiGuest
 
+
+%META:FORM{name="Applications.WebTool"}%
+%META:FIELD{name="TopicType" title="TopicType" value="WebTool, ApplicationTopic, WikiTopic"}%
+%META:FIELD{name="TopicTitle" title="<nop>TopicTitle" value=""}%
+%META:FIELD{name="Summary" title="Summary" value=""}%
+%META:FIELD{name="WikiApplication" title="WikiApplication" value="BlogApp"}%

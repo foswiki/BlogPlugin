@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1"  version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicFunction"}%
 %TOC{depth="2"}%
 
@@ -50,7 +50,7 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
         }$percnt</div>
         [[$web.$topic]] 
         $percntIF{\"'$expand(State)' = 'unpublished'\"
-          then=\"<span class='foswikiAlert foswikiSmall'>(%MAKETEXT{"unpublished"}%)</span>\"
+          then=\"<span class='foswikiAlert foswikiSmall'>(%TRANSLATE{"unpublished"}%)</span>\"
         }$percnt<!-- -->
         $percntREDDOT{\"$web.$topic\"}$percnt<!-- -->
         <div class='foswikiTopicSummary'>$expand(Summary')</div>
@@ -59,13 +59,13 @@ This TopicFunction displays a collection of BlogEntries within the given CATegor
          then="$percntDBCALL{\"%WEB%.%TOPIC%\" section=\"revinfo\"}$percnt" 
       }%<!-- -->
     </div>
-    <div class='blogText clearfix'>
+    <div class='blogText hyphenate clearfix'>
 $percntDBCALL{\"$web.$topic\" 
    $percntIF{\"'%ONLYTEASER{default="off"}%'='on' AND '$expand(_sections)'!=''\" 
       then=\"section=\\"teaser\\"\"
    }$percnt
 }$percnt 
-       <div class='blogMore'>[[$web.$topic][%MAKETEXT{"Read more"}%]]</div>
+       <div class='blogMore'>[[$web.$topic][%TRANSLATE{"Read more"}%]]</div>
     </div>
     </div>"
    footer="%IF{"'%STICKY{default=""}%' != ''" then="</div>"}%
@@ -90,7 +90,7 @@ $percntDBCALL{\"$web.$topic\"
 
 ---++ Revinfo
 <verbatim class="tml">
-%STARTSECTION{"revinfo"}%%JQICON{"fa-calendar"}% <nop>$formatTime(publishdate, '$day $mon $year')
+%STARTSECTION{"revinfo"}%%JQICON{"fa-calendar"}% <nop>$formatTime(publishdate)
 <span class='foswikiRevisionSep'>&#124;</span> %JQICON{"fa-user"}% $percntFORMATLIST{ 
    \"$expand(Author or createauthor)\"  
    split=\"\s*,\s*\"  
@@ -114,18 +114,22 @@ $percntTAGINFO{
 ---++ Pagination
 <verbatim class="tml">
 %STARTSECTION{"pagination"}%<!-- -->
-%CALCULATE{"$SET(theNextSkip,$EVAL(%SKIP{default="0"}%+%LIMIT{default="5"}%))$SET(thePrevSkip,$EVAL(%SKIP{default="0"}%-%LIMIT{default="5}%))$IF($GET(thePrevSkip) < 0,$SET(thePrevSkip,0))"}%<!-- -->
+%CALCULATE{"$SET(theNextSkip,$EVAL($VALUE(%SKIP{default="0"}%)+$VALUE(%LIMIT{default="5"}%)))$SET(thePrevSkip,$EVAL($VALUE(%SKIP{default="0"}%)-$VALUE(%LIMIT{default="5}%)))$IF($GET(thePrevSkip) < 0,$SET(thePrevSkip,0))"}%<!-- -->
 <div class='blogPagination foswikiSmallish foswikiHideOnPrint clearfix %CLASS{default=""}%'> 
 <div class='blogPrev' %IF{"%SKIP{default="0"}% = 0" then="style='display:none'"}%> 
-<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(thePrevSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%MAKETEXT{"previous page"}%</a> 
+<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(thePrevSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%TRANSLATE{"previous page"}%</a> 
 </div> 
 <div class='blogNext' %IF{"%CALCULATE{"$GET(theNextSkip)"}% >= %COUNT%" then="style='display:none'"}%>
-<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(theNextSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%MAKETEXT{"next page"}%</a> 
+<a href='%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%?skip=%CALCULATE{"$GET(theNextSkip)"}%&limit=%LIMIT{default="5"}%%PARAMS{default=""}%'>%TRANSLATE{"next page"}%</a> 
 </div> 
 </div><!-- -->%ENDSECTION{"pagination"}%
 </verbatim>
 
 ---++ Test
+%ADDTOZONE{"head"
+  id="BLOGPLUGIN::CSS"
+  text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/BlogPlugin/blogplugin.css'  media='all' />"
+}%
 
 ---+++ no stickiness
 %TWISTY%

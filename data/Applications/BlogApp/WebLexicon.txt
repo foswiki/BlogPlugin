@@ -1,6 +1,7 @@
-%META:TOPICINFO{author="ProjectContributor" date="1485171728" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" date="1556792547" format="1.1" version="1"}%
 %META:TOPICPARENT{name="WebHome"}%
 
 %META:FORM{name="Applications.WebTool"}%
 %META:FIELD{name="TopicType" title="TopicType" value="WebTool, ApplicationTopic, WikiTopic"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="Applications.WebLexiconView"}%
+%META:LEXICON{name="id1" Comment="" Englishen="" Frenchfr="" Germande="Veröffentlicht" String="Published"}%

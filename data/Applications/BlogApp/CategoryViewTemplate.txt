@@ -1,7 +1,17 @@
-%META:TOPICINFO{author="ProjectContributor" comment="" date="1485171728" format="1.1" version="1"}%
+%META:TOPICINFO{author="ProjectContributor" comment="" date="1556792547" format="1.1"  version="1"}%
 %META:TOPICPARENT{name="TopicView"}%
 %{<verbatim class="tml">}%
 %TMPL:INCLUDE{"Applications.ClassificationApp.CategoryView"}%
+%{</verbatim>}%
+
+%{<verbatim class="tml">}%
+%TMPL:DEF{"banner::title"}%<div class='natBannerTitle'>
+   %CATINFO{cat="%URLPARAM{"catname" default="%BASETOPIC%"}%" format="$icon $title"}%<!-- -->
+</div>
+%IF{
+   "defined time" 
+   then="<div class='natBannerSubtitle'>%DATETIME{"%URLPARAM{"time"}%" format="$mon $year"}%</div>"
+}%%TMPL:END%
 %{</verbatim>}%
 
 %{<verbatim class="tml">}%
@@ -14,11 +24,13 @@
   "%CATINFO{
     cat="%URLPARAM{"catname" default="%BASETOPIC%"}%" 
     exclude="TopCategory"
-    format="$title"
+    format="$icon=$title"
   }%%IF{"defined time"
-     then=", %CALC{"$FORMATTIME(%URLPARAM{"time"}%, $mon $year)"}%"
+     then=", %DATETIME{"%URLPARAM{"time"}%" format="$mon $year)"}%"
   }%"
   header="<h1 class='blogCategoryTitle'>" 
+  pattern="(.*)=(.*)"
+  format="$1 $2"
   footer="</h1>"
 }%<!-- -->
 %DBCALL{
@@ -27,7 +39,7 @@
    STICKY="%IF{"$'URLPARAM{skip}'" then="disabled" else="category"}%"
    NOSTICKY=""
    FROM_TIME="%URLPARAM{"time"}%"
-   TO_TIME="%IF{"defined time" then="%CALC{"$TIMEADD(%URLPARAM{"time"}%, 1, month)"}%"}%"
+   TO_TIME="%IF{"defined time" then="%DATETIME{"%URLPARAM{"time"}%" delta="in 1 month" lang="en" format="$epoch"}%"}%"
 }%<!-- -->
 %DBCALL{
   "Applications.BlogApp.RenderBlogEntries"
@@ -37,7 +49,7 @@
   NOSTICKY="category"
   STICKY=""
   FROM_TIME="%URLPARAM{"time"}%"
-  TO_TIME="%IF{"defined time" then="%CALC{"$TIMEADD(%URLPARAM{"time"}%, 1, month)"}%"}%"
+  TO_TIME="%IF{"defined time" then="%DATETIME{"%URLPARAM{"time"}%" delta="in 1 month" lang="en" format="$epoch"}%"}%"
 }%<!-- -->
 %ADDTOZONE{"head" 
   id="BLOGPLUGIN::CSS" 
